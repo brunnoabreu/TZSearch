@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "C:/Users/Brunno/Desktop/TZSearch_F/TZSearch_F/UC_TZSearch.xst" -ofn "C:/Users/Brunno/Desktop/TZSearch_F/TZSearch_F/UC_TZSearch.syr" 
+xst -intstyle ise -ifn "C:/Users/Brunno/Desktop/TZSearch_F/TZSearch_F/UC_TZSearch.xst" -ofn "C:/Users/Brunno/Desktop/TZSearch_F/TZSearch_F/UC_TZSearch.syr" 
+xst -intstyle ise -ifn "C:/Users/Brunno/Desktop/TZSearch_F/TZSearch_F/UC_TZSearch.xst" -ofn "C:/Users/Brunno/Desktop/TZSearch_F/TZSearch_F/UC_TZSearch.syr" 

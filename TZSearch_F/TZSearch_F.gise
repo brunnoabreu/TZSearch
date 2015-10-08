@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="TZSearch_F.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Final_TZSearch.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Final_TZSearch.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Final_TZSearch.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Final_TZSearch.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Final_TZSearch.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Final_TZSearch.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Final_TZSearch.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Final_TZSearch.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Final_TZSearch_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Final_TZSearch_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Final_TZSearch_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="UC_TZSearch.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="UC_TZSearch.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="UC_TZSearch.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="UC_TZSearch.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="UC_TZSearch.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="UC_TZSearch.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="UC_TZSearch.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="UC_TZSearch.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="UC_TZSearch_envsettings.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="UC_TZSearch_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="UC_TZSearch_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="UC_TZSearch_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testbench_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testbench_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="testbench_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testbench_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1444244104" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1444244104">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1444244104" xil_pn:in_ck="8608307620769593360" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1444244104">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="CircularBuffer_Datapath.vhd"/>
+      <outfile xil_pn:name="DatapathPredVec.vhd"/>
+      <outfile xil_pn:name="Datapath_FirstSearch.vhd"/>
+      <outfile xil_pn:name="Datapath_Raster.vhd"/>
+      <outfile xil_pn:name="Final_TZSearch.vhd"/>
+      <outfile xil_pn:name="SAD4x4_Datapath.vhd"/>
+      <outfile xil_pn:name="STD_SAD.vhd"/>
+      <outfile xil_pn:name="TB_TZSearch.vhd"/>
+      <outfile xil_pn:name="UC_MainFirst.vhd"/>
+      <outfile xil_pn:name="UC_PredMov.vhd"/>
+      <outfile xil_pn:name="UC_Raster.vhd"/>
+      <outfile xil_pn:name="UC_SAD.vhd"/>
+      <outfile xil_pn:name="UC_TZSearch.vhd"/>
+      <outfile xil_pn:name="blck4x4.vhd"/>
+      <outfile xil_pn:name="genericAdder.vhd"/>
+      <outfile xil_pn:name="genericSub.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1444244104" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="4434870115928851094" xil_pn:start_ts="1444244104">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1444244104" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-5638616450700532698" xil_pn:start_ts="1444244104">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1444244104" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="279664409358868671" xil_pn:start_ts="1444244104">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1444244104" xil_pn:in_ck="8608307620769593360" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1444244104">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="CircularBuffer_Datapath.vhd"/>
+      <outfile xil_pn:name="DatapathPredVec.vhd"/>
+      <outfile xil_pn:name="Datapath_FirstSearch.vhd"/>
+      <outfile xil_pn:name="Datapath_Raster.vhd"/>
+      <outfile xil_pn:name="Final_TZSearch.vhd"/>
+      <outfile xil_pn:name="SAD4x4_Datapath.vhd"/>
+      <outfile xil_pn:name="STD_SAD.vhd"/>
+      <outfile xil_pn:name="TB_TZSearch.vhd"/>
+      <outfile xil_pn:name="UC_MainFirst.vhd"/>
+      <outfile xil_pn:name="UC_PredMov.vhd"/>
+      <outfile xil_pn:name="UC_Raster.vhd"/>
+      <outfile xil_pn:name="UC_SAD.vhd"/>
+      <outfile xil_pn:name="UC_TZSearch.vhd"/>
+      <outfile xil_pn:name="blck4x4.vhd"/>
+      <outfile xil_pn:name="genericAdder.vhd"/>
+      <outfile xil_pn:name="genericSub.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1444244116" xil_pn:in_ck="8608307620769593360" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-496446194301561323" xil_pn:start_ts="1444244104">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="testbench_beh.prj"/>
+      <outfile xil_pn:name="testbench_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1444244117" xil_pn:in_ck="1325431893825837657" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-581576765062378270" xil_pn:start_ts="1444244116">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="testbench_isim_beh.wdb"/>
+    </transform>
+    <transform xil_pn:end_ts="1443677736" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1443677736">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1443841310" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-9128995500288451712" xil_pn:start_ts="1443841310">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1443841310" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="279664409358868671" xil_pn:start_ts="1443841310">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1443841310" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1443841310">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1443841310" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="97081117544226096" xil_pn:start_ts="1443841310">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1443841310" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-5639406475183444553" xil_pn:start_ts="1443841310">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1443841310" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-4301711708272195895" xil_pn:start_ts="1443841310">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1444244028" xil_pn:in_ck="7566554874729242247" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-21106769329561569" xil_pn:start_ts="1444243970">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Final_TZSearch.lso"/>
+      <outfile xil_pn:name="Final_TZSearch.ngc"/>
+      <outfile xil_pn:name="Final_TZSearch.ngr"/>
+      <outfile xil_pn:name="Final_TZSearch.prj"/>
+      <outfile xil_pn:name="Final_TZSearch.stx"/>
+      <outfile xil_pn:name="Final_TZSearch.syr"/>
+      <outfile xil_pn:name="Final_TZSearch.xst"/>
+      <outfile xil_pn:name="Final_TZSearch_xst.xrpt"/>
+      <outfile xil_pn:name="UC_TZSearch.ngr"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+  </transforms>
+
+</generated_project>

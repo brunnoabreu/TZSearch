@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Brunno/Desktop/TZSearch_F/TZSearch_F/testbench_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="std_sad" />
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="81" />
+   <wvobject fp_name="/testbench/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/start" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/mata1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mata1[0:3]</obj_property>
+      <obj_property name="ObjectShortName">mata1[0:3]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/mata2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mata2[0:3]</obj_property>
+      <obj_property name="ObjectShortName">mata2[0:3]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/mata3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mata3[0:3]</obj_property>
+      <obj_property name="ObjectShortName">mata3[0:3]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/mata4" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mata4[0:3]</obj_property>
+      <obj_property name="ObjectShortName">mata4[0:3]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/matb1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">matb1[0:3]</obj_property>
+      <obj_property name="ObjectShortName">matb1[0:3]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/matb2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">matb2[0:3]</obj_property>
+      <obj_property name="ObjectShortName">matb2[0:3]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/matb3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">matb3[0:3]</obj_property>
+      <obj_property name="ObjectShortName">matb3[0:3]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/matb4" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">matb4[0:3]</obj_property>
+      <obj_property name="ObjectShortName">matb4[0:3]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath/matsa[0]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">matsa[0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath/matsa[1]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[1]</obj_property>
+      <obj_property name="ObjectShortName">matsa[1]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath/matsa[2]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[2]</obj_property>
+      <obj_property name="ObjectShortName">matsa[2]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath/matsa[3]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[3]</obj_property>
+      <obj_property name="ObjectShortName">matsa[3]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath/matsb[0]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">matsb[0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath/matsb[1]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[1]</obj_property>
+      <obj_property name="ObjectShortName">matsb[1]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath/matsb[2]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[2]</obj_property>
+      <obj_property name="ObjectShortName">matsb[2]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath/matsb[3]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[3]</obj_property>
+      <obj_property name="ObjectShortName">matsb[3]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath/\gen0(0)\/blckX/regsubvec" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">regsubvec[0:15]</obj_property>
+      <obj_property name="ObjectShortName">regsubvec[0:15]</obj_property>
+      <obj_property name="label">regsubvec[0:15]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath/\gen0(0)\/blckX/regfirstadder" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regfirstadder[0:7]</obj_property>
+      <obj_property name="ObjectShortName">regfirstadder[0:7]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath/\gen0(0)\/blckX/regsecondadder" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regsecondadder[0:3]</obj_property>
+      <obj_property name="ObjectShortName">regsecondadder[0:3]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath/\gen0(0)\/blckX/regthirdadder" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regthirdadder[0:1]</obj_property>
+      <obj_property name="ObjectShortName">regthirdadder[0:1]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath/regsecafterblock" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regsecafterblock[0:1]</obj_property>
+      <obj_property name="ObjectShortName">regsecafterblock[0:1]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath/outaftersum" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">outaftersum[13:0]</obj_property>
+      <obj_property name="ObjectShortName">outaftersum[13:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath/s_sad" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_sad[19:0]</obj_property>
+      <obj_property name="ObjectShortName">s_sad[19:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/heightpu" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">heightpu[6:0]</obj_property>
+      <obj_property name="ObjectShortName">heightpu[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/widthpu" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">widthpu[6:0]</obj_property>
+      <obj_property name="ObjectShortName">widthpu[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/searchrange" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">searchrange[7:0]</obj_property>
+      <obj_property name="ObjectShortName">searchrange[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/initcandidatex" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">initcandidatex[7:0]</obj_property>
+      <obj_property name="ObjectShortName">initcandidatex[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/initcandidatey" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">initcandidatey[7:0]</obj_property>
+      <obj_property name="ObjectShortName">initcandidatey[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/curvecx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">curvecx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">curvecx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/curvecy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">curvecy[7:0]</obj_property>
+      <obj_property name="ObjectShortName">curvecy[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/bestvecx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bestvecx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bestvecx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/bestvecy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bestvecy[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bestvecy[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/done" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_MainFirst/state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_MainFirst/nextstate" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">nextstate</obj_property>
+      <obj_property name="ObjectShortName">nextstate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_Raster/state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_Raster/nextstate" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">nextstate</obj_property>
+      <obj_property name="ObjectShortName">nextstate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_DatapathPredVec/foundbettersad" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">foundbettersad</obj_property>
+      <obj_property name="ObjectShortName">foundbettersad</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_SAD_UC/start" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/muxstart2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">muxstart2</obj_property>
+      <obj_property name="ObjectShortName">muxstart2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_DatapathPredVec/vecx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">vecx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">vecx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_DatapathPredVec/vecy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">vecy[7:0]</obj_property>
+      <obj_property name="ObjectShortName">vecy[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_DatapathPredVec/bestvecx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bestvecx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bestvecx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_DatapathPredVec/bestvecy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bestvecy[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bestvecy[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_DatapathPredVec/regbestvecx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regbestvecx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regbestvecx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_DatapathPredVec/regbestvecy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regbestvecy[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regbestvecy[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_DatapathPredVec/invecybypass9" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">invecybypass9[7:0]</obj_property>
+      <obj_property name="ObjectShortName">invecybypass9[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_DatapathPredVec/invecxbypass9" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">invecxbypass9[7:0]</obj_property>
+      <obj_property name="ObjectShortName">invecxbypass9[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/regcentery" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcentery[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcentery[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/regcenterx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcenterx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcenterx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_PredMov/state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_PredMov/nextstate" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">nextstate</obj_property>
+      <obj_property name="ObjectShortName">nextstate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_PredMov/start" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_TZSearch/state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_TZSearch/nextstate" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">nextstate</obj_property>
+      <obj_property name="ObjectShortName">nextstate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_SAD_UC/state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_SAD_UC/nextstate" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">nextstate</obj_property>
+      <obj_property name="ObjectShortName">nextstate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_SAD_UC/donerest" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">donerest</obj_property>
+      <obj_property name="ObjectShortName">donerest</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_PredMov/donesad" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">donesad</obj_property>
+      <obj_property name="ObjectShortName">donesad</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_PredMov/waitcycles" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">waitcycles</obj_property>
+      <obj_property name="ObjectShortName">waitcycles</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/middlewaitcycles" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">middlewaitcycles</obj_property>
+      <obj_property name="ObjectShortName">middlewaitcycles</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_PredMov/dirtybit" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dirtybit</obj_property>
+      <obj_property name="ObjectShortName">dirtybit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/middledirtybit" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">middledirtybit</obj_property>
+      <obj_property name="ObjectShortName">middledirtybit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_PredMov/done" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_SAD_UC/waitcycles" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">waitcycles</obj_property>
+      <obj_property name="ObjectShortName">waitcycles</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_SAD_UC/is8x8or16x4" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">is8x8or16x4</obj_property>
+      <obj_property name="ObjectShortName">is8x8or16x4</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_SAD_UC/subresult" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">subresult</obj_property>
+      <obj_property name="ObjectShortName">subresult</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_SAD_UC/finishfsm" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">finishfsm</obj_property>
+      <obj_property name="ObjectShortName">finishfsm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_SAD_UC/dirtybit" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dirtybit</obj_property>
+      <obj_property name="ObjectShortName">dirtybit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_SAD_UC/validsad" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">validsad</obj_property>
+      <obj_property name="ObjectShortName">validsad</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_SAD_UC/nraccumsubsrc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nraccumsubsrc</obj_property>
+      <obj_property name="ObjectShortName">nraccumsubsrc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_TZSearch/startpredmov" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">startpredmov</obj_property>
+      <obj_property name="ObjectShortName">startpredmov</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/start2predmov" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start2predmov</obj_property>
+      <obj_property name="ObjectShortName">start2predmov</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_TZSearch/startfirstsearch" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">startfirstsearch</obj_property>
+      <obj_property name="ObjectShortName">startfirstsearch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_TZSearch/startraster" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">startraster</obj_property>
+      <obj_property name="ObjectShortName">startraster</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_TZSearch/choosemode" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">choosemode</obj_property>
+      <obj_property name="ObjectShortName">choosemode</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_TZSearch/loadsearchcenter" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">loadsearchcenter</obj_property>
+      <obj_property name="ObjectShortName">loadsearchcenter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_TZSearch/loadbestvecs" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">loadbestvecs</obj_property>
+      <obj_property name="ObjectShortName">loadbestvecs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_TZSearch/sel_tz_stage" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sel_tz_stage[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sel_tz_stage[1:0]</obj_property>
+   </wvobject>
+</wave_config>
