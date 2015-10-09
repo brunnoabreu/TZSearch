@@ -169,7 +169,6 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= fourCandidates_2;
 				loadByPassOutOfAnyBound <= '1';
 				if(isOutOfAnyBound = '0') then
-					writeCache <= '1';
 					if(vecFound = '1') then
 						initIncrement <= '0';
 						sendToMem <= '0';
@@ -1972,11 +1971,11 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 			
 			when waitAndDecide10 =>
 				rstRegPUsFinished <= '1';
---				incRegNumLevels <= '1';
+				incRegNumLevels <= '1';
 				nextState <= waitAndDecide12;
 
 			when waitAndDecide11 =>
---				incRegNumLevels <= '0';
+				incRegNumLevels <= '0';
 --				rstRegPUsFinished <= '0';
 --				nextState <= waitAndDecide12;
 

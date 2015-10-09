@@ -87,13 +87,12 @@ architecture Behavioral of Final_TZSearch is
 	
 	component DatapathPredVec
 		Port(
-			CLK				: in STD_LOGIC;
-			START				: in STD_LOGIC;
-			foundBetterSAD	: in STD_LOGIC;
-			vecX				: in STD_LOGIC_VECTOR(7 downto 0);
-			vecY				: in STD_LOGIC_VECTOR(7 downto 0);
-			bestVecX			: out STD_LOGIC_VECTOR(7 downto 0);
-			bestVecY			: out STD_LOGIC_VECTOR(7 downto 0)
+			CLK					: in STD_LOGIC;
+			START					: in STD_LOGIC;
+			vecX					: in STD_LOGIC_VECTOR(7 downto 0);
+			vecY					: in STD_LOGIC_VECTOR(7 downto 0);
+			bestVecX				: out STD_LOGIC_VECTOR(7 downto 0);
+			bestVecY				: out STD_LOGIC_VECTOR(7 downto 0)
 		);
 	end component;
 	
@@ -174,13 +173,15 @@ architecture Behavioral of Final_TZSearch is
 	
 	component UC_PredMov
 		Port(
-		CLK			: in STD_LOGIC;
-		START			: in STD_LOGIC;
-		doneSAD		: in STD_LOGIC;
-		START2		: out STD_LOGIC;
-		waitCycles	: out STD_LOGIC;
-		dirtyBit		: out STD_LOGIC;
-		done			: out STD_LOGIC
+		CLK					: in STD_LOGIC;
+		START					: in STD_LOGIC;
+		doneSAD				: in STD_LOGIC;
+		foundBetterSAD		: in STD_LOGIC;
+		START2				: out STD_LOGIC;
+		loadBetterCenter	: out STD_LOGIC;
+		waitCycles			: out STD_LOGIC;
+		dirtyBit				: out STD_LOGIC;
+		done					: out STD_LOGIC
 	);
 	end component;
 	
@@ -314,11 +315,17 @@ signal middleLoadRegNumPUsLevel, middleIncRegPUsFinished: STD_LOGIC;
 signal middleOp_typeX, middleOp_typeY: STD_LOGIC;
 signal middleIncRegCurVecX, middleIncRegCurVecY, middleRstRegCurVecX, middleRstRegCurVecY: STD_LOGIC;
 signal middleIncRegNumLevels, middleRstRegNumLevels: STD_LOGIC;
+signal loadCenter: STD_LOGIC;
+
+signal loadBetterCenter: STD_LOGIC;
 
 signal middleChooseMode: STD_LOGIC;
 
+signal regHeightPU, regWidthPU: STD_LOGIC_VECTOR(6 downto 0);
+
 signal sel_TZ_stage: STD_LOGIC_VECTOR(1 downto 0);
 
+signal middleLoadBetterCenter: STD_LOGIC;
 
 
 signal dirtyBitByPass1, dirtyBitByPass2, dirtyBitByPass3, dirtyBitByPass4, dirtyBitByPass5, dirtyBitByPass6, dirtyBitByPass7,
@@ -328,7 +335,7 @@ dirtyBitByPass8, dirtyBitByPass9, dirtyBitByPass10: STD_LOGIC;
 begin
 
 
-auxIs8x8or16x4 <= '1' when ((heightPU(3 downto 2) = "10" and widthPU(3 downto 2) = "10") or (heightPU(3 downto 2) = "01" or widthPU(3 downto 2) = "01")) else
+auxIs8x8or16x4 <= '1' when ((heightPU(3 downto 2) = "10" and widthPU(3 downto 2) = "10") or (heightPU(3 downto 2) = "01" and widthPU(3 downto 2) = "01")) else
 						'0';
 
 foundBetterSAD <= '1' when flagBetter = '1' and doneRest = '1' else
@@ -351,9 +358,13 @@ bestVecY <= regBestVecY;
 --subRight <= muxVecs_RegX - regBorderRight;
 --subDown <= muxVecs_RegY - regBorderDown;
 
-	process(CLK, START)
+loadCenter <= foundBetterSAD and loadSearchCenter;
+
+	process(CLK, START, loadCenter)
 	begin
 		if(START='0') then
+			regHeightPU <= (OTHERS=>'0');
+			regWidthPU <= (OTHERS=>'0');
 			regIs8x8or16x4 <= '0';
 			regBestSAD <= (OTHERS=>'1');
 			regCenterX <= (OTHERS=>'0');
@@ -363,17 +374,19 @@ bestVecY <= regBestVecY;
 --			regSearchRange <= (OTHERS=>'0');
 		elsif(CLK'event and CLK='1') then
 			regIs8x8or16x4 <= auxIs8x8or16x4;
+			regHeightPU <= heightPU;
+			regWidthPU <= widthPU;
 			
 			if(foundBetterSAD = '1') then
 				regBestSAD <= S_SAD;
 			end if;
 			
-			if(loadSearchCenter = '1') then
+			if(loadCenter = '1') then
 				regCenterX <= middleInitCenterX;
 				regCenterY <= middleInitCenterY;
 			end if;
 			
-			if(loadBestVecs = '1') then
+			if(foundBetterSAD = '1') then
 				regBestVecX <= auxBestVecX;
 				regBestVecY <= auxBestVecY;
 			end if;
@@ -406,8 +419,8 @@ bestVecY <= regBestVecY;
 		START 			=> START, --OK
 		nrAccumSubSrc 	=> middleNrAccumSubSrc, --OK
 		validSAD			=> middleValidSAD, --OK
-		heightPU 		=> heightPU, --OK
-		widthPU 			=> widthPU, --OK
+		heightPU 		=> regHeightPU, --OK
+		widthPU 			=> regWidthPU, --OK
 		subResult 		=> middleSubResult, --OK
 		SAD 				=> S_SAD --OK
 	);
@@ -420,8 +433,8 @@ bestVecY <= regBestVecY;
 		subResult 	  	=> middleSubResult, --OK
 		finishFSM	  	=> '0', --OK??
 		dirtyBit			=> middleDirtyBit, --OK
-		heightPU		  	=> heightPU, --OK
-		widthPU		  	=> widthPU, --OK
+		heightPU		  	=> regHeightPU, --OK
+		widthPU		  	=> regWidthPU, --OK
 		validSAD			=> middleValidSAD, --OK
 		nrAccumSubSrc 	=> middleNrAccumSubSrc, --OK
 		done 			  	=> doneAux, --OK
@@ -437,8 +450,10 @@ bestVecY <= regBestVecY;
 		isOutOfAnyBound			=> middleIsOutOfAnyBound, --OK
 		byPassIsOutOfAnyBound	=> middleByPassIsOutOfAnyBound, --OK
 		hasPassedNumLevels		=> middleHasPassedNumLevels, --OK
-		vecFound						=> middleVecFound, --OK
-		byPassVecFound				=> middleByPassVecFound, --OK
+--		vecFound						=> middleVecFound, --OK
+--		byPassVecFound				=> middleByPassVecFound, --OK
+		vecFound						=> '0', --OK
+		byPassVecFound				=> '0', --OK
 		loadByPassVecFound		=> middleLoadByPassVecFound, --OK
 		writeCache					=> middleWriteCache, --OK
 		loadCurVec					=> middleLoadCurVec, --OK
@@ -488,21 +503,23 @@ bestVecY <= regBestVecY;
 
 
 	Inst_UC_PredMov: UC_PredMov PORT MAP(
-		CLK 			=> CLK, --OK
-		START 		=> STARTPredMov, --OK
-		doneSAD 		=> doneRest, --OK
-		START2  		=> START2PredMov, --OK
-		waitCycles	=> waitCycles_PredMov, --OK
-		dirtyBit		=> dirtyBit_PredMov, --OK
-		done 			=> donePredMov --OK
+		CLK 					=> CLK, --OK
+		START 				=> STARTPredMov, --OK
+		doneSAD 				=> doneRest, --OK
+		foundBetterSAD		=> foundBetterSAD, --OK
+		loadBetterCenter	=> loadBetterCenter, --OK
+		START2  				=> START2PredMov, --OK
+		waitCycles			=> waitCycles_PredMov, --OK
+		dirtyBit				=> dirtyBit_PredMov, --OK
+		done 					=> donePredMov --OK
 	);
 	
 	Inst_Datapath_FirstSearch: Datapath_FirstSearch PORT MAP(
 			CLK							=> CLK, --OK
 			START							=> STARTFirstSearch, --OK
 			foundBetterSAD				=> foundBetterSAD, --OK
-			heightPU						=> heightPU,
-			widthPU						=> widthPU,
+			heightPU						=> regHeightPU,
+			widthPU						=> regWidthPU,
 			initCenterX					=> regCenterX, --OK
 			initCenterY					=> regCenterY, --OK
 			incDoAgain					=> middleIncDoAgain, --OK
@@ -554,8 +571,8 @@ bestVecY <= regBestVecY;
 			loadRegXMem2			=> middleLoadRegXMem2, --OK
 			sendToMem				=> middleSendToMem_Raster, --OK
 			searchRange				=> searchRange, --OK
-			heightPU					=> heightPU, --OK
-			widthPU					=> widthPU, --OK
+			heightPU					=> regHeightPU, --OK
+			widthPU					=> regWidthPU, --OK
 			initCenterX				=> regCenterX, --OK
 			initCenterY				=> regCenterY, --OK
 			bestInitialX			=> regBestVecX, --OK
@@ -571,13 +588,12 @@ bestVecY <= regBestVecY;
 
 
 	Inst_DatapathPredVec: DatapathPredVec PORT MAP(
-			CLK				=> CLK, --OK
-			START				=> STARTPredMov, --OK
-			foundBetterSAD	=> foundBetterSAD, --OK
-			vecX				=> initCandidateX, --OK
-			vecY				=> initCandidateY, --OK
-			bestVecX			=> middleInitCenterX, --OK
-			bestVecY			=> middleInitCenterY --OK
+			CLK					=> CLK, --OK
+			START					=> STARTPredMov, --OK
+			vecX					=> initCandidateX, --OK
+			vecY					=> initCandidateY, --OK
+			bestVecX				=> middleInitCenterX, --OK
+			bestVecY				=> middleInitCenterY --OK
 			);
 
 	Inst_TZSearch: UC_TZSearch PORT MAP(
@@ -629,11 +645,13 @@ curVecY <= middleVecMemY_FirstSearch when sel_TZ_stage = "01" else
 			  middleVecMemY_Raster when sel_TZ_stage = "10" else
 			  (OTHERS=>'0');
 
-auxBestVecX <= middleBestVecX_FirstSearch when sel_TZ_stage = "01" else
+auxBestVecX <= middleInitCenterX when sel_TZ_stage = "00" else
+					middleBestVecX_FirstSearch when sel_TZ_stage = "01" else
 					middleBestVecX_Raster when sel_TZ_stage = "10" else
 					regBestVecX;
 
-auxBestVecY <= middleBestVecY_FirstSearch when sel_TZ_stage = "01" else
+auxBestVecY <= middleInitCenterY when sel_TZ_stage = "00" else
+					middleBestVecY_FirstSearch when sel_TZ_stage = "01" else
 					middleBestVecY_Raster when sel_TZ_stage = "10" else
 					regBestVecY;
 

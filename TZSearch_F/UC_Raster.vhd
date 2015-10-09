@@ -55,6 +55,8 @@ architecture Behavioral of UC_Raster is
 
 type t_state is (idle, waitForStart1, waitForStart2, waitForStart3, waitForStart4, waitForStart5, waitForDone, waitLastSADs1, waitLastSADs2, waitLastSADs3, waitLastSADs4, waitLastSADs5, waitLastSADs6, waitLastSADs7, waitLastSADs8, stateDone);
 signal state, nextState: t_state;
+signal dirtyBitByPass1, dirtyBitByPass2, dirtyBitByPass3, dirtyBitByPass4, dirtyBitByPass5, dirtyBitByPass6, dirtyBitByPass7, dirtyBitByPass8: STD_LOGIC;
+signal auxDirtyBit: STD_LOGIC;
 
 begin
 
@@ -76,7 +78,7 @@ begin
 			initIncrement <= '0';
 			incRegX <= '0';
 			waitCycles <= '0';
-			dirtyBit <= '0';
+			auxDirtyBit <= '0';
 			loadRegXMem2 <= '0';
 			sendToMem <= '0';
 			done <= '0';
@@ -93,7 +95,7 @@ begin
 			initData <= '0';
 			initIncrement <= '0';
 			loadRegXMem2 <= '1';
-			dirtyBit <= '1';
+			auxDirtyBit <= '1';
 			incRegX <= '1';
 			nextState <= waitForStart4;
 			
@@ -121,7 +123,7 @@ begin
 			if(finishSendPartitions = '1') then
 				if(isOutOfXBound = '1') then
 					if(isOutOfYBound = '1') then
-						dirtyBit <= '0';
+						auxDirtyBit <= '0';
 						nextState <= waitLastSADs1;
 					else
 						rearrangeVecMems <= '1';
@@ -155,7 +157,6 @@ begin
 			nextState <= waitLastSADs8;
 			
 		when waitLastSADs8 =>
-		
 			nextState <= stateDone;
 			
 		when stateDone =>
@@ -164,5 +165,30 @@ begin
 	end case;
 	
 end process;
+
+process(CLK, START)
+begin
+	if(START='0') then
+		dirtyBitByPass1 <= '0';
+		dirtyBitByPass2 <= '0';
+		dirtyBitByPass3 <= '0';
+		dirtyBitByPass4 <= '0';
+		dirtyBitByPass5 <= '0';
+		dirtyBitByPass6 <= '0';
+		dirtyBitByPass7 <= '0';
+		dirtyBitByPass8 <= '0';
+	elsif(CLK'event and CLK='1') then
+		dirtyBitByPass1 <= auxDirtyBit;
+		dirtyBitByPass2 <= dirtyBitByPass1;
+		dirtyBitByPass3 <= dirtyBitByPass2;
+		dirtyBitByPass4 <= dirtyBitByPass3;
+		dirtyBitByPass5 <= dirtyBitByPass4;
+		dirtyBitByPass6 <= dirtyBitByPass5;
+		dirtyBitByPass7 <= dirtyBitByPass6;
+		dirtyBitByPass8 <= dirtyBitByPass7;
+	end if;
+end process;
+
+dirtyBit <= dirtyBitByPass8;
 
 end Behavioral;

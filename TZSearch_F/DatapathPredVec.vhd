@@ -35,7 +35,6 @@ entity DatapathPredVec is
 	Port(
 		CLK				: in STD_LOGIC;
 		START				: in STD_LOGIC;
-		foundBetterSAD	: in STD_LOGIC;
 		vecX				: in STD_LOGIC_VECTOR(7 downto 0);
 		vecY				: in STD_LOGIC_VECTOR(7 downto 0);
 		bestVecX			: out STD_LOGIC_VECTOR(7 downto 0);
@@ -58,8 +57,8 @@ signal inVecYByPass1, inVecYByPass2, inVecYByPass3, inVecYByPass4, inVecYByPass5
 
 begin
 
-bestVecX <= regBestVecX;
-bestVecY <= regBestVecY;
+bestVecX <= inVecXByPass9;
+bestVecY <= inVecYByPass9;
 
 process(START, CLK)
 begin
@@ -113,11 +112,6 @@ begin
 		inVecYByPass9 <= inVecYByPass8;
 		-----------------------------------
 		-----------------------------------
-		
-		if(foundBetterSAD = '1') then
-			regBestVecX <= inVecXByPass9;
-			regBestVecY <= inVecYByPass9;
-		end if;
 
 	end if;
 end process;

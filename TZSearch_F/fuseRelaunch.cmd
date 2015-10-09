@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Brunno/Desktop/TZSearch_F/TZSearch_F/testbench_isim_beh.exe" -prj "C:/Users/Brunno/Desktop/TZSearch_F/TZSearch_F/testbench_beh.prj" "work.testbench" 
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/testbench_isim_beh.exe" -prj "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/testbench_beh.prj" "work.testbench" 

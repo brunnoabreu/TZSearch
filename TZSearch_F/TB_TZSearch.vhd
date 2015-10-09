@@ -218,6 +218,62 @@
 			end loop;
 		end loop;
 		wait for CLK_period;
+		for i in 0 to 100 loop
+			for i in 0 to 3 loop
+				for j in 0 to 3 loop
+					matA1(i,j) <= "00001001";
+					matA2(i,j) <= "00001001";
+					matA3(i,j) <= "00001001";
+					matA4(i,j) <= "00001001";
+					matB1(i,j) <= "00001110";
+					matB2(i,j) <= "00001110";
+					matB3(i,j) <= "00001110";
+					matB4(i,j) <= "00001110";
+				end loop;		
+			end loop;
+			wait for CLK_period;
+			for i in 0 to 3 loop
+				for j in 0 to 3 loop
+					matA1(i,j) <= "00000101";
+					matA2(i,j) <= "00000101";
+					matA3(i,j) <= "00000101";
+					matA4(i,j) <= "00000101";
+					matB1(i,j) <= "00000110";
+					matB2(i,j) <= "00000110";
+					matB3(i,j) <= "00000110";
+					matB4(i,j) <= "00000110";
+				end loop;		
+			end loop;
+			wait for CLK_period;
+		end loop;
+		for i in 0 to 99999 loop
+			for i in 0 to 3 loop
+				for j in 0 to 3 loop
+					matA1(i,j) <= "00001001";
+					matA2(i,j) <= "00001001";
+					matA3(i,j) <= "00001001";
+					matA4(i,j) <= "00001001";
+					matB1(i,j) <= "00001001";
+					matB2(i,j) <= "00001001";
+					matB3(i,j) <= "00001001";
+					matB4(i,j) <= "00001010";
+				end loop;		
+			end loop;
+			wait for CLK_period;
+			for i in 0 to 3 loop
+				for j in 0 to 3 loop
+					matA1(i,j) <= "00000101";
+					matA2(i,j) <= "00000101";
+					matA3(i,j) <= "00000101";
+					matA4(i,j) <= "00000101";
+					matB1(i,j) <= "00000110";
+					matB2(i,j) <= "00000110";
+					matB3(i,j) <= "00000110";
+					matB4(i,j) <= "00000110";
+				end loop;		
+			end loop;
+			wait for CLK_period;
+		end loop;
 		wait for 9999*CLK_period;
         wait for 100 ns; -- wait until global set/reset completes
 		

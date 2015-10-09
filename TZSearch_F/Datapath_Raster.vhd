@@ -100,8 +100,10 @@ auxIsOutOfYBound <= '1' when subDown(7) = '0' else
 subRight <= regXMem - regBorderRight;
 subDown <= regYMemAfter - regBorderDown;
 
-bestVecX <= curRegBestVecX;
-bestVecY <= curRegBestVecY;
+--bestVecX <= curRegBestVecX;
+--bestVecY <= curRegBestVecY;
+bestVecX <= currentXVecByPass8;
+bestVecY <= currentYVecByPass8;
 xMem <= regXMem3;
 yMem <= regYMem3;
 isOutOfXBound <= regIsOutOfXBound;
@@ -194,11 +196,11 @@ isOutOfYBound <= regIsOutOfYBound;
 				regIsOutOfXBound <= '0';
 				regIsOutOfYBound <= '0';
 			end if;
-			
-			if(foundBetterSAD = '1') then
-				curRegBestVecX <= currentXVecByPass8;
-				curRegBestVecY <= currentYVecByPass8;
-			end if;
+--			
+--			if(foundBetterSAD = '1') then
+--				curRegBestVecX <= currentXVecByPass8;
+--				curRegBestVecY <= currentYVecByPass8;
+--			end if;
 			
 			
 		end if;
@@ -234,7 +236,7 @@ isOutOfYBound <= regIsOutOfYBound;
 			currentYVecByPass7 <= (OTHERS=>'0');
 			currentYVecByPass8 <= (OTHERS=>'0');
 		elsif(CLK'event and CLK='1') then
-			currentXVecByPass1 <= regXMem;
+			currentXVecByPass1 <= regXMem3;
 			currentXVecByPass2 <= currentXVecByPass1;
 			currentXVecByPass3 <= currentXVecByPass2;
 			currentXVecByPass4 <= currentXVecByPass3;
@@ -242,7 +244,7 @@ isOutOfYBound <= regIsOutOfYBound;
 			currentXVecByPass6 <= currentXVecByPass5;
 			currentXVecByPass7 <= currentXVecByPass6;
 			currentXVecByPass8 <= currentXVecByPass7;
-			currentYVecByPass1 <= regYMem;
+			currentYVecByPass1 <= regYMem3;
 			currentYVecByPass2 <= currentYVecByPass1;
 			currentYVecByPass3 <= currentYVecByPass2;
 			currentYVecByPass4 <= currentYVecByPass3;

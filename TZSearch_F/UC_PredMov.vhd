@@ -32,13 +32,15 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity UC_PredMov is
    Port(
-		CLK			: in STD_LOGIC;
-		START			: in STD_LOGIC;
-		doneSAD		: in STD_LOGIC;
-		START2		: out STD_LOGIC;
-		waitCycles	: out STD_LOGIC;
-		dirtyBit		: out STD_LOGIC;
-		done			: out STD_LOGIC
+		CLK					: in STD_LOGIC;
+		START					: in STD_LOGIC;
+		doneSAD				: in STD_LOGIC;
+		foundBetterSAD		: in STD_LOGIC;
+		START2				: out STD_LOGIC;
+		loadBetterCenter	: out STD_LOGIC;
+		waitCycles			: out STD_LOGIC;
+		dirtyBit				: out STD_LOGIC;
+		done					: out STD_LOGIC
 	);
 end UC_PredMov;
 
@@ -59,12 +61,13 @@ begin
 end process;
 
 
-process(state, doneSAD)
+process(state, doneSAD, foundBetterSAD)
 begin
 
 	case state is
 		when idle =>
 			START2 <= '0';
+			loadBetterCenter <= '0';
 			waitCycles <= '0';
 			dirtyBit <= '0';
 			done <= '0';
@@ -74,6 +77,11 @@ begin
 			START2 <= '1';
 			dirtyBit <= '1';
 			waitCycles <= '0';
+			if(foundBetterSAD = '1') then
+				loadBetterCenter <= '1';
+			else
+				loadBetterCenter <= '0';
+			end if;
 			if(doneSAD = '0') then
 				nextState <= s0;
 			else
@@ -83,6 +91,11 @@ begin
 		when s1 =>
 			dirtyBit <= '1';
 			waitCycles <= '0';
+			if(foundBetterSAD = '1') then
+				loadBetterCenter <= '1';
+			else
+				loadBetterCenter <= '0';
+			end if;
 			if(doneSAD = '0') then
 				nextState <= s1;
 			else
@@ -92,6 +105,11 @@ begin
 		when s2 =>
 			dirtyBit <= '1';
 			waitCycles <= '0';
+			if(foundBetterSAD = '1') then
+				loadBetterCenter <= '1';
+			else
+				loadBetterCenter <= '0';
+			end if;
 			if(doneSAD = '0') then
 				nextState <= s2;
 			else
@@ -101,6 +119,11 @@ begin
 		when s3 =>
 			dirtyBit <= '1';
 			waitCycles <= '0';
+			if(foundBetterSAD = '1') then
+				loadBetterCenter <= '1';
+			else
+				loadBetterCenter <= '0';
+			end if;
 			if(doneSAD = '0') then
 				nextState <= s3;
 			else
@@ -108,6 +131,8 @@ begin
 			end if;
 		
 		when stateDone =>
+			loadBetterCenter <= '0';
+			waitCycles <= '0';
 			dirtyBit <= '0';
 			done <= '1';
 			nextState <= stateDone;

@@ -25,8 +25,8 @@ constant matrixROM: lutable:=
 ("1000000", "0100000", "0110000", "0010000", "0001000", "0001100", "0000100", "0000011", "0000010", "0000001", "0000000");
 
 constant TOLERANCE_LEVELS: STD_LOGIC_VECTOR(2 downto 0) := "011";
-constant IRASTER: STD_LOGIC_VECTOR(3 downto 0) := "0101";
-constant DOUBLE_IRASTER: STD_LOGIC_VECTOR(3 downto 0) := "1010";
+constant IRASTER: STD_LOGIC_VECTOR(4 downto 0) := "01010";
+constant DOUBLE_IRASTER: STD_LOGIC_VECTOR(4 downto 0) := "10100";
 constant WIDTH2 : integer := 4;
 constant HEIGHT2 : integer := 4;
 constant TOTAL: integer := 16;

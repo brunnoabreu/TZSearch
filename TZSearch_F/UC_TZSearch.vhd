@@ -40,7 +40,7 @@ entity UC_TZSearch is
 		STARTPredMov		: out STD_LOGIC;
 		STARTFirstSearch	: out STD_LOGIC;
 		STARTRaster			: out STD_LOGIC;
-		chooseMode			: out STD_LOGIC;
+		chooseMode			: out STD_LOGIC; --DECIDE ENTRE FIRST E REFINEMENT SEARCH
 		loadSearchCenter	: out STD_LOGIC;
 		loadBestVecs		: out STD_LOGIC;
 		sel_TZ_stage		: out STD_LOGIC_VECTOR(1 downto 0);
@@ -83,14 +83,12 @@ begin
 		when s_PredMov =>
 			STARTPredMov <= '1';
 			loadSearchCenter <= '1';
-			loadBestVecs <= '0';
+			loadBestVecs <= '1';
 			sel_TZ_stage <= "00";
-			STARTFirstSearch <= '0';
 			chooseMode <= '0';
 			if(donePredMov = '1') then
 				STARTPredMov <= '1';
---				STARTFirstSearch <= '1';
-				loadSearchCenter <= '1';
+				loadSearchCenter <= '0';
 				sel_TZ_stage <= "00";
 				chooseMode <= '0';
 				nextState <= s_FirstSearch;
@@ -100,26 +98,27 @@ begin
 	
 		when s_FirstSearch =>
 			STARTFirstSearch <= '1';
+			loadBestVecs <= '1';
 			chooseMode <= '0';
 			STARTRaster <= '0';
 			sel_TZ_stage <= "01";
 			if(doneFirstSearch = '1') then
-				STARTFirstSearch <= '0';
-				loadBestVecs <= '1';
-				STARTRaster <= '1';
-				sel_TZ_stage <= "10";
+				STARTFirstSearch <= '1';
+				loadBestVecs <= '0';
+				STARTRaster <= '0';
+				sel_TZ_stage <= "01";
 				nextState <= s_Raster;
 			end if;
 		
 		when s_Raster =>
-			STARTRaster <= '1';
 			STARTFirstSearch <= '0';
+			STARTRaster <= '1';
+			loadBestVecs <= '1';
 			sel_TZ_stage <= "10";
 			chooseMode <= '0';
 			if(doneRaster = '1') then
-				STARTRaster <= '0';
-				STARTFirstSearch <= '1';
-				sel_TZ_stage <= "11";
+				STARTRaster <= '1';
+				sel_TZ_stage <= "10";
 				chooseMode <= '1';
 				nextState <= s_RefinementSearch;
 			end if;
@@ -127,7 +126,7 @@ begin
 		when s_RefinementSearch =>
 			STARTFirstSearch <= '1';
 			chooseMode <= '1';
-			sel_TZ_stage <= "11";
+			sel_TZ_stage <= "01";
 			if(doneFirstSearch = '1') then
 				STARTFirstSearch <= '0';
 				chooseMode <= '0';

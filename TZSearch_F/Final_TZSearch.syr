@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.44 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.45 secs
  
 --> Reading design: Final_TZSearch.prj
 
@@ -105,49 +105,49 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\STD_SAD.vhd" into library work
+Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\STD_SAD.vhd" into library work
 Parsing package <STD_SAD>.
 Parsing package body <STD_SAD>.
-Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\genericSub.vhd" into library work
+Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\genericSub.vhd" into library work
 Parsing entity <genericSub>.
 Parsing architecture <Behavioral> of entity <genericsub>.
-Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\genericAdder.vhd" into library work
+Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\genericAdder.vhd" into library work
 Parsing entity <genericAdder>.
 Parsing architecture <Behavioral> of entity <genericadder>.
-Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\CircularBuffer_Datapath.vhd" into library work
+Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\CircularBuffer_Datapath.vhd" into library work
 Parsing entity <CircularBuffer_Datapath>.
 Parsing architecture <Behavioral> of entity <circularbuffer_datapath>.
-Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\blck4x4.vhd" into library work
+Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\blck4x4.vhd" into library work
 Parsing entity <blck4x4>.
 Parsing architecture <Behavioral> of entity <blck4x4>.
-Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\UC_TZSearch.vhd" into library work
+Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\UC_TZSearch.vhd" into library work
 Parsing entity <UC_TZSearch>.
 Parsing architecture <Behavioral> of entity <uc_tzsearch>.
-Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\UC_SAD.vhd" into library work
+Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\UC_SAD.vhd" into library work
 Parsing entity <UC_SAD>.
 Parsing architecture <Behavioral> of entity <uc_sad>.
-Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\UC_Raster.vhd" into library work
+Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\UC_Raster.vhd" into library work
 Parsing entity <UC_Raster>.
 Parsing architecture <Behavioral> of entity <uc_raster>.
-Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\UC_PredMov.vhd" into library work
+Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\UC_PredMov.vhd" into library work
 Parsing entity <UC_PredMov>.
 Parsing architecture <Behavioral> of entity <uc_predmov>.
-Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\UC_MainFirst.vhd" into library work
+Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\UC_MainFirst.vhd" into library work
 Parsing entity <UC_MainFirst>.
 Parsing architecture <Behavioral> of entity <uc_mainfirst>.
-Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\SAD4x4_Datapath.vhd" into library work
+Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\SAD4x4_Datapath.vhd" into library work
 Parsing entity <Datapath>.
 Parsing architecture <Behavioral> of entity <datapath>.
-Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\Datapath_Raster.vhd" into library work
+Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Datapath_Raster.vhd" into library work
 Parsing entity <Datapath_Raster>.
 Parsing architecture <Behavioral> of entity <datapath_raster>.
-Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\Datapath_FirstSearch.vhd" into library work
+Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Datapath_FirstSearch.vhd" into library work
 Parsing entity <Datapath_FirstSearch>.
 Parsing architecture <Behavioral> of entity <datapath_firstsearch>.
-Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\DatapathPredVec.vhd" into library work
+Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\DatapathPredVec.vhd" into library work
 Parsing entity <DatapathPredVec>.
 Parsing architecture <Behavioral> of entity <datapathpredvec>.
-Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\Final_TZSearch.vhd" into library work
+Parsing VHDL file "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Final_TZSearch.vhd" into library work
 Parsing entity <Final_TZSearch>.
 Parsing architecture <Behavioral> of entity <final_tzsearch>.
 
@@ -184,15 +184,16 @@ Elaborating entity <UC_Raster> (architecture <Behavioral>) from library <work>.
 Elaborating entity <UC_PredMov> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <Datapath_FirstSearch> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:1127 - "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\Datapath_FirstSearch.vhd" Line 238: Assignment to regborderleft ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Datapath_FirstSearch.vhd" Line 237: Assignment to regborderleft ignored, since the identifier is never used
 
 Elaborating entity <CircularBuffer_Datapath> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:634 - "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\Datapath_FirstSearch.vhd" Line 99: Net <doneRest> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Datapath_FirstSearch.vhd" Line 98: Net <doneRest> does not have a driver.
 
 Elaborating entity <Datapath_Raster> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:1127 - "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\Datapath_Raster.vhd" Line 110: Assignment to reginitcenterx ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Datapath_Raster.vhd" Line 112: Assignment to reginitcenterx ignored, since the identifier is never used
 
 Elaborating entity <DatapathPredVec> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:1127 - "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\DatapathPredVec.vhd" Line 63: Assignment to regbestvecx ignored, since the identifier is never used
 
 Elaborating entity <UC_TZSearch> (architecture <Behavioral>) from library <work>.
 
@@ -201,14 +202,19 @@ Elaborating entity <UC_TZSearch> (architecture <Behavioral>) from library <work>
 =========================================================================
 
 Synthesizing Unit <Final_TZSearch>.
-    Related source file is "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\Final_TZSearch.vhd".
-INFO:Xst:3210 - "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\Final_TZSearch.vhd" line 396: Output port <SAD441> of the instance <Inst_Datapath> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\Final_TZSearch.vhd" line 396: Output port <SAD442> of the instance <Inst_Datapath> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\Final_TZSearch.vhd" line 396: Output port <SAD443> of the instance <Inst_Datapath> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\Final_TZSearch.vhd" line 396: Output port <SAD444> of the instance <Inst_Datapath> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\Final_TZSearch.vhd" line 396: Output port <SAD481> of the instance <Inst_Datapath> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\Final_TZSearch.vhd" line 396: Output port <SAD482> of the instance <Inst_Datapath> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\Final_TZSearch.vhd" line 415: Output port <done> of the instance <Inst_SAD_UC> is unconnected or connected to loadless signal.
+    Related source file is "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Final_TZSearch.vhd".
+INFO:Xst:3210 - "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Final_TZSearch.vhd" line 409: Output port <SAD441> of the instance <Inst_Datapath> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Final_TZSearch.vhd" line 409: Output port <SAD442> of the instance <Inst_Datapath> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Final_TZSearch.vhd" line 409: Output port <SAD443> of the instance <Inst_Datapath> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Final_TZSearch.vhd" line 409: Output port <SAD444> of the instance <Inst_Datapath> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Final_TZSearch.vhd" line 409: Output port <SAD481> of the instance <Inst_Datapath> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Final_TZSearch.vhd" line 409: Output port <SAD482> of the instance <Inst_Datapath> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Final_TZSearch.vhd" line 428: Output port <done> of the instance <Inst_SAD_UC> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Final_TZSearch.vhd" line 505: Output port <loadBetterCenter> of the instance <Inst_UC_PredMov> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Final_TZSearch.vhd" line 517: Output port <vecFound> of the instance <Inst_Datapath_FirstSearch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Final_TZSearch.vhd" line 517: Output port <byPassVecFound> of the instance <Inst_Datapath_FirstSearch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Final_TZSearch.vhd" line 599: Output port <loadBestVecs> of the instance <Inst_TZSearch> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <regis8x8or16x4>.
     Found 1-bit register for signal <dirtyBitByPass1>.
     Found 1-bit register for signal <dirtyBitByPass2>.
     Found 1-bit register for signal <dirtyBitByPass3>.
@@ -219,26 +225,27 @@ INFO:Xst:3210 - "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\Final_TZSearch.vh
     Found 1-bit register for signal <dirtyBitByPass8>.
     Found 1-bit register for signal <dirtyBitByPass9>.
     Found 1-bit register for signal <dirtyBitByPass10>.
-    Found 1-bit register for signal <regis8x8or16x4>.
     Found 20-bit register for signal <regBestSAD>.
+    Found 7-bit register for signal <regWidthPU>.
+    Found 7-bit register for signal <regHeightPU>.
     Found 8-bit register for signal <regCenterx>.
     Found 8-bit register for signal <regCenterY>.
     Found 8-bit register for signal <bestVecX>.
     Found 8-bit register for signal <bestVecY>.
-    Found 1-bit 4-to-1 multiplexer for signal <middleWaitCycles> created at line 285.
-    Found 1-bit 4-to-1 multiplexer for signal <middleDirtyBit> created at line 286.
-    Found 1-bit 4-to-1 multiplexer for signal <muxstart2> created at line 291.
+    Found 1-bit 4-to-1 multiplexer for signal <middleWaitCycles> created at line 286.
+    Found 1-bit 4-to-1 multiplexer for signal <middleDirtyBit> created at line 287.
+    Found 1-bit 4-to-1 multiplexer for signal <muxstart2> created at line 292.
     Found 8-bit 4-to-1 multiplexer for signal <curVecX> created at line 51.
     Found 8-bit 4-to-1 multiplexer for signal <curVecY> created at line 52.
-    Found 20-bit comparator greater for signal <flagBetter> created at line 337
+    Found 20-bit comparator greater for signal <flagBetter> created at line 344
     Summary:
-	inferred  63 D-type flip-flop(s).
+	inferred  77 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-	inferred   7 Multiplexer(s).
+	inferred   9 Multiplexer(s).
 Unit <Final_TZSearch> synthesized.
 
 Synthesizing Unit <Datapath>.
-    Related source file is "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\SAD4x4_Datapath.vhd".
+    Related source file is "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\SAD4x4_Datapath.vhd".
     Found 8-bit register for signal <matsA<0><0><1>>.
     Found 8-bit register for signal <matsA<0><0><2>>.
     Found 8-bit register for signal <matsA<0><0><3>>.
@@ -401,7 +408,7 @@ Synthesizing Unit <Datapath>.
 Unit <Datapath> synthesized.
 
 Synthesizing Unit <blck4x4>.
-    Related source file is "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\blck4x4.vhd".
+    Related source file is "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\blck4x4.vhd".
     Found 8-bit register for signal <regSubVec<1>>.
     Found 8-bit register for signal <regSubVec<2>>.
     Found 8-bit register for signal <regSubVec<3>>.
@@ -438,7 +445,7 @@ Synthesizing Unit <blck4x4>.
 Unit <blck4x4> synthesized.
 
 Synthesizing Unit <genericSub>.
-    Related source file is "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\genericSub.vhd".
+    Related source file is "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\genericSub.vhd".
     Found 9-bit subtractor for signal <sig_C> created at line 45.
     Found 8-bit subtractor for signal <not_sig_C<7:0>> created at line 45.
     Summary:
@@ -447,7 +454,7 @@ Synthesizing Unit <genericSub>.
 Unit <genericSub> synthesized.
 
 Synthesizing Unit <genericAdder_1>.
-    Related source file is "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\genericAdder.vhd".
+    Related source file is "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\genericAdder.vhd".
         widthX = 8
     Found 9-bit adder for signal <c> created at line 47.
     Summary:
@@ -455,7 +462,7 @@ Synthesizing Unit <genericAdder_1>.
 Unit <genericAdder_1> synthesized.
 
 Synthesizing Unit <genericAdder_2>.
-    Related source file is "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\genericAdder.vhd".
+    Related source file is "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\genericAdder.vhd".
         widthX = 9
     Found 10-bit adder for signal <c> created at line 47.
     Summary:
@@ -463,7 +470,7 @@ Synthesizing Unit <genericAdder_2>.
 Unit <genericAdder_2> synthesized.
 
 Synthesizing Unit <genericAdder_3>.
-    Related source file is "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\genericAdder.vhd".
+    Related source file is "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\genericAdder.vhd".
         widthX = 10
     Found 11-bit adder for signal <c> created at line 47.
     Summary:
@@ -471,7 +478,7 @@ Synthesizing Unit <genericAdder_3>.
 Unit <genericAdder_3> synthesized.
 
 Synthesizing Unit <genericAdder_4>.
-    Related source file is "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\genericAdder.vhd".
+    Related source file is "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\genericAdder.vhd".
         widthX = 11
     Found 12-bit adder for signal <c> created at line 47.
     Summary:
@@ -479,7 +486,7 @@ Synthesizing Unit <genericAdder_4>.
 Unit <genericAdder_4> synthesized.
 
 Synthesizing Unit <genericAdder_5>.
-    Related source file is "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\genericAdder.vhd".
+    Related source file is "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\genericAdder.vhd".
         widthX = 12
     Found 13-bit adder for signal <c> created at line 47.
     Summary:
@@ -487,7 +494,7 @@ Synthesizing Unit <genericAdder_5>.
 Unit <genericAdder_5> synthesized.
 
 Synthesizing Unit <genericAdder_6>.
-    Related source file is "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\genericAdder.vhd".
+    Related source file is "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\genericAdder.vhd".
         widthX = 13
     Found 14-bit adder for signal <c> created at line 47.
     Summary:
@@ -495,7 +502,7 @@ Synthesizing Unit <genericAdder_6>.
 Unit <genericAdder_6> synthesized.
 
 Synthesizing Unit <UC_SAD>.
-    Related source file is "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\UC_SAD.vhd".
+    Related source file is "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\UC_SAD.vhd".
 WARNING:Xst:647 - Input <heightPU> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <widthPU> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 4-bit register for signal <state>.
@@ -516,9 +523,9 @@ WARNING:Xst:737 - Found 1-bit latch for signal <nextState<0>>. Latches may be ge
 Unit <UC_SAD> synthesized.
 
 Synthesizing Unit <UC_MainFirst>.
-    Related source file is "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\UC_MainFirst.vhd".
+    Related source file is "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\UC_MainFirst.vhd".
     Found 7-bit register for signal <state>.
-    Found 128x27-bit Read Only RAM for signal <_n1086>
+    Found 128x28-bit Read Only RAM for signal <_n0904>
 WARNING:Xst:737 - Found 1-bit latch for signal <loadByPassVecFound>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <incRegPUsFinished>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <loadregNumPUsLevel>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -560,33 +567,41 @@ WARNING:Xst:737 - Found 1-bit latch for signal <loadByPassOutOfAnyBound>. Latche
 	inferred   1 RAM(s).
 	inferred   7 D-type flip-flop(s).
 	inferred  37 Latch(s).
-	inferred  98 Multiplexer(s).
+	inferred 106 Multiplexer(s).
 Unit <UC_MainFirst> synthesized.
 
 Synthesizing Unit <UC_Raster>.
-    Related source file is "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\UC_Raster.vhd".
+    Related source file is "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\UC_Raster.vhd".
+    Found 1-bit register for signal <dirtyBitByPass1>.
+    Found 1-bit register for signal <dirtyBitByPass2>.
+    Found 1-bit register for signal <dirtyBitByPass3>.
+    Found 1-bit register for signal <dirtyBitByPass4>.
+    Found 1-bit register for signal <dirtyBitByPass5>.
+    Found 1-bit register for signal <dirtyBitByPass6>.
+    Found 1-bit register for signal <dirtyBitByPass7>.
+    Found 1-bit register for signal <dirtyBitByPass8>.
     Found 4-bit register for signal <state>.
-    Found 16x1-bit Read Only RAM for signal <state[3]_GND_68_o_Mux_16_o>
-    Found 16x1-bit Read Only RAM for signal <state[3]_GND_69_o_Mux_18_o>
-    Found 16x1-bit Read Only RAM for signal <state[3]_GND_70_o_Mux_20_o>
-    Found 16x1-bit Read Only RAM for signal <state[3]_GND_71_o_Mux_22_o>
-    Found 16x1-bit Read Only RAM for signal <state[3]_GND_72_o_Mux_24_o>
-    Found 16x1-bit Read Only RAM for signal <state[3]_GND_75_o_Mux_30_o>
+    Found 16x1-bit Read Only RAM for signal <state[3]_GND_70_o_Mux_16_o>
+    Found 16x1-bit Read Only RAM for signal <state[3]_GND_71_o_Mux_18_o>
+    Found 16x1-bit Read Only RAM for signal <state[3]_GND_72_o_Mux_20_o>
+    Found 16x1-bit Read Only RAM for signal <state[3]_GND_73_o_Mux_22_o>
+    Found 16x1-bit Read Only RAM for signal <state[3]_GND_74_o_Mux_24_o>
+    Found 16x1-bit Read Only RAM for signal <state[3]_GND_77_o_Mux_30_o>
     Found 16x1-bit Read Only RAM for signal <state[3]_PWR_67_o_Mux_31_o>
     Found 16x1-bit Read Only RAM for signal <state[3]_PWR_76_o_Mux_32_o>
     Found 16x1-bit Read Only RAM for signal <state[3]_nextState[3]_Mux_33_o>
     Found 16x1-bit Read Only RAM for signal <state[3]_nextState[2]_Mux_35_o>
     Found 16x1-bit Read Only RAM for signal <state[3]_nextState[1]_Mux_37_o>
     Found 16x1-bit Read Only RAM for signal <state[3]_nextState[0]_Mux_39_o>
-    Found 16x1-bit Read Only RAM for signal <state[3]_GND_81_o_Mux_42_o>
+    Found 16x1-bit Read Only RAM for signal <state[3]_GND_83_o_Mux_42_o>
     Found 4x1-bit Read Only RAM for signal <state[3]_initData_Mux_17_o>
-    Found 8x3-bit Read Only RAM for signal <_n0092>
+    Found 8x3-bit Read Only RAM for signal <_n0101>
 WARNING:Xst:737 - Found 1-bit latch for signal <START2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <initData>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <initIncrement>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <incRegX>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <waitCycles>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <dirtyBit>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <auxDirtyBit>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <sendToMem>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <done>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <nextState<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -596,20 +611,20 @@ WARNING:Xst:737 - Found 1-bit latch for signal <nextState<0>>. Latches may be ge
 WARNING:Xst:737 - Found 1-bit latch for signal <rearrangeVecMems>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred  15 RAM(s).
-	inferred   4 D-type flip-flop(s).
+	inferred  12 D-type flip-flop(s).
 	inferred  13 Latch(s).
 	inferred   9 Multiplexer(s).
 Unit <UC_Raster> synthesized.
 
 Synthesizing Unit <UC_PredMov>.
-    Related source file is "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\UC_PredMov.vhd".
+    Related source file is "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\UC_PredMov.vhd".
     Found 3-bit register for signal <state>.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 6                                              |
     | Transitions        | 10                                             |
     | Inputs             | 1                                              |
-    | Outputs            | 6                                              |
+    | Outputs            | 8                                              |
     | Clock              | CLK (rising_edge)                              |
     | Reset              | START (negative)                               |
     | Reset type         | asynchronous                                   |
@@ -619,15 +634,15 @@ Synthesizing Unit <UC_PredMov>.
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
 WARNING:Xst:737 - Found 1-bit latch for signal <START2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <waitCycles>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <done>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
-	inferred   3 Latch(s).
+	inferred   2 Latch(s).
+	inferred   1 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <UC_PredMov> synthesized.
 
 Synthesizing Unit <Datapath_FirstSearch>.
-    Related source file is "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\Datapath_FirstSearch.vhd".
+    Related source file is "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Datapath_FirstSearch.vhd".
 WARNING:Xst:647 - Input <rstRegNumLevels> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:653 - Signal <doneRest> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 1-bit register for signal <regLoadedBetter>.
@@ -676,27 +691,27 @@ WARNING:Xst:653 - Signal <doneRest> is used but never assigned. This sourceless 
     Found 5-bit register for signal <regPUsFinished>.
     Found 5-bit register for signal <regNumPUsLevel>.
     Found 3-bit register for signal <regDoAgain>.
-    Found 9-bit subtractor for signal <n0176> created at line 235.
-    Found 9-bit subtractor for signal <n0177> created at line 236.
-    Found 8-bit adder for signal <regCurVecX[7]_sumValueX[7]_add_31_OUT> created at line 186.
-    Found 8-bit adder for signal <regCurVecY[7]_sumValueY[7]_add_34_OUT> created at line 189.
-    Found 2-bit adder for signal <regNumLevels[1]_GND_86_o_add_50_OUT> created at line 217.
-    Found 8-bit adder for signal <initCenterX[7]_regSearchRange[7]_add_56_OUT> created at line 294.
-    Found 8-bit adder for signal <initCenterY[7]_regSearchRange[7]_add_57_OUT> created at line 295.
-    Found 8-bit adder for signal <GND_86_o_GND_86_o_add_59_OUT> created at line 297.
-    Found 8-bit adder for signal <GND_86_o_GND_86_o_add_61_OUT> created at line 298.
-    Found 3-bit adder for signal <regDoAgain[2]_GND_86_o_add_62_OUT> created at line 305.
-    Found 5-bit adder for signal <regPUsFinished[4]_GND_86_o_add_85_OUT> created at line 393.
-    Found 8-bit subtractor for signal <latency> created at line 106.
-    Found 8-bit subtractor for signal <GND_86_o_GND_86_o_sub_31_OUT<7:0>> created at line 187.
-    Found 8-bit subtractor for signal <GND_86_o_GND_86_o_sub_34_OUT<7:0>> created at line 190.
+    Found 9-bit subtractor for signal <n0176> created at line 234.
+    Found 9-bit subtractor for signal <n0177> created at line 235.
+    Found 8-bit adder for signal <regCurVecX[7]_sumValueX[7]_add_31_OUT> created at line 185.
+    Found 8-bit adder for signal <regCurVecY[7]_sumValueY[7]_add_34_OUT> created at line 188.
+    Found 2-bit adder for signal <regNumLevels[1]_GND_87_o_add_50_OUT> created at line 216.
+    Found 8-bit adder for signal <initCenterX[7]_regSearchRange[7]_add_56_OUT> created at line 289.
+    Found 8-bit adder for signal <initCenterY[7]_regSearchRange[7]_add_57_OUT> created at line 290.
+    Found 8-bit adder for signal <GND_87_o_GND_87_o_add_59_OUT> created at line 292.
+    Found 8-bit adder for signal <GND_87_o_GND_87_o_add_61_OUT> created at line 293.
+    Found 3-bit adder for signal <regDoAgain[2]_GND_87_o_add_62_OUT> created at line 300.
+    Found 5-bit adder for signal <regPUsFinished[4]_GND_87_o_add_85_OUT> created at line 388.
+    Found 8-bit subtractor for signal <latency> created at line 105.
+    Found 8-bit subtractor for signal <GND_87_o_GND_87_o_sub_31_OUT<7:0>> created at line 186.
+    Found 8-bit subtractor for signal <GND_87_o_GND_87_o_sub_34_OUT<7:0>> created at line 189.
     Found 8-bit subtractor for signal <n0343> created at line 0.
     Found 8-bit subtractor for signal <n0345> created at line 0.
-    Found 8-bit subtractor for signal <GND_86_o_GND_86_o_sub_78_OUT<7:0>> created at line 353.
-    Found 7x7-bit multiplier for signal <multHW> created at line 153.
+    Found 8-bit subtractor for signal <GND_87_o_GND_87_o_sub_78_OUT<7:0>> created at line 348.
+    Found 7x7-bit multiplier for signal <multHW> created at line 152.
     Found 4x5-bit Read Only RAM for signal <numCandidatesLevel>
-    Found 2-bit comparator equal for signal <hasPassedNumLevels> created at line 209
-    Found 5-bit comparator equal for signal <hasPassedPUsLevel> created at line 214
+    Found 2-bit comparator equal for signal <hasPassedNumLevels> created at line 208
+    Found 5-bit comparator equal for signal <hasPassedPUsLevel> created at line 213
     Summary:
 	inferred   1 RAM(s).
 	inferred   1 Multiplier(s).
@@ -707,7 +722,7 @@ WARNING:Xst:653 - Signal <doneRest> is used but never assigned. This sourceless 
 Unit <Datapath_FirstSearch> synthesized.
 
 Synthesizing Unit <CircularBuffer_Datapath>.
-    Related source file is "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\CircularBuffer_Datapath.vhd".
+    Related source file is "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\CircularBuffer_Datapath.vhd".
     Found 1-bit register for signal <regVecFound>.
     Found 8-bit register for signal <regCurVecXByPass>.
     Found 8-bit register for signal <regCurVecYByPass>.
@@ -728,7 +743,7 @@ Synthesizing Unit <CircularBuffer_Datapath>.
     Found 17-bit register for signal <cache<13>>.
     Found 17-bit register for signal <cache<15>>.
     Found 4-bit register for signal <index>.
-    Found 4-bit adder for signal <index[3]_GND_87_o_add_17_OUT> created at line 78.
+    Found 4-bit adder for signal <index[3]_GND_88_o_add_17_OUT> created at line 78.
     Found 17-bit comparator not equal for signal <bitsFound<0>> created at line 88
     Found 17-bit comparator not equal for signal <bitsFound<1>> created at line 88
     Found 17-bit comparator not equal for signal <bitsFound<2>> created at line 88
@@ -752,19 +767,18 @@ Synthesizing Unit <CircularBuffer_Datapath>.
 Unit <CircularBuffer_Datapath> synthesized.
 
 Synthesizing Unit <Datapath_Raster>.
-    Related source file is "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\Datapath_Raster.vhd".
+    Related source file is "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\Datapath_Raster.vhd".
+WARNING:Xst:647 - Input <bestInitialX> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <bestInitialY> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <foundBetterSAD> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <regIsOutOfXBound>.
     Found 1-bit register for signal <regIsOutOfYBound>.
     Found 8-bit register for signal <regBorderLeft>.
     Found 8-bit register for signal <regBorderRight>.
     Found 8-bit register for signal <regBorderUp>.
     Found 8-bit register for signal <regBorderDown>.
-    Found 8-bit register for signal <regBestInitialX>.
-    Found 8-bit register for signal <regBestInitialY>.
     Found 8-bit register for signal <regLatency>.
     Found 8-bit register for signal <regSubLatency>.
-    Found 8-bit register for signal <curRegBestVecX>.
-    Found 8-bit register for signal <curRegBestVecY>.
     Found 8-bit register for signal <regXMem>.
     Found 8-bit register for signal <regYMem>.
     Found 8-bit register for signal <regXMem2>.
@@ -791,31 +805,31 @@ Synthesizing Unit <Datapath_Raster>.
     Found 8-bit register for signal <currentYVecByPass7>.
     Found 8-bit register for signal <currentYVecByPass8>.
     Found 8-bit register for signal <regSearchRange>.
-    Found 9-bit subtractor for signal <n0136> created at line 100.
-    Found 9-bit subtractor for signal <n0137> created at line 101.
-    Found 8-bit adder for signal <initCenterX[7]_regSearchRange[7]_add_10_OUT> created at line 150.
-    Found 8-bit adder for signal <initCenterY[7]_regSearchRange[7]_add_11_OUT> created at line 151.
-    Found 8-bit adder for signal <regYMem[7]_GND_89_o_add_14_OUT> created at line 156.
-    Found 8-bit adder for signal <regXMem[7]_GND_89_o_add_25_OUT> created at line 184.
-    Found 8-bit adder for signal <regBorderLeft[7]_GND_89_o_add_28_OUT> created at line 190.
-    Found 8-bit adder for signal <regBorderLeft[7]_GND_89_o_add_30_OUT> created at line 192.
-    Found 8-bit adder for signal <regYMem3[7]_GND_89_o_add_31_OUT> created at line 193.
+    Found 9-bit subtractor for signal <n0126> created at line 100.
+    Found 9-bit subtractor for signal <n0127> created at line 101.
+    Found 8-bit adder for signal <initCenterX[7]_regSearchRange[7]_add_10_OUT> created at line 152.
+    Found 8-bit adder for signal <initCenterY[7]_regSearchRange[7]_add_11_OUT> created at line 153.
+    Found 8-bit adder for signal <regYMem[7]_GND_90_o_add_14_OUT> created at line 158.
+    Found 8-bit adder for signal <regXMem[7]_GND_90_o_add_25_OUT> created at line 186.
+    Found 8-bit adder for signal <regBorderLeft[7]_GND_90_o_add_28_OUT> created at line 192.
+    Found 8-bit adder for signal <regBorderLeft[7]_GND_90_o_add_30_OUT> created at line 194.
+    Found 8-bit adder for signal <regYMem3[7]_GND_90_o_add_31_OUT> created at line 195.
     Found 8-bit subtractor for signal <latency> created at line 68.
-    Found 8-bit subtractor for signal <GND_89_o_GND_89_o_sub_9_OUT<7:0>> created at line 146.
-    Found 8-bit subtractor for signal <GND_89_o_GND_89_o_sub_10_OUT<7:0>> created at line 147.
-    Found 8-bit subtractor for signal <GND_89_o_GND_89_o_sub_13_OUT<7:0>> created at line 153.
-    Found 8-bit subtractor for signal <GND_89_o_GND_89_o_sub_14_OUT<7:0>> created at line 154.
-    Found 8-bit subtractor for signal <GND_89_o_GND_89_o_sub_20_OUT<7:0>> created at line 166.
+    Found 8-bit subtractor for signal <GND_90_o_GND_90_o_sub_9_OUT<7:0>> created at line 148.
+    Found 8-bit subtractor for signal <GND_90_o_GND_90_o_sub_10_OUT<7:0>> created at line 149.
+    Found 8-bit subtractor for signal <GND_90_o_GND_90_o_sub_13_OUT<7:0>> created at line 155.
+    Found 8-bit subtractor for signal <GND_90_o_GND_90_o_sub_14_OUT<7:0>> created at line 156.
+    Found 8-bit subtractor for signal <GND_90_o_GND_90_o_sub_20_OUT<7:0>> created at line 168.
     Found 7x7-bit multiplier for signal <multHW> created at line 90.
     Summary:
 	inferred   1 Multiplier(s).
 	inferred  14 Adder/Subtractor(s).
-	inferred 290 D-type flip-flop(s).
-	inferred  15 Multiplexer(s).
+	inferred 258 D-type flip-flop(s).
+	inferred  13 Multiplexer(s).
 Unit <Datapath_Raster> synthesized.
 
 Synthesizing Unit <DatapathPredVec>.
-    Related source file is "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\DatapathPredVec.vhd".
+    Related source file is "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\DatapathPredVec.vhd".
     Found 8-bit register for signal <inVecXByPass2>.
     Found 8-bit register for signal <inVecXByPass3>.
     Found 8-bit register for signal <inVecXByPass4>.
@@ -833,26 +847,27 @@ Synthesizing Unit <DatapathPredVec>.
     Found 8-bit register for signal <inVecYByPass7>.
     Found 8-bit register for signal <inVecYByPass8>.
     Found 8-bit register for signal <inVecYByPass9>.
-    Found 8-bit register for signal <regBestVecX>.
-    Found 8-bit register for signal <regBestVecY>.
     Found 8-bit register for signal <inVecXByPass1>.
     Summary:
-	inferred 160 D-type flip-flop(s).
+	inferred 144 D-type flip-flop(s).
 Unit <DatapathPredVec> synthesized.
 
 Synthesizing Unit <UC_TZSearch>.
-    Related source file is "C:\Users\Brunno\Desktop\TZSearch_F\TZSearch_F\UC_TZSearch.vhd".
+    Related source file is "C:\Users\Brunno\Desktop\TZSearch_Github\TZSearch\TZSearch_F\UC_TZSearch.vhd".
     Found 3-bit register for signal <state>.
+    Found 8x1-bit Read Only RAM for signal <state[2]_PWR_91_o_Mux_15_o>
     Found 8x1-bit Read Only RAM for signal <state[2]_PWR_92_o_Mux_17_o>
     Found 8x1-bit Read Only RAM for signal <state[2]_PWR_93_o_Mux_19_o>
     Found 8x1-bit Read Only RAM for signal <state[2]_PWR_94_o_Mux_21_o>
-    Found 8x1-bit Read Only RAM for signal <state[2]_X_88_o_Mux_28_o>
-    Found 8x1-bit Read Only RAM for signal <state[2]_PWR_98_o_Mux_29_o>
-    Found 8x1-bit Read Only RAM for signal <state[2]_X_88_o_Mux_34_o>
-    Found 8x1-bit Read Only RAM for signal <state[2]_X_88_o_Mux_36_o>
-    Found 8x1-bit Read Only RAM for signal <state[2]_X_88_o_Mux_38_o>
-    Found 4x1-bit Read Only RAM for signal <state[2]_X_88_o_Mux_32_o>
-    Found 1-bit 3-to-1 multiplexer for signal <state[2]_X_88_o_Mux_20_o> created at line 70.
+    Found 8x1-bit Read Only RAM for signal <state[2]_X_87_o_Mux_22_o>
+    Found 8x1-bit Read Only RAM for signal <state[2]_X_87_o_Mux_24_o>
+    Found 8x1-bit Read Only RAM for signal <state[2]_X_87_o_Mux_26_o>
+    Found 8x1-bit Read Only RAM for signal <state[2]_PWR_97_o_Mux_27_o>
+    Found 8x1-bit Read Only RAM for signal <state[2]_PWR_99_o_Mux_31_o>
+    Found 8x1-bit Read Only RAM for signal <state[2]_X_87_o_Mux_32_o>
+    Found 8x1-bit Read Only RAM for signal <state[2]_X_87_o_Mux_34_o>
+    Found 8x1-bit Read Only RAM for signal <state[2]_X_87_o_Mux_36_o>
+    Found 4x1-bit Read Only RAM for signal <state[2]_X_87_o_Mux_18_o>
 WARNING:Xst:737 - Found 1-bit latch for signal <STARTPredMov>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <STARTFirstSearch>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <STARTRaster>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -860,28 +875,29 @@ WARNING:Xst:737 - Found 1-bit latch for signal <chooseMode>. Latches may be gene
 WARNING:Xst:737 - Found 1-bit latch for signal <sel_TZ_stage<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <sel_TZ_stage<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <done>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <loadSearchCenter>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <loadBestVecs>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <nextState<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <nextState<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <nextState<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
-	inferred   9 RAM(s).
+	inferred  13 RAM(s).
 	inferred   3 D-type flip-flop(s).
-	inferred  11 Latch(s).
-	inferred  16 Multiplexer(s).
+	inferred  12 Latch(s).
+	inferred   6 Multiplexer(s).
 Unit <UC_TZSearch> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 27
- 128x27-bit single-port Read Only RAM                  : 1
+# RAMs                                                 : 31
+ 128x28-bit single-port Read Only RAM                  : 1
  16x1-bit single-port Read Only RAM                    : 13
  16x5-bit single-port Read Only RAM                    : 1
  4x1-bit single-port Read Only RAM                     : 2
  4x5-bit single-port Read Only RAM                     : 1
- 8x1-bit single-port Read Only RAM                     : 8
+ 8x1-bit single-port Read Only RAM                     : 12
  8x3-bit single-port Read Only RAM                     : 1
 # Multipliers                                          : 3
  7x7-bit multiplier                                    : 3
@@ -901,8 +917,8 @@ Macro Statistics
  8-bit subtractor                                      : 76
  9-bit adder                                           : 32
  9-bit subtractor                                      : 68
-# Registers                                            : 418
- 1-bit register                                        : 18
+# Registers                                            : 422
+ 1-bit register                                        : 26
  10-bit register                                       : 16
  11-bit register                                       : 8
  12-bit register                                       : 16
@@ -914,8 +930,8 @@ Macro Statistics
  3-bit register                                        : 2
  4-bit register                                        : 3
  5-bit register                                        : 2
- 7-bit register                                        : 1
- 8-bit register                                        : 293
+ 7-bit register                                        : 3
+ 8-bit register                                        : 287
  9-bit register                                        : 32
 # Latches                                              : 72
  1-bit latch                                           : 72
@@ -924,9 +940,8 @@ Macro Statistics
  2-bit comparator equal                                : 1
  20-bit comparator greater                             : 1
  5-bit comparator equal                                : 1
-# Multiplexers                                         : 252
+# Multiplexers                                         : 251
  1-bit 2-to-1 multiplexer                              : 153
- 1-bit 3-to-1 multiplexer                              : 1
  1-bit 4-to-1 multiplexer                              : 3
  2-bit 2-to-1 multiplexer                              : 1
  20-bit 2-to-1 multiplexer                             : 1
@@ -942,25 +957,9 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <waitCycles> (without init value) has a constant value of 0 in block <Inst_UC_PredMov>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1290 - Hierarchical block <Inst_Circ_Buffer> is unconnected in block <Inst_Datapath_FirstSearch>.
+   It will be removed from the design.
 WARNING:Xst:1710 - FF/Latch <waitCycles> (without init value) has a constant value of 0 in block <Inst_UC_Raster>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <incRegNumLevels> (without init value) has a constant value of 0 in block <Inst_UC_MainFirst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cache_15_0> (without init value) has a constant value of 1 in block <Inst_Circ_Buffer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cache_13_0> (without init value) has a constant value of 1 in block <Inst_Circ_Buffer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cache_12_0> (without init value) has a constant value of 1 in block <Inst_Circ_Buffer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cache_0_0> (without init value) has a constant value of 1 in block <Inst_Circ_Buffer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cache_14_0> (without init value) has a constant value of 1 in block <Inst_Circ_Buffer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cache_11_0> (without init value) has a constant value of 1 in block <Inst_Circ_Buffer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cache_9_0> (without init value) has a constant value of 1 in block <Inst_Circ_Buffer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cache_8_0> (without init value) has a constant value of 1 in block <Inst_Circ_Buffer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cache_10_0> (without init value) has a constant value of 1 in block <Inst_Circ_Buffer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cache_7_0> (without init value) has a constant value of 1 in block <Inst_Circ_Buffer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cache_6_0> (without init value) has a constant value of 1 in block <Inst_Circ_Buffer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cache_4_0> (without init value) has a constant value of 1 in block <Inst_Circ_Buffer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cache_3_0> (without init value) has a constant value of 1 in block <Inst_Circ_Buffer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cache_5_0> (without init value) has a constant value of 1 in block <Inst_Circ_Buffer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cache_2_0> (without init value) has a constant value of 1 in block <Inst_Circ_Buffer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cache_1_0> (without init value) has a constant value of 1 in block <Inst_Circ_Buffer>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <CircularBuffer_Datapath>.
 The following registers are absorbed into counter <index>: 1 register on signal <index>.
@@ -988,12 +987,12 @@ INFO:Xst:3217 - HDL ADVISOR - Register <regNumPUsLevel> currently described with
 Unit <Datapath_FirstSearch> synthesized (advanced).
 
 Synthesizing (advanced) Unit <UC_MainFirst>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1086> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0904> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 128-word x 27-bit                   |          |
+    |     aspect ratio   | 128-word x 28-bit                   |          |
     |     weA            | connected to signal <GND>           | high     |
     |     addrA          | connected to signal <state>         |          |
     |     diA            | connected to signal <GND>           |          |
@@ -1002,7 +1001,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1086> will be implemented on LUTs 
 Unit <UC_MainFirst> synthesized (advanced).
 
 Synthesizing (advanced) Unit <UC_Raster>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_GND_68_o_Mux_16_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_GND_70_o_Mux_16_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -1013,7 +1012,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_GND_68_o_Mux_16_o> will be 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_GND_69_o_Mux_18_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_GND_71_o_Mux_18_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -1024,7 +1023,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_GND_69_o_Mux_18_o> will be 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_GND_70_o_Mux_20_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_GND_72_o_Mux_20_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -1035,7 +1034,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_GND_70_o_Mux_20_o> will be 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_GND_71_o_Mux_22_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_GND_73_o_Mux_22_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -1046,7 +1045,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_GND_71_o_Mux_22_o> will be 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_GND_72_o_Mux_24_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_GND_74_o_Mux_24_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -1057,7 +1056,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_GND_72_o_Mux_24_o> will be 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_GND_75_o_Mux_30_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_GND_77_o_Mux_30_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -1134,7 +1133,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_nextState[0]_Mux_39_o> will
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_GND_81_o_Mux_42_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_GND_83_o_Mux_42_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -1156,7 +1155,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[3]_initData_Mux_17_o> will be 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0092> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0101> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -1184,6 +1183,17 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0073> will be implemented on LUTs 
 Unit <UC_SAD> synthesized (advanced).
 
 Synthesizing (advanced) Unit <UC_TZSearch>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_PWR_91_o_Mux_15_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_PWR_92_o_Mux_17_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
@@ -1217,7 +1227,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_PWR_94_o_Mux_21_o> will be 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_X_88_o_Mux_28_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_X_87_o_Mux_22_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -1228,7 +1238,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_X_88_o_Mux_28_o> will be im
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_PWR_98_o_Mux_29_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_X_87_o_Mux_24_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -1239,7 +1249,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_PWR_98_o_Mux_29_o> will be 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_X_88_o_Mux_34_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_X_87_o_Mux_26_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -1250,7 +1260,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_X_88_o_Mux_34_o> will be im
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_X_88_o_Mux_36_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_PWR_97_o_Mux_27_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -1261,7 +1271,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_X_88_o_Mux_36_o> will be im
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_X_88_o_Mux_38_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_PWR_99_o_Mux_31_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -1272,7 +1282,40 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_X_88_o_Mux_38_o> will be im
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_X_88_o_Mux_32_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_X_87_o_Mux_32_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_X_87_o_Mux_34_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_X_87_o_Mux_36_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_state[2]_X_87_o_Mux_18_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -1289,13 +1332,13 @@ Unit <UC_TZSearch> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 27
- 128x27-bit single-port distributed Read Only RAM      : 1
+# RAMs                                                 : 31
+ 128x28-bit single-port distributed Read Only RAM      : 1
  16x1-bit single-port distributed Read Only RAM        : 13
  16x5-bit single-port distributed Read Only RAM        : 1
  4x1-bit single-port distributed Read Only RAM         : 2
  4x5-bit single-port distributed Read Only RAM         : 1
- 8x1-bit single-port distributed Read Only RAM         : 8
+ 8x1-bit single-port distributed Read Only RAM         : 12
  8x3-bit single-port distributed Read Only RAM         : 1
 # Multipliers                                          : 3
  7x7-bit multiplier                                    : 3
@@ -1317,18 +1360,17 @@ Macro Statistics
  5-bit up counter                                      : 1
 # Accumulators                                         : 1
  20-bit up loadable accumulator                        : 1
-# Registers                                            : 3499
- Flip-Flops                                            : 3499
+# Registers                                            : 3473
+ Flip-Flops                                            : 3473
 # Comparators                                          : 19
  17-bit comparator not equal                           : 16
  2-bit comparator equal                                : 1
  20-bit comparator greater                             : 1
  5-bit comparator equal                                : 1
-# Multiplexers                                         : 277
- 1-bit 2-to-1 multiplexer                              : 185
- 1-bit 3-to-1 multiplexer                              : 1
+# Multiplexers                                         : 282
+ 1-bit 2-to-1 multiplexer                              : 192
  1-bit 4-to-1 multiplexer                              : 3
- 8-bit 2-to-1 multiplexer                              : 86
+ 8-bit 2-to-1 multiplexer                              : 85
  8-bit 4-to-1 multiplexer                              : 2
 # FSMs                                                 : 1
 
@@ -1353,21 +1395,19 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_0_0> (without
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_12_0> (without init value) has a constant value of 1 in block <CircularBuffer_Datapath>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_13_0> (without init value) has a constant value of 1 in block <CircularBuffer_Datapath>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_15_0> (without init value) has a constant value of 1 in block <CircularBuffer_Datapath>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <incRegNumLevels> (without init value) has a constant value of 0 in block <UC_MainFirst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rstRegNumLevels> (without init value) has a constant value of 0 in block <UC_MainFirst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <waitCycles> (without init value) has a constant value of 0 in block <UC_Raster>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <waitCycles> (without init value) has a constant value of 0 in block <UC_PredMov>. This FF/Latch will be trimmed during the optimization process.
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <FSM_0> on signal <state[1:3]> with gray encoding.
+Optimizing FSM <Inst_UC_PredMov/FSM_0> on signal <state[1:3]> with user encoding.
 -----------------------
  State     | Encoding
 -----------------------
  idle      | 000
  s0        | 001
- s1        | 011
- s2        | 010
- s3        | 110
- statedone | 111
+ s1        | 010
+ s2        | 011
+ s3        | 100
+ statedone | 101
 -----------------------
 INFO:Xst:2261 - The FF/Latch <regNumPUsLevel_0> in Unit <Datapath_FirstSearch> is equivalent to the following FF/Latch, which will be removed : <regNumPUsLevel_1> 
 
@@ -1377,8 +1417,6 @@ Optimizing unit <Datapath> ...
 
 Optimizing unit <blck4x4> ...
 
-Optimizing unit <UC_SAD> ...
-
 Optimizing unit <Datapath_FirstSearch> ...
 
 Optimizing unit <CircularBuffer_Datapath> ...
@@ -1387,13 +1425,15 @@ Optimizing unit <Datapath_Raster> ...
 
 Optimizing unit <DatapathPredVec> ...
 
+Optimizing unit <UC_SAD> ...
+
 Optimizing unit <UC_MainFirst> ...
 
 Optimizing unit <UC_Raster> ...
 
+Optimizing unit <UC_PredMov> ...
+
 Optimizing unit <UC_TZSearch> ...
-WARNING:Xst:1710 - FF/Latch <Inst_Datapath_FirstSearch/regNumLevels_1> (without init value) has a constant value of 0 in block <Final_TZSearch>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_Datapath_FirstSearch/regNumLevels_0> (without init value) has a constant value of 0 in block <Final_TZSearch>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <Inst_Datapath/regByPass48_1_12> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_Datapath/regByPass48_1_11> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_Datapath/regByPass48_1_10> of sequential type is unconnected in block <Final_TZSearch>.
@@ -1590,58 +1630,314 @@ WARNING:Xst:2677 - Node <Inst_Datapath/regByPass441_1_3> of sequential type is u
 WARNING:Xst:2677 - Node <Inst_Datapath/regByPass441_1_2> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_Datapath/regByPass441_1_1> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_Datapath/regByPass441_1_0> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/regByPassVecFound> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/index_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/index_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/index_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/index_0> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecYByPass_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecYByPass_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecYByPass_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecYByPass_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecYByPass_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecYByPass_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecYByPass_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecYByPass_0> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecXByPass_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecXByPass_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecXByPass_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecXByPass_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecXByPass_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecXByPass_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecXByPass_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecXByPass_0> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regVecFound> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_SAD_UC/done> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Inst_Datapath_FirstSearch/regLoadedBetter> is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_UC_MainFirst/loadByPassVecFound> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_UC_MainFirst/writeCache> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_TZSearch/loadBestVecs> of sequential type is unconnected in block <Final_TZSearch>.
 INFO:Xst:2261 - The FF/Latch <Inst_Datapath_Raster/regBorderUp_0> in Unit <Final_TZSearch> is equivalent to the following FF/Latch, which will be removed : <Inst_Datapath_Raster/auxRegBorderDown_0> 
 INFO:Xst:2261 - The FF/Latch <Inst_Datapath_Raster/regBorderLeft_0> in Unit <Final_TZSearch> is equivalent to the following FF/Latch, which will be removed : <Inst_Datapath_Raster/auxRegBorderRight_0> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-INFO:Xst:2261 - The FF/Latch <Inst_Datapath_FirstSearch/regCurVecXByPass1_0> in Unit <Final_TZSearch> is equivalent to the following FF/Latch, which will be removed : <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecXByPass_0> 
-INFO:Xst:2261 - The FF/Latch <Inst_Datapath_FirstSearch/regCurVecXByPass1_1> in Unit <Final_TZSearch> is equivalent to the following FF/Latch, which will be removed : <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecXByPass_1> 
-INFO:Xst:2261 - The FF/Latch <Inst_Datapath_FirstSearch/regCurVecXByPass1_2> in Unit <Final_TZSearch> is equivalent to the following FF/Latch, which will be removed : <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecXByPass_2> 
-INFO:Xst:2261 - The FF/Latch <Inst_Datapath_FirstSearch/regCurVecXByPass1_3> in Unit <Final_TZSearch> is equivalent to the following FF/Latch, which will be removed : <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecXByPass_3> 
-INFO:Xst:2261 - The FF/Latch <Inst_Datapath_FirstSearch/regCurVecXByPass1_4> in Unit <Final_TZSearch> is equivalent to the following FF/Latch, which will be removed : <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecXByPass_4> 
-INFO:Xst:2261 - The FF/Latch <Inst_Datapath_FirstSearch/regCurVecXByPass1_5> in Unit <Final_TZSearch> is equivalent to the following FF/Latch, which will be removed : <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecXByPass_5> 
-INFO:Xst:2261 - The FF/Latch <Inst_Datapath_FirstSearch/regCurVecXByPass1_6> in Unit <Final_TZSearch> is equivalent to the following FF/Latch, which will be removed : <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecXByPass_6> 
-INFO:Xst:2261 - The FF/Latch <Inst_Datapath_FirstSearch/regCurVecXByPass1_7> in Unit <Final_TZSearch> is equivalent to the following FF/Latch, which will be removed : <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecXByPass_7> 
-INFO:Xst:2261 - The FF/Latch <Inst_Datapath_FirstSearch/regCurVecYByPass1_0> in Unit <Final_TZSearch> is equivalent to the following FF/Latch, which will be removed : <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecYByPass_0> 
-INFO:Xst:2261 - The FF/Latch <Inst_Datapath_FirstSearch/regCurVecYByPass1_1> in Unit <Final_TZSearch> is equivalent to the following FF/Latch, which will be removed : <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecYByPass_1> 
-INFO:Xst:2261 - The FF/Latch <Inst_Datapath_FirstSearch/regCurVecYByPass1_2> in Unit <Final_TZSearch> is equivalent to the following FF/Latch, which will be removed : <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecYByPass_2> 
-INFO:Xst:2261 - The FF/Latch <Inst_Datapath_FirstSearch/regCurVecYByPass1_3> in Unit <Final_TZSearch> is equivalent to the following FF/Latch, which will be removed : <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecYByPass_3> 
-INFO:Xst:2261 - The FF/Latch <Inst_Datapath_FirstSearch/regCurVecYByPass1_4> in Unit <Final_TZSearch> is equivalent to the following FF/Latch, which will be removed : <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecYByPass_4> 
-INFO:Xst:2261 - The FF/Latch <Inst_Datapath_FirstSearch/regCurVecYByPass1_5> in Unit <Final_TZSearch> is equivalent to the following FF/Latch, which will be removed : <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecYByPass_5> 
-INFO:Xst:2261 - The FF/Latch <Inst_Datapath_FirstSearch/regCurVecYByPass1_6> in Unit <Final_TZSearch> is equivalent to the following FF/Latch, which will be removed : <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecYByPass_6> 
-INFO:Xst:2261 - The FF/Latch <Inst_Datapath_FirstSearch/regCurVecYByPass1_7> in Unit <Final_TZSearch> is equivalent to the following FF/Latch, which will be removed : <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecYByPass_7> 
-Found area constraint ratio of 100 (+ 5) on block Final_TZSearch, actual ratio is 7.
+Found area constraint ratio of 100 (+ 5) on block Final_TZSearch, actual ratio is 6.
 
 Final Macro Processing ...
 
 Processing Unit <Final_TZSearch> :
-	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_7>.
-	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_6>.
-	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_5>.
-	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_4>.
-	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_3>.
-	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_2>.
-	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_1>.
-	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_0>.
-	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_7>.
-	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_6>.
-	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_5>.
-	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_4>.
-	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_3>.
-	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_2>.
-	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_1>.
-	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_0>.
-	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentYVecByPass8_7>.
-	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentYVecByPass8_6>.
-	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentYVecByPass8_5>.
-	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentYVecByPass8_4>.
-	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentYVecByPass8_3>.
-	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentYVecByPass8_2>.
-	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentYVecByPass8_1>.
-	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentYVecByPass8_0>.
+	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_7>.
+	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_6>.
+	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_5>.
+	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_4>.
+	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_3>.
+	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_2>.
+	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_1>.
+	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_0>.
+	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_7>.
+	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_6>.
+	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_5>.
+	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_4>.
+	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_3>.
+	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_2>.
+	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_1>.
+	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_0>.
 	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentXVecByPass8_7>.
 	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentXVecByPass8_6>.
 	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentXVecByPass8_5>.
@@ -1650,6 +1946,14 @@ Processing Unit <Final_TZSearch> :
 	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentXVecByPass8_2>.
 	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentXVecByPass8_1>.
 	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentXVecByPass8_0>.
+	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentYVecByPass8_7>.
+	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentYVecByPass8_6>.
+	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentYVecByPass8_5>.
+	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentYVecByPass8_4>.
+	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentYVecByPass8_3>.
+	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentYVecByPass8_2>.
+	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentYVecByPass8_1>.
+	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentYVecByPass8_0>.
 	Found 9-bit shift register for signal <Inst_DatapathPredVec/inVecYByPass9_7>.
 	Found 9-bit shift register for signal <Inst_DatapathPredVec/inVecYByPass9_6>.
 	Found 9-bit shift register for signal <Inst_DatapathPredVec/inVecYByPass9_5>.
@@ -1666,6 +1970,7 @@ Processing Unit <Final_TZSearch> :
 	Found 9-bit shift register for signal <Inst_DatapathPredVec/inVecXByPass9_2>.
 	Found 9-bit shift register for signal <Inst_DatapathPredVec/inVecXByPass9_1>.
 	Found 9-bit shift register for signal <Inst_DatapathPredVec/inVecXByPass9_0>.
+	Found 8-bit shift register for signal <Inst_UC_Raster/dirtyBitByPass8>.
 INFO:Xst:741 - HDL ADVISOR - A 10-bit shift register was found for signal <dirtyBitByPass10> and currently occupies 10 logic cells (5 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
 Unit <Final_TZSearch> processed.
 
@@ -1673,11 +1978,12 @@ Unit <Final_TZSearch> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 2886
- Flip-Flops                                            : 2886
-# Shift Registers                                      : 48
- 8-bit shift register                                  : 16
- 9-bit shift register                                  : 32
+# Registers                                            : 2577
+ Flip-Flops                                            : 2577
+# Shift Registers                                      : 49
+ 10-bit shift register                                 : 16
+ 8-bit shift register                                  : 17
+ 9-bit shift register                                  : 16
 
 =========================================================================
 
@@ -1700,27 +2006,26 @@ Top Level Output File Name         : Final_TZSearch.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 6465
+# BELS                             : 6249
 #      GND                         : 1
-#      INV                         : 15
-#      LUT1                        : 1
-#      LUT2                        : 1793
-#      LUT3                        : 614
-#      LUT4                        : 122
-#      LUT5                        : 144
-#      LUT6                        : 267
-#      MUXCY                       : 1745
-#      MUXF7                       : 11
+#      INV                         : 14
+#      LUT2                        : 1779
+#      LUT3                        : 605
+#      LUT4                        : 144
+#      LUT5                        : 142
+#      LUT6                        : 153
+#      MUXCY                       : 1647
+#      MUXF7                       : 12
 #      VCC                         : 1
 #      XORCY                       : 1751
-# FlipFlops/Latches                : 3056
-#      FDC                         : 2431
-#      FDCE                        : 379
-#      FDE                         : 32
-#      FDPE                        : 147
-#      LD                          : 67
-# Shift Registers                  : 48
-#      SRLC16E                     : 48
+# FlipFlops/Latches                : 2765
+#      FDC                         : 2380
+#      FDCE                        : 250
+#      FDE                         : 49
+#      FDPE                        : 20
+#      LD                          : 66
+# Shift Registers                  : 49
+#      SRLC16E                     : 49
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 1096
@@ -1736,18 +2041,18 @@ Selected Device : 6vlx130tff484-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            3055  out of  160000     1%  
- Number of Slice LUTs:                 3004  out of  80000     3%  
-    Number used as Logic:              2956  out of  80000     3%  
-    Number used as Memory:               48  out of  27840     0%  
-       Number used as SRL:               48
+ Number of Slice Registers:            2764  out of  160000     1%  
+ Number of Slice LUTs:                 2886  out of  80000     3%  
+    Number used as Logic:              2837  out of  80000     3%  
+    Number used as Memory:               49  out of  27840     0%  
+       Number used as SRL:               49
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   4424
-   Number with an unused Flip Flop:    1369  out of   4424    30%  
-   Number with an unused LUT:          1420  out of   4424    32%  
-   Number of fully used LUT-FF pairs:  1635  out of   4424    36%  
-   Number of unique control sets:        87
+ Number of LUT Flip Flop pairs used:   4019
+   Number with an unused Flip Flop:    1255  out of   4019    31%  
+   Number with an unused LUT:          1133  out of   4019    28%  
+   Number of fully used LUT-FF pairs:  1631  out of   4019    40%  
+   Number of unique control sets:        70
 
 IO Utilization: 
  Number of IOs:                        1097
@@ -1781,52 +2086,51 @@ Clock Information:
 -----------------------------------------------------------------------------------------------------+---------------------------------------------------+-------+
 Clock Signal                                                                                         | Clock buffer(FF name)                             | Load  |
 -----------------------------------------------------------------------------------------------------+---------------------------------------------------+-------+
-CLK                                                                                                  | BUFGP                                             | 3037  |
-Inst_UC_PredMov/state[2]_PWR_85_o_Mux_15_o(Inst_UC_PredMov/state_state[2]_PWR_85_o_Mux_15_o1:O)      | NONE(*)(Inst_UC_PredMov/done)                     | 1     |
-Inst_UC_PredMov/state_FSM_FFd2                                                                       | NONE(Inst_UC_PredMov/START2)                      | 1     |
+CLK                                                                                                  | BUFGP                                             | 2748  |
 Inst_SAD_UC/state[3]_PWR_24_o_Mux_22_o(Inst_SAD_UC/Mmux_state[3]_PWR_24_o_Mux_22_o11:O)              | NONE(*)(Inst_SAD_UC/nextState_1)                  | 4     |
 Inst_SAD_UC/Mram__n00731(Inst_SAD_UC/Mram__n0073111:O)                                               | NONE(*)(Inst_SAD_UC/validSAD)                     | 1     |
 Inst_SAD_UC/state[3]_PWR_22_o_Mux_18_o(Inst_SAD_UC/state[3]_PWR_22_o_Mux_18_o1:O)                    | NONE(*)(Inst_SAD_UC/nrAccumSubSrc)                | 1     |
 Inst_SAD_UC/state[3]_PWR_21_o_Mux_16_o(Inst_SAD_UC/state[3]_PWR_21_o_Mux_16_o1:O)                    | NONE(*)(Inst_SAD_UC/doneRest)                     | 1     |
-Inst_UC_MainFirst/_n1086<25>(Inst_UC_MainFirst_Mram__n108611:O)                                      | NONE(*)(Inst_UC_MainFirst/incDoAgain)             | 1     |
-Inst_UC_MainFirst/_n1086<19>(Inst_UC_MainFirst_Mram__n10865:O)                                       | NONE(*)(Inst_UC_MainFirst/initData)               | 1     |
-Inst_UC_MainFirst/_n1086<14>(Inst_UC_MainFirst_Mram__n108610:O)                                      | NONE(*)(Inst_UC_MainFirst/START2)                 | 1     |
-Inst_UC_MainFirst/_n1086<12>(Inst_UC_MainFirst_Mram__n108612:O)                                      | NONE(*)(Inst_UC_MainFirst/done)                   | 1     |
-Inst_UC_MainFirst/_n1086<10>(Inst_UC_MainFirst_Mram__n108614:O)                                      | NONE(*)(Inst_UC_MainFirst/rstRegPUsFinished)      | 1     |
-Inst_UC_MainFirst/_n1086<8>(Inst_UC_MainFirst_Mram__n108616:O)                                       | NONE(*)(Inst_UC_MainFirst/waitCycles)             | 1     |
-Inst_UC_MainFirst/_n1086<5>(Inst_UC_MainFirst_Mram__n108619:O)                                       | NONE(*)(Inst_UC_MainFirst/sel_candidates_0)       | 2     |
-Inst_UC_MainFirst/_n1086<3>(Inst_UC_MainFirst_Mram__n108621:O)                                       | NONE(*)(Inst_UC_MainFirst/loadregNumPUsLevel)     | 1     |
-Inst_UC_MainFirst/_n1086<23>(Inst_UC_MainFirst_Mram__n10863:O)                                       | NONE(*)(Inst_UC_MainFirst/sendToMem)              | 1     |
-Inst_UC_MainFirst/_n1086<1>(Inst_UC_MainFirst_Mram__n108623:O)                                       | NONE(*)(Inst_UC_MainFirst/incRegPUsFinished)      | 1     |
-Inst_UC_MainFirst/_n1086<26>(Inst_UC_MainFirst_Mram__n10861:O)                                       | NONE(*)(Inst_UC_MainFirst/loadByPassOutOfAnyBound)| 1     |
-Inst_UC_MainFirst/_n1086<17>(Inst_UC_MainFirst_Mram__n10867:O)                                       | NONE(*)(Inst_UC_MainFirst/rstRegCurVecY)          | 1     |
-Inst_UC_MainFirst/_n1086<16>(Inst_UC_MainFirst_Mram__n10868:O)                                       | NONE(*)(Inst_UC_MainFirst/incRegCurVecX)          | 1     |
-Inst_UC_MainFirst/state[6]_PWR_45_o_Mux_202_o(Inst_UC_MainFirst/Mmux_state[6]_PWR_45_o_Mux_202_o16:O)| NONE(*)(Inst_UC_MainFirst/op_typeY)               | 1     |
-Inst_UC_MainFirst/_n1086<0>(Inst_UC_MainFirst_Mram__n108624:O)                                       | NONE(*)(Inst_UC_MainFirst/loadByPassVecFound)     | 1     |
-Inst_UC_MainFirst/_n1086<22>(Inst_UC_MainFirst_Mram__n10864:O)                                       | NONE(*)(Inst_UC_MainFirst/loadCurVec)             | 1     |
-Inst_UC_MainFirst/state[6]_PWR_58_o_Mux_228_o(Inst_UC_MainFirst/Mmux_state[6]_PWR_58_o_Mux_228_o16:O)| NONE(*)(Inst_UC_MainFirst/nextState_0)            | 7     |
-Inst_UC_MainFirst/state[6]_PWR_38_o_Mux_188_o(Inst_UC_MainFirst/Mmux_state[6]_PWR_38_o_Mux_188_o14:O)| NONE(*)(Inst_UC_MainFirst/sel_distY_0)            | 5     |
-Inst_UC_MainFirst/state[6]_PWR_57_o_Mux_226_o(Inst_UC_MainFirst/Mmux_state[6]_PWR_57_o_Mux_226_o1:O) | NONE(*)(Inst_UC_MainFirst/writeCache)             | 1     |
-Inst_UC_MainFirst/state[6]_PWR_51_o_Mux_214_o(Inst_UC_MainFirst/Mmux_state[6]_PWR_51_o_Mux_214_o11:O)| NONE(*)(Inst_UC_MainFirst/initIncrement)          | 1     |
-Inst_UC_MainFirst/state[6]_PWR_54_o_Mux_220_o(Inst_UC_MainFirst/Mmux_state[6]_PWR_54_o_Mux_220_o16:O)| NONE(*)(Inst_UC_MainFirst/dirtyBit)               | 1     |
-Inst_UC_MainFirst/state[6]_PWR_48_o_Mux_208_o(Inst_UC_MainFirst/Mmux_state[6]_PWR_48_o_Mux_208_o11:O)| NONE(*)(Inst_UC_MainFirst/incRegCurVecY)          | 1     |
-Inst_UC_MainFirst/state[6]_PWR_47_o_Mux_206_o(Inst_UC_MainFirst/Mmux_state[6]_PWR_47_o_Mux_206_o11:O)| NONE(*)(Inst_UC_MainFirst/rstRegCurVecX)          | 1     |
+Inst_UC_MainFirst/_n0904<26>(Inst_UC_MainFirst_Mram__n090411:O)                                      | NONE(*)(Inst_UC_MainFirst/incDoAgain)             | 1     |
+Inst_UC_MainFirst/_n0904<21>(Inst_UC_MainFirst_Mram__n09045:O)                                       | NONE(*)(Inst_UC_MainFirst/incRegNumLevels)        | 1     |
+Inst_UC_MainFirst/_n0904<19>(Inst_UC_MainFirst_Mram__n09047:O)                                       | NONE(*)(Inst_UC_MainFirst/initData)               | 1     |
+Inst_UC_MainFirst/_n0904<12>(Inst_UC_MainFirst_Mram__n090414:O)                                      | NONE(*)(Inst_UC_MainFirst/done)                   | 1     |
+Inst_UC_MainFirst/_n0904<10>(Inst_UC_MainFirst_Mram__n090416:O)                                      | NONE(*)(Inst_UC_MainFirst/rstRegPUsFinished)      | 1     |
+Inst_UC_MainFirst/_n0904<14>(Inst_UC_MainFirst_Mram__n090412:O)                                      | NONE(*)(Inst_UC_MainFirst/START2)                 | 1     |
+Inst_UC_MainFirst/_n0904<8>(Inst_UC_MainFirst_Mram__n090418:O)                                       | NONE(*)(Inst_UC_MainFirst/waitCycles)             | 1     |
+Inst_UC_MainFirst/_n0904<5>(Inst_UC_MainFirst_Mram__n090421:O)                                       | NONE(*)(Inst_UC_MainFirst/sel_candidates_0)       | 2     |
+Inst_UC_MainFirst/_n0904<3>(Inst_UC_MainFirst_Mram__n090423:O)                                       | NONE(*)(Inst_UC_MainFirst/loadregNumPUsLevel)     | 1     |
+Inst_UC_MainFirst/_n0904<1>(Inst_UC_MainFirst_Mram__n090425:O)                                       | NONE(*)(Inst_UC_MainFirst/incRegPUsFinished)      | 1     |
+Inst_UC_MainFirst/_n0904<27>(Inst_UC_MainFirst_Mram__n09041:O)                                       | NONE(*)(Inst_UC_MainFirst/loadByPassOutOfAnyBound)| 1     |
+Inst_UC_MainFirst/_n0904<17>(Inst_UC_MainFirst_Mram__n09049:O)                                       | NONE(*)(Inst_UC_MainFirst/rstRegCurVecY)          | 1     |
+Inst_UC_MainFirst/_n0904<16>(Inst_UC_MainFirst_Mram__n090410:O)                                      | NONE(*)(Inst_UC_MainFirst/incRegCurVecX)          | 1     |
+Inst_UC_MainFirst/_n0904<23>(Inst_UC_MainFirst_Mram__n09044:O)                                       | NONE(*)(Inst_UC_MainFirst/loadCurVec)             | 1     |
+Inst_UC_MainFirst/_n0904<24>(Inst_UC_MainFirst_Mram__n09043:O)                                       | NONE(*)(Inst_UC_MainFirst/sendToMem)              | 1     |
+Inst_UC_MainFirst/state[6]_PWR_45_o_Mux_202_o(Inst_UC_MainFirst/Mmux_state[6]_PWR_45_o_Mux_202_o18:O)| NONE(*)(Inst_UC_MainFirst/op_typeY)               | 1     |
+Inst_UC_MainFirst/state[6]_PWR_58_o_Mux_228_o(Inst_UC_MainFirst/Mmux_state[6]_PWR_58_o_Mux_228_o17:O)| NONE(*)(Inst_UC_MainFirst/nextState_0)            | 7     |
+Inst_UC_MainFirst/state[6]_PWR_38_o_Mux_188_o(Inst_UC_MainFirst/Mmux_state[6]_PWR_38_o_Mux_188_o15:O)| NONE(*)(Inst_UC_MainFirst/sel_distY_0)            | 5     |
 Inst_UC_MainFirst/state[6]_PWR_44_o_Mux_200_o(Inst_UC_MainFirst/Mmux_state[6]_PWR_44_o_Mux_200_o14:O)| NONE(*)(Inst_UC_MainFirst/op_typeX)               | 1     |
-Inst_UC_Raster/Mram_state[3]_GND_75_o_Mux_30_o(Inst_UC_Raster/Mram_state[3]_GND_75_o_Mux_30_o11:O)   | NONE(*)(Inst_UC_Raster/sendToMem)                 | 1     |
-Inst_UC_Raster/Mram_state[3]_GND_71_o_Mux_22_o(Inst_UC_Raster/Mram_state[3]_GND_71_o_Mux_22_o11:O)   | NONE(*)(Inst_UC_Raster/incRegX)                   | 1     |
+Inst_UC_MainFirst/state[6]_PWR_48_o_Mux_208_o(Inst_UC_MainFirst/Mmux_state[6]_PWR_48_o_Mux_208_o1:O) | NONE(*)(Inst_UC_MainFirst/incRegCurVecY)          | 1     |
+Inst_UC_MainFirst/state[6]_PWR_47_o_Mux_206_o(Inst_UC_MainFirst/Mmux_state[6]_PWR_47_o_Mux_206_o14:O)| NONE(*)(Inst_UC_MainFirst/rstRegCurVecX)          | 1     |
+Inst_UC_MainFirst/state[6]_PWR_54_o_Mux_220_o(Inst_UC_MainFirst/Mmux_state[6]_PWR_54_o_Mux_220_o16:O)| NONE(*)(Inst_UC_MainFirst/dirtyBit)               | 1     |
+Inst_UC_MainFirst/state[6]_PWR_51_o_Mux_214_o(Inst_UC_MainFirst/Mmux_state[6]_PWR_51_o_Mux_214_o11:O)| NONE(*)(Inst_UC_MainFirst/initIncrement)          | 1     |
+Inst_UC_Raster/Mram_state[3]_GND_73_o_Mux_22_o(Inst_UC_Raster/Mram_state[3]_GND_73_o_Mux_22_o11:O)   | NONE(*)(Inst_UC_Raster/incRegX)                   | 1     |
+Inst_UC_Raster/Mram_state[3]_GND_77_o_Mux_30_o(Inst_UC_Raster/Mram_state[3]_GND_77_o_Mux_30_o11:O)   | NONE(*)(Inst_UC_Raster/sendToMem)                 | 1     |
 Inst_UC_Raster/Mram_state[3]_PWR_76_o_Mux_32_o(Inst_UC_Raster/Mram_state[3]_PWR_76_o_Mux_32_o11:O)   | NONE(*)(Inst_UC_Raster/done)                      | 1     |
-Inst_UC_Raster/Mram_state[3]_GND_70_o_Mux_20_o(Inst_UC_Raster/Mram_state[3]_GND_70_o_Mux_20_o11:O)   | NONE(*)(Inst_UC_Raster/initIncrement)             | 1     |
-Inst_UC_Raster/Mram_state[3]_GND_69_o_Mux_18_o(Inst_UC_Raster/Mram_state[3]_GND_69_o_Mux_18_o11:O)   | NONE(*)(Inst_UC_Raster/initData)                  | 1     |
-Inst_UC_Raster/Mram_state[3]_GND_68_o_Mux_16_o(Inst_UC_Raster/Mram_state[3]_GND_68_o_Mux_16_o11:O)   | NONE(*)(Inst_UC_Raster/START2)                    | 1     |
-Inst_UC_Raster/state[3]_GND_73_o_Mux_26_o(Inst_UC_Raster/Mmux_state[3]_GND_73_o_Mux_26_o11:O)        | NONE(*)(Inst_UC_Raster/dirtyBit)                  | 1     |
-Inst_UC_Raster/Mram_state[3]_GND_81_o_Mux_42_o(Inst_UC_Raster/Mram_state[3]_GND_81_o_Mux_42_o1:O)    | NONE(*)(Inst_UC_Raster/rearrangeVecMems)          | 1     |
-Inst_UC_Raster/state[3]_GND_77_o_Mux_34_o(Inst_UC_Raster/Mmux_state[3]_GND_77_o_Mux_34_o11:O)        | NONE(*)(Inst_UC_Raster/nextState_0)               | 4     |
-Inst_TZSearch/Mram_state[2]_PWR_93_o_Mux_19_o(Inst_TZSearch/Mram_state[2]_PWR_93_o_Mux_19_o11:O)     | NONE(*)(Inst_TZSearch/sel_TZ_stage_0)             | 4     |
-Inst_TZSearch/state[2]_PWR_100_o_Mux_33_o(Inst_TZSearch/Mmux_state[2]_PWR_100_o_Mux_33_o11:O)        | NONE(*)(Inst_TZSearch/loadBestVecs)               | 1     |
-Inst_TZSearch/Mram_state[2]_PWR_98_o_Mux_29_o(Inst_TZSearch/Mram_state[2]_PWR_98_o_Mux_29_o11:O)     | NONE(*)(Inst_TZSearch/done)                       | 1     |
-Inst_TZSearch/Mram_state[2]_PWR_92_o_Mux_17_o(Inst_TZSearch/Mram_state[2]_PWR_92_o_Mux_17_o11:O)     | NONE(*)(Inst_TZSearch/STARTPredMov)               | 1     |
-Inst_TZSearch/Mram_state[2]_PWR_94_o_Mux_21_o(Inst_TZSearch/Mram_state[2]_PWR_94_o_Mux_21_o11:O)     | NONE(*)(Inst_TZSearch/STARTRaster)                | 1     |
-Inst_TZSearch/state[2]_PWR_101_o_Mux_35_o(Inst_TZSearch/state[2]_PWR_101_o_Mux_35_o1:O)              | NONE(*)(Inst_TZSearch/nextState_0)                | 3     |
+Inst_UC_Raster/Mram_state[3]_GND_71_o_Mux_18_o(Inst_UC_Raster/Mram_state[3]_GND_71_o_Mux_18_o11:O)   | NONE(*)(Inst_UC_Raster/initData)                  | 1     |
+Inst_UC_Raster/Mram_state[3]_GND_70_o_Mux_16_o(Inst_UC_Raster/Mram_state[3]_GND_70_o_Mux_16_o11:O)   | NONE(*)(Inst_UC_Raster/START2)                    | 1     |
+Inst_UC_Raster/Mram_state[3]_GND_72_o_Mux_20_o(Inst_UC_Raster/Mram_state[3]_GND_72_o_Mux_20_o11:O)   | NONE(*)(Inst_UC_Raster/initIncrement)             | 1     |
+Inst_UC_Raster/state[3]_GND_75_o_Mux_26_o(Inst_UC_Raster/Mmux_state[3]_GND_75_o_Mux_26_o11:O)        | NONE(*)(Inst_UC_Raster/auxDirtyBit)               | 1     |
+Inst_UC_Raster/Mram_state[3]_GND_83_o_Mux_42_o(Inst_UC_Raster/Mram_state[3]_GND_83_o_Mux_42_o1:O)    | NONE(*)(Inst_UC_Raster/rearrangeVecMems)          | 1     |
+Inst_UC_Raster/state[3]_GND_79_o_Mux_34_o(Inst_UC_Raster/Mmux_state[3]_GND_79_o_Mux_34_o11:O)        | NONE(*)(Inst_UC_Raster/nextState_1)               | 4     |
+Inst_UC_PredMov/state[2]_PWR_83_o_Mux_11_o(Inst_UC_PredMov/state_state[2]_PWR_83_o_Mux_11_o1:O)      | NONE(*)(Inst_UC_PredMov/START2)                   | 1     |
+Inst_UC_PredMov/state[2]_PWR_84_o_Mux_13_o(Inst_UC_PredMov/state_state[2]_PWR_84_o_Mux_13_o1:O)      | NONE(*)(Inst_UC_PredMov/done)                     | 1     |
+Inst_TZSearch/Mram_state[2]_PWR_94_o_Mux_21_o(Inst_TZSearch/Mram_state[2]_PWR_94_o_Mux_21_o11:O)     | NONE(*)(Inst_TZSearch/chooseMode)                 | 3     |
+Inst_TZSearch/Mram_state[2]_PWR_92_o_Mux_17_o(Inst_TZSearch/Mram_state[2]_PWR_92_o_Mux_17_o11:O)     | NONE(*)(Inst_TZSearch/STARTFirstSearch)           | 1     |
+Inst_TZSearch/Mram_state[2]_PWR_97_o_Mux_27_o(Inst_TZSearch/Mram_state[2]_PWR_97_o_Mux_27_o11:O)     | NONE(*)(Inst_TZSearch/done)                       | 1     |
+Inst_TZSearch/Mram_state[2]_PWR_93_o_Mux_19_o(Inst_TZSearch/Mram_state[2]_PWR_93_o_Mux_19_o11:O)     | NONE(*)(Inst_TZSearch/STARTRaster)                | 1     |
+Inst_TZSearch/Mram_state[2]_PWR_91_o_Mux_15_o(Inst_TZSearch/Mram_state[2]_PWR_91_o_Mux_15_o11:O)     | NONE(*)(Inst_TZSearch/STARTPredMov)               | 2     |
+Inst_TZSearch/state[2]_PWR_100_o_Mux_33_o(Inst_TZSearch/state[2]_PWR_100_o_Mux_33_o1:O)              | NONE(*)(Inst_TZSearch/nextState_0)                | 3     |
 -----------------------------------------------------------------------------------------------------+---------------------------------------------------+-------+
 (*) These 44 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -1841,8 +2145,8 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 2.824ns (Maximum Frequency: 354.051MHz)
-   Minimum input arrival time before clock: 4.857ns
+   Minimum period: 5.122ns (Maximum Frequency: 195.253MHz)
+   Minimum input arrival time before clock: 1.408ns
    Maximum output required time after clock: 1.423ns
    Maximum combinational path delay: No path found
 
@@ -1852,64 +2156,56 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 2.824ns (frequency: 354.051MHz)
-  Total number of paths / destination ports: 45171 / 2236
+  Clock period: 5.122ns (frequency: 195.253MHz)
+  Total number of paths / destination ports: 45911 / 1734
 -------------------------------------------------------------------------
-Delay:               2.824ns (Levels of Logic = 9)
-  Source:            Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_3 (FF)
-  Destination:       Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regVecFound (FF)
+Delay:               5.122ns (Levels of Logic = 3)
+  Source:            regWidthPU_5 (FF)
+  Destination:       Inst_Datapath_Raster/regLatency_7 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_3 to Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regVecFound
+  Data Path: regWidthPU_5 to Inst_Datapath_Raster/regLatency_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDPE:C->Q             1   0.317   0.696  Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_3 (Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_3)
-     LUT6:I0->O            1   0.061   0.000  Inst_Datapath_FirstSearch/Inst_Circ_Buffer/Mcompar__n0399_lut<0> (Inst_Datapath_FirstSearch/Inst_Circ_Buffer/Mcompar__n0399_lut<0>)
-     MUXCY:S->O            1   0.248   0.000  Inst_Datapath_FirstSearch/Inst_Circ_Buffer/Mcompar__n0399_cy<0> (Inst_Datapath_FirstSearch/Inst_Circ_Buffer/Mcompar__n0399_cy<0>)
-     MUXCY:CI->O           1   0.017   0.000  Inst_Datapath_FirstSearch/Inst_Circ_Buffer/Mcompar__n0399_cy<1> (Inst_Datapath_FirstSearch/Inst_Circ_Buffer/Mcompar__n0399_cy<1>)
-     MUXCY:CI->O           1   0.017   0.000  Inst_Datapath_FirstSearch/Inst_Circ_Buffer/Mcompar__n0399_cy<2> (Inst_Datapath_FirstSearch/Inst_Circ_Buffer/Mcompar__n0399_cy<2>)
-     MUXCY:CI->O           1   0.017   0.000  Inst_Datapath_FirstSearch/Inst_Circ_Buffer/Mcompar__n0399_cy<3> (Inst_Datapath_FirstSearch/Inst_Circ_Buffer/Mcompar__n0399_cy<3>)
-     MUXCY:CI->O           1   0.017   0.000  Inst_Datapath_FirstSearch/Inst_Circ_Buffer/Mcompar__n0399_cy<4> (Inst_Datapath_FirstSearch/Inst_Circ_Buffer/Mcompar__n0399_cy<4>)
-     MUXCY:CI->O           1   0.190   0.696  Inst_Datapath_FirstSearch/Inst_Circ_Buffer/Mcompar__n0399_cy<5> (Inst_Datapath_FirstSearch/Inst_Circ_Buffer/_n0399)
-     LUT6:I0->O            1   0.061   0.426  Inst_Datapath_FirstSearch/Inst_Circ_Buffer/hasFoundVec1 (Inst_Datapath_FirstSearch/Inst_Circ_Buffer/hasFoundVec1)
-     LUT6:I4->O            1   0.061   0.000  Inst_Datapath_FirstSearch/Inst_Circ_Buffer/hasFoundVec3 (Inst_Datapath_FirstSearch/Inst_Circ_Buffer/hasFoundVec)
-     FDC:D                    -0.002          Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regVecFound
+     FDC:C->Q              8   0.317   0.378  regWidthPU_5 (regWidthPU_5)
+     DSP48E1:A5->P10       3   3.236   0.706  Inst_Datapath_Raster/Mmult_multHW (Inst_Datapath_Raster/multHW<10>)
+     LUT6:I1->O            2   0.061   0.362  Inst_Datapath_Raster/Msub_latency_cy<5>11 (Inst_Datapath_Raster/Msub_latency_cy<5>)
+     LUT2:I1->O            1   0.061   0.000  Inst_Datapath_Raster/Msub_latency_xor<7>11 (Inst_Datapath_Raster/latency<7>)
+     FDC:D                    -0.002          Inst_Datapath_Raster/regLatency_7
     ----------------------------------------
-    Total                      2.824ns (1.006ns logic, 1.818ns route)
-                                       (35.6% logic, 64.4% route)
+    Total                      5.122ns (3.675ns logic, 1.447ns route)
+                                       (71.8% logic, 28.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 4956 / 3375
+  Total number of paths / destination ports: 3350 / 3347
 -------------------------------------------------------------------------
-Offset:              4.857ns (Levels of Logic = 4)
-  Source:            widthPU<3> (PAD)
-  Destination:       Inst_Datapath/regNrAccum_6 (FF)
+Offset:              1.408ns (Levels of Logic = 2)
+  Source:            START (PAD)
+  Destination:       regWidthPU_0 (FF)
   Destination Clock: CLK rising
 
-  Data Path: widthPU<3> to Inst_Datapath/regNrAccum_6
+  Data Path: START to regWidthPU_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            10   0.003   0.389  widthPU_3_IBUF (widthPU_3_IBUF)
-     DSP48E1:A3->P8        5   3.236   0.589  Inst_Datapath/Mmult_multHW (Inst_Datapath/multHW<8>)
-     LUT4:I0->O            2   0.061   0.517  Inst_Datapath/Msub_nrAccum_xor<3>111 (Inst_Datapath/Msub_nrAccum_xor<3>11)
-     LUT4:I1->O            1   0.061   0.000  Inst_Datapath/Msub_nrAccum_xor<6>11 (Inst_Datapath/nrAccum<6>)
-     FDC:D                    -0.002          Inst_Datapath/regNrAccum_6
+     IBUF:I->O             1   0.003   0.339  START_IBUF (START_IBUF)
+     INV:I->O           2276   0.079   0.622  START_inv1_INV_0 (Inst_Datapath/START_inv)
+     FDC:CLR                   0.365          Inst_Datapath/matsA_0_0_2_0
     ----------------------------------------
-    Total                      4.857ns (3.361ns logic, 1.496ns route)
-                                       (69.2% logic, 30.8% route)
+    Total                      1.408ns (0.447ns logic, 0.961ns route)
+                                       (31.7% logic, 68.3% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_TZSearch/Mram_state[2]_PWR_93_o_Mux_19_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_TZSearch/Mram_state[2]_PWR_94_o_Mux_21_o'
   Total number of paths / destination ports: 32 / 16
 -------------------------------------------------------------------------
 Offset:              1.423ns (Levels of Logic = 2)
   Source:            Inst_TZSearch/sel_TZ_stage_1 (LATCH)
   Destination:       curVecX<7> (PAD)
-  Source Clock:      Inst_TZSearch/Mram_state[2]_PWR_93_o_Mux_19_o falling
+  Source Clock:      Inst_TZSearch/Mram_state[2]_PWR_94_o_Mux_21_o falling
 
   Data Path: Inst_TZSearch/sel_TZ_stage_1 to curVecX<7>
                                 Gate     Net
@@ -1927,29 +2223,29 @@ Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
   Total number of paths / destination ports: 48 / 32
 -------------------------------------------------------------------------
 Offset:              1.230ns (Levels of Logic = 2)
-  Source:            Inst_Datapath_Raster/regYMem3_0 (FF)
-  Destination:       curVecY<0> (PAD)
+  Source:            Inst_Datapath_Raster/regYMem3_1 (FF)
+  Destination:       curVecY<1> (PAD)
   Source Clock:      CLK rising
 
-  Data Path: Inst_Datapath_Raster/regYMem3_0 to curVecY<0>
+  Data Path: Inst_Datapath_Raster/regYMem3_1 to curVecY<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            16   0.317   0.509  Inst_Datapath_Raster/regYMem3_0 (Inst_Datapath_Raster/regYMem3_0)
-     LUT4:I2->O            1   0.061   0.339  Mmux_curVecY11 (curVecY_0_OBUF)
-     OBUF:I->O                 0.003          curVecY_0_OBUF (curVecY<0>)
+     FDCE:C->Q            16   0.317   0.509  Inst_Datapath_Raster/regYMem3_1 (Inst_Datapath_Raster/regYMem3_1)
+     LUT4:I2->O            1   0.061   0.339  Mmux_curVecY21 (curVecY_1_OBUF)
+     OBUF:I->O                 0.003          curVecY_1_OBUF (curVecY<1>)
     ----------------------------------------
     Total                      1.230ns (0.381ns logic, 0.849ns route)
                                        (31.0% logic, 69.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_TZSearch/Mram_state[2]_PWR_98_o_Mux_29_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_TZSearch/Mram_state[2]_PWR_97_o_Mux_27_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              0.665ns (Levels of Logic = 1)
   Source:            Inst_TZSearch/done (LATCH)
   Destination:       done (PAD)
-  Source Clock:      Inst_TZSearch/Mram_state[2]_PWR_98_o_Mux_29_o falling
+  Source Clock:      Inst_TZSearch/Mram_state[2]_PWR_97_o_Mux_27_o falling
 
   Data Path: Inst_TZSearch/done to done
                                 Gate     Net
@@ -1971,46 +2267,46 @@ Clock to Setup on destination clock CLK
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |    2.824|         |         |         |
+CLK                                           |    5.122|         |         |         |
 Inst_SAD_UC/Mram__n00731                      |         |    1.674|         |         |
-Inst_SAD_UC/state[3]_PWR_21_o_Mux_16_o        |         |    1.849|         |         |
-Inst_SAD_UC/state[3]_PWR_22_o_Mux_18_o        |         |    1.755|         |         |
+Inst_SAD_UC/state[3]_PWR_21_o_Mux_16_o        |         |    1.845|         |         |
+Inst_SAD_UC/state[3]_PWR_22_o_Mux_18_o        |         |    1.989|         |         |
 Inst_SAD_UC/state[3]_PWR_24_o_Mux_22_o        |         |    0.662|         |         |
-Inst_TZSearch/Mram_state[2]_PWR_92_o_Mux_17_o |         |    1.667|         |         |
-Inst_TZSearch/Mram_state[2]_PWR_93_o_Mux_19_o |         |    1.918|         |         |
-Inst_TZSearch/Mram_state[2]_PWR_94_o_Mux_21_o |         |    1.604|         |         |
-Inst_TZSearch/state[2]_PWR_100_o_Mux_33_o     |         |    1.515|         |         |
-Inst_TZSearch/state[2]_PWR_101_o_Mux_35_o     |         |    0.662|         |         |
-Inst_UC_MainFirst/_n1086<0>                   |         |    0.896|         |         |
-Inst_UC_MainFirst/_n1086<10>                  |         |    1.327|         |         |
-Inst_UC_MainFirst/_n1086<14>                  |         |    1.462|         |         |
-Inst_UC_MainFirst/_n1086<16>                  |         |    1.515|         |         |
-Inst_UC_MainFirst/_n1086<17>                  |         |    1.429|         |         |
-Inst_UC_MainFirst/_n1086<19>                  |         |    1.530|         |         |
-Inst_UC_MainFirst/_n1086<1>                   |         |    1.368|         |         |
-Inst_UC_MainFirst/_n1086<22>                  |         |    0.948|         |         |
-Inst_UC_MainFirst/_n1086<23>                  |         |    0.941|         |         |
-Inst_UC_MainFirst/_n1086<25>                  |         |    0.870|         |         |
-Inst_UC_MainFirst/_n1086<26>                  |         |    0.896|         |         |
-Inst_UC_MainFirst/_n1086<3>                   |         |    0.875|         |         |
-Inst_UC_MainFirst/_n1086<5>                   |         |    0.822|         |         |
-Inst_UC_MainFirst/state[6]_PWR_38_o_Mux_188_o |         |    2.219|         |         |
-Inst_UC_MainFirst/state[6]_PWR_44_o_Mux_200_o |         |    1.973|         |         |
-Inst_UC_MainFirst/state[6]_PWR_45_o_Mux_202_o |         |    1.973|         |         |
+Inst_TZSearch/Mram_state[2]_PWR_91_o_Mux_15_o |         |    1.574|         |         |
+Inst_TZSearch/Mram_state[2]_PWR_92_o_Mux_17_o |         |    1.604|         |         |
+Inst_TZSearch/Mram_state[2]_PWR_93_o_Mux_19_o |         |    1.598|         |         |
+Inst_TZSearch/Mram_state[2]_PWR_94_o_Mux_21_o |         |    1.930|         |         |
+Inst_TZSearch/state[2]_PWR_100_o_Mux_33_o     |         |    0.662|         |         |
+Inst_UC_MainFirst/_n0904<10>                  |         |    1.333|         |         |
+Inst_UC_MainFirst/_n0904<14>                  |         |    1.462|         |         |
+Inst_UC_MainFirst/_n0904<16>                  |         |    1.515|         |         |
+Inst_UC_MainFirst/_n0904<17>                  |         |    1.429|         |         |
+Inst_UC_MainFirst/_n0904<19>                  |         |    1.377|         |         |
+Inst_UC_MainFirst/_n0904<1>                   |         |    1.368|         |         |
+Inst_UC_MainFirst/_n0904<21>                  |         |    1.293|         |         |
+Inst_UC_MainFirst/_n0904<23>                  |         |    0.948|         |         |
+Inst_UC_MainFirst/_n0904<24>                  |         |    0.941|         |         |
+Inst_UC_MainFirst/_n0904<26>                  |         |    0.870|         |         |
+Inst_UC_MainFirst/_n0904<27>                  |         |    0.896|         |         |
+Inst_UC_MainFirst/_n0904<3>                   |         |    0.875|         |         |
+Inst_UC_MainFirst/_n0904<5>                   |         |    0.822|         |         |
+Inst_UC_MainFirst/state[6]_PWR_38_o_Mux_188_o |         |    2.286|         |         |
+Inst_UC_MainFirst/state[6]_PWR_44_o_Mux_200_o |         |    2.176|         |         |
+Inst_UC_MainFirst/state[6]_PWR_45_o_Mux_202_o |         |    2.176|         |         |
 Inst_UC_MainFirst/state[6]_PWR_47_o_Mux_206_o |         |    1.429|         |         |
 Inst_UC_MainFirst/state[6]_PWR_48_o_Mux_208_o |         |    1.515|         |         |
 Inst_UC_MainFirst/state[6]_PWR_51_o_Mux_214_o |         |    1.548|         |         |
 Inst_UC_MainFirst/state[6]_PWR_54_o_Mux_220_o |         |    0.662|         |         |
-Inst_UC_MainFirst/state[6]_PWR_57_o_Mux_226_o |         |    1.675|         |         |
 Inst_UC_MainFirst/state[6]_PWR_58_o_Mux_228_o |         |    0.662|         |         |
-Inst_UC_PredMov/state_FSM_FFd2                |    1.531|         |         |         |
-Inst_UC_Raster/Mram_state[3]_GND_68_o_Mux_16_o|         |    1.617|         |         |
-Inst_UC_Raster/Mram_state[3]_GND_69_o_Mux_18_o|         |    1.566|         |         |
-Inst_UC_Raster/Mram_state[3]_GND_70_o_Mux_20_o|         |    1.541|         |         |
-Inst_UC_Raster/Mram_state[3]_GND_71_o_Mux_22_o|         |    2.231|         |         |
-Inst_UC_Raster/Mram_state[3]_GND_75_o_Mux_30_o|         |    1.360|         |         |
-Inst_UC_Raster/Mram_state[3]_GND_81_o_Mux_42_o|         |    2.285|         |         |
-Inst_UC_Raster/state[3]_GND_77_o_Mux_34_o     |         |    0.662|         |         |
+Inst_UC_PredMov/state[2]_PWR_83_o_Mux_11_o    |         |    1.531|         |         |
+Inst_UC_Raster/Mram_state[3]_GND_70_o_Mux_16_o|         |    1.617|         |         |
+Inst_UC_Raster/Mram_state[3]_GND_71_o_Mux_18_o|         |    1.475|         |         |
+Inst_UC_Raster/Mram_state[3]_GND_72_o_Mux_20_o|         |    1.541|         |         |
+Inst_UC_Raster/Mram_state[3]_GND_73_o_Mux_22_o|         |    2.915|         |         |
+Inst_UC_Raster/Mram_state[3]_GND_77_o_Mux_30_o|         |    1.360|         |         |
+Inst_UC_Raster/Mram_state[3]_GND_83_o_Mux_42_o|         |    3.057|         |         |
+Inst_UC_Raster/state[3]_GND_75_o_Mux_26_o     |         |    0.870|         |         |
+Inst_UC_Raster/state[3]_GND_79_o_Mux_34_o     |         |    0.662|         |         |
 ----------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock Inst_SAD_UC/Mram__n00731
@@ -2019,8 +2315,7 @@ Clock to Setup on destination clock Inst_SAD_UC/Mram__n00731
 Source Clock                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------------+---------+---------+---------+---------+
 CLK                                          |         |         |    1.846|         |
-Inst_TZSearch/Mram_state[2]_PWR_93_o_Mux_19_o|         |         |    1.632|         |
-Inst_UC_Raster/state[3]_GND_73_o_Mux_26_o    |         |         |    1.385|         |
+Inst_TZSearch/Mram_state[2]_PWR_94_o_Mux_21_o|         |         |    1.646|         |
 ---------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock Inst_SAD_UC/state[3]_PWR_21_o_Mux_16_o
@@ -2037,8 +2332,7 @@ Clock to Setup on destination clock Inst_SAD_UC/state[3]_PWR_22_o_Mux_18_o
 Source Clock                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------------+---------+---------+---------+---------+
 CLK                                          |         |         |    1.846|         |
-Inst_TZSearch/Mram_state[2]_PWR_93_o_Mux_19_o|         |         |    1.632|         |
-Inst_UC_Raster/state[3]_GND_73_o_Mux_26_o    |         |         |    1.385|         |
+Inst_TZSearch/Mram_state[2]_PWR_94_o_Mux_21_o|         |         |    1.646|         |
 ---------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock Inst_SAD_UC/state[3]_PWR_24_o_Mux_22_o
@@ -2047,45 +2341,52 @@ Clock to Setup on destination clock Inst_SAD_UC/state[3]_PWR_24_o_Mux_22_o
 Source Clock                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------------+---------+---------+---------+---------+
 CLK                                          |         |         |    2.334|         |
-Inst_TZSearch/Mram_state[2]_PWR_93_o_Mux_19_o|         |         |    2.119|         |
-Inst_UC_MainFirst/_n1086<8>                  |         |         |    1.513|         |
-Inst_UC_Raster/state[3]_GND_73_o_Mux_26_o    |         |         |    1.872|         |
+Inst_TZSearch/Mram_state[2]_PWR_94_o_Mux_21_o|         |         |    2.133|         |
+Inst_UC_MainFirst/_n0904<8>                  |         |         |    1.513|         |
 ---------------------------------------------+---------+---------+---------+---------+
 
+Clock to Setup on destination clock Inst_TZSearch/Mram_state[2]_PWR_91_o_Mux_15_o
+------------------------------------------+---------+---------+---------+---------+
+                                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------------+---------+---------+---------+---------+
+CLK                                       |         |         |    0.813|         |
+Inst_UC_PredMov/state[2]_PWR_84_o_Mux_13_o|         |         |    0.815|         |
+------------------------------------------+---------+---------+---------+---------+
+
 Clock to Setup on destination clock Inst_TZSearch/Mram_state[2]_PWR_92_o_Mux_17_o
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+CLK                         |         |         |    1.012|         |
+Inst_UC_MainFirst/_n0904<12>|         |         |    0.753|         |
+----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_TZSearch/Mram_state[2]_PWR_93_o_Mux_19_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |    0.728|         |
+CLK            |         |         |    0.882|         |
 ---------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock Inst_TZSearch/Mram_state[2]_PWR_93_o_Mux_19_o
-----------------------------------------------+---------+---------+---------+---------+
-                                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |         |         |    1.144|         |
-Inst_UC_MainFirst/_n1086<12>                  |         |         |    1.112|         |
-Inst_UC_Raster/Mram_state[3]_PWR_76_o_Mux_32_o|         |         |    0.973|         |
-----------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock Inst_TZSearch/Mram_state[2]_PWR_94_o_Mux_21_o
 ----------------------------------------------+---------+---------+---------+---------+
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |         |         |    1.016|         |
-Inst_UC_MainFirst/_n1086<12>                  |         |         |    0.775|         |
-Inst_UC_Raster/Mram_state[3]_PWR_76_o_Mux_32_o|         |         |    0.833|         |
+CLK                                           |         |         |    1.140|         |
+Inst_UC_MainFirst/_n0904<12>                  |         |         |    0.962|         |
+Inst_UC_Raster/Mram_state[3]_PWR_76_o_Mux_32_o|         |         |    0.901|         |
 ----------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock Inst_TZSearch/Mram_state[2]_PWR_98_o_Mux_29_o
+Clock to Setup on destination clock Inst_TZSearch/Mram_state[2]_PWR_97_o_Mux_27_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |    0.728|         |
+CLK            |         |         |    0.724|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock Inst_TZSearch/state[2]_PWR_100_o_Mux_33_o
@@ -2093,26 +2394,10 @@ Clock to Setup on destination clock Inst_TZSearch/state[2]_PWR_100_o_Mux_33_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |    0.728|         |
+CLK            |         |         |    0.968|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock Inst_TZSearch/state[2]_PWR_101_o_Mux_35_o
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |         |         |    0.962|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock Inst_UC_MainFirst/_n1086<0>
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |         |         |    3.189|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock Inst_UC_MainFirst/_n1086<10>
+Clock to Setup on destination clock Inst_UC_MainFirst/_n0904<10>
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -2120,39 +2405,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 CLK            |         |         |    1.379|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock Inst_UC_MainFirst/_n1086<12>
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |         |         |    1.534|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock Inst_UC_MainFirst/_n1086<14>
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |         |         |    1.636|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock Inst_UC_MainFirst/_n1086<16>
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |         |         |    2.194|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock Inst_UC_MainFirst/_n1086<17>
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |         |         |    2.708|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock Inst_UC_MainFirst/_n1086<19>
+Clock to Setup on destination clock Inst_UC_MainFirst/_n0904<12>
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -2160,55 +2413,31 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 CLK            |         |         |    1.379|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock Inst_UC_MainFirst/_n1086<1>
+Clock to Setup on destination clock Inst_UC_MainFirst/_n0904<14>
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |    2.136|         |
+CLK            |         |         |    1.637|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock Inst_UC_MainFirst/_n1086<22>
+Clock to Setup on destination clock Inst_UC_MainFirst/_n0904<16>
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |    1.841|         |
+CLK            |         |         |    2.730|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock Inst_UC_MainFirst/_n1086<23>
+Clock to Setup on destination clock Inst_UC_MainFirst/_n0904<17>
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |    2.427|         |
+CLK            |         |         |    2.210|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock Inst_UC_MainFirst/_n1086<25>
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |         |         |    1.362|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock Inst_UC_MainFirst/_n1086<26>
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |         |         |    2.378|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock Inst_UC_MainFirst/_n1086<3>
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |         |         |    1.633|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock Inst_UC_MainFirst/_n1086<5>
+Clock to Setup on destination clock Inst_UC_MainFirst/_n0904<19>
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -2216,12 +2445,76 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 CLK            |         |         |    1.379|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock Inst_UC_MainFirst/_n1086<8>
+Clock to Setup on destination clock Inst_UC_MainFirst/_n0904<1>
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |    1.367|         |
+CLK            |         |         |    2.817|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_UC_MainFirst/_n0904<21>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    1.379|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_UC_MainFirst/_n0904<23>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    2.749|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_UC_MainFirst/_n0904<24>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    2.353|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_UC_MainFirst/_n0904<26>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    1.573|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_UC_MainFirst/_n0904<27>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    2.148|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_UC_MainFirst/_n0904<3>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    1.634|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_UC_MainFirst/_n0904<5>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    1.379|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_UC_MainFirst/_n0904<8>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    1.369|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock Inst_UC_MainFirst/state[6]_PWR_38_o_Mux_188_o
@@ -2229,7 +2522,7 @@ Clock to Setup on destination clock Inst_UC_MainFirst/state[6]_PWR_38_o_Mux_188_
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |    1.640|         |
+CLK            |         |         |    1.641|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock Inst_UC_MainFirst/state[6]_PWR_44_o_Mux_200_o
@@ -2237,7 +2530,7 @@ Clock to Setup on destination clock Inst_UC_MainFirst/state[6]_PWR_44_o_Mux_200_
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |    1.705|         |
+CLK            |         |         |    1.704|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock Inst_UC_MainFirst/state[6]_PWR_45_o_Mux_202_o
@@ -2245,7 +2538,7 @@ Clock to Setup on destination clock Inst_UC_MainFirst/state[6]_PWR_45_o_Mux_202_
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |    1.428|         |
+CLK            |         |         |    1.429|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock Inst_UC_MainFirst/state[6]_PWR_47_o_Mux_206_o
@@ -2253,7 +2546,7 @@ Clock to Setup on destination clock Inst_UC_MainFirst/state[6]_PWR_47_o_Mux_206_
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |    2.213|         |
+CLK            |         |         |    2.223|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock Inst_UC_MainFirst/state[6]_PWR_48_o_Mux_208_o
@@ -2261,7 +2554,7 @@ Clock to Setup on destination clock Inst_UC_MainFirst/state[6]_PWR_48_o_Mux_208_
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |    2.389|         |
+CLK            |         |         |    2.263|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock Inst_UC_MainFirst/state[6]_PWR_51_o_Mux_214_o
@@ -2269,7 +2562,7 @@ Clock to Setup on destination clock Inst_UC_MainFirst/state[6]_PWR_51_o_Mux_214_
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |    1.612|         |
+CLK            |         |         |    1.216|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock Inst_UC_MainFirst/state[6]_PWR_54_o_Mux_220_o
@@ -2277,15 +2570,7 @@ Clock to Setup on destination clock Inst_UC_MainFirst/state[6]_PWR_54_o_Mux_220_
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |    1.612|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock Inst_UC_MainFirst/state[6]_PWR_57_o_Mux_226_o
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |         |         |    3.005|         |
+CLK            |         |         |    1.217|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock Inst_UC_MainFirst/state[6]_PWR_58_o_Mux_228_o
@@ -2293,10 +2578,18 @@ Clock to Setup on destination clock Inst_UC_MainFirst/state[6]_PWR_58_o_Mux_228_
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |    3.188|         |
+CLK            |         |         |    4.026|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock Inst_UC_PredMov/state[2]_PWR_85_o_Mux_15_o
+Clock to Setup on destination clock Inst_UC_PredMov/state[2]_PWR_83_o_Mux_11_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    0.684|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_UC_PredMov/state[2]_PWR_84_o_Mux_13_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -2304,15 +2597,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 CLK            |         |         |    0.690|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock Inst_UC_PredMov/state_FSM_FFd2
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |    0.918|         |         |         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock Inst_UC_Raster/Mram_state[3]_GND_68_o_Mux_16_o
+Clock to Setup on destination clock Inst_UC_Raster/Mram_state[3]_GND_70_o_Mux_16_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -2320,7 +2605,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 CLK            |         |         |    0.751|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock Inst_UC_Raster/Mram_state[3]_GND_69_o_Mux_18_o
+Clock to Setup on destination clock Inst_UC_Raster/Mram_state[3]_GND_71_o_Mux_18_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -2328,7 +2613,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 CLK            |         |         |    0.876|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock Inst_UC_Raster/Mram_state[3]_GND_70_o_Mux_20_o
+Clock to Setup on destination clock Inst_UC_Raster/Mram_state[3]_GND_72_o_Mux_20_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -2336,7 +2621,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 CLK            |         |         |    0.751|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock Inst_UC_Raster/Mram_state[3]_GND_71_o_Mux_22_o
+Clock to Setup on destination clock Inst_UC_Raster/Mram_state[3]_GND_73_o_Mux_22_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -2344,7 +2629,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 CLK            |         |         |    1.039|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock Inst_UC_Raster/Mram_state[3]_GND_75_o_Mux_30_o
+Clock to Setup on destination clock Inst_UC_Raster/Mram_state[3]_GND_77_o_Mux_30_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -2352,7 +2637,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 CLK            |         |         |    1.039|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock Inst_UC_Raster/Mram_state[3]_GND_81_o_Mux_42_o
+Clock to Setup on destination clock Inst_UC_Raster/Mram_state[3]_GND_83_o_Mux_42_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -2368,7 +2653,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 CLK            |         |         |    0.728|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock Inst_UC_Raster/state[3]_GND_73_o_Mux_26_o
+Clock to Setup on destination clock Inst_UC_Raster/state[3]_GND_75_o_Mux_26_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -2376,7 +2661,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 CLK            |         |         |    0.899|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock Inst_UC_Raster/state[3]_GND_77_o_Mux_34_o
+Clock to Setup on destination clock Inst_UC_Raster/state[3]_GND_79_o_Mux_34_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -2387,14 +2672,14 @@ CLK            |         |         |    1.039|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 53.00 secs
-Total CPU time to Xst completion: 52.54 secs
+Total REAL time to Xst completion: 45.00 secs
+Total CPU time to Xst completion: 45.12 secs
  
 --> 
 
-Total memory usage is 355372 kilobytes
+Total memory usage is 353632 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  319 (   0 filtered)
-Number of infos    :   56 (   0 filtered)
+Number of warnings :  582 (   0 filtered)
+Number of infos    :   48 (   0 filtered)
 

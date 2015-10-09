@@ -88,7 +88,6 @@ signal regSearchRange: STD_LOGIC_VECTOR(7 downto 0);
 signal numLevels, regNumLevels, regMode: STD_LOGIC_VECTOR(1 downto 0);
 signal regCurVecX, regCurVecY: STD_LOGIC_VECTOR(7 downto 0);
 signal regBestX, regBestY: STD_LOGIC_VECTOR(7 downto 0);
-signal regCenterX, regCenterY: STD_LOGIC_VECTOR(7 downto 0);
 signal regBestSAD: STD_LOGIC_VECTOR(19 downto 0);
 signal regBorderLeft, regBorderRight, regBorderUp, regBorderDown: STD_LOGIC_VECTOR(7 downto 0);
 signal subRight, subDown: STD_LOGIC_VECTOR(7 downto 0);
@@ -261,8 +260,6 @@ subDown <= regCurVecY - regBorderDown;
 			auxRegBorderDown <= (OTHERS=>'0');
 			regBestX <= (OTHERS=>'0');
 			regBestY <= (OTHERS=>'0');
-			regCenterX <= (OTHERS=>'0');
-			regCenterY <= (OTHERS=>'0');
 			
 			regCurCenterX <= (OTHERS=>'0');
 			regCurCenterY <= (OTHERS=>'0');
@@ -283,8 +280,6 @@ subDown <= regCurVecY - regBorderDown;
 			regLatency <= latency;
 
 			regSearchRange <= searchRange; -- OK
---			regCenterX <= initCenterX;
---			regCenterY <= initCenterY;
 			
 			regNumLevels <= numLevels;
 			
@@ -306,9 +301,9 @@ subDown <= regCurVecY - regBorderDown;
 			end if;
 			
 			if(chooseMode = '0') then
-				regMode <= "10";
-			else
 				regMode <= "11";
+			else
+				regMode <= "10";
 			end if;
 			
 			if(initData = '1') then
@@ -327,7 +322,7 @@ subDown <= regCurVecY - regBorderDown;
 --				regSubRight <= (OTHERS=>'1');
 --				regSubDown <= (OTHERS=>'1');
 			end if;
-			
+
 			if(sendToMem = '1') then
 				regVecMemX <= regByPassCurVecX;
 				regVecMemY <= regByPassCurVecY;
