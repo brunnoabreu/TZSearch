@@ -44,14 +44,6 @@ end DatapathPredVec;
 
 architecture Behavioral of DatapathPredVec is
 
-signal regBestVecX, regBestVecY: STD_LOGIC_VECTOR(7 downto 0);
---signal SAD: STD_LOGIC_VECTOR(19 downto 0);
-
-signal flagBetter: STD_LOGIC;
-
-
-signal heightPUByPass1, heightPUByPass2, heightPUByPass3, heightPUByPass4, heightPUByPass5, heightPUByPass6, heightPUByPass7, heightPUByPass8: STD_LOGIC_VECTOR(6 downto 0);
-signal widthPUByPass1, widthPUByPass2, widthPUByPass3, widthPUByPass4, widthPUByPass5, widthPUByPass6, widthPUByPass7, widthPUByPass8: STD_LOGIC_VECTOR(6 downto 0);
 signal inVecXByPass1, inVecXByPass2, inVecXByPass3, inVecXByPass4, inVecXByPass5, inVecXByPass6, inVecXByPass7, inVecXByPass8, inVecXByPass9: STD_LOGIC_VECTOR(7 downto 0);
 signal inVecYByPass1, inVecYByPass2, inVecYByPass3, inVecYByPass4, inVecYByPass5, inVecYByPass6, inVecYByPass7, inVecYByPass8, inVecYByPass9: STD_LOGIC_VECTOR(7 downto 0);
 

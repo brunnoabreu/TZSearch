@@ -35,10 +35,7 @@ entity UC_PredMov is
 		CLK					: in STD_LOGIC;
 		START					: in STD_LOGIC;
 		doneSAD				: in STD_LOGIC;
-		foundBetterSAD		: in STD_LOGIC;
 		START2				: out STD_LOGIC;
-		loadBetterCenter	: out STD_LOGIC;
-		waitCycles			: out STD_LOGIC;
 		dirtyBit				: out STD_LOGIC;
 		done					: out STD_LOGIC
 	);
@@ -61,27 +58,19 @@ begin
 end process;
 
 
-process(state, doneSAD, foundBetterSAD)
+process(state, doneSAD)
 begin
 
 	case state is
 		when idle =>
 			START2 <= '0';
-			loadBetterCenter <= '0';
-			waitCycles <= '0';
-			dirtyBit <= '0';
+			dirtyBit <= '1';
 			done <= '0';
 			nextState <= s0;
 		
 		when s0 =>
 			START2 <= '1';
 			dirtyBit <= '1';
-			waitCycles <= '0';
-			if(foundBetterSAD = '1') then
-				loadBetterCenter <= '1';
-			else
-				loadBetterCenter <= '0';
-			end if;
 			if(doneSAD = '0') then
 				nextState <= s0;
 			else
@@ -90,12 +79,6 @@ begin
 		
 		when s1 =>
 			dirtyBit <= '1';
-			waitCycles <= '0';
-			if(foundBetterSAD = '1') then
-				loadBetterCenter <= '1';
-			else
-				loadBetterCenter <= '0';
-			end if;
 			if(doneSAD = '0') then
 				nextState <= s1;
 			else
@@ -104,12 +87,6 @@ begin
 			
 		when s2 =>
 			dirtyBit <= '1';
-			waitCycles <= '0';
-			if(foundBetterSAD = '1') then
-				loadBetterCenter <= '1';
-			else
-				loadBetterCenter <= '0';
-			end if;
 			if(doneSAD = '0') then
 				nextState <= s2;
 			else
@@ -118,12 +95,6 @@ begin
 
 		when s3 =>
 			dirtyBit <= '1';
-			waitCycles <= '0';
-			if(foundBetterSAD = '1') then
-				loadBetterCenter <= '1';
-			else
-				loadBetterCenter <= '0';
-			end if;
 			if(doneSAD = '0') then
 				nextState <= s3;
 			else
@@ -131,12 +102,10 @@ begin
 			end if;
 		
 		when stateDone =>
-			loadBetterCenter <= '0';
-			waitCycles <= '0';
 			dirtyBit <= '0';
 			done <= '1';
 			nextState <= stateDone;
-			
+
 	end case;
 
 end process;

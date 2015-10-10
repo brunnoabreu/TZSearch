@@ -9,12 +9,13 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/Final_TZSearch - Behavioral C:|Users|Brunno|Desktop|TZSearch_F|TZSearch_F|Final_TZSearch.vhd/Inst_Datapath - Datapath - Behavioral</ClosedNode>
          <ClosedNode>/Final_TZSearch - Behavioral C:|Users|Brunno|Desktop|TZSearch_F|TZSearch_F|Final_TZSearch.vhd/Inst_Datapath_FirstSearch - Datapath_FirstSearch - Behavioral</ClosedNode>
+         <ClosedNode>/Final_TZSearch - Behavioral C:|Users|Brunno|Desktop|TZSearch_Github|TZSearch|TZSearch_F|Final_TZSearch.vhd/Inst_Datapath - Datapath - Behavioral</ClosedNode>
          <ClosedNode>/Final_TZSearch - Behavioral C:|Users|Brunno|Desktop|TZSearch_Github|TZSearch|TZSearch_F|Final_TZSearch.vhd/Inst_Datapath_FirstSearch - Datapath_FirstSearch - Behavioral</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem>Final_TZSearch - Behavioral (C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >1</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000229000000020000000000000000000000000200000064ffffffff000000810000000300000002000002290000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
@@ -26,13 +27,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000103000000010000000100000000000000000000000064ffffffff000000810000000000000001000001030000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -69,6 +70,40 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
+         <SelectedItem>Synthesize - XST</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f20000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Synthesize - XST</CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/Final_TZSearch - Behavioral C:|Users|Brunno|Desktop|TZSearch_F|TZSearch_F|Final_TZSearch.vhd</ClosedNode>
+         <ClosedNode>/testbench - behavior C:|Users|Brunno|Desktop|TZSearch_F|TZSearch_F|TB_TZSearch.vhd/Inst_TZSearch - Final_TZSearch - Behavioral/Inst_Datapath - Datapath - Behavioral</ClosedNode>
+         <ClosedNode>/testbench - behavior C:|Users|Brunno|Desktop|TZSearch_F|TZSearch_F|TB_TZSearch.vhd/Inst_TZSearch - Final_TZSearch - Behavioral/Inst_Datapath_FirstSearch - Datapath_FirstSearch - Behavioral</ClosedNode>
+         <ClosedNode>/testbench - behavior C:|Users|Brunno|Desktop|TZSearch_Github|TZSearch|TZSearch_F|TB_TZSearch.vhd/Inst_TZSearch - Final_TZSearch - Behavioral/Inst_Datapath - Datapath - Behavioral</ClosedNode>
+         <ClosedNode>/testbench - behavior C:|Users|Brunno|Desktop|TZSearch_Github|TZSearch|TZSearch_F|TB_TZSearch.vhd/Inst_TZSearch - Final_TZSearch - Behavioral/Inst_Datapath_FirstSearch - Datapath_FirstSearch - Behavioral</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Unassigned User Library Modules</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000023d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000023d0000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>Unassigned User Library Modules</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
          <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
@@ -77,50 +112,17 @@
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
-   <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
-   <CurrentView>Behavioral Simulation</CurrentView>
-   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
-      <ClosedNodes>
-         <ClosedNodesVersion>2</ClosedNodesVersion>
-         <ClosedNode>/Final_TZSearch - Behavioral C:|Users|Brunno|Desktop|TZSearch_F|TZSearch_F|Final_TZSearch.vhd</ClosedNode>
-         <ClosedNode>/testbench - behavior C:|Users|Brunno|Desktop|TZSearch_F|TZSearch_F|TB_TZSearch.vhd/Inst_TZSearch - Final_TZSearch - Behavioral/Inst_Datapath - Datapath - Behavioral</ClosedNode>
-         <ClosedNode>/testbench - behavior C:|Users|Brunno|Desktop|TZSearch_F|TZSearch_F|TB_TZSearch.vhd/Inst_TZSearch - Final_TZSearch - Behavioral/Inst_Datapath_FirstSearch - Datapath_FirstSearch - Behavioral</ClosedNode>
-         <ClosedNode>/testbench - behavior C:|Users|Brunno|Desktop|TZSearch_Github|TZSearch|TZSearch_F|TB_TZSearch.vhd/Inst_TZSearch - Final_TZSearch - Behavioral/Inst_Datapath - Datapath - Behavioral</ClosedNode>
-      </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem>Inst_TZSearch - Final_TZSearch - Behavioral (C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd)</SelectedItem>
-      </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
-      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000023d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000023d0000000100000003000000000000000100000003</ViewHeaderState>
-      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Inst_TZSearch - Final_TZSearch - Behavioral (C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd)</CurrentItem>
-   </ItemView>
-   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
-      <ClosedNodes>
-         <ClosedNodesVersion>1</ClosedNodesVersion>
-         <ClosedNode>Design Utilities</ClosedNode>
-      </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem/>
-      </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
-      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000103000000010000000100000000000000000000000064ffffffff000000810000000000000001000001030000000100000000</ViewHeaderState>
-      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
-   </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+         <SelectedItem>ISim Simulator</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000103000000010000000100000000000000000000000064ffffffff000000810000000000000001000001030000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+      <CurrentItem>ISim Simulator</CurrentItem>
    </ItemView>
 </Project>

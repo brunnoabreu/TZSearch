@@ -34,7 +34,7 @@ use work.STD_SAD.ALL;
 entity Final_TZSearch is
 	Port(
 		CLK				: in STD_LOGIC;
-		START				: in STD_LOGIC;
+		GLOBAL_START	: in STD_LOGIC;
 		matA1				: in matrixSAD;
 		matA2				: in matrixSAD;
 		matA3				: in matrixSAD;
@@ -46,11 +46,11 @@ entity Final_TZSearch is
 		heightPU			: in STD_LOGIC_VECTOR(6 downto 0);
 		widthPU			: in STD_LOGIC_VECTOR(6 downto 0);
 		searchRange		: in STD_LOGIC_VECTOR(7 downto 0);
-		initCandidateX	: in STD_LOGIC_VECTOR(7 downto 0);
+		initCandidateX	: in STD_LOGIC_VECTOR(7 downto 0); --CANDIDATOS ENVIADOS DE FORA PARA SEREM ESCOLHIDOS COMO O CENTRO
 		initCandidateY	: in STD_LOGIC_VECTOR(7 downto 0);
-		curVecX			: out STD_LOGIC_VECTOR(7 downto 0);
+		curVecX			: out STD_LOGIC_VECTOR(7 downto 0); --VETORES A SEREM ENVIADOS PARA A MEMÓRIA (PARA BUSCA)
 		curVecY			: out STD_LOGIC_VECTOR(7 downto 0);
-		bestVecX			: out STD_LOGIC_VECTOR(7 downto 0);
+		bestVecX			: out STD_LOGIC_VECTOR(7 downto 0); --MELHOR VETOR
 		bestVecY			: out STD_LOGIC_VECTOR(7 downto 0);
 		done				: out STD_LOGIC
 	);
@@ -70,10 +70,9 @@ architecture Behavioral of Final_TZSearch is
 		matB4      			: in matrixSAD;
 		CLK        			: in STD_LOGIC;
 		START      			: in STD_LOGIC;
-		heightPU				: in STD_LOGIC_VECTOR(6 downto 0);
-		widthPU				: in STD_LOGIC_VECTOR(6 downto 0);
+		nrAccum				: in STD_LOGIC_VECTOR(7 downto 0);
 		nrAccumSubSrc		: in STD_LOGIC;
-		validSAD				: in STD_LOGIC;
+		isValidSAD			: in STD_LOGIC;
 		subResult			: out STD_LOGIC;
 		SAD441				: out STD_LOGIC_VECTOR(11 downto 0);
 		SAD442				: out STD_LOGIC_VECTOR(11 downto 0);
@@ -85,22 +84,27 @@ architecture Behavioral of Final_TZSearch is
 	);
 	end component;
 	
-	component DatapathPredVec
-		Port(
-			CLK					: in STD_LOGIC;
-			START					: in STD_LOGIC;
-			vecX					: in STD_LOGIC_VECTOR(7 downto 0);
-			vecY					: in STD_LOGIC_VECTOR(7 downto 0);
-			bestVecX				: out STD_LOGIC_VECTOR(7 downto 0);
-			bestVecY				: out STD_LOGIC_VECTOR(7 downto 0)
-		);
-	end component;
+--	component DatapathPredVec
+--		Port(
+--			CLK					: in STD_LOGIC;
+--			START					: in STD_LOGIC;
+--			vecX					: in STD_LOGIC_VECTOR(7 downto 0);
+--			vecY					: in STD_LOGIC_VECTOR(7 downto 0);
+--			bestVecX				: out STD_LOGIC_VECTOR(7 downto 0);
+--			bestVecY				: out STD_LOGIC_VECTOR(7 downto 0)
+--		);
+--	end component;
 	
 	component Datapath_Raster
 		Port(
 		CLK						: in STD_LOGIC;
 		START						: in STD_LOGIC;
 		foundBetterSAD			: in STD_LOGIC;
+		cyclesPerPU				: in STD_LOGIC_VECTOR(7 downto 0);
+		borderLeft				: in STD_LOGIC_VECTOR(7 downto 0);
+		borderRight				: in STD_LOGIC_VECTOR(7 downto 0);
+		borderUp					: in STD_LOGIC_VECTOR(7 downto 0);
+		borderDown				: in STD_LOGIC_VECTOR(7 downto 0);
 		initData					: in STD_LOGIC;
 		initIncrement			: in STD_LOGIC;
 		rearrangeVecMems		: in STD_LOGIC;
@@ -108,8 +112,6 @@ architecture Behavioral of Final_TZSearch is
 		loadRegXMem2			: in STD_LOGIC;
 		sendToMem				: in STD_LOGIC;
 		searchRange				: in STD_LOGIC_VECTOR(7 downto 0);
-		heightPU					: in STD_LOGIC_VECTOR(6 downto 0);
-		widthPU					: in STD_LOGIC_VECTOR(6 downto 0);
 		initCenterX				: in STD_LOGIC_VECTOR(7 downto 0);
 		initCenterY				: in STD_LOGIC_VECTOR(7 downto 0);
 		bestInitialX			: in STD_LOGIC_VECTOR(7 downto 0);
@@ -129,8 +131,11 @@ architecture Behavioral of Final_TZSearch is
 		CLK							: in STD_LOGIC;
 		START							: in STD_LOGIC;
 		foundBetterSAD				: in STD_LOGIC;
-		heightPU						: in STD_LOGIC_VECTOR(6 downto 0);
-		widthPU						: in STD_LOGIC_VECTOR(6 downto 0);
+		cyclesPerPU					: in STD_LOGIC_VECTOR(7 downto 0);
+		borderLeft					: in STD_LOGIC_VECTOR(7 downto 0);
+		borderRight					: in STD_LOGIC_VECTOR(7 downto 0);
+		borderUp						: in STD_LOGIC_VECTOR(7 downto 0);
+		borderDown					: in STD_LOGIC_VECTOR(7 downto 0);
 		initCenterX					: in STD_LOGIC_VECTOR(7 downto 0);
 		initCenterY					: in STD_LOGIC_VECTOR(7 downto 0);
 		incDoAgain					: in STD_LOGIC;
@@ -176,10 +181,7 @@ architecture Behavioral of Final_TZSearch is
 		CLK					: in STD_LOGIC;
 		START					: in STD_LOGIC;
 		doneSAD				: in STD_LOGIC;
-		foundBetterSAD		: in STD_LOGIC;
 		START2				: out STD_LOGIC;
-		loadBetterCenter	: out STD_LOGIC;
-		waitCycles			: out STD_LOGIC;
 		dirtyBit				: out STD_LOGIC;
 		done					: out STD_LOGIC
 	);
@@ -212,13 +214,9 @@ architecture Behavioral of Final_TZSearch is
 		waitCycles			: in STD_LOGIC;
 		is8x8or16x4			: in STD_LOGIC;
 		subResult			: in STD_LOGIC;
-		finishFSM			: in STD_LOGIC;
 		dirtyBit				: in STD_LOGIC;
-		heightPU				: in STD_LOGIC_VECTOR(6 downto 0);
-		widthPU				: in STD_LOGIC_VECTOR(6 downto 0);
-		validSAD				: out STD_LOGIC;
+		isValidSAD			: out STD_LOGIC;
 		nrAccumSubSrc		: out STD_LOGIC;
-		done        		: out STD_LOGIC;
 		doneRest				: out STD_LOGIC
 	);
 	end component;
@@ -276,7 +274,6 @@ architecture Behavioral of Final_TZSearch is
 		STARTRaster			: out STD_LOGIC;
 		chooseMode			: out STD_LOGIC;
 		loadSearchCenter	: out STD_LOGIC;
-		loadBestVecs		: out STD_LOGIC;
 		sel_TZ_stage		: out STD_LOGIC_VECTOR(1 downto 0);
 		done					: out STD_LOGIC
 	);
@@ -284,11 +281,11 @@ architecture Behavioral of Final_TZSearch is
 		
 	
 signal middleWaitCycles, middleAuxIs8x8or16x4, middleSubResult, middleFinishFSM, 
-middleDirtyBit, middleValidSAD, middleNrAccumSubSrc, middleDoneRest, START2: STD_LOGIC;
+middleDirtyBit, middleIsValidSAD, middleNrAccumSubSrc, middleDoneRest, START2: STD_LOGIC;
 signal S_SAD, regBestSAD: STD_LOGIC_VECTOR(19 downto 0);
-signal doneRest, doneaux: STD_LOGIC;
+signal doneRest: STD_LOGIC;
 signal auxIs8x8or16x4, foundBetterSAD, flagBetter, regis8x8or16x4: STD_LOGIC;
-signal loadsearchcenter, loadbestvecs: STD_LOGIC;
+signal loadsearchcenter: STD_LOGIC;
 signal muxstart2: STD_LOGIC;
 signal regCenterx, regCenterY, regBestVecX, regBestVecY: STD_LOGIC_VECTOR(7 downto 0);
 signal middleInitCenterX, middleInitCenterY, auxBestVecX, auxBestVecY: STD_LOGIC_VECTOR(7 downto 0);
@@ -326,14 +323,21 @@ signal regHeightPU, regWidthPU: STD_LOGIC_VECTOR(6 downto 0);
 signal sel_TZ_stage: STD_LOGIC_VECTOR(1 downto 0);
 
 signal middleLoadBetterCenter: STD_LOGIC;
-
+signal inDirtyBit: STD_LOGIC;
 
 signal dirtyBitByPass1, dirtyBitByPass2, dirtyBitByPass3, dirtyBitByPass4, dirtyBitByPass5, dirtyBitByPass6, dirtyBitByPass7,
 dirtyBitByPass8, dirtyBitByPass9, dirtyBitByPass10: STD_LOGIC;
+signal inVecX, inVecXByPass1, inVecXByPass2, inVecXByPass3, inVecXByPass4, inVecXByPass5, inVecXByPass6, inVecXByPass7, inVecXByPass8, inVecXByPass9: STD_LOGIC_VECTOR(7 downto 0);
+signal inVecY, inVecYByPass1, inVecYByPass2, inVecYByPass3, inVecYByPass4, inVecYByPass5, inVecYByPass6, inVecYByPass7, inVecYByPass8, inVecYByPass9: STD_LOGIC_VECTOR(7 downto 0);
 
+signal cyclesPerPU, regCyclesPerPU: STD_LOGIC_VECTOR(7 downto 0);
+signal multHW: STD_LOGIC_VECTOR(13 downto 0);
+signal regSearchRange, regBorderLeft, regBorderRight, regBorderUp, regBorderDown, auxRegBorderRight, auxRegBorderDown: STD_LOGIC_VECTOR(7 downto 0);
 
 begin
 
+multHW <= regHeightPU * regWidthPU;
+cyclesPerPU <= ('0' & multHW (12 downto 6)) - 1;
 
 auxIs8x8or16x4 <= '1' when ((heightPU(3 downto 2) = "10" and widthPU(3 downto 2) = "10") or (heightPU(3 downto 2) = "01" and widthPU(3 downto 2) = "01")) else
 						'0';
@@ -360,9 +364,10 @@ bestVecY <= regBestVecY;
 
 loadCenter <= foundBetterSAD and loadSearchCenter;
 
-	process(CLK, START, loadCenter)
+	process(CLK, GLOBAL_START, loadCenter, foundBetterSAD)
 	begin
-		if(START='0') then
+		if(GLOBAL_START='0') then
+			regCyclesPerPU <= (OTHERS=>'0');
 			regHeightPU <= (OTHERS=>'0');
 			regWidthPU <= (OTHERS=>'0');
 			regIs8x8or16x4 <= '0';
@@ -371,19 +376,26 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 			regCenterY <= (OTHERS=>'0');
 			regBestVecX <= (OTHERS=>'0');
 			regBestVecY <= (OTHERS=>'0');
---			regSearchRange <= (OTHERS=>'0');
+			regSearchRange <= (OTHERS=>'0');
+			regBorderLeft <= (OTHERS=>'0');
+			regBorderRight <= (OTHERS=>'0');
+			regBorderUp <= (OTHERS=>'0');
+			regBorderDown <= (OTHERS=>'0');
+			auxRegBorderRight <= (OTHERS=>'0');
+			auxRegBorderDown <= (OTHERS=>'0');
 		elsif(CLK'event and CLK='1') then
 			regIs8x8or16x4 <= auxIs8x8or16x4;
 			regHeightPU <= heightPU;
 			regWidthPU <= widthPU;
+			regCyclesPerPU <= cyclesPerPU;
 			
 			if(foundBetterSAD = '1') then
 				regBestSAD <= S_SAD;
 			end if;
 			
 			if(loadCenter = '1') then
-				regCenterX <= middleInitCenterX;
-				regCenterY <= middleInitCenterY;
+				regCenterX <= inVecXByPass8;
+				regCenterY <= inVecYByPass8;
 			end if;
 			
 			if(foundBetterSAD = '1') then
@@ -391,15 +403,15 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 				regBestVecY <= auxBestVecY;
 			end if;
 			
---			regSearchRange <= searchRange;
---			regBorderLeft <= middleBestVecX - regSearchRange;
---			regBorderUp <= middleBestVecY - regSearchRange;
---			
---			auxRegBorderRight <= middleBestVecX + regSearchRange;
---			auxRegBorderDown <= middleBestVecY + regSearchRange;
---		
---			regBorderRight <= auxRegBorderRight - widthPU;
---			regBorderDown <= auxRegBorderDown - heightPU;
+			regSearchRange <= searchRange;
+			regBorderLeft <= regCenterX - regSearchRange;
+			regBorderUp <= regCenterY - regSearchRange;
+			
+			auxRegBorderRight <= regCenterX + regSearchRange;
+			auxRegBorderDown <= regCenterY + regSearchRange;
+		
+			regBorderRight <= auxRegBorderRight - regWidthPU;
+			regBorderDown <= auxRegBorderDown - regHeightPU;
 		end if;
 	end process;
 	
@@ -416,11 +428,10 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 		matA4 			=> matA4, --OK
 		matB4 			=> matB4, --OK 
 		CLK 				=> CLK, --OK
-		START 			=> START, --OK
+		START 			=> GLOBAL_START, --OK
+		nrAccum			=> regCyclesPerPU, --OK
 		nrAccumSubSrc 	=> middleNrAccumSubSrc, --OK
-		validSAD			=> middleValidSAD, --OK
-		heightPU 		=> regHeightPU, --OK
-		widthPU 			=> regWidthPU, --OK
+		isValidSAD		=> middleIsValidSAD, --OK
 		subResult 		=> middleSubResult, --OK
 		SAD 				=> S_SAD --OK
 	);
@@ -431,13 +442,9 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 		waitCycles	  	=> middleWaitCycles, --OK
 		is8x8or16x4		=> regIs8x8or16x4, --OK
 		subResult 	  	=> middleSubResult, --OK
-		finishFSM	  	=> '0', --OK??
 		dirtyBit			=> middleDirtyBit, --OK
-		heightPU		  	=> regHeightPU, --OK
-		widthPU		  	=> regWidthPU, --OK
-		validSAD			=> middleValidSAD, --OK
+		isValidSAD		=> middleIsValidSAD, --OK
 		nrAccumSubSrc 	=> middleNrAccumSubSrc, --OK
-		done 			  	=> doneAux, --OK
 		doneRest 	  	=> doneRest --OK
 	);
 	
@@ -506,10 +513,7 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 		CLK 					=> CLK, --OK
 		START 				=> STARTPredMov, --OK
 		doneSAD 				=> doneRest, --OK
-		foundBetterSAD		=> foundBetterSAD, --OK
-		loadBetterCenter	=> loadBetterCenter, --OK
 		START2  				=> START2PredMov, --OK
-		waitCycles			=> waitCycles_PredMov, --OK
 		dirtyBit				=> dirtyBit_PredMov, --OK
 		done 					=> donePredMov --OK
 	);
@@ -518,8 +522,11 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 			CLK							=> CLK, --OK
 			START							=> STARTFirstSearch, --OK
 			foundBetterSAD				=> foundBetterSAD, --OK
-			heightPU						=> regHeightPU,
-			widthPU						=> regWidthPU,
+			cyclesPerPU					=> regCyclesPerPU, --OK
+			borderLeft					=> regBorderLeft,
+			borderRight					=> regBorderRight,
+			borderUp						=> regBorderUp,
+			borderDown					=> regBorderDown,
 			initCenterX					=> regCenterX, --OK
 			initCenterY					=> regCenterY, --OK
 			incDoAgain					=> middleIncDoAgain, --OK
@@ -545,7 +552,7 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 			incRegPUsFinished			=> middleIncRegPUsFinished, --OK
 			loadByPassVecFound		=> middleLoadByPassVecFound, --OK
 			writeCache					=> middleWriteCache, --OK
-			searchRange					=> searchRange, --OK
+			searchRange					=> regSearchRange, --OK
 			vecFound						=> middleVecFound, --OK
 			byPassVecFound				=> middleByPassVecFound, --OK
 			isOutOfAnyBound			=> middleIsOutOfAnyBound, --OK
@@ -564,15 +571,18 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 			CLK						=> CLK, --OK
 			START						=> STARTRaster, --OK
 			foundBetterSAD 		=> foundBetterSAD, --OK
+			cyclesPerPU				=> regCyclesPerPU, --OK
+			borderLeft				=> regBorderLeft, --OK
+			borderRight				=> regBorderRight, --OK
+			borderUp					=> regBorderUp, --OK
+			borderDown				=> regBorderDown, --OK
 			initData					=> middleInitData_Raster, --OK
 			initIncrement			=> middleInitIncrement_Raster, --OK
 			rearrangeVecMems		=> middleRearrangeVecMems, --OK
 			incRegX					=> middleIncRegX, --OK
 			loadRegXMem2			=> middleLoadRegXMem2, --OK
 			sendToMem				=> middleSendToMem_Raster, --OK
-			searchRange				=> searchRange, --OK
-			heightPU					=> regHeightPU, --OK
-			widthPU					=> regWidthPU, --OK
+			searchRange				=> regSearchRange, --OK
 			initCenterX				=> regCenterX, --OK
 			initCenterY				=> regCenterY, --OK
 			bestInitialX			=> regBestVecX, --OK
@@ -586,19 +596,9 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 			bestVecY					=> middleBestVecY_Raster --OK
 	);
 
-
-	Inst_DatapathPredVec: DatapathPredVec PORT MAP(
-			CLK					=> CLK, --OK
-			START					=> STARTPredMov, --OK
-			vecX					=> initCandidateX, --OK
-			vecY					=> initCandidateY, --OK
-			bestVecX				=> middleInitCenterX, --OK
-			bestVecY				=> middleInitCenterY --OK
-			);
-
 	Inst_TZSearch: UC_TZSearch PORT MAP(
 		CLK 					=> CLK,
-		START 				=> START,
+		START 				=> GLOBAL_START,
 		donePredMov			=> donePredMov,
 		doneFirstSearch 	=> doneFirstSearch,
 		doneRaster 			=> doneRaster,
@@ -607,28 +607,21 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 		STARTRaster			=> STARTRaster,
 		chooseMode			=> middleChooseMode,
 		loadSearchCenter	=> loadSearchCenter,
-		loadBestVecs		=> loadBestVecs,
 		sel_TZ_stage		=> sel_TZ_stage,
 		done					=> done
 	);
 
 
-middleWaitCycles <= waitCycles_PredMov when sel_TZ_stage = "00" else
+middleWaitCycles <= '0' when sel_TZ_stage = "00" else
 						  waitCycles_FirstSearch when sel_TZ_stage = "01" else
 						  waitCycles_Raster when sel_TZ_stage = "10" else
 						  waitCycles_FirstSearch;
-
-
---middleFinishFSM <= finishFSM_PredMov when sel_TZ_stage = "00" else
---						 finishFSM_FirstSearch when sel_TZ_stage = "01" else
---						 finishFSM_Raster when sel_TZ_stage = "10" else
---						 finishFSM_FirstSearch when OTHERS;
 						 
 
-middleDirtyBit <= dirtyBit_PredMov when sel_TZ_stage = "00" else
-					   dirtyBitByPass10 when sel_TZ_stage = "01" else
+inDirtyBit <= dirtyBit_PredMov when sel_TZ_stage = "00" else
+					   dirtyBit_FirstSearch when sel_TZ_stage = "01" else
 						dirtyBit_Raster when sel_TZ_stage = "10" else
-						dirtyBitByPass10;
+						dirtyBit_FirstSearch;
 
 
 muxSTART2 <= START2PredMov when sel_TZ_stage = "00" else
@@ -645,21 +638,27 @@ curVecY <= middleVecMemY_FirstSearch when sel_TZ_stage = "01" else
 			  middleVecMemY_Raster when sel_TZ_stage = "10" else
 			  (OTHERS=>'0');
 
-auxBestVecX <= middleInitCenterX when sel_TZ_stage = "00" else
+auxBestVecX <= inVecXByPass8 when sel_TZ_stage = "00" else
 					middleBestVecX_FirstSearch when sel_TZ_stage = "01" else
 					middleBestVecX_Raster when sel_TZ_stage = "10" else
 					regBestVecX;
 
-auxBestVecY <= middleInitCenterY when sel_TZ_stage = "00" else
+auxBestVecY <= inVecYByPass8 when sel_TZ_stage = "00" else
 					middleBestVecY_FirstSearch when sel_TZ_stage = "01" else
 					middleBestVecY_Raster when sel_TZ_stage = "10" else
 					regBestVecY;
 
+inVecX <= initCandidateX;
 
 
-	process(START, CLK)
+inVecY <= initCandidateY;
+
+
+middleDirtyBit <= dirtyBitByPass10;
+
+	process(GLOBAL_START, CLK)
 	begin
-		if(START = '0') then
+		if(GLOBAL_START = '0') then
 			dirtyBitByPass1 <= '0';
 			dirtyBitByPass2 <= '0';
 			dirtyBitByPass3 <= '0';
@@ -671,7 +670,7 @@ auxBestVecY <= middleInitCenterY when sel_TZ_stage = "00" else
 			dirtyBitByPass9 <= '0';
 			dirtyBitByPass10 <= '0';
 		elsif(CLK'event and CLK='1') then
-			dirtyBitByPass1 <= dirtyBit_FirstSearch;
+			dirtyBitByPass1 <= inDirtyBit;
 			dirtyBitByPass2 <= dirtyBitByPass1;
 			dirtyBitByPass3 <= dirtyBitByPass2;
 			dirtyBitByPass4 <= dirtyBitByPass3;
@@ -681,6 +680,45 @@ auxBestVecY <= middleInitCenterY when sel_TZ_stage = "00" else
 			dirtyBitByPass8 <= dirtyBitByPass7;
 			dirtyBitByPass9 <= dirtyBitByPass8;
 			dirtyBitByPass10 <= dirtyBitByPass9;
+		end if;
+	end process;
+	
+	process(GLOBAL_START, CLK)
+	begin
+		if(GLOBAL_START='0') then
+			inVecXByPass1 <= (OTHERS=>'0');
+			inVecXByPass2 <= (OTHERS=>'0');
+			inVecXByPass3 <= (OTHERS=>'0');
+			inVecXByPass4 <= (OTHERS=>'0');
+			inVecXByPass5 <= (OTHERS=>'0');
+			inVecXByPass6 <= (OTHERS=>'0');
+			inVecXByPass7 <= (OTHERS=>'0');
+			inVecXByPass8 <= (OTHERS=>'0');
+			inVecYByPass1 <= (OTHERS=>'0');
+			inVecYByPass2 <= (OTHERS=>'0');
+			inVecYByPass3 <= (OTHERS=>'0');
+			inVecYByPass4 <= (OTHERS=>'0');
+			inVecYByPass5 <= (OTHERS=>'0');
+			inVecYByPass6 <= (OTHERS=>'0');
+			inVecYByPass7 <= (OTHERS=>'0');
+			inVecYByPass8 <= (OTHERS=>'0');
+		elsif(CLK'event and CLK='1') then
+			inVecXByPass1 <= inVecX;
+			inVecXByPass2 <= inVecXByPass1;
+			inVecXByPass3 <= inVecXByPass2;
+			inVecXByPass4 <= inVecXByPass3;
+			inVecXByPass5 <= inVecXByPass4;
+			inVecXByPass6 <= inVecXByPass5;
+			inVecXByPass7 <= inVecXByPass6;
+			inVecXByPass8 <= inVecXByPass7;
+			inVecYByPass1 <= inVecY;
+			inVecYByPass2 <= inVecYByPass1;
+			inVecYByPass3 <= inVecYByPass2;
+			inVecYByPass4 <= inVecYByPass3;
+			inVecYByPass5 <= inVecYByPass4;
+			inVecYByPass6 <= inVecYByPass5;
+			inVecYByPass7 <= inVecYByPass6;
+			inVecYByPass8 <= inVecYByPass7;
 		end if;
 	end process;
 

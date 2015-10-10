@@ -82,6 +82,7 @@ begin
 			loadRegXMem2 <= '0';
 			sendToMem <= '0';
 			done <= '0';
+			rearrangeVecMems <= '0';
 			nextState <= waitForStart1;
 
 		when waitForStart1 =>

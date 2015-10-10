@@ -36,6 +36,11 @@ entity Datapath_Raster is
 		CLK						: in STD_LOGIC;
 		START						: in STD_LOGIC;
 		foundBetterSAD			: in STD_LOGIC;
+		cyclesPerPU				: in STD_LOGIC_VECTOR(7 downto 0);
+		borderLeft				: in STD_LOGIC_VECTOR(7 downto 0);
+		borderRight				: in STD_LOGIC_VECTOR(7 downto 0);
+		borderUp					: in STD_LOGIC_VECTOR(7 downto 0);
+		borderDown				: in STD_LOGIC_VECTOR(7 downto 0);
 		initData					: in STD_LOGIC;
 		initIncrement			: in STD_LOGIC;
 		rearrangeVecMems		: in STD_LOGIC;
@@ -43,8 +48,6 @@ entity Datapath_Raster is
 		loadRegXMem2			: in STD_LOGIC;
 		sendToMem				: in STD_LOGIC;
 		searchRange				: in STD_LOGIC_VECTOR(7 downto 0);
-		heightPU					: in STD_LOGIC_VECTOR(6 downto 0);
-		widthPU					: in STD_LOGIC_VECTOR(6 downto 0);
 		initCenterX				: in STD_LOGIC_VECTOR(7 downto 0);
 		initCenterY				: in STD_LOGIC_VECTOR(7 downto 0);
 		bestInitialX			: in STD_LOGIC_VECTOR(7 downto 0);
@@ -61,34 +64,19 @@ end Datapath_Raster;
 
 architecture Behavioral of Datapath_Raster is
 
-signal middleSubResult, middleNrAccumSubSrc: STD_LOGIC;
 signal currentXVecByPass1, currentXVecByPass2, currentXVecByPass3, currentXVecByPass4, currentXVecByPass5, currentXVecByPass6, currentXVecByPass7, currentXVecByPass8: STD_LOGIC_VECTOR(7 downto 0);
 signal currentYVecByPass1, currentYVecByPass2, currentYVecByPass3, currentYVecByPass4, currentYVecByPass5, currentYVecByPass6, currentYVecByPass7, currentYVecByPass8: STD_LOGIC_VECTOR(7 downto 0);
-signal multHW: STD_LOGIC_VECTOR(13 downto 0);
-signal latency, regLatency, regSubLatency, subLatency: STD_LOGIC_VECTOR(7 downto 0);
-signal auxRegBorderRight, auxRegBorderDown: STD_LOGIC_VECTOR(7 downto 0);
-signal regBorderRight, regBorderLeft, regBorderDown, regBorderUp: STD_LOGIC_VECTOR(7 downto 0);
-signal regBestInitialX, regBestInitialY, regSearchRange: STD_LOGIC_VECTOR(7 downto 0);
-signal regBestSAD: STD_LOGIC_VECTOR(19 downto 0);
-signal regBestInitialSAD: STD_LOGIC_VECTOR(19 downto 0);
+signal regLatency, regSubLatency, subLatency: STD_LOGIC_VECTOR(7 downto 0);
+signal regBestInitialX, regBestInitialY: STD_LOGIC_VECTOR(7 downto 0);
 signal regXMem, regYMem, regYMemAfter: STD_LOGIC_VECTOR(7 downto 0);
 signal regXMem2, regYMem2: STD_LOGIC_VECTOR(7 downto 0);
 signal regXMem3, regYMem3: STD_LOGIC_VECTOR(7 downto 0);
 signal subRight, subDown: STD_LOGIC_VECTOR(7 downto 0);
 signal auxIsOutOfXBound, auxIsOutOfYBound, regIsOutOfXBound, regIsOutOfYBound: STD_LOGIC;
-signal S_SAD, regDifferenceSADs: STD_LOGIC_VECTOR(19 downto 0);
-signal flagBetterSAD: STD_LOGIC;
-signal doneRest, done44, done48: STD_LOGIC;
 signal curRegBestVecX, curRegBestVecY: STD_LOGIC_VECTOR(7 downto 0);
-signal done: STD_LOGIC;
---signal auxIs8x8or16x4: STD_LOGIC;
-signal middleValidSAD: STD_LOGIC;
 signal regInitCenterX, regInitCenterY: STD_LOGIC_VECTOR(7 downto 0);
 
 begin
-
-multHW <= heightPU * widthPU;
-latency <= ('0' & multHW (12 downto 6)) - 1;
 
 finishSendPartitions <= regSubLatency(7);
 
@@ -97,8 +85,8 @@ auxIsOutOfXBound <= '1' when subRight(7) = '0' else
 auxIsOutOfYBound <= '1' when subDown(7) = '0' else
 					  '0';
 
-subRight <= regXMem - regBorderRight;
-subDown <= regYMemAfter - regBorderDown;
+subRight <= regXMem - borderRight;
+subDown <= regYMemAfter - borderDown;
 
 --bestVecX <= curRegBestVecX;
 --bestVecY <= curRegBestVecY;
@@ -114,14 +102,8 @@ isOutOfYBound <= regIsOutOfYBound;
 		if(START='0') then
 			regInitCenterX <= (OTHERS=>'0');
 			regInitCenterY <= (OTHERS=>'0');
-			regSearchRange <= (OTHERS=>'0');
-			regBorderLeft <= (OTHERS=>'0');
-			regBorderRight <= (OTHERS=>'0');
-			regBorderUp <= (OTHERS=>'0');
-			regBorderDown <= (OTHERS=>'0');
 			regBestInitialX <= (OTHERS=>'0');
 			regBestInitialY <= (OTHERS=>'0');
-			regBestInitialSAD <= (OTHERS=>'0');
 			regLatency <= (OTHERS=>'0');
 			regSubLatency <= (OTHERS=>'0');
 			curRegBestVecX <= (OTHERS=>'0');
@@ -132,8 +114,6 @@ isOutOfYBound <= regIsOutOfYBound;
 			regYMem2 <= (OTHERS=>'0');
 			regXMem3 <= (OTHERS=>'0');
 			regYMem3 <= (OTHERS=>'0');
-			auxRegBorderRight <= (OTHERS=>'0');
-			auxRegBorderDown <= (OTHERS=>'0');
 			regIsOutOfXBound <= '0';
 			regIsOutOfYBound <= '0';
 			regYMemAfter <= (OTHERS=>'0');
@@ -143,25 +123,15 @@ isOutOfYBound <= regIsOutOfYBound;
 		elsif(CLK'event and CLK='1') then
 			regBestInitialX <= bestInitialX;
 			regBestInitialY <= bestInitialY;
-			regSearchRange <= searchRange;
-			regLatency <= latency;
-			regBorderLeft <= initCenterX - regSearchRange;
-			regBorderUp <= initCenterY - regSearchRange;
-			
-			
-			auxRegBorderRight <= initCenterX + regSearchRange;
-			auxRegBorderDown <= initCenterY + regSearchRange;
-			
-			regBorderRight <= auxRegBorderRight - widthPU;
-			regBorderDown <= auxRegBorderDown - heightPU;
+			regLatency <= cyclesPerPU;
 						
 			regYMemAfter <= regYMem + IRASTER;
 			
 			if(initData = '1') then
 				curRegBestVecX <= regBestInitialX;
 				curRegBestVecY <= regBestInitialY;
-				regXMem <= regBorderLeft; --PODE-SE USAR OUTRO SOMADOR PARA FAZER TUDO UM CICLO ANTES
-				regYMem <= regBorderUp;
+				regXMem <= borderLeft; --PODE-SE USAR OUTRO SOMADOR PARA FAZER TUDO UM CICLO ANTES
+				regYMem <= borderUp;
 			end if;
 			
 			if(initIncrement = '1') then
@@ -187,21 +157,15 @@ isOutOfYBound <= regIsOutOfYBound;
 			end if;
 			
 			if(rearrangeVecMems = '1') then
-				regXMem3 <= regBorderLeft;
+				regXMem3 <= borderLeft;
 				regYMem3 <= regYMem3 + IRASTER;
-				regXMem2 <= regBorderLeft + IRASTER;
+				regXMem2 <= borderLeft + IRASTER;
 				regYMem2 <= regYMem3 + IRASTER;
-				regXMem <= regBorderLeft + DOUBLE_IRASTER;
+				regXMem <= borderLeft + DOUBLE_IRASTER;
 				regYMem <= regYMem3 + IRASTER;
 				regIsOutOfXBound <= '0';
 				regIsOutOfYBound <= '0';
 			end if;
---			
---			if(foundBetterSAD = '1') then
---				curRegBestVecX <= currentXVecByPass8;
---				curRegBestVecY <= currentYVecByPass8;
---			end if;
-			
 			
 		end if;
 	end process;

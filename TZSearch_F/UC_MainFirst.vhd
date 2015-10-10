@@ -106,6 +106,8 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 	begin
 		case state is
 			when idle =>
+				loadByPassOutOfAnyBound <= '0';
+				incDoAgain <= '0';
 				loadByPassVecFound <= '0';
 				incRegPUsFinished <= '0';
 				loadregNumPUsLevel <= '0';
@@ -122,7 +124,6 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				rstRegCurVecX <= '0';
 				incRegCurVecY <= '0';
 				rstRegCurVecY <= '0';
---				inc_iDist <= '0';
 				initData <= '0';
 				initIncrement <= '0';
 				incRegNumLevels <= '0';

@@ -15,7 +15,7 @@
           COMPONENT Final_TZSearch
           PORT(
 				CLK				: in STD_LOGIC;
-				START				: in STD_LOGIC;
+				GLOBAL_START	: in STD_LOGIC;
 				matA1				: in matrixSAD;
 				matA2				: in matrixSAD;
 				matA3				: in matrixSAD;
@@ -46,7 +46,7 @@
 		signal matB3: matrixSAD := (OTHERS=>(OTHERS=>(OTHERS=>'0')));
 		signal matB4: matrixSAD := (OTHERS=>(OTHERS=>(OTHERS=>'0')));
 		signal CLK: STD_LOGIC := '0';
-		signal START: STD_LOGIC := '0';
+		signal GLOBAL_START: STD_LOGIC := '0';
 		signal heightPU: STD_LOGIC_VECTOR(6 downto 0) := (OTHERS=>'0');
 		signal widthPU: STD_LOGIC_VECTOR(6 downto 0) := (OTHERS=>'0');
 		signal searchRange: STD_LOGIC_VECTOR(7 downto 0) := (OTHERS=>'0');
@@ -65,7 +65,7 @@
   -- Component Instantiation
           Inst_TZSearch: Final_TZSearch PORT MAP(
 				CLK				=> CLK,
-				START				=> START,
+				GLOBAL_START	=> GLOBAL_START,
 				matA1 			=> matA1,
 				matA2 			=> matA2,
 				matA3 			=> matA3,
@@ -98,12 +98,12 @@
 
 	tb: process
 	begin
-		START <= '0';
+		GLOBAL_START <= '0';
 		heightPU <= "0001000";
 		widthPU <= "0010000";
 		searchRange <= "01000000";
 		wait for CLK_period;
-		START <= '1';
+		GLOBAL_START <= '1';
 		wait for 5*CLK_period/2;
 		
 		initCandidateX <= "00010100";

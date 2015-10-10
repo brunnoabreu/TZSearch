@@ -42,7 +42,6 @@ entity UC_TZSearch is
 		STARTRaster			: out STD_LOGIC;
 		chooseMode			: out STD_LOGIC; --DECIDE ENTRE FIRST E REFINEMENT SEARCH
 		loadSearchCenter	: out STD_LOGIC;
-		loadBestVecs		: out STD_LOGIC;
 		sel_TZ_stage		: out STD_LOGIC_VECTOR(1 downto 0);
 		done					: out STD_LOGIC
 	);
@@ -77,13 +76,11 @@ begin
 			sel_TZ_stage <= "00";
 			done <= '0';
 			loadSearchCenter <= '0';
-			loadBestVecs <= '0';
 			nextState <= s_PredMov;
 		
 		when s_PredMov =>
 			STARTPredMov <= '1';
 			loadSearchCenter <= '1';
-			loadBestVecs <= '1';
 			sel_TZ_stage <= "00";
 			chooseMode <= '0';
 			if(donePredMov = '1') then
@@ -98,13 +95,11 @@ begin
 	
 		when s_FirstSearch =>
 			STARTFirstSearch <= '1';
-			loadBestVecs <= '1';
 			chooseMode <= '0';
 			STARTRaster <= '0';
 			sel_TZ_stage <= "01";
 			if(doneFirstSearch = '1') then
 				STARTFirstSearch <= '1';
-				loadBestVecs <= '0';
 				STARTRaster <= '0';
 				sel_TZ_stage <= "01";
 				nextState <= s_Raster;
@@ -113,7 +108,6 @@ begin
 		when s_Raster =>
 			STARTFirstSearch <= '0';
 			STARTRaster <= '1';
-			loadBestVecs <= '1';
 			sel_TZ_stage <= "10";
 			chooseMode <= '0';
 			if(doneRaster = '1') then
