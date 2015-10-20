@@ -47,7 +47,7 @@ entity Datapath_FirstSearch is
 		sel_distX					: in STD_LOGIC_VECTOR(2 downto 0);
 		sel_distY					: in STD_LOGIC_VECTOR(2 downto 0);
 		sel_candidates				: in STD_LOGIC_VECTOR(1 downto 0);
-		chooseMode					: in STD_LOGIC;
+		isRefinement				: in STD_LOGIC;
 		loadregNumPUsLevel		: in STD_LOGIC;
 		op_typeX						: in STD_LOGIC;
 		op_typeY						: in STD_LOGIC;
@@ -84,7 +84,7 @@ end Datapath_FirstSearch;
 architecture Behavioral of Datapath_FirstSearch is
 
 
-signal numLevels, regNumLevels, regMode: STD_LOGIC_VECTOR(1 downto 0);
+signal numLevels, regNumLevels, regToleranceLevels: STD_LOGIC_VECTOR(1 downto 0);
 signal regCurVecX, regCurVecY: STD_LOGIC_VECTOR(7 downto 0);
 signal regBestX, regBestY: STD_LOGIC_VECTOR(7 downto 0);
 signal subRight, subDown: STD_LOGIC_VECTOR(7 downto 0);
@@ -183,7 +183,7 @@ doAgain 			<= regDoAgain;
 byPassVecFound <= regByPassVecFound;
 vecFound			<= auxVecFound;
 
-hasPassedNumLevels <= '1' when regNumLevels = regMode else
+hasPassedNumLevels <= '1' when regNumLevels = regToleranceLevels else
 							 '0';
 							 
 hasPassedPUsLevel <= '1' when regNumPUsLevel = regPUsFinished else
@@ -206,7 +206,7 @@ subDown <= regCurVecY - borderDown;
 	begin
 		if(START = '0') then
 		
-			regMode <= (OTHERS=>'0');
+			regToleranceLevels <= (OTHERS=>'0');
 			
 			regLatency <= (OTHERS=>'0');
 			regSubLatency <= (OTHERS=>'0');
@@ -248,10 +248,10 @@ subDown <= regCurVecY - borderDown;
 				regDoAgain <= regDoAgain + 1;
 			end if;
 			
-			if(chooseMode = '0') then
-				regMode <= "11";
+			if(isRefinement = '0') then
+				regToleranceLevels <= "11";
 			else
-				regMode <= "10";
+				regToleranceLevels <= "10";
 			end if;
 			
 			if(initData = '1') then

@@ -84,17 +84,6 @@ architecture Behavioral of Final_TZSearch is
 	);
 	end component;
 	
---	component DatapathPredVec
---		Port(
---			CLK					: in STD_LOGIC;
---			START					: in STD_LOGIC;
---			vecX					: in STD_LOGIC_VECTOR(7 downto 0);
---			vecY					: in STD_LOGIC_VECTOR(7 downto 0);
---			bestVecX				: out STD_LOGIC_VECTOR(7 downto 0);
---			bestVecY				: out STD_LOGIC_VECTOR(7 downto 0)
---		);
---	end component;
-	
 	component Datapath_Raster
 		Port(
 		CLK						: in STD_LOGIC;
@@ -142,7 +131,7 @@ architecture Behavioral of Final_TZSearch is
 		sel_distX					: in STD_LOGIC_VECTOR(2 downto 0);
 		sel_distY					: in STD_LOGIC_VECTOR(2 downto 0);
 		sel_candidates				: in STD_LOGIC_VECTOR(1 downto 0);
-		chooseMode					: in STD_LOGIC;
+		isRefinement				: in STD_LOGIC;
 		loadregNumPUsLevel		: in STD_LOGIC;
 		op_typeX						: in STD_LOGIC;
 		op_typeY						: in STD_LOGIC;
@@ -182,7 +171,7 @@ architecture Behavioral of Final_TZSearch is
 		START					: in STD_LOGIC;
 		doneSAD				: in STD_LOGIC;
 		START2				: out STD_LOGIC;
-		dirtyBit				: out STD_LOGIC;
+		validBit				: out STD_LOGIC;
 		done					: out STD_LOGIC
 	);
 	end component;
@@ -200,7 +189,7 @@ architecture Behavioral of Final_TZSearch is
 		incRegX					: out STD_LOGIC;
 		rearrangeVecMems		: out STD_LOGIC;
 		waitCycles				: out STD_LOGIC;
-		dirtyBit					: out STD_LOGIC;
+		validBit					: out STD_LOGIC;
 		loadRegXMem2			: out STD_LOGIC;
 		sendToMem				: out STD_LOGIC;
 		done						: out STD_LOGIC
@@ -214,11 +203,10 @@ architecture Behavioral of Final_TZSearch is
 		waitCycles			: in STD_LOGIC;
 		is8x8or16x4			: in STD_LOGIC;
 		subResult			: in STD_LOGIC;
-		dirtyBit				: in STD_LOGIC;
-		isValidSAD			: out STD_LOGIC;
+		validBit				: in STD_LOGIC;
 		nrAccumSubSrc		: out STD_LOGIC;
 		doneRest				: out STD_LOGIC
-	);
+		);
 	end component;
 	
 	component UC_MainFirst
@@ -257,7 +245,7 @@ architecture Behavioral of Final_TZSearch is
 		initIncrement				: out STD_LOGIC;
 		START2						: out STD_LOGIC;
 		waitCycles					: out STD_LOGIC;
-		dirtyBit						: out STD_LOGIC;
+		validBit						: out STD_LOGIC;
 		done							: out STD_LOGIC
 	);	
 	end component;
@@ -272,7 +260,6 @@ architecture Behavioral of Final_TZSearch is
 		STARTPredMov		: out STD_LOGIC;
 		STARTFirstSearch	: out STD_LOGIC;
 		STARTRaster			: out STD_LOGIC;
-		chooseMode			: out STD_LOGIC;
 		loadSearchCenter	: out STD_LOGIC;
 		sel_TZ_stage		: out STD_LOGIC_VECTOR(1 downto 0);
 		done					: out STD_LOGIC
@@ -281,7 +268,7 @@ architecture Behavioral of Final_TZSearch is
 		
 	
 signal middleWaitCycles, middleAuxIs8x8or16x4, middleSubResult, middleFinishFSM, 
-middleDirtyBit, middleIsValidSAD, middleNrAccumSubSrc, middleDoneRest, START2: STD_LOGIC;
+middlevalidBit, middleIsValidSAD, middleNrAccumSubSrc, middleDoneRest, START2: STD_LOGIC;
 signal S_SAD, regBestSAD: STD_LOGIC_VECTOR(19 downto 0);
 signal doneRest: STD_LOGIC;
 signal auxIs8x8or16x4, foundBetterSAD, flagBetter, regis8x8or16x4: STD_LOGIC;
@@ -291,14 +278,14 @@ signal regCenterx, regCenterY, regBestVecX, regBestVecY: STD_LOGIC_VECTOR(7 down
 signal middleInitCenterX, middleInitCenterY, auxBestVecX, auxBestVecY: STD_LOGIC_VECTOR(7 downto 0);
 
 signal STARTFirstSearch, START2FirstSearch, middleInitData_FirstSearch, middleInitIncrement_FirstSearch: STD_LOGIC;
-signal waitCycles_FirstSearch, dirtyBit_FirstSearch, doneFirstSearch, middleSendToMem_Firstsearch: STD_LOGIC;
+signal waitCycles_FirstSearch, validBit_FirstSearch, doneFirstSearch, middleSendToMem_Firstsearch: STD_LOGIC;
 signal middleVecMemX_FirstSearch, middleVecMemY_FirstSearch, middleBestVecX_FirstSearch, middleBestVecY_FirstSearch: STD_LOGIC_VECTOR(7 downto 0);
 
 signal STARTRaster, START2Raster, middleFinishSendPartitions_Raster, middleIsOutOfXBound, middleIsOutOfYBound, doneRaster: STD_LOGIC;
-signal middleInitData_Raster, middleInitIncrement_Raster, waitCycles_Raster, dirtyBit_Raster, middleSendToMem_Raster: STD_LOGIC;
+signal middleInitData_Raster, middleInitIncrement_Raster, waitCycles_Raster, validBit_Raster, middleSendToMem_Raster: STD_LOGIC;
 signal middleVecMemX_Raster, middleVecMemY_Raster, middleBestVecX_Raster, middleBestVecY_Raster: STD_LOGIC_VECTOR(7 downto 0);
 
-signal STARTPredMov, START2PredMov, waitCycles_PredMov, dirtyBit_PredMov, donePredMov: STD_LOGIC;
+signal STARTPredMov, START2PredMov, waitCycles_PredMov, validBit_PredMov, donePredMov: STD_LOGIC;
 signal middleIncRegX, middleRearrangeVecMems, middleLoadRegXMem2: STD_LOGIC;
 signal middleFinishSendPartitions_FirstSearch, middleIsOutOfAnyBound, middleByPassIsOutOfAnyBound, middleLoadByPassVecFound, middleLoadByPassOutOfAnyBound: STD_LOGIC;
 signal middleHasPassedNumLevels, middleVecFound, middleByPassVecFound: STD_LOGIC;
@@ -316,17 +303,15 @@ signal loadCenter: STD_LOGIC;
 
 signal loadBetterCenter: STD_LOGIC;
 
-signal middleChooseMode: STD_LOGIC;
-
 signal regHeightPU, regWidthPU: STD_LOGIC_VECTOR(6 downto 0);
 
 signal sel_TZ_stage: STD_LOGIC_VECTOR(1 downto 0);
 
 signal middleLoadBetterCenter: STD_LOGIC;
-signal inDirtyBit: STD_LOGIC;
+signal invalidBit: STD_LOGIC;
 
-signal dirtyBitByPass1, dirtyBitByPass2, dirtyBitByPass3, dirtyBitByPass4, dirtyBitByPass5, dirtyBitByPass6, dirtyBitByPass7,
-dirtyBitByPass8, dirtyBitByPass9, dirtyBitByPass10: STD_LOGIC;
+signal validBitByPass1, validBitByPass2, validBitByPass3, validBitByPass4, validBitByPass5, validBitByPass6, validBitByPass7,
+validBitByPass8, validBitByPass9, validBitByPass10: STD_LOGIC;
 signal inVecX, inVecXByPass1, inVecXByPass2, inVecXByPass3, inVecXByPass4, inVecXByPass5, inVecXByPass6, inVecXByPass7, inVecXByPass8, inVecXByPass9: STD_LOGIC_VECTOR(7 downto 0);
 signal inVecY, inVecYByPass1, inVecYByPass2, inVecYByPass3, inVecYByPass4, inVecYByPass5, inVecYByPass6, inVecYByPass7, inVecYByPass8, inVecYByPass9: STD_LOGIC_VECTOR(7 downto 0);
 
@@ -431,7 +416,7 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 		START 			=> GLOBAL_START, --OK
 		nrAccum			=> regCyclesPerPU, --OK
 		nrAccumSubSrc 	=> middleNrAccumSubSrc, --OK
-		isValidSAD		=> middleIsValidSAD, --OK
+		isValidSAD		=> middlevalidBit, --OK
 		subResult 		=> middleSubResult, --OK
 		SAD 				=> S_SAD --OK
 	);
@@ -442,8 +427,7 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 		waitCycles	  	=> middleWaitCycles, --OK
 		is8x8or16x4		=> regIs8x8or16x4, --OK
 		subResult 	  	=> middleSubResult, --OK
-		dirtyBit			=> middleDirtyBit, --OK
-		isValidSAD		=> middleIsValidSAD, --OK
+		validBit			=> middlevalidBit, --OK
 		nrAccumSubSrc 	=> middleNrAccumSubSrc, --OK
 		doneRest 	  	=> doneRest --OK
 	);
@@ -485,7 +469,7 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 		initIncrement				=> middleInitIncrement_FirstSearch, --OK
 		START2						=> START2FirstSearch, --OK
 		waitCycles					=> waitCycles_FirstSearch, --OK
-		dirtyBit						=> dirtyBit_FirstSearch, --OK
+		validBit						=> validBit_FirstSearch, --OK
 		done							=> doneFirstSearch --OK
 	);
 
@@ -502,7 +486,7 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 		incRegX					=> middleIncRegX, --OK
 		rearrangeVecMems		=> middleRearrangeVecMems, --OK
 		waitCycles				=> waitCycles_Raster, --OK
-		dirtyBit					=> dirtyBit_Raster, --OK
+		validBit					=> validBit_Raster, --OK
 		loadRegXMem2			=> middleLoadRegXMem2, --OK
 		sendToMem				=> middleSendToMem_Raster, --OK
 		done						=> doneRaster --OK
@@ -514,7 +498,7 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 		START 				=> STARTPredMov, --OK
 		doneSAD 				=> doneRest, --OK
 		START2  				=> START2PredMov, --OK
-		dirtyBit				=> dirtyBit_PredMov, --OK
+		validBit				=> validBit_PredMov, --OK
 		done 					=> donePredMov --OK
 	);
 	
@@ -533,7 +517,7 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 			sel_distX					=> middleSel_distX, --OK
 			sel_distY					=> middleSel_distY, --OK
 			sel_candidates				=> middleSel_candidates, --OK
-			chooseMode					=> middleChooseMode, --OK
+			isRefinement				=> sel_TZ_stage(1), --OK
 			loadregNumPUsLevel		=> middleLoadRegNumPUsLevel, --OK
 			op_typeX						=> middleOp_typeX, --OK
 			op_typeY						=> middleOp_typeY, --OK
@@ -605,7 +589,6 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 		STARTPredMov		=> STARTPredMov,
 		STARTFirstSearch	=> STARTFirstSearch,
 		STARTRaster			=> STARTRaster,
-		chooseMode			=> middleChooseMode,
 		loadSearchCenter	=> loadSearchCenter,
 		sel_TZ_stage		=> sel_TZ_stage,
 		done					=> done
@@ -618,10 +601,10 @@ middleWaitCycles <= '0' when sel_TZ_stage = "00" else
 						  waitCycles_FirstSearch;
 						 
 
-inDirtyBit <= dirtyBit_PredMov when sel_TZ_stage = "00" else
-					   dirtyBit_FirstSearch when sel_TZ_stage = "01" else
-						dirtyBit_Raster when sel_TZ_stage = "10" else
-						dirtyBit_FirstSearch;
+invalidBit <= validBit_PredMov when sel_TZ_stage = "00" else
+					   validBit_FirstSearch when sel_TZ_stage = "01" else
+						validBit_Raster when sel_TZ_stage = "10" else
+						validBit_FirstSearch;
 
 
 muxSTART2 <= START2PredMov when sel_TZ_stage = "00" else
@@ -654,32 +637,32 @@ inVecX <= initCandidateX;
 inVecY <= initCandidateY;
 
 
-middleDirtyBit <= dirtyBitByPass10;
+middlevalidBit <= validBitByPass10;
 
 	process(GLOBAL_START, CLK)
 	begin
 		if(GLOBAL_START = '0') then
-			dirtyBitByPass1 <= '0';
-			dirtyBitByPass2 <= '0';
-			dirtyBitByPass3 <= '0';
-			dirtyBitByPass4 <= '0';
-			dirtyBitByPass5 <= '0';
-			dirtyBitByPass6 <= '0';
-			dirtyBitByPass7 <= '0';
-			dirtyBitByPass8 <= '0';
-			dirtyBitByPass9 <= '0';
-			dirtyBitByPass10 <= '0';
+			validBitByPass1 <= '0';
+			validBitByPass2 <= '0';
+			validBitByPass3 <= '0';
+			validBitByPass4 <= '0';
+			validBitByPass5 <= '0';
+			validBitByPass6 <= '0';
+			validBitByPass7 <= '0';
+			validBitByPass8 <= '0';
+			validBitByPass9 <= '0';
+			validBitByPass10 <= '0';
 		elsif(CLK'event and CLK='1') then
-			dirtyBitByPass1 <= inDirtyBit;
-			dirtyBitByPass2 <= dirtyBitByPass1;
-			dirtyBitByPass3 <= dirtyBitByPass2;
-			dirtyBitByPass4 <= dirtyBitByPass3;
-			dirtyBitByPass5 <= dirtyBitByPass4;
-			dirtyBitByPass6 <= dirtyBitByPass5;
-			dirtyBitByPass7 <= dirtyBitByPass6;
-			dirtyBitByPass8 <= dirtyBitByPass7;
-			dirtyBitByPass9 <= dirtyBitByPass8;
-			dirtyBitByPass10 <= dirtyBitByPass9;
+			validBitByPass1 <= invalidBit;
+			validBitByPass2 <= validBitByPass1;
+			validBitByPass3 <= validBitByPass2;
+			validBitByPass4 <= validBitByPass3;
+			validBitByPass5 <= validBitByPass4;
+			validBitByPass6 <= validBitByPass5;
+			validBitByPass7 <= validBitByPass6;
+			validBitByPass8 <= validBitByPass7;
+			validBitByPass9 <= validBitByPass8;
+			validBitByPass10 <= validBitByPass9;
 		end if;
 	end process;
 	

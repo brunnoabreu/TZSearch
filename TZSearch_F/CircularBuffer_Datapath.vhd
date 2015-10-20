@@ -66,11 +66,10 @@ vecFound <= regVecFound;
 			regCurVecXByPass <= (OTHERS=>'0');
 			regCurVecYByPass <= (OTHERS=>'0');
 			for i in 0 to 14 loop
-				cache(i) <= "01010110010101011";
-				cache(i+1) <= "01010101010101101";
+				cache(i) <= (OTHERS=>'0');
+				cache(i+1) <= (OTHERS=>'0');
 			end loop;
-			cache(12) <= "01010100010101011";
-			cache(13) <= "01010011010101011";
+			cache(12) <= "00010100000101011";
 		elsif(CLK'event and CLK = '1') then
 			regVecFound <= hasFoundVec;
 			if(writeCache = '1') then
@@ -88,15 +87,6 @@ COMP: for i in 0 to 15 generate
 	bitsFound(i) <= '1' when ((concatVecXY & '1') = cache(i)) else
 						 '0';
 end generate COMP;
-
---	COMP: for i in 0 to 15 generate
---		COMP2: for j in 0 to 15 generate
---			comparison(j) <= cache(i)(j) xor concatVecXY(j);
---		end generate COMP2;
---		bitsFound(i) <= comparison(15) and comparison(14) and comparison(13) and comparison(12) and comparison(11) and 
---		comparison(10) and comparison(9) and comparison(8) and comparison(7) and comparison(6) and comparison(5) and 
---		comparison(4) and comparison(3) and comparison(2) and comparison(1) and comparison(0) and cache(i)(16);
---	end generate COMP;
 
 hasFoundVec <= '0' when bitsFound = "0000000000000000" else
 				'1';

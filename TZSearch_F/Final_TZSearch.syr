@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.52 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.25 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.52 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.25 secs
  
 --> Reading design: Final_TZSearch.prj
 
@@ -67,8 +67,8 @@ Use DSP Block                      : Auto
 Automatic Register Balancing       : No
 
 ---- Target Options
-LUT Combining                      : Off
-Reduce Control Sets                : Off
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
 Add IO Buffers                     : YES
 Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 32
@@ -109,165 +109,152 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/STD_SAD.vhd" in Library work.
-Package <STD_SAD> compiled.
-Package body <STD_SAD> compiled.
+Architecture std_sad of Entity std_sad is up to date.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/genericSub.vhd" in Library work.
-Entity <genericSub> compiled.
-Entity <genericSub> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity genericsub is up to date.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/genericAdder.vhd" in Library work.
-Entity <genericAdder> compiled.
-Entity <genericAdder> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity genericadder is up to date.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/CircularBuffer_Datapath.vhd" in Library work.
-Entity <CircularBuffer_Datapath> compiled.
-Entity <CircularBuffer_Datapath> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity circularbuffer_datapath is up to date.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/blck4x4.vhd" in Library work.
-Entity <blck4x4> compiled.
-Entity <blck4x4> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity blck4x4 is up to date.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/SAD4x4_Datapath.vhd" in Library work.
-Entity <Datapath> compiled.
-Entity <Datapath> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity datapath is up to date.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_SAD.vhd" in Library work.
-Entity <UC_SAD> compiled.
-Entity <UC_SAD> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity uc_sad is up to date.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_MainFirst.vhd" in Library work.
-Entity <UC_MainFirst> compiled.
-Entity <UC_MainFirst> (Architecture <Behavioral>) compiled.
+Entity <uc_mainfirst> compiled.
+Entity <uc_mainfirst> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_Raster.vhd" in Library work.
-Entity <UC_Raster> compiled.
-Entity <UC_Raster> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity uc_raster is up to date.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_PredMov.vhd" in Library work.
-Entity <UC_PredMov> compiled.
-Entity <UC_PredMov> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity uc_predmov is up to date.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Datapath_FirstSearch.vhd" in Library work.
-Entity <Datapath_FirstSearch> compiled.
-Entity <Datapath_FirstSearch> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity datapath_firstsearch is up to date.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Datapath_Raster.vhd" in Library work.
-Entity <Datapath_Raster> compiled.
-Entity <Datapath_Raster> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity datapath_raster is up to date.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_TZSearch.vhd" in Library work.
-Entity <UC_TZSearch> compiled.
-Entity <UC_TZSearch> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity uc_tzsearch is up to date.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" in Library work.
-Entity <Final_TZSearch> compiled.
-Entity <Final_TZSearch> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity final_tzsearch is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <Final_TZSearch> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <Final_TZSearch> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <Datapath> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <Datapath> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <UC_SAD> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <UC_SAD> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <UC_MainFirst> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <UC_MainFirst> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <UC_Raster> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <UC_Raster> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <UC_PredMov> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <UC_PredMov> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <Datapath_FirstSearch> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <Datapath_FirstSearch> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <Datapath_Raster> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <Datapath_Raster> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <UC_TZSearch> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <UC_TZSearch> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <blck4x4> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <blck4x4> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <genericAdder> in library <work> (architecture <Behavioral>) with generics.
+Analyzing hierarchy for entity <genericAdder> in library <work> (architecture <behavioral>) with generics.
 	widthX = 12
 
-Analyzing hierarchy for entity <genericAdder> in library <work> (architecture <Behavioral>) with generics.
+Analyzing hierarchy for entity <genericAdder> in library <work> (architecture <behavioral>) with generics.
 	widthX = 13
 
-Analyzing hierarchy for entity <CircularBuffer_Datapath> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <CircularBuffer_Datapath> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <genericSub> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <genericSub> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <genericAdder> in library <work> (architecture <Behavioral>) with generics.
+Analyzing hierarchy for entity <genericAdder> in library <work> (architecture <behavioral>) with generics.
 	WIDTHX = 8
 
-Analyzing hierarchy for entity <genericAdder> in library <work> (architecture <Behavioral>) with generics.
+Analyzing hierarchy for entity <genericAdder> in library <work> (architecture <behavioral>) with generics.
 	WIDTHX = 9
 
-Analyzing hierarchy for entity <genericAdder> in library <work> (architecture <Behavioral>) with generics.
+Analyzing hierarchy for entity <genericAdder> in library <work> (architecture <behavioral>) with generics.
 	WIDTHX = 10
 
-Analyzing hierarchy for entity <genericAdder> in library <work> (architecture <Behavioral>) with generics.
+Analyzing hierarchy for entity <genericAdder> in library <work> (architecture <behavioral>) with generics.
 	WIDTHX = 11
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <Final_TZSearch> in library <work> (Architecture <Behavioral>).
-WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 421: Unconnected output port 'SAD441' of component 'Datapath'.
-WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 421: Unconnected output port 'SAD442' of component 'Datapath'.
-WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 421: Unconnected output port 'SAD443' of component 'Datapath'.
-WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 421: Unconnected output port 'SAD444' of component 'Datapath'.
-WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 421: Unconnected output port 'SAD481' of component 'Datapath'.
-WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 421: Unconnected output port 'SAD482' of component 'Datapath'.
+Analyzing Entity <Final_TZSearch> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 406: Unconnected output port 'SAD441' of component 'Datapath'.
+WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 406: Unconnected output port 'SAD442' of component 'Datapath'.
+WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 406: Unconnected output port 'SAD443' of component 'Datapath'.
+WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 406: Unconnected output port 'SAD444' of component 'Datapath'.
+WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 406: Unconnected output port 'SAD481' of component 'Datapath'.
+WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 406: Unconnected output port 'SAD482' of component 'Datapath'.
 Entity <Final_TZSearch> analyzed. Unit <Final_TZSearch> generated.
 
-Analyzing Entity <Datapath> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <Datapath> in library <work> (Architecture <behavioral>).
 Entity <Datapath> analyzed. Unit <Datapath> generated.
 
-Analyzing Entity <blck4x4> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <blck4x4> in library <work> (Architecture <behavioral>).
 Entity <blck4x4> analyzed. Unit <blck4x4> generated.
 
-Analyzing Entity <genericSub> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <genericSub> in library <work> (Architecture <behavioral>).
 Entity <genericSub> analyzed. Unit <genericSub> generated.
 
-Analyzing generic Entity <genericAdder.3> in library <work> (Architecture <Behavioral>).
+Analyzing generic Entity <genericAdder.3> in library <work> (Architecture <behavioral>).
 	WIDTHX = 8
 Entity <genericAdder.3> analyzed. Unit <genericAdder.3> generated.
 
-Analyzing generic Entity <genericAdder.4> in library <work> (Architecture <Behavioral>).
+Analyzing generic Entity <genericAdder.4> in library <work> (Architecture <behavioral>).
 	WIDTHX = 9
 Entity <genericAdder.4> analyzed. Unit <genericAdder.4> generated.
 
-Analyzing generic Entity <genericAdder.5> in library <work> (Architecture <Behavioral>).
+Analyzing generic Entity <genericAdder.5> in library <work> (Architecture <behavioral>).
 	WIDTHX = 10
 Entity <genericAdder.5> analyzed. Unit <genericAdder.5> generated.
 
-Analyzing generic Entity <genericAdder.6> in library <work> (Architecture <Behavioral>).
+Analyzing generic Entity <genericAdder.6> in library <work> (Architecture <behavioral>).
 	WIDTHX = 11
 Entity <genericAdder.6> analyzed. Unit <genericAdder.6> generated.
 
-Analyzing generic Entity <genericAdder.1> in library <work> (Architecture <Behavioral>).
+Analyzing generic Entity <genericAdder.1> in library <work> (Architecture <behavioral>).
 	widthX = 12
 Entity <genericAdder.1> analyzed. Unit <genericAdder.1> generated.
 
-Analyzing generic Entity <genericAdder.2> in library <work> (Architecture <Behavioral>).
+Analyzing generic Entity <genericAdder.2> in library <work> (Architecture <behavioral>).
 	widthX = 13
 Entity <genericAdder.2> analyzed. Unit <genericAdder.2> generated.
 
-Analyzing Entity <UC_SAD> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <UC_SAD> in library <work> (Architecture <behavioral>).
 Entity <UC_SAD> analyzed. Unit <UC_SAD> generated.
 
-Analyzing Entity <UC_MainFirst> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <UC_MainFirst> in library <work> (Architecture <behavioral>).
 INFO:Xst:2679 - Register <rstRegNumLevels> in unit <UC_MainFirst> has a constant value of 0 during circuit operation. The register is replaced by logic.
 Entity <UC_MainFirst> analyzed. Unit <UC_MainFirst> generated.
 
-Analyzing Entity <UC_Raster> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <UC_Raster> in library <work> (Architecture <behavioral>).
 INFO:Xst:2679 - Register <waitCycles> in unit <UC_Raster> has a constant value of 0 during circuit operation. The register is replaced by logic.
 Entity <UC_Raster> analyzed. Unit <UC_Raster> generated.
 
-Analyzing Entity <UC_PredMov> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <UC_PredMov> in library <work> (Architecture <behavioral>).
 Entity <UC_PredMov> analyzed. Unit <UC_PredMov> generated.
 
-Analyzing Entity <Datapath_FirstSearch> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <Datapath_FirstSearch> in library <work> (Architecture <behavioral>).
 Entity <Datapath_FirstSearch> analyzed. Unit <Datapath_FirstSearch> generated.
 
-Analyzing Entity <CircularBuffer_Datapath> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <CircularBuffer_Datapath> in library <work> (Architecture <behavioral>).
 Entity <CircularBuffer_Datapath> analyzed. Unit <CircularBuffer_Datapath> generated.
 
-Analyzing Entity <Datapath_Raster> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <Datapath_Raster> in library <work> (Architecture <behavioral>).
 INFO:Xst:2679 - Register <regInitCenterX> in unit <Datapath_Raster> has a constant value of 00000000 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <regInitCenterY> in unit <Datapath_Raster> has a constant value of 00000000 during circuit operation. The register is replaced by logic.
 Entity <Datapath_Raster> analyzed. Unit <Datapath_Raster> generated.
 
-Analyzing Entity <UC_TZSearch> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <UC_TZSearch> in library <work> (Architecture <behavioral>).
 Entity <UC_TZSearch> analyzed. Unit <UC_TZSearch> generated.
 
 
@@ -280,8 +267,6 @@ Performing bidirectional port resolution...
 Synthesizing Unit <UC_SAD>.
     Related source file is "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_SAD.vhd".
     Using one-hot encoding for signal <state>.
-WARNING:Xst:737 - Found 1-bit latch for signal <isValidSAD>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 WARNING:Xst:737 - Found 12-bit latch for signal <nextState>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 WARNING:Xst:737 - Found 1-bit latch for signal <doneRest>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -331,11 +316,11 @@ WARNING:Xst:737 - Found 1-bit latch for signal <initData>. Latches may be genera
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 WARNING:Xst:737 - Found 1-bit latch for signal <sendToMem>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <dirtyBit>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 WARNING:Xst:737 - Found 3-bit latch for signal <sel_distX>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 WARNING:Xst:737 - Found 3-bit latch for signal <sel_distY>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <validBit>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 WARNING:Xst:737 - Found 1-bit latch for signal <writeCache>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
@@ -355,7 +340,9 @@ WARNING:Xst:737 - Found 78-bit latch for signal <nextState$mux0083>. Latches may
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 WARNING:Xst:737 - Found 1-bit latch for signal <initIncrement$mux0002>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <dirtyBit$mux0000>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <validBit$mux0000>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <writeCache$mux0002>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
     Found 78-bit register for signal <state>.
 Unit <UC_MainFirst> synthesized.
@@ -370,6 +357,8 @@ WARNING:Xst:737 - Found 1-bit latch for signal <rearrangeVecMems>. Latches may b
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 WARNING:Xst:737 - Found 16-bit latch for signal <nextState>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <auxvalidBit>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 WARNING:Xst:737 - Found 1-bit latch for signal <initIncrement>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 WARNING:Xst:737 - Found 1-bit latch for signal <done>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -380,17 +369,15 @@ WARNING:Xst:737 - Found 1-bit latch for signal <sendToMem>. Latches may be gener
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 WARNING:Xst:737 - Found 1-bit latch for signal <incRegX>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <auxDirtyBit>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 1-bit register for signal <dirtyBitByPass1>.
-    Found 1-bit register for signal <dirtyBitByPass2>.
-    Found 1-bit register for signal <dirtyBitByPass3>.
-    Found 1-bit register for signal <dirtyBitByPass4>.
-    Found 1-bit register for signal <dirtyBitByPass5>.
-    Found 1-bit register for signal <dirtyBitByPass6>.
-    Found 1-bit register for signal <dirtyBitByPass7>.
-    Found 1-bit register for signal <dirtyBitByPass8>.
     Found 16-bit register for signal <state>.
+    Found 1-bit register for signal <validBitByPass1>.
+    Found 1-bit register for signal <validBitByPass2>.
+    Found 1-bit register for signal <validBitByPass3>.
+    Found 1-bit register for signal <validBitByPass4>.
+    Found 1-bit register for signal <validBitByPass5>.
+    Found 1-bit register for signal <validBitByPass6>.
+    Found 1-bit register for signal <validBitByPass7>.
+    Found 1-bit register for signal <validBitByPass8>.
     Summary:
 	inferred   8 D-type flip-flop(s).
 Unit <UC_Raster> synthesized.
@@ -403,7 +390,7 @@ Synthesizing Unit <UC_PredMov>.
     | States             | 6                                              |
     | Transitions        | 10                                             |
     | Inputs             | 1                                              |
-    | Outputs            | 7                                              |
+    | Outputs            | 6                                              |
     | Clock              | CLK                       (rising_edge)        |
     | Reset              | START                     (negative)           |
     | Reset type         | asynchronous                                   |
@@ -477,8 +464,6 @@ Synthesizing Unit <UC_TZSearch>.
     Related source file is "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_TZSearch.vhd".
     Using one-hot encoding for signal <state>.
 WARNING:Xst:737 - Found 1-bit latch for signal <STARTFirstSearch>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <chooseMode>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 WARNING:Xst:737 - Found 1-bit latch for signal <loadSearchCenter>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
@@ -556,22 +541,22 @@ Unit <genericAdder_6> synthesized.
 
 Synthesizing Unit <CircularBuffer_Datapath>.
     Related source file is "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/CircularBuffer_Datapath.vhd".
-    Found 17-bit comparator equal for signal <bitsFound_0$cmp_eq0000> created at line 88.
-    Found 17-bit comparator equal for signal <bitsFound_1$cmp_eq0000> created at line 88.
-    Found 17-bit comparator equal for signal <bitsFound_10$cmp_eq0000> created at line 88.
-    Found 17-bit comparator equal for signal <bitsFound_11$cmp_eq0000> created at line 88.
-    Found 17-bit comparator equal for signal <bitsFound_12$cmp_eq0000> created at line 88.
-    Found 17-bit comparator equal for signal <bitsFound_13$cmp_eq0000> created at line 88.
-    Found 17-bit comparator equal for signal <bitsFound_14$cmp_eq0000> created at line 88.
-    Found 17-bit comparator equal for signal <bitsFound_15$cmp_eq0000> created at line 88.
-    Found 17-bit comparator equal for signal <bitsFound_2$cmp_eq0000> created at line 88.
-    Found 17-bit comparator equal for signal <bitsFound_3$cmp_eq0000> created at line 88.
-    Found 17-bit comparator equal for signal <bitsFound_4$cmp_eq0000> created at line 88.
-    Found 17-bit comparator equal for signal <bitsFound_5$cmp_eq0000> created at line 88.
-    Found 17-bit comparator equal for signal <bitsFound_6$cmp_eq0000> created at line 88.
-    Found 17-bit comparator equal for signal <bitsFound_7$cmp_eq0000> created at line 88.
-    Found 17-bit comparator equal for signal <bitsFound_8$cmp_eq0000> created at line 88.
-    Found 17-bit comparator equal for signal <bitsFound_9$cmp_eq0000> created at line 88.
+    Found 17-bit comparator equal for signal <bitsFound_0$cmp_eq0000> created at line 87.
+    Found 17-bit comparator equal for signal <bitsFound_1$cmp_eq0000> created at line 87.
+    Found 17-bit comparator equal for signal <bitsFound_10$cmp_eq0000> created at line 87.
+    Found 17-bit comparator equal for signal <bitsFound_11$cmp_eq0000> created at line 87.
+    Found 17-bit comparator equal for signal <bitsFound_12$cmp_eq0000> created at line 87.
+    Found 17-bit comparator equal for signal <bitsFound_13$cmp_eq0000> created at line 87.
+    Found 17-bit comparator equal for signal <bitsFound_14$cmp_eq0000> created at line 87.
+    Found 17-bit comparator equal for signal <bitsFound_15$cmp_eq0000> created at line 87.
+    Found 17-bit comparator equal for signal <bitsFound_2$cmp_eq0000> created at line 87.
+    Found 17-bit comparator equal for signal <bitsFound_3$cmp_eq0000> created at line 87.
+    Found 17-bit comparator equal for signal <bitsFound_4$cmp_eq0000> created at line 87.
+    Found 17-bit comparator equal for signal <bitsFound_5$cmp_eq0000> created at line 87.
+    Found 17-bit comparator equal for signal <bitsFound_6$cmp_eq0000> created at line 87.
+    Found 17-bit comparator equal for signal <bitsFound_7$cmp_eq0000> created at line 87.
+    Found 17-bit comparator equal for signal <bitsFound_8$cmp_eq0000> created at line 87.
+    Found 17-bit comparator equal for signal <bitsFound_9$cmp_eq0000> created at line 87.
     Found 272-bit register for signal <cache>.
     Found 4-bit up counter for signal <index>.
     Found 8-bit register for signal <regCurVecXByPass>.
@@ -580,7 +565,7 @@ Synthesizing Unit <CircularBuffer_Datapath>.
 INFO:Xst:738 - HDL ADVISOR - 272 flip-flops were inferred for signal <cache>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
     Summary:
 	inferred   1 Counter(s).
-	inferred  17 D-type flip-flop(s).
+	inferred 272 D-type flip-flop(s).
 	inferred  16 Comparator(s).
 Unit <CircularBuffer_Datapath> synthesized.
 
@@ -636,12 +621,12 @@ WARNING:Xst:1780 - Signal <auxDiffRegPUsLevel> is never used or assigned. This u
     Found 1-bit register for signal <regIsOutOfAnyBoundByPass>.
     Found 8-bit register for signal <regLatency>.
     Found 1-bit register for signal <regLoadedBetter>.
-    Found 2-bit register for signal <regMode>.
     Found 2-bit up counter for signal <regNumLevels>.
     Found 5-bit register for signal <regNumPUsLevel>.
     Found 5-bit up counter for signal <regPUsFinished>.
     Found 8-bit register for signal <regSubLatency>.
     Found 8-bit subtractor for signal <regSubLatency$addsub0000> created at line 287.
+    Found 2-bit register for signal <regToleranceLevels>.
     Found 8-bit register for signal <regVecMemX>.
     Found 8-bit register for signal <regVecMemY>.
     Found 8-bit subtractor for signal <subDown>.
@@ -726,6 +711,7 @@ WARNING:Xst:646 - Signal <multHW<13>> is assigned but never used. This unconnect
 WARNING:Xst:646 - Signal <multHW<5:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <middleVecFound> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <middleLoadBetterCenter> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <middleIsValidSAD> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <middleInitCenterY> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <middleInitCenterX> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <middleFinishFSM> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -737,21 +723,11 @@ WARNING:Xst:1780 - Signal <inVecYByPass9> is never used or assigned. This unconn
 WARNING:Xst:1780 - Signal <inVecXByPass9> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <START2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 8-bit register for signal <auxRegBorderDown>.
-    Found 8-bit adder for signal <auxRegBorderDown$add0000> created at line 411.
+    Found 8-bit adder for signal <auxRegBorderDown$add0000> created at line 396.
     Found 8-bit register for signal <auxRegBorderRight>.
-    Found 8-bit adder for signal <auxRegBorderRight$add0000> created at line 410.
+    Found 8-bit adder for signal <auxRegBorderRight$add0000> created at line 395.
     Found 8-bit subtractor for signal <cyclesPerPU>.
-    Found 1-bit register for signal <dirtyBitByPass1>.
-    Found 1-bit register for signal <dirtyBitByPass10>.
-    Found 1-bit register for signal <dirtyBitByPass2>.
-    Found 1-bit register for signal <dirtyBitByPass3>.
-    Found 1-bit register for signal <dirtyBitByPass4>.
-    Found 1-bit register for signal <dirtyBitByPass5>.
-    Found 1-bit register for signal <dirtyBitByPass6>.
-    Found 1-bit register for signal <dirtyBitByPass7>.
-    Found 1-bit register for signal <dirtyBitByPass8>.
-    Found 1-bit register for signal <dirtyBitByPass9>.
-    Found 20-bit comparator less for signal <flagBetter$cmp_lt0000> created at line 348.
+    Found 20-bit comparator less for signal <flagBetter$cmp_lt0000> created at line 333.
     Found 8-bit register for signal <inVecXByPass1>.
     Found 8-bit register for signal <inVecXByPass2>.
     Found 8-bit register for signal <inVecXByPass3>.
@@ -773,13 +749,13 @@ WARNING:Xst:1780 - Signal <START2> is never used or assigned. This unconnected s
     Found 8-bit register for signal <regBestVecX>.
     Found 8-bit register for signal <regBestVecY>.
     Found 8-bit register for signal <regBorderDown>.
-    Found 8-bit subtractor for signal <regBorderDown$sub0000> created at line 414.
+    Found 8-bit subtractor for signal <regBorderDown$sub0000> created at line 399.
     Found 8-bit register for signal <regBorderLeft>.
-    Found 8-bit subtractor for signal <regBorderLeft$sub0000> created at line 407.
+    Found 8-bit subtractor for signal <regBorderLeft$sub0000> created at line 392.
     Found 8-bit register for signal <regBorderRight>.
-    Found 8-bit subtractor for signal <regBorderRight$sub0000> created at line 413.
+    Found 8-bit subtractor for signal <regBorderRight$sub0000> created at line 398.
     Found 8-bit register for signal <regBorderUp>.
-    Found 8-bit subtractor for signal <regBorderUp$sub0000> created at line 408.
+    Found 8-bit subtractor for signal <regBorderUp$sub0000> created at line 393.
     Found 8-bit register for signal <regCenterx>.
     Found 8-bit register for signal <regCenterY>.
     Found 8-bit register for signal <regCyclesPerPU>.
@@ -787,6 +763,16 @@ WARNING:Xst:1780 - Signal <START2> is never used or assigned. This unconnected s
     Found 1-bit register for signal <regis8x8or16x4>.
     Found 8-bit register for signal <regSearchRange>.
     Found 7-bit register for signal <regWidthPU>.
+    Found 1-bit register for signal <validBitByPass1>.
+    Found 1-bit register for signal <validBitByPass10>.
+    Found 1-bit register for signal <validBitByPass2>.
+    Found 1-bit register for signal <validBitByPass3>.
+    Found 1-bit register for signal <validBitByPass4>.
+    Found 1-bit register for signal <validBitByPass5>.
+    Found 1-bit register for signal <validBitByPass6>.
+    Found 1-bit register for signal <validBitByPass7>.
+    Found 1-bit register for signal <validBitByPass8>.
+    Found 1-bit register for signal <validBitByPass9>.
     Summary:
 	inferred 269 D-type flip-flop(s).
 	inferred   7 Adder/Subtractor(s).
@@ -840,8 +826,8 @@ Macro Statistics
  78-bit register                                       : 1
  8-bit register                                        : 281
  9-bit register                                        : 32
-# Latches                                              : 54
- 1-bit latch                                           : 45
+# Latches                                              : 53
+ 1-bit latch                                           : 44
  12-bit latch                                          : 1
  16-bit latch                                          : 1
  2-bit latch                                           : 2
@@ -861,16 +847,16 @@ Macro Statistics
 =========================================================================
 
 Analyzing FSM <FSM_0> for best encoding.
-Optimizing FSM <Inst_UC_PredMov/state/FSM> on signal <state[1:6]> with one-hot encoding.
+Optimizing FSM <Inst_UC_PredMov/state/FSM> on signal <state[1:3]> with gray encoding.
 -----------------------
  State     | Encoding
 -----------------------
- idle      | 000001
- s0        | 000010
- s1        | 000100
- s2        | 001000
- s3        | 010000
- statedone | 100000
+ idle      | 000
+ s0        | 001
+ s1        | 011
+ s2        | 010
+ s3        | 110
+ statedone | 111
 -----------------------
 WARNING:Xst:1290 - Hierarchical block <Inst_Circ_Buffer> is unconnected in block <Inst_Datapath_FirstSearch>.
    It will be removed from the design.
@@ -998,10 +984,10 @@ Macro Statistics
  5-bit up counter                                      : 1
 # Accumulators                                         : 1
  20-bit up loadable accumulator                        : 1
-# Registers                                            : 3524
- Flip-Flops                                            : 3524
-# Latches                                              : 54
- 1-bit latch                                           : 45
+# Registers                                            : 3521
+ Flip-Flops                                            : 3521
+# Latches                                              : 53
+ 1-bit latch                                           : 44
  12-bit latch                                          : 1
  16-bit latch                                          : 1
  2-bit latch                                           : 2
@@ -1020,27 +1006,12 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 INFO:Xst:2261 - The FF/Latch <77> in Unit <LPM_LATCH_97> is equivalent to the following 76 FFs/Latches, which will be removed : <76> <75> <74> <73> <72> <71> <70> <69> <68> <67> <66> <65> <64> <63> <62> <61> <60> <59> <58> <57> <56> <55> <54> <53> <52> <51> <50> <49> <48> <47> <46> <45> <44> <43> <42> <41> <40> <39> <38> <37> <36> <35> <34> <33> <32> <31> <30> <29> <28> <27> <26> <25> <24> <23> <22> <21> <20> <19> <18> <17> <16> <15> <14> <13> <11> <10> <9> <8> <7> <6> <5> <4> <3> <2> <1> <0> 
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 1 in block <LPM_DFF_137>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 1 in block <LPM_DFF_136>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 1 in block <LPM_DFF_135>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 1 in block <LPM_DFF_134>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 1 in block <LPM_DFF_133>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 1 in block <LPM_DFF_132>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 1 in block <LPM_DFF_131>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 1 in block <LPM_DFF_130>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 1 in block <LPM_DFF_129>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 1 in block <LPM_DFF_128>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 1 in block <LPM_DFF_127>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 1 in block <LPM_DFF_126>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 1 in block <LPM_DFF_125>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 1 in block <LPM_DFF_124>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 1 in block <LPM_DFF_123>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 1 in block <LPM_DFF_121>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 1 in block <LPM_DFF_122>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1426 - The value init of the FF/Latch 0 hinder the constant cleaning in the block LPM_LATCH_98.
    You should achieve better results by setting this init to 0.
 WARNING:Xst:1293 - FF/Latch <5> has a constant value of 0 in block <LPM_LATCH_98>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <77> (without init value) has a constant value of 0 in block <LPM_LATCH_97>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1426 - The value init of the FF/Latch 0 hinder the constant cleaning in the block LPM_LATCH_2.
+WARNING:Xst:1426 - The value init of the FF/Latch 0 hinder the constant cleaning in the block LPM_LATCH_1.
    You should achieve better results by setting this init to 0.
 WARNING:Xst:1710 - FF/Latch <op_typeY_mux0000> (without init value) has a constant value of 0 in block <UC_MainFirst>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <sel_distY_2> in Unit <UC_MainFirst> is equivalent to the following FF/Latch, which will be removed : <sel_distX_2> 
@@ -1080,54 +1051,7 @@ Optimizing unit <blck4x4> ...
 
 Optimizing unit <Datapath> ...
 WARNING:Xst:2677 - Node <Inst_UC_MainFirst/writeCache> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_2> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_1> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_3> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_4> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_5> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_6> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_7> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_8> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_9> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_10> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_11> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_12> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_13> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_14> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_15> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_16> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_2> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_1> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_3> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_4> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_5> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_6> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_7> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_8> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_9> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_10> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_11> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_12> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_13> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_14> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_15> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_16> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_2> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_1> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_3> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_4> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_5> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_6> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_7> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_8> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_9> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_10> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_11> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_12> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_13> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_14> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_15> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_UC_MainFirst/writeCache_mux0002> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_2> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_1> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_3> of sequential type is unconnected in block <Final_TZSearch>.
@@ -1144,202 +1068,265 @@ WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_13>
 WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_14> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_15> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_12_16> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_2> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_1> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_3> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_4> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_5> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_6> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_7> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_8> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_9> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_10> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_11> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_12> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_13> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_14> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_15> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_16> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_2> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_1> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_3> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_4> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_5> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_6> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_7> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_8> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_9> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_10> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_11> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_12> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_13> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_14> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_15> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_16> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_2> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_1> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_3> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_4> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_5> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_6> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_7> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_8> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_9> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_10> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_11> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_12> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_13> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_14> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_15> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_16> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_2> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_1> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_3> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_4> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_5> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_6> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_7> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_8> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_9> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_10> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_11> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_12> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_13> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_14> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_15> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_16> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_2> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_1> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_3> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_4> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_5> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_6> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_7> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_8> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_9> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_10> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_11> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_12> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_13> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_14> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_15> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_16> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_2> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_1> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_3> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_4> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_5> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_6> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_7> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_8> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_9> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_10> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_11> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_12> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_13> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_14> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_15> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_16> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_2> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_1> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_3> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_4> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_5> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_6> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_7> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_8> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_9> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_10> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_11> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_12> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_13> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_14> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_15> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_16> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_2> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_1> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_3> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_4> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_5> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_6> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_7> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_8> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_9> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_10> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_11> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_12> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_13> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_14> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_15> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_16> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_2> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_1> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_3> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_4> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_5> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_6> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_7> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_8> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_9> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_10> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_11> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_12> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_13> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_14> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_15> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_16> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_2> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_1> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_3> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_4> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_5> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_6> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_7> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_8> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_9> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_10> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_11> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_12> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_13> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_14> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_15> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_16> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_2> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_1> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_3> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_4> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_5> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_6> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_7> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_8> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_9> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_10> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_11> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_12> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_13> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_14> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_15> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_16> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_2> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_1> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_3> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_4> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_5> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_6> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_7> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_8> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_9> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_10> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_11> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_12> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_13> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_14> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_15> of sequential type is unconnected in block <Final_TZSearch>.
-WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_16> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/index_3> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/index_2> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/index_1> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/index_0> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_10_0> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_0_0> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_9_0> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_8_0> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_7_0> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_15_0> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_5_0> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_6_0> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_14_0> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_4_0> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_13_0> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_3_0> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_2_0> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_11_0> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_16> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_15> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_14> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_13> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_12> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_11> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_10> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_9> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_8> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_7> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_6> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_5> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_4> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_3> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_2> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_1> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache_1_0> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecYByPass_7> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecYByPass_6> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regCurVecYByPass_5> of sequential type is unconnected in block <Final_TZSearch>.
@@ -1577,7 +1564,7 @@ Processing Unit <Final_TZSearch> :
 	Found 8-bit shift register for signal <inVecXByPass8_5>.
 	Found 8-bit shift register for signal <inVecXByPass8_6>.
 	Found 8-bit shift register for signal <inVecXByPass8_7>.
-	Found 9-bit shift register for signal <dirtyBitByPass10>.
+	Found 9-bit shift register for signal <validBitByPass10>.
 	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentYVecByPass8_0>.
 	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentYVecByPass8_1>.
 	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentYVecByPass8_2>.
@@ -1610,15 +1597,15 @@ Processing Unit <Final_TZSearch> :
 	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_5>.
 	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_6>.
 	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_7>.
-	Found 8-bit shift register for signal <Inst_UC_Raster/dirtyBitByPass8>.
+	Found 8-bit shift register for signal <Inst_UC_Raster/validBitByPass8>.
 Unit <Final_TZSearch> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 2630
- Flip-Flops                                            : 2630
+# Registers                                            : 2627
+ Flip-Flops                                            : 2627
 # Shift Registers                                      : 50
  10-bit shift register                                 : 16
  8-bit shift register                                  : 33
@@ -1651,26 +1638,26 @@ Design Statistics
 # IOs                              : 1097
 
 Cell Usage :
-# BELS                             : 6119
+# BELS                             : 6151
 #      GND                         : 1
-#      INV                         : 13
-#      LUT2                        : 1754
-#      LUT3                        : 596
-#      LUT4                        : 105
-#      LUT5                        : 103
-#      LUT6                        : 158
-#      MUXCY                       : 1642
-#      MUXF7                       : 9
+#      INV                         : 12
+#      LUT2                        : 1760
+#      LUT3                        : 594
+#      LUT4                        : 108
+#      LUT5                        : 102
+#      LUT6                        : 172
+#      MUXCY                       : 1657
+#      MUXF7                       : 7
 #      VCC                         : 1
 #      XORCY                       : 1737
-# FlipFlops/Latches                : 2909
-#      FDC                         : 2423
-#      FDCE                        : 256
+# FlipFlops/Latches                : 2904
+#      FDC                         : 2426
+#      FDCE                        : 251
 #      FDE                         : 50
-#      FDP                         : 5
+#      FDP                         : 4
 #      FDPE                        : 20
-#      LD                          : 118
-#      LD_1                        : 37
+#      LD                          : 117
+#      LD_1                        : 36
 # Shift Registers                  : 50
 #      SRLC16E                     : 50
 # Clock Buffers                    : 2
@@ -1690,18 +1677,18 @@ Selected Device : 5vlx20tff323-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            2908  out of  12480    23%  
- Number of Slice LUTs:                 2779  out of  12480    22%  
-    Number used as Logic:              2729  out of  12480    21%  
+ Number of Slice Registers:            2903  out of  12480    23%  
+ Number of Slice LUTs:                 2798  out of  12480    22%  
+    Number used as Logic:              2748  out of  12480    22%  
     Number used as Memory:               50  out of   3360     1%  
        Number used as SRL:               50
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   4099
-   Number with an unused Flip Flop:    1191  out of   4099    29%  
-   Number with an unused LUT:          1320  out of   4099    32%  
-   Number of fully used LUT-FF pairs:  1588  out of   4099    38%  
-   Number of unique control sets:        72
+ Number of LUT Flip Flop pairs used:   4116
+   Number with an unused Flip Flop:    1213  out of   4116    29%  
+   Number with an unused LUT:          1318  out of   4116    32%  
+   Number of fully used LUT-FF pairs:  1585  out of   4116    38%  
+   Number of unique control sets:        68
 
 IO Utilization: 
  Number of IOs:                        1097
@@ -1735,33 +1722,32 @@ Clock Information:
 -----------------------------------------------------------------------------------------------------+---------------------------------------------------+-------+
 Clock Signal                                                                                         | Clock buffer(FF name)                             | Load  |
 -----------------------------------------------------------------------------------------------------+---------------------------------------------------+-------+
-CLK                                                                                                  | BUFGP                                             | 2804  |
+CLK                                                                                                  | BUFGP                                             | 2801  |
 Inst_UC_PredMov/done_or0000(Inst_UC_PredMov/done_or00001:O)                                          | NONE(*)(Inst_UC_PredMov/done)                     | 1     |
 Inst_UC_PredMov/START2_or0000(Inst_UC_PredMov/START2_or00001:O)                                      | NONE(*)(Inst_UC_PredMov/START2)                   | 1     |
 Inst_SAD_UC/nextState_not0001(Inst_SAD_UC/nextState_not00011:O)                                      | NONE(*)(Inst_SAD_UC/nextState_11)                 | 12    |
-Inst_SAD_UC/isValidSAD_or0000(Inst_SAD_UC/isValidSAD_or0000:O)                                       | NONE(*)(Inst_SAD_UC/isValidSAD)                   | 1     |
-Inst_SAD_UC/doneRest_not0001(Inst_SAD_UC/nrAccumSubSrc_not00011:O)                                   | NONE(*)(Inst_SAD_UC/doneRest)                     | 1     |
-Inst_SAD_UC/nrAccumSubSrc_not0001(Inst_SAD_UC/nrAccumSubSrc_not00012:O)                              | NONE(*)(Inst_SAD_UC/nrAccumSubSrc)                | 1     |
+Inst_SAD_UC/doneRest_or0000(Inst_SAD_UC/doneRest_or0000:O)                                           | NONE(*)(Inst_SAD_UC/doneRest)                     | 1     |
+Inst_SAD_UC/nrAccumSubSrc_not0001(Inst_SAD_UC/nrAccumSubSrc_not0001:O)                               | NONE(*)(Inst_SAD_UC/nrAccumSubSrc)                | 1     |
 Inst_UC_MainFirst/nextState_not00011(Inst_UC_MainFirst/nextState_not00011:O)                         | BUFG(*)(Inst_UC_MainFirst/nextState_77)           | 74    |
-Inst_UC_MainFirst/sel_candidates_or0000(Inst_UC_MainFirst/sel_candidates_or00001:O)                  | NONE(*)(Inst_UC_MainFirst/sel_candidates_1)       | 2     |
+Inst_UC_MainFirst/sel_candidates_or0000(Inst_UC_MainFirst/sel_candidates_or00002:O)                  | NONE(*)(Inst_UC_MainFirst/sel_candidates_1)       | 2     |
 Inst_UC_MainFirst/sel_distX_not0001(Inst_UC_MainFirst/sel_distX_not0001171:O)                        | NONE(*)(Inst_UC_MainFirst/sel_distY_2)            | 3     |
-Inst_UC_MainFirst/START2_or0000(Inst_UC_MainFirst/START2_or00001:O)                                  | NONE(*)(Inst_UC_MainFirst/START2)                 | 1     |
+Inst_UC_MainFirst/START2_or0000(Inst_UC_MainFirst/START2_or0000_f7:O)                                | NONE(*)(Inst_UC_MainFirst/START2)                 | 1     |
 Inst_UC_MainFirst/loadregNumPUsLevel_or0000(Inst_UC_MainFirst/loadregNumPUsLevel_or00001:O)          | NONE(*)(Inst_UC_MainFirst/loadregNumPUsLevel)     | 1     |
 Inst_UC_MainFirst/incRegPUsFinished_or0000(Inst_UC_MainFirst/incRegPUsFinished_or00001:O)            | NONE(*)(Inst_UC_MainFirst/incRegPUsFinished)      | 1     |
-Inst_UC_MainFirst/op_typeY_or0000(Inst_UC_MainFirst/op_typeY_or00001:O)                              | NONE(*)(Inst_UC_MainFirst/op_typeY)               | 1     |
+Inst_UC_MainFirst/op_typeY_or0000(Inst_UC_MainFirst/op_typeY_or0000:O)                               | NONE(*)(Inst_UC_MainFirst/op_typeY)               | 1     |
 Inst_UC_MainFirst/incRegCurVecX_or0000(Inst_UC_MainFirst/incRegCurVecX_or0000:O)                     | NONE(*)(Inst_UC_MainFirst/incRegCurVecX)          | 1     |
 Inst_UC_MainFirst/loadByPassOutOfAnyBound_or0000(Inst_UC_MainFirst/loadByPassOutOfAnyBound_or00001:O)| NONE(*)(Inst_UC_MainFirst/loadByPassOutOfAnyBound)| 1     |
 Inst_UC_MainFirst/waitCycles_or0000(Inst_UC_MainFirst/waitCycles_or0000:O)                           | NONE(*)(Inst_UC_MainFirst/waitCycles)             | 1     |
 Inst_UC_MainFirst/initIncrement_or0000(Inst_UC_MainFirst/initIncrement_or00001:O)                    | NONE(*)(Inst_UC_MainFirst/initIncrement)          | 1     |
 Inst_UC_MainFirst/rstRegPUsFinished_or0000(Inst_UC_MainFirst/rstRegPUsFinished_or00001:O)            | NONE(*)(Inst_UC_MainFirst/rstRegPUsFinished)      | 1     |
-Inst_UC_MainFirst/done_or0000(Inst_UC_MainFirst/done_or00001:O)                                      | NONE(*)(Inst_UC_MainFirst/done)                   | 1     |
+Inst_UC_MainFirst/done_or0000(Inst_UC_MainFirst/done_or0000_wg_cy<11>:O)                             | NONE(*)(Inst_UC_MainFirst/done)                   | 1     |
 Inst_UC_MainFirst/rstRegCurVecY_or0000(Inst_UC_MainFirst/rstRegCurVecY_or00001:O)                    | NONE(*)(Inst_UC_MainFirst/rstRegCurVecY)          | 1     |
-Inst_UC_MainFirst/initData_or0000(Inst_UC_MainFirst/initData_or00001:O)                              | NONE(*)(Inst_UC_MainFirst/initData)               | 1     |
+Inst_UC_MainFirst/initData_or0000(Inst_UC_MainFirst/initData_or00002:O)                              | NONE(*)(Inst_UC_MainFirst/initData)               | 1     |
 Inst_UC_MainFirst/sendToMem_or0000(Inst_UC_MainFirst/sendToMem_or00001:O)                            | NONE(*)(Inst_UC_MainFirst/sendToMem)              | 1     |
-Inst_UC_MainFirst/dirtyBit_or0000(Inst_UC_MainFirst/dirtyBit_or0000_wg_cy<7>:O)                      | NONE(*)(Inst_UC_MainFirst/dirtyBit)               | 1     |
+Inst_UC_MainFirst/validBit_or0000(Inst_UC_MainFirst/validBit_or00001:O)                              | NONE(*)(Inst_UC_MainFirst/validBit)               | 1     |
 Inst_UC_MainFirst/incRegNumLevels_or0000(Inst_UC_MainFirst/incRegNumLevels_or00001:O)                | NONE(*)(Inst_UC_MainFirst/incRegNumLevels)        | 1     |
-Inst_UC_MainFirst/incDoAgain_or0000(Inst_UC_MainFirst/incDoAgain_or0000:O)                           | NONE(*)(Inst_UC_MainFirst/incDoAgain)             | 1     |
-Inst_UC_MainFirst/loadCurVec_or0000(Inst_UC_MainFirst/loadCurVec_or00001:O)                          | NONE(*)(Inst_UC_MainFirst/loadCurVec)             | 1     |
+Inst_UC_MainFirst/incDoAgain_or0000(Inst_UC_MainFirst/incDoAgain_or0000_wg_cy<10>:O)                 | NONE(*)(Inst_UC_MainFirst/incDoAgain)             | 1     |
+Inst_UC_MainFirst/loadCurVec_or0000(Inst_UC_MainFirst/loadCurVec_or0000:O)                           | NONE(*)(Inst_UC_MainFirst/loadCurVec)             | 1     |
 Inst_UC_MainFirst/op_typeX_not0001(Inst_UC_MainFirst/op_typeX_not00011:O)                            | NONE(*)(Inst_UC_MainFirst/op_typeX)               | 1     |
 Inst_UC_MainFirst/incRegCurVecY_not0001(Inst_UC_MainFirst/rstRegCurVecX_not000111:O)                 | NONE(*)(Inst_UC_MainFirst/incRegCurVecY)          | 1     |
 Inst_UC_MainFirst/rstRegCurVecX_not0001(Inst_UC_MainFirst/rstRegCurVecX_not00012:O)                  | NONE(*)(Inst_UC_MainFirst/rstRegCurVecX)          | 1     |
@@ -1773,15 +1759,15 @@ Inst_UC_Raster/done_or0000(Inst_UC_Raster/done_or000067:O)                      
 Inst_UC_Raster/initData_or0000(Inst_UC_Raster/initData_or000055_f7:O)                                | NONE(*)(Inst_UC_Raster/initData)                  | 1     |
 Inst_UC_Raster/sendToMem_or0000(Inst_UC_Raster/sendToMem_or000055:O)                                 | NONE(*)(Inst_UC_Raster/sendToMem)                 | 1     |
 Inst_UC_Raster/incRegX_or0000(Inst_UC_Raster/incRegX_or0000:O)                                       | NONE(*)(Inst_UC_Raster/incRegX)                   | 1     |
-Inst_UC_Raster/auxDirtyBit_not0001(Inst_UC_Raster/auxDirtyBit_not0001198:O)                          | NONE(*)(Inst_UC_Raster/auxDirtyBit)               | 1     |
-Inst_TZSearch/state_5                                                                                | NONE(Inst_TZSearch/sel_TZ_stage_1)                | 3     |
+Inst_UC_Raster/auxvalidBit_not0001(Inst_UC_Raster/auxvalidBit_not0001198:O)                          | NONE(*)(Inst_UC_Raster/auxvalidBit)               | 1     |
+Inst_TZSearch/state_5                                                                                | NONE(Inst_TZSearch/sel_TZ_stage_1)                | 2     |
 Inst_TZSearch/nextState_not0001(Inst_TZSearch/nextState_not0001:O)                                   | NONE(*)(Inst_TZSearch/nextState_5)                | 6     |
 Inst_TZSearch/STARTFirstSearch_or0000(Inst_TZSearch/STARTFirstSearch_or00001:O)                      | NONE(*)(Inst_TZSearch/STARTFirstSearch)           | 1     |
 Inst_TZSearch/loadSearchCenter_or0000(Inst_TZSearch/loadSearchCenter_or00001:O)                      | NONE(*)(Inst_TZSearch/loadSearchCenter)           | 2     |
 Inst_TZSearch/STARTRaster_or0000(Inst_TZSearch/STARTRaster_or00001:O)                                | NONE(*)(Inst_TZSearch/STARTRaster)                | 1     |
 Inst_TZSearch/done_or0000(Inst_TZSearch/done_or00001:O)                                              | NONE(*)(Inst_TZSearch/done)                       | 1     |
 -----------------------------------------------------------------------------------------------------+---------------------------------------------------+-------+
-(*) These 43 clock signal(s) are generated by combinatorial logic,
+(*) These 42 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -1795,7 +1781,7 @@ GLOBAL_START_inv(Inst_TZSearch/state_Acst_inv1_INV_0:O)              | NONE(GLOB
 Inst_UC_MainFirst/state_Acst_inv(STARTFirstSearch_inv401_INV_0:O)    | NONE(Inst_Datapath_FirstSearch/regBestX_0)     | 214   |
 Inst_UC_Raster/START_inv(STARTRaster_inv271_INV_0:O)                 | NONE(Inst_Datapath_Raster/currentXVecByPass8_0)| 113   |
 Inst_SAD_UC/state_Acst_inv(Inst_SAD_UC/state_Acst_inv1:O)            | NONE(Inst_SAD_UC/state_0)                      | 12    |
-Inst_UC_PredMov/state_Rst_inv(Inst_UC_PredMov/state_Rst_inv1_INV_0:O)| NONE(Inst_UC_PredMov/state_FSM_FFd1)           | 6     |
+Inst_UC_PredMov/state_Rst_inv(Inst_UC_PredMov/state_Rst_inv1_INV_0:O)| NONE(Inst_UC_PredMov/state_FSM_FFd1)           | 3     |
 ---------------------------------------------------------------------+------------------------------------------------+-------+
 
 Timing Summary:
@@ -1814,23 +1800,23 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
   Clock period: 5.252ns (frequency: 190.416MHz)
-  Total number of paths / destination ports: 44916 / 1709
+  Total number of paths / destination ports: 45112 / 1707
 -------------------------------------------------------------------------
 Delay:               5.252ns (Levels of Logic = 3)
-  Source:            regWidthPU_1 (FF)
+  Source:            regHeightPU_0 (FF)
   Destination:       regCyclesPerPU_6 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: regWidthPU_1 to regCyclesPerPU_6
+  Data Path: regHeightPU_0 to regCyclesPerPU_6
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              2   0.396   0.290  regWidthPU_1 (regWidthPU_1)
-     DSP48E:B1->P10        3   3.068   0.910  Mmult_multHW (multHW<10>)
+     FDC:C->Q              2   0.396   0.290  regHeightPU_0 (regHeightPU_0)
+     DSP48E:A0->P10        3   3.068   0.910  Mmult_multHW (multHW<10>)
      LUT6:I0->O            2   0.086   0.416  cyclesPerPU<6>11 (cyclesPerPU<6>_bdd0)
-     LUT2:I1->O            1   0.086   0.000  cyclesPerPU<7>1 (cyclesPerPU<7>)
-     FDC:D                    -0.022          regCyclesPerPU_7
+     LUT2:I1->O            1   0.086   0.000  cyclesPerPU<6>2 (cyclesPerPU<6>)
+     FDC:D                    -0.022          regCyclesPerPU_6
     ----------------------------------------
     Total                      5.252ns (3.636ns logic, 1.616ns route)
                                        (69.2% logic, 30.8% route)
@@ -1917,14 +1903,14 @@ Offset:              3.896ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 66.00 secs
-Total CPU time to Xst completion: 66.88 secs
+Total REAL time to Xst completion: 61.00 secs
+Total CPU time to Xst completion: 60.92 secs
  
 --> 
 
-Total memory usage is 471180 kilobytes
+Total memory usage is 469200 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  694 (   0 filtered)
-Number of infos    :   67 (   0 filtered)
+Number of warnings :  695 (   0 filtered)
+Number of infos    :   66 (   0 filtered)
 

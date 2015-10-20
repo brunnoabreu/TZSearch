@@ -36,7 +36,7 @@ entity UC_PredMov is
 		START					: in STD_LOGIC;
 		doneSAD				: in STD_LOGIC;
 		START2				: out STD_LOGIC;
-		dirtyBit				: out STD_LOGIC;
+		validBit				: out STD_LOGIC;
 		done					: out STD_LOGIC
 	);
 end UC_PredMov;
@@ -64,13 +64,13 @@ begin
 	case state is
 		when idle =>
 			START2 <= '0';
-			dirtyBit <= '1';
+			validBit <= '1';
 			done <= '0';
 			nextState <= s0;
 		
 		when s0 =>
 			START2 <= '1';
-			dirtyBit <= '1';
+			validBit <= '1';
 			if(doneSAD = '0') then
 				nextState <= s0;
 			else
@@ -78,7 +78,7 @@ begin
 			end if;
 		
 		when s1 =>
-			dirtyBit <= '1';
+			validBit <= '1';
 			if(doneSAD = '0') then
 				nextState <= s1;
 			else
@@ -86,7 +86,7 @@ begin
 			end if;
 			
 		when s2 =>
-			dirtyBit <= '1';
+			validBit <= '1';
 			if(doneSAD = '0') then
 				nextState <= s2;
 			else
@@ -94,7 +94,7 @@ begin
 			end if;
 
 		when s3 =>
-			dirtyBit <= '1';
+			validBit <= '1';
 			if(doneSAD = '0') then
 				nextState <= s3;
 			else
@@ -102,7 +102,7 @@ begin
 			end if;
 		
 		when stateDone =>
-			dirtyBit <= '0';
+			validBit <= '1';
 			done <= '1';
 			nextState <= stateDone;
 

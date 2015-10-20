@@ -276,7 +276,7 @@ LAB8:    xsi_set_current_line(105, ng0);
     t4 = *((char **)t2);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
-    *((unsigned char *)t6) = (unsigned char)2;
+    *((unsigned char *)t6) = (unsigned char)3;
     xsi_driver_first_trans_fast_port(t1);
     xsi_set_current_line(106, ng0);
     t1 = (t0 + 4168);

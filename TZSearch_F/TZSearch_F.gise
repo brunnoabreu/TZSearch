@@ -61,8 +61,89 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1445363654" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1445363654">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1445371260" xil_pn:in_ck="8608307620769593360" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1445371260">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="CircularBuffer_Datapath.vhd"/>
+      <outfile xil_pn:name="DatapathPredVec.vhd"/>
+      <outfile xil_pn:name="Datapath_FirstSearch.vhd"/>
+      <outfile xil_pn:name="Datapath_Raster.vhd"/>
+      <outfile xil_pn:name="Final_TZSearch.vhd"/>
+      <outfile xil_pn:name="SAD4x4_Datapath.vhd"/>
+      <outfile xil_pn:name="STD_SAD.vhd"/>
+      <outfile xil_pn:name="TB_TZSearch.vhd"/>
+      <outfile xil_pn:name="UC_MainFirst.vhd"/>
+      <outfile xil_pn:name="UC_PredMov.vhd"/>
+      <outfile xil_pn:name="UC_Raster.vhd"/>
+      <outfile xil_pn:name="UC_SAD.vhd"/>
+      <outfile xil_pn:name="UC_TZSearch.vhd"/>
+      <outfile xil_pn:name="blck4x4.vhd"/>
+      <outfile xil_pn:name="genericAdder.vhd"/>
+      <outfile xil_pn:name="genericSub.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1445363662" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="4434870115928851094" xil_pn:start_ts="1445363662">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1445363662" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8681248348864795388" xil_pn:start_ts="1445363662">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1445363662" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-1444453647286885149" xil_pn:start_ts="1445363662">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1445371260" xil_pn:in_ck="8608307620769593360" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1445371260">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="CircularBuffer_Datapath.vhd"/>
+      <outfile xil_pn:name="DatapathPredVec.vhd"/>
+      <outfile xil_pn:name="Datapath_FirstSearch.vhd"/>
+      <outfile xil_pn:name="Datapath_Raster.vhd"/>
+      <outfile xil_pn:name="Final_TZSearch.vhd"/>
+      <outfile xil_pn:name="SAD4x4_Datapath.vhd"/>
+      <outfile xil_pn:name="STD_SAD.vhd"/>
+      <outfile xil_pn:name="TB_TZSearch.vhd"/>
+      <outfile xil_pn:name="UC_MainFirst.vhd"/>
+      <outfile xil_pn:name="UC_PredMov.vhd"/>
+      <outfile xil_pn:name="UC_Raster.vhd"/>
+      <outfile xil_pn:name="UC_SAD.vhd"/>
+      <outfile xil_pn:name="UC_TZSearch.vhd"/>
+      <outfile xil_pn:name="blck4x4.vhd"/>
+      <outfile xil_pn:name="genericAdder.vhd"/>
+      <outfile xil_pn:name="genericSub.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1445371271" xil_pn:in_ck="8608307620769593360" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6196825661383379340" xil_pn:start_ts="1445371260">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="testbench_beh.prj"/>
+      <outfile xil_pn:name="testbench_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1445371401" xil_pn:in_ck="1325431893825837657" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4025546739785759519" xil_pn:start_ts="1445371400">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="testbench_isim_beh.wdb"/>
+    </transform>
     <transform xil_pn:end_ts="1444466607" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1444466607">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1444466607" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-6731093432608159010" xil_pn:start_ts="1444466607">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -88,7 +169,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1444466686" xil_pn:in_ck="7566554874729242247" xil_pn:name="TRANEXT_xstsynthesize_virtex5" xil_pn:prop_ck="7575938665292642739" xil_pn:start_ts="1444466607">
+    <transform xil_pn:end_ts="1445371381" xil_pn:in_ck="7566554874729242247" xil_pn:name="TRANEXT_xstsynthesize_virtex5" xil_pn:prop_ck="-259041981487232021" xil_pn:start_ts="1445371314">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>

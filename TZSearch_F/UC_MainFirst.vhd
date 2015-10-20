@@ -62,12 +62,11 @@ entity UC_MainFirst is
 			rstRegCurVecY				: out STD_LOGIC;
 			incRegNumLevels			: out STD_LOGIC;
 			rstRegNumLevels			: out STD_LOGIC;
---			inc_iDist					: out STD_LOGIC;
 			initData						: out STD_LOGIC;
 			initIncrement				: out STD_LOGIC;
 			START2						: out STD_LOGIC;
 			waitCycles					: out STD_LOGIC;
-			dirtyBit						: out STD_LOGIC;
+			validBit						: out STD_LOGIC;
 			done							: out STD_LOGIC
 	);	
 end UC_MainFirst;
@@ -128,7 +127,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				initIncrement <= '0';
 				incRegNumLevels <= '0';
 				rstRegNumLevels <= '0';
-				dirtyBit <= '0';
+				validBit <= '0';
 				loadCurVec <= '0';
 				sendToMem <= '0';
 				writeCache <= '0';
@@ -160,7 +159,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				incRegPUsFinished <= '0';
 				loadregNumPUsLevel <= '0';
 				sel_candidates <= "00";
-				dirtyBit <= isValid;
+				validBit <= isValid;
 				incRegCurVecY <= '0';
 				rstRegCurVecX <= '0';
 				incRegCurVecX <= '1';
@@ -175,6 +174,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 						sendToMem <= '0';
 						incRegPUsFinished <= '1';
 					else
+						writeCache <= '1';
 						initIncrement <= '1';
 						sendToMem <= '1';
 					end if;
@@ -203,7 +203,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					op_typeY <= '0';
 					incRegCurVecY <= '1';
 					rstRegCurVecX <= '1';
@@ -214,13 +214,14 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 						nextState <= fourCandidates_3;
 					end if;
 					if(isOutOfAnyBound = '0') then
-						writeCache <= '1';
 						if(vecFound = '1') then
+							writeCache <= '0';
 							initIncrement <= '0';
 							sendToMem <= '0';
 							incRegPUsFinished <= '1';
 							nextState <= fourCandidates_3;
 						else
+							writeCache <= '1';
 							initIncrement <= '1';
 							sendToMem <= '1';
 						end if;
@@ -259,20 +260,21 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					nextState <= fourCandidates_3_5;
 					loadByPassOutOfAnyBound <= '1';
 					if(is8x8or16x4 = '1') then
 						nextState <= fourCandidates_4;
 					end if;
 					if(isOutOfAnyBound = '0') then
-						writeCache <= '1';
 						if(vecFound = '1') then
+							writeCache <= '0';
 							incRegPUsFinished <= '1';
 							initIncrement <= '0';
 							sendToMem <= '0';
 							nextState <= fourCandidates_4;
 						else
+							writeCache <= '1';
 							initIncrement <= '1';
 							sendToMem <= '1';
 						end if;
@@ -308,7 +310,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					loadByPassOutOfAnyBound <= '1';
 					nextState <= fourCandidates_4_5;
 					if(is8x8or16x4 = '1') then
@@ -390,7 +392,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
 				loadregNumPUsLevel <= '0';
-				dirtyBit <= isValid;
+				validBit <= isValid;
 				incRegCurVecY <= '1';
 				rstRegCurVecX <= '1';
 				incRegCurVecX <= '0';
@@ -435,7 +437,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					incRegCurVecX <= '1';
 					incRegCurVecY <= '1';
 					op_typeX <= '0';
@@ -496,7 +498,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					rstRegCurVecY <= '1';
 					incRegCurVecX <= '1';
 					loadByPassOutOfAnyBound <= '1';
@@ -559,7 +561,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					incRegCurVecX <= '1';
 					incRegCurVecY <= '1';
 					op_typeX <= '1';
@@ -621,7 +623,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					rstRegCurVecX <= '1';
 					incRegCurVecY <= '1';
 					loadByPassOutOfAnyBound <= '1';
@@ -681,7 +683,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					incRegCurVecX <= '1';
 					incRegCurVecY <= '1';
 					op_typeY <= '1';
@@ -742,7 +744,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					loadByPassOutOfAnyBound <= '1';
 					nextState <= eightCandidates_7_5;
 					if(is8x8or16x4 = '1') then
@@ -794,7 +796,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 --				loadByPassOutOfAnyBound <= '0';
 --				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1') then
 --					loadCurVec <= '1';
---					dirtyBit <= isOutOfAnyBound;
+--					validBit <= isOutOfAnyBound;
 --					loadByPassOutOfAnyBound <= '1';
 --					nextState <= eightCandidates_8_5;
 --					if(is8x8or16x4 = '1') then
@@ -843,7 +845,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					loadByPassOutOfAnyBound <= '1';
 					nextState <= eightCandidates_8_5;
 					if(is8x8or16x4 = '1') then
@@ -925,7 +927,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 			when initialSixteenCandidates_3 =>
 				incRegPUsFinished <= '0';
 				loadregNumPUsLevel <= '0';
-				dirtyBit <= isValid;
+				validBit <= isValid;
 				incRegCurVecY <= '1';
 				rstRegCurVecX <= '0';
 				incRegCurVecX <= '1';
@@ -966,7 +968,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					op_typeY <= '1';
 					incRegCurVecY <= '1';
 					incRegCurVecX <= '1';
@@ -1030,7 +1032,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					op_typeY <= '1';
 					incRegCurVecY <= '1';
 					incRegCurVecX <= '1';
@@ -1091,7 +1093,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					op_typeY <= '1';
 					incRegCurVecY <= '1';
 					rstRegCurVecX <= '1';
@@ -1150,7 +1152,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					op_typeY <= '0';
 					incRegCurVecY <= '1';
 					incRegCurVecX <= '1';
@@ -1210,7 +1212,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					op_typeY <= '0';
 					incRegCurVecY <= '1';
 					incRegCurVecX <= '1';
@@ -1270,7 +1272,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					op_typeY <= '0';
 					incRegCurVecY <= '1';
 					incRegCurVecX <= '1';
@@ -1330,7 +1332,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					op_typeY <= '0';
 					incRegCurVecY <= '1';
 					incRegCurVecX <= '1';
@@ -1390,7 +1392,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					op_typeX <= '1';
 					op_typeY <= '0';
 					incRegCurVecY <= '1';
@@ -1451,7 +1453,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					op_typeY <= '0';
 					incRegCurVecY <= '1';
 					incRegCurVecX <= '1';
@@ -1511,7 +1513,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					op_typeY <= '0';
 					incRegCurVecY <= '1';
 					incRegCurVecX <= '1';
@@ -1571,7 +1573,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					op_typeY <= '0';
 					op_typeX <= '1';
 					incRegCurVecY <= '1';
@@ -1632,7 +1634,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					op_typeX <= '0';
 					op_typeY <= '1';
 					incRegCurVecY <= '1';
@@ -1693,7 +1695,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					op_typeY <= '1';
 					incRegCurVecY <= '1';
 					incRegCurVecX <= '1';
@@ -1753,7 +1755,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					op_typeY <= '1';
 					incRegCurVecY <= '1';
 					incRegCurVecX <= '1';
@@ -1813,7 +1815,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					op_typeY <= '1';
 					incRegCurVecY <= '1';
 					incRegCurVecX <= '1';
@@ -1873,7 +1875,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
 					loadCurVec <= '1';
-					dirtyBit <= isValid;
+					validBit <= isValid;
 					loadByPassOutOfAnyBound <= '1';
 					nextState <= sixteenCandidates_16_5;
 					if(is8x8or16x4 = '1') then

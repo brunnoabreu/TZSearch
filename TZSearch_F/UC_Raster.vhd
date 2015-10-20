@@ -44,7 +44,7 @@ entity UC_Raster is
 		incRegX					: out STD_LOGIC;
 		rearrangeVecMems		: out STD_LOGIC;
 		waitCycles				: out STD_LOGIC;
-		dirtyBit					: out STD_LOGIC;
+		validBit					: out STD_LOGIC;
 		loadRegXMem2			: out STD_LOGIC;
 		sendToMem				: out STD_LOGIC;
 		done						: out STD_LOGIC
@@ -55,8 +55,8 @@ architecture Behavioral of UC_Raster is
 
 type t_state is (idle, waitForStart1, waitForStart2, waitForStart3, waitForStart4, waitForStart5, waitForDone, waitLastSADs1, waitLastSADs2, waitLastSADs3, waitLastSADs4, waitLastSADs5, waitLastSADs6, waitLastSADs7, waitLastSADs8, stateDone);
 signal state, nextState: t_state;
-signal dirtyBitByPass1, dirtyBitByPass2, dirtyBitByPass3, dirtyBitByPass4, dirtyBitByPass5, dirtyBitByPass6, dirtyBitByPass7, dirtyBitByPass8: STD_LOGIC;
-signal auxDirtyBit: STD_LOGIC;
+signal validBitByPass1, validBitByPass2, validBitByPass3, validBitByPass4, validBitByPass5, validBitByPass6, validBitByPass7, validBitByPass8: STD_LOGIC;
+signal auxvalidBit: STD_LOGIC;
 
 begin
 
@@ -78,7 +78,7 @@ begin
 			initIncrement <= '0';
 			incRegX <= '0';
 			waitCycles <= '0';
-			auxDirtyBit <= '0';
+			auxvalidBit <= '0';
 			loadRegXMem2 <= '0';
 			sendToMem <= '0';
 			done <= '0';
@@ -96,7 +96,7 @@ begin
 			initData <= '0';
 			initIncrement <= '0';
 			loadRegXMem2 <= '1';
-			auxDirtyBit <= '1';
+			auxvalidBit <= '1';
 			incRegX <= '1';
 			nextState <= waitForStart4;
 			
@@ -124,7 +124,7 @@ begin
 			if(finishSendPartitions = '1') then
 				if(isOutOfXBound = '1') then
 					if(isOutOfYBound = '1') then
-						auxDirtyBit <= '0';
+						auxvalidBit <= '0';
 						nextState <= waitLastSADs1;
 					else
 						rearrangeVecMems <= '1';
@@ -170,26 +170,26 @@ end process;
 process(CLK, START)
 begin
 	if(START='0') then
-		dirtyBitByPass1 <= '0';
-		dirtyBitByPass2 <= '0';
-		dirtyBitByPass3 <= '0';
-		dirtyBitByPass4 <= '0';
-		dirtyBitByPass5 <= '0';
-		dirtyBitByPass6 <= '0';
-		dirtyBitByPass7 <= '0';
-		dirtyBitByPass8 <= '0';
+		validBitByPass1 <= '0';
+		validBitByPass2 <= '0';
+		validBitByPass3 <= '0';
+		validBitByPass4 <= '0';
+		validBitByPass5 <= '0';
+		validBitByPass6 <= '0';
+		validBitByPass7 <= '0';
+		validBitByPass8 <= '0';
 	elsif(CLK'event and CLK='1') then
-		dirtyBitByPass1 <= auxDirtyBit;
-		dirtyBitByPass2 <= dirtyBitByPass1;
-		dirtyBitByPass3 <= dirtyBitByPass2;
-		dirtyBitByPass4 <= dirtyBitByPass3;
-		dirtyBitByPass5 <= dirtyBitByPass4;
-		dirtyBitByPass6 <= dirtyBitByPass5;
-		dirtyBitByPass7 <= dirtyBitByPass6;
-		dirtyBitByPass8 <= dirtyBitByPass7;
+		validBitByPass1 <= auxvalidBit;
+		validBitByPass2 <= validBitByPass1;
+		validBitByPass3 <= validBitByPass2;
+		validBitByPass4 <= validBitByPass3;
+		validBitByPass5 <= validBitByPass4;
+		validBitByPass6 <= validBitByPass5;
+		validBitByPass7 <= validBitByPass6;
+		validBitByPass8 <= validBitByPass7;
 	end if;
 end process;
 
-dirtyBit <= dirtyBitByPass8;
+validBit <= validBitByPass8;
 
 end Behavioral;

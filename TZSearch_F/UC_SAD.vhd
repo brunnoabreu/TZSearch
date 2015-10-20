@@ -37,8 +37,7 @@ entity UC_SAD is
 		waitCycles			: in STD_LOGIC;
 		is8x8or16x4			: in STD_LOGIC;
 		subResult			: in STD_LOGIC;
-		dirtyBit				: in STD_LOGIC;
-		isValidSAD			: out STD_LOGIC;
+		validBit				: in STD_LOGIC;
 		nrAccumSubSrc		: out STD_LOGIC;
 		doneRest				: out STD_LOGIC
 	);
@@ -62,14 +61,13 @@ begin
 	end process;
 	
 	
-	process(state, subResult, is8x8or16x4, waitCycles, dirtyBit)
+	process(state, subResult, is8x8or16x4, waitCycles, validBit)
 	begin
 	
 		case state is
 			when idle =>
 				doneRest <= '0';
 				nrAccumSubSrc <= '0';
-				isValidSAD <= '0';
 				nextState <= waitPipe1;
 				
 			when waitPipe1 =>
@@ -99,15 +97,13 @@ begin
 				else
 					nextState <= s2Nx2N_0;
 				end if;
-					
+
 			when s2Nx2N_0 =>
 				doneRest <= '0';
 				nrAccumSubSrc <= '1';
-				isValidSAD <= '1';
 				nextState <= s2Nx2N_1;
-				if(dirtyBit = '0') then
+				if(validBit = '0') then
 					nrAccumSubSrc <= '0';
-					isValidSAD <= '0';
 					nextState <= s2Nx2N_0;
 				end if;
 				if(waitCycles = '1') then
@@ -125,11 +121,12 @@ begin
 					if(waitCycles = '1') then
 						nextState <= waitFlushCycles;
 					end if;
+				else
+					doneRest <= '0';
 				end if;
 				
 			when waitFlushCycles =>
 				doneRest <= '0';
-				isValidSAD <= '0';
 				if(waitCycles = '0') then
 					nextState <= waitPipe1;
 				end if;
