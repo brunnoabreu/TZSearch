@@ -49,5 +49,5 @@ Time Resolution for simulation is 1ps.
 Waiting for 17 sub-compilation(s) to finish...
 Compiled 43 VHDL Units
 Built simulation executable C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/testbench_isim_beh.exe
-Fuse Memory Usage: 39092 KB
-Fuse CPU Usage: 2651 ms
+Fuse Memory Usage: 39328 KB
+Fuse CPU Usage: 2292 ms

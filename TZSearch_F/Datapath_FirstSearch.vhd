@@ -64,6 +64,7 @@ entity Datapath_FirstSearch is
 		loadCurVec					: in STD_LOGIC;
 		loadByPassOutOfAnyBound : in STD_LOGIC;
 		incRegPUsFinished			: in STD_LOGIC;
+		loadVecFound				: in STD_LOGIC;
 		loadByPassVecFound		: in STD_LOGIC;
 		writeCache					: in STD_LOGIC;
 		searchRange					: in STD_LOGIC_VECTOR(7 downto 0);
@@ -123,6 +124,7 @@ signal auxVecFound, regByPassVecFound: STD_LOGIC;
 		CLK			: in STD_LOGIC;
 		START			: in STD_LOGIC;
 		writeCache	: in STD_LOGIC;
+		loadVecFound: in STD_LOGIC;
 		curVecX		: in STD_LOGIC_VECTOR(7 downto 0);
 		curVecY		: in STD_LOGIC_VECTOR(7 downto 0);
 		vecFound		: out STD_LOGIC
@@ -341,6 +343,7 @@ subDown <= regCurVecY - borderDown;
 		CLK				=> CLK,
 		START				=> START,
 		writeCache		=> writeCache,
+		loadVecFound	=> loadVecFound,
 		curVecX			=> regCurVecX,
 		curVecY			=> regCurVecY,
 		vecFound			=> auxVecFound

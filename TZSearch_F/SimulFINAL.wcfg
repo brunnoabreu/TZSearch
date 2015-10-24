@@ -14,7 +14,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="114" />
+   <WVObjectSize size="124" />
    <wvobject fp_name="/testbench/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -125,6 +125,11 @@
       <obj_property name="ObjectShortName">regthirdadder[0:1]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath/firstafterblock" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">firstafterblock[0:3]</obj_property>
+      <obj_property name="ObjectShortName">firstafterblock[0:3]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
    <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath/regsecafterblock" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">regsecafterblock[0:1]</obj_property>
       <obj_property name="ObjectShortName">regsecafterblock[0:1]</obj_property>
@@ -230,6 +235,15 @@
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="CustomSignalColor">#ff0000</obj_property>
    </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cache[0:15]</obj_property>
+      <obj_property name="ObjectShortName">cache[0:15]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_MainFirst/initincrement" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">initincrement</obj_property>
+      <obj_property name="ObjectShortName">initincrement</obj_property>
+   </wvobject>
    <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/sendtomem" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">sendtomem</obj_property>
       <obj_property name="ObjectShortName">sendtomem</obj_property>
@@ -257,6 +271,18 @@
    <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/vecfound" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">vecfound</obj_property>
       <obj_property name="ObjectShortName">vecfound</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regvecfound" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">regvecfound</obj_property>
+      <obj_property name="ObjectShortName">regvecfound</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/Inst_Circ_Buffer/hasfoundvec" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">hasfoundvec</obj_property>
+      <obj_property name="ObjectShortName">hasfoundvec</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_MainFirst/concatvecoutbound" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">concatvecoutbound[1:0]</obj_property>
+      <obj_property name="ObjectShortName">concatvecoutbound[1:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/bypassvecfound" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">bypassvecfound</obj_property>
@@ -287,6 +313,26 @@
    <wvobject fp_name="/testbench/Inst_TZSearch/regbestsad" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">regbestsad[19:0]</obj_property>
       <obj_property name="ObjectShortName">regbestsad[19:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecxbypass10" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecxbypass10[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecxbypass10[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecybypass10" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecybypass10[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecybypass10[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regbestx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regbestx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regbestx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regbesty" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regbesty[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regbesty[7:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/Inst_TZSearch/regcenterx" type="array" db_ref_id="1">

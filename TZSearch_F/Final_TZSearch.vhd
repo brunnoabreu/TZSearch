@@ -148,6 +148,7 @@ architecture Behavioral of Final_TZSearch is
 		loadCurVec					: in STD_LOGIC;
 		loadByPassOutOfAnyBound : in STD_LOGIC;
 		incRegPUsFinished			: in STD_LOGIC;
+		loadVecFound				: in STD_LOGIC;
 		loadByPassVecFound		: in STD_LOGIC;
 		writeCache					: in STD_LOGIC;
 		searchRange					: in STD_LOGIC_VECTOR(7 downto 0);
@@ -221,6 +222,7 @@ architecture Behavioral of Final_TZSearch is
 		hasPassedNumLevels		: in STD_LOGIC;
 		vecFound						: in STD_LOGIC;
 		byPassVecFound				: in STD_LOGIC;
+		loadVecFound				: out STD_LOGIC;
 		loadByPassVecFound		: out STD_LOGIC;
 		writeCache					: out STD_LOGIC;
 		loadCurVec					: out STD_LOGIC;
@@ -287,7 +289,7 @@ signal middleVecMemX_Raster, middleVecMemY_Raster, middleBestVecX_Raster, middle
 
 signal STARTPredMov, START2PredMov, waitCycles_PredMov, validBit_PredMov, donePredMov: STD_LOGIC;
 signal middleIncRegX, middleRearrangeVecMems, middleLoadRegXMem2: STD_LOGIC;
-signal middleFinishSendPartitions_FirstSearch, middleIsOutOfAnyBound, middleByPassIsOutOfAnyBound, middleLoadByPassVecFound, middleLoadByPassOutOfAnyBound: STD_LOGIC;
+signal middleFinishSendPartitions_FirstSearch, middleIsOutOfAnyBound, middleByPassIsOutOfAnyBound, middleLoadVecFound, middleLoadByPassVecFound, middleLoadByPassOutOfAnyBound: STD_LOGIC;
 signal middleHasPassedNumLevels, middleVecFound, middleByPassVecFound: STD_LOGIC;
 signal middleDoAgain: STD_LOGIC_VECTOR(2 downto 0);
 signal middleWriteCache: STD_LOGIC;
@@ -392,11 +394,11 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 			regBorderLeft <= regCenterX - regSearchRange;
 			regBorderUp <= regCenterY - regSearchRange;
 			
-			auxRegBorderRight <= regCenterX + regSearchRange;
-			auxRegBorderDown <= regCenterY + regSearchRange;
+			auxRegBorderRight <= regSearchRange - regWidthPU;
+			auxRegBorderDown <= regSearchRange - regHeightPU;
 		
-			regBorderRight <= auxRegBorderRight - regWidthPU;
-			regBorderDown <= auxRegBorderDown - regHeightPU;
+			regBorderRight <= auxRegBorderRight + regCenterX;
+			regBorderDown <= auxRegBorderDown + regCenterY;
 		end if;
 	end process;
 	
@@ -441,10 +443,9 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 		isOutOfAnyBound			=> middleIsOutOfAnyBound, --OK
 		byPassIsOutOfAnyBound	=> middleByPassIsOutOfAnyBound, --OK
 		hasPassedNumLevels		=> middleHasPassedNumLevels, --OK
---		vecFound						=> middleVecFound, --OK
---		byPassVecFound				=> middleByPassVecFound, --OK
-		vecFound						=> '0', --OK
-		byPassVecFound				=> '0', --OK
+		vecFound						=> middleVecFound, --OK
+		byPassVecFound				=> middleByPassVecFound, --OK
+		loadVecFound				=> middleLoadVecFound, --OK
 		loadByPassVecFound		=> middleLoadByPassVecFound, --OK
 		writeCache					=> middleWriteCache, --OK
 		loadCurVec					=> middleLoadCurVec, --OK
@@ -534,6 +535,7 @@ loadCenter <= foundBetterSAD and loadSearchCenter;
 			loadCurVec					=> middleLoadCurVec, --OK
 			loadByPassOutOfAnyBound => middleLoadByPassOutOfAnyBound, --OK
 			incRegPUsFinished			=> middleIncRegPUsFinished, --OK
+			loadVecFound				=> middleLoadVecFound, --OK
 			loadByPassVecFound		=> middleLoadByPassVecFound, --OK
 			writeCache					=> middleWriteCache, --OK
 			searchRange					=> regSearchRange, --OK
@@ -615,20 +617,24 @@ muxSTART2 <= START2PredMov when sel_TZ_stage = "00" else
 
 curVecX <= middleVecMemX_FirstSearch when sel_TZ_stage = "01" else
 			  middleVecMemX_Raster when sel_TZ_stage = "10" else
+			  middleVecMemX_FirstSearch when sel_TZ_stage = "11" else
 			  (OTHERS=>'0');
 				
 curVecY <= middleVecMemY_FirstSearch when sel_TZ_stage = "01" else
 			  middleVecMemY_Raster when sel_TZ_stage = "10" else
+			  middleVecMemY_FirstSearch when sel_TZ_stage = "11" else
 			  (OTHERS=>'0');
 
 auxBestVecX <= inVecXByPass8 when sel_TZ_stage = "00" else
 					middleBestVecX_FirstSearch when sel_TZ_stage = "01" else
 					middleBestVecX_Raster when sel_TZ_stage = "10" else
+					middleBestVecX_FirstSearch when sel_TZ_stage = "11" else
 					regBestVecX;
 
 auxBestVecY <= inVecYByPass8 when sel_TZ_stage = "00" else
 					middleBestVecY_FirstSearch when sel_TZ_stage = "01" else
 					middleBestVecY_Raster when sel_TZ_stage = "10" else
+					middleBestVecY_FirstSearch when sel_TZ_stage = "11" else
 					regBestVecY;
 
 inVecX <= initCandidateX;

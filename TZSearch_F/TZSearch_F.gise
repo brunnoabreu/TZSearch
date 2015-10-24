@@ -65,9 +65,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1445371260" xil_pn:in_ck="8608307620769593360" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1445371260">
+    <transform xil_pn:end_ts="1445658254" xil_pn:in_ck="8608307620769593360" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1445658254">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="CircularBuffer_Datapath.vhd"/>
       <outfile xil_pn:name="DatapathPredVec.vhd"/>
       <outfile xil_pn:name="Datapath_FirstSearch.vhd"/>
@@ -97,9 +101,14 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1445371260" xil_pn:in_ck="8608307620769593360" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1445371260">
+    <transform xil_pn:end_ts="1445658254" xil_pn:in_ck="8608307620769593360" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1445658254">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="CircularBuffer_Datapath.vhd"/>
       <outfile xil_pn:name="DatapathPredVec.vhd"/>
       <outfile xil_pn:name="Datapath_FirstSearch.vhd"/>
@@ -117,11 +126,14 @@
       <outfile xil_pn:name="genericAdder.vhd"/>
       <outfile xil_pn:name="genericSub.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1445371271" xil_pn:in_ck="8608307620769593360" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6196825661383379340" xil_pn:start_ts="1445371260">
+    <transform xil_pn:end_ts="1445658265" xil_pn:in_ck="8608307620769593360" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6196825661383379340" xil_pn:start_ts="1445658254">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
@@ -130,7 +142,7 @@
       <outfile xil_pn:name="testbench_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1445371401" xil_pn:in_ck="1325431893825837657" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4025546739785759519" xil_pn:start_ts="1445371400">
+    <transform xil_pn:end_ts="1445658266" xil_pn:in_ck="1325431893825837657" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4025546739785759519" xil_pn:start_ts="1445658265">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForProperties"/>
@@ -169,10 +181,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1445371381" xil_pn:in_ck="7566554874729242247" xil_pn:name="TRANEXT_xstsynthesize_virtex5" xil_pn:prop_ck="-259041981487232021" xil_pn:start_ts="1445371314">
+    <transform xil_pn:end_ts="1445658238" xil_pn:in_ck="7566554874729242247" xil_pn:name="TRANEXT_xstsynthesize_virtex5" xil_pn:prop_ck="-259041981487232021" xil_pn:start_ts="1445658194">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="Final_TZSearch.lso"/>
       <outfile xil_pn:name="Final_TZSearch.ngc"/>
       <outfile xil_pn:name="Final_TZSearch.ngr"/>

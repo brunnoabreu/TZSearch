@@ -42,6 +42,7 @@ entity UC_MainFirst is
 			hasPassedNumLevels		: in STD_LOGIC;
 			vecFound						: in STD_LOGIC;
 			byPassVecFound				: in STD_LOGIC;
+			loadVecFound				: out STD_LOGIC;
 			loadByPassVecFound		: out STD_LOGIC;
 			writeCache					: out STD_LOGIC;
 			loadCurVec					: out STD_LOGIC;
@@ -85,9 +86,11 @@ type t_state is (idle, wait1, initialFourCandidates, initialFourCandidates_2, in
 signal state, nextState: t_state;
 
 signal isNotOutOfAnyBound, isValid, isNotVecFound: STD_LOGIC;
+signal concatVecOutBound: STD_LOGIC_VECTOR(1 downto 0);
 
 begin
 
+concatVecOutBound <= vecFound & isOutOfAnyBound;
 isNotOutOfAnyBound <= not (isOutOfAnyBound);
 isNotVecFound		 <= not (vecFound);
 isValid <= isNotOutOfAnyBound and isNotvecFound;
@@ -101,12 +104,13 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 		end if;
 	end process;
 
-	process(state, vecFound, byPassVecFound, finishSendPartitions, doAgain, is8x8or16x4, hasPassedNumLevels, isOutOfAnyBound, isValid, isNotVecFound, isNotOutOfAnyBound, byPassIsOutOfAnyBound)
+	process(state, concatVecOutBound, vecFound, byPassVecFound, finishSendPartitions, doAgain, is8x8or16x4, hasPassedNumLevels, isOutOfAnyBound, isValid, isNotVecFound, isNotOutOfAnyBound, byPassIsOutOfAnyBound)
 	begin
 		case state is
 			when idle =>
 				loadByPassOutOfAnyBound <= '0';
 				incDoAgain <= '0';
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				incRegPUsFinished <= '0';
 				loadregNumPUsLevel <= '0';
@@ -139,10 +143,11 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 			
 			when initialFourCandidates =>
 				incDoAgain <= '0';
+				loadVecFound <= '1';
 				incRegCurVecX <= '1';
 				initData <= '0';
-				nextState <= initialFourCandidates_2;
-				
+				nextState <= initialFourCandidates_2;			
+
 			when initialFourCandidates_2 =>
 				incRegNumLevels <= '0';
 				loadregNumPUsLevel <= '1';
@@ -154,7 +159,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				rstRegCurVecX <= '1';
 				loadCurVec <= '1';
 				nextState <= initialFourCandidates_3;
-				
+			
 			when initialFourCandidates_3 =>
 				incRegPUsFinished <= '0';
 				loadregNumPUsLevel <= '0';
@@ -183,10 +188,8 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					initIncrement <= '0';
 					sendToMem <= '0';
 				end if;
-				
--- ARRUMAR ESSA LOGICA DO ISOUTOFBOUND	
--- VERIFICAR SINCRONIA DO FINISHSENDPARTITIONS		
 
+--NECESSITA-SE DE UM NOVO SINAL: LOADVECFOUND, NA CACHE.
 
 			when fourCandidates_2 =>
 				writeCache <= '0';
@@ -200,8 +203,10 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadCurVec <= '0';
 				loadByPassVecFound <= '0';
 				loadByPassOutOfAnyBound <= '0';
+				loadVecFound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					op_typeY <= '0';
@@ -213,18 +218,22 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= fourCandidates_3;
 					end if;
-					if(isOutOfAnyBound = '0') then
-						if(vecFound = '1') then
-							writeCache <= '0';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							incRegPUsFinished <= '1';
-							nextState <= fourCandidates_3;
-						else
-							writeCache <= '1';
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
+					if(concatVecOutBound = "00") then
+						writeCache <= '1';
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= fourCandidates_3;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= fourCandidates_3;
 					else
 						writeCache <= '0';
 						incRegPUsFinished <= '1';
@@ -235,6 +244,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				end if;
 
 			when fourCandidates_2_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadByPassOutOfAnyBound <= '0';
@@ -247,6 +257,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= fourCandidates_3;
 			
 			when fourCandidates_3 =>
+				loadVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
 				incRegCurVecX <= '0';
@@ -259,6 +270,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					nextState <= fourCandidates_3_5;
@@ -266,19 +278,24 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= fourCandidates_4;
 					end if;
-					if(isOutOfAnyBound = '0') then
-						if(vecFound = '1') then
-							writeCache <= '0';
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= fourCandidates_4;
-						else
-							writeCache <= '1';
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
+					if(concatVecOutBound = "00") then
+						writeCache <= '1';
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= fourCandidates_4;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= fourCandidates_4;
 					else
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
 						sendToMem <= '0';
@@ -287,6 +304,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				end if;
 				
 			when fourCandidates_3_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadByPassOutOfAnyBound <= '0';
@@ -299,6 +317,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= fourCandidates_4;
 			
 			when fourCandidates_4 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -309,6 +328,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					loadByPassOutOfAnyBound <= '1';
@@ -316,25 +336,33 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= fourCandidates_5;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= fourCandidates_5;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= fourCandidates_5;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= fourCandidates_5;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= fourCandidates_5;
 					end if;
 				end if;
 
 			when fourCandidates_4_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadByPassOutOfAnyBound <= '0';
@@ -347,6 +375,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= fourCandidates_5;
 	
 			when fourCandidates_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -368,6 +397,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= initialEightCandidates_2;
 				
 			when initialEightCandidates_2 =>
+				loadVecFound <= '1';
 				incRegNumLevels <= '0';
 				loadregNumPUsLevel <= '1';
 				sel_candidates <= "01";
@@ -419,6 +449,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				end if;
 			
 			when eightCandidates_2 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -436,6 +467,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= eightCandidates_2;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					incRegCurVecX <= '1';
@@ -447,32 +479,33 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= eightCandidates_3;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= eightCandidates_3;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= eightCandidates_3;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= eightCandidates_3;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= eightCandidates_3;
 					end if;
---					if(doAgain = "010") then
---						sel_distX <= "001";
---						sel_distY <= "001";
---					else
---						sel_distX <= "010";
---						sel_distY <= "010";
---					end if;
 				end if;
 				
 			when eightCandidates_2_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadByPassOutOfAnyBound <= '0';
@@ -486,6 +519,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 			
 			when eightCandidates_3 =>
 				loadByPassVecFound <= '0';
+				loadVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
 				loadCurVec <= '0';
@@ -497,6 +531,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					rstRegCurVecY <= '1';
@@ -506,33 +541,34 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= eightCandidates_4;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= eightCandidates_4;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= eightCandidates_4;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= eightCandidates_4;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= eightCandidates_4;
 					end if;
---					if(doAgain = "010") then
---						sel_distX <= "001";
---						sel_distY <= "001";
---					else
---						sel_distX <= "010";
---						sel_distY <= "010";
---					end if;
 				end if;
 
 			
 			when eightCandidates_3_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadByPassOutOfAnyBound <= '0';
@@ -545,6 +581,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= eightCandidates_4;
 	
 			when eightCandidates_4 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -560,6 +597,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= eightCandidates_4;
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					incRegCurVecX <= '1';
@@ -571,33 +609,34 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= eightCandidates_5;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= eightCandidates_5;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= eightCandidates_5;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= eightCandidates_5;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= eightCandidates_5;
 					end if;
---					if(doAgain = "010") then
---						sel_distX <= "001";
---						sel_distY <= "001";
---					else
---						sel_distX <= "010";
---						sel_distY <= "010";
---					end if;
 				end if;
 
 				
 			when eightCandidates_4_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadByPassOutOfAnyBound <= '0';
@@ -610,6 +649,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= eightCandidates_5;
 		
 			when eightCandidates_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -622,6 +662,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					rstRegCurVecX <= '1';
@@ -631,34 +672,35 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= eightCandidates_6;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= eightCandidates_6;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= eightCandidates_6;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= eightCandidates_6;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= eightCandidates_6;
 					end if;
---					if(doAgain = "010") then
---						sel_distX <= "001";
---						sel_distY <= "001";
---					else
---						sel_distX <= "010";
---						sel_distY <= "010";
---					end if;
 				end if;
 
 			
 			when eightCandidates_5_5 =>
 				loadByPassVecFound <= '0';
+				loadVecFound <= '0';
 				writeCache <= '0';
 				loadByPassOutOfAnyBound <= '0';
 				loadCurVec <= '0';
@@ -671,6 +713,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 		
 			when eightCandidates_6 =>
 				loadByPassVecFound <= '0';
+				loadVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
 				loadCurVec <= '0';
@@ -682,6 +725,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					incRegCurVecX <= '1';
@@ -692,33 +736,34 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= eightCandidates_7;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= eightCandidates_7;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= eightCandidates_7;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= eightCandidates_7;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= eightCandidates_7;
 					end if;
---					if(doAgain = "010") then
---						sel_distX <= "001";
---						sel_distY <= "001";
---					else
---						sel_distX <= "010";
---						sel_distY <= "010";
---					end if;
 				end if;
 
 			
 			when eightCandidates_6_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadByPassOutOfAnyBound <= '0';
@@ -731,6 +776,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= eightCandidates_7;
 			
 			when eightCandidates_7 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -743,6 +789,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					loadByPassOutOfAnyBound <= '1';
@@ -750,29 +797,29 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= eightCandidates_8;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= eightCandidates_8;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= eightCandidates_8;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= eightCandidates_8;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= eightCandidates_8;
 					end if;
---					if(doAgain = "010") then
---						sel_distX <= "001";
---						sel_distY <= "001";
---					else
---						sel_distX <= "010";
---						sel_distY <= "010";
---					end if;
 				end if;
 
 			
@@ -820,6 +867,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 
 			
 			when eightCandidates_7_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadByPassOutOfAnyBound <= '0';
@@ -832,6 +880,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= eightCandidates_8;
 			
 			when eightCandidates_8 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -844,6 +893,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					loadByPassOutOfAnyBound <= '1';
@@ -851,25 +901,33 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= eightCandidates_9;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= eightCandidates_9;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= eightCandidates_9;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= eightCandidates_9;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= eightCandidates_9;
 					end if;
 				end if;
 			
 			when eightCandidates_8_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadByPassOutOfAnyBound <= '0';
@@ -882,6 +940,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= eightCandidates_9;
 				
 			when eightCandidates_9 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -954,6 +1013,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				end if;
 			
 			when sixteenCandidates_1 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -967,6 +1027,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '0';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					op_typeY <= '1';
@@ -978,20 +1039,27 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= sixteenCandidates_2;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= sixteenCandidates_2;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= sixteenCandidates_2;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= sixteenCandidates_2;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= sixteenCandidates_2;
 					end if;
 					if(doAgain = "100") then
@@ -1005,6 +1073,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 
 			
 			when sixteenCandidates_1_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadByPassOutOfAnyBound <= '0';
@@ -1017,6 +1086,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= sixteenCandidates_2;
 			
 			when sixteenCandidates_2 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				waitCycles <= '0';
@@ -1031,6 +1101,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					op_typeY <= '1';
@@ -1042,32 +1113,33 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= sixteenCandidates_3;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= sixteenCandidates_3;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= sixteenCandidates_3;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= sixteenCandidates_3;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= sixteenCandidates_3;
 					end if;
---					if(doAgain = "100") then
---						sel_distX <= "010";
---						sel_distY <= "001";
---					else
---						sel_distX <= "011";
---						sel_distY <= "011";
---					end if;
 				end if;
 			
 			when sixteenCandidates_2_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadByPassOutOfAnyBound <= '0';
@@ -1080,6 +1152,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= sixteenCandidates_3;
 			
 			when sixteenCandidates_3 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -1092,6 +1165,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					op_typeY <= '1';
@@ -1102,31 +1176,33 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= sixteenCandidates_4;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= sixteenCandidates_4;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= sixteenCandidates_4;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= sixteenCandidates_4;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= sixteenCandidates_4;
 					end if;
---					if(doAgain = "100") then
---						sel_distX <= "010";
---						sel_distY <= "001";
---					else
---						sel_distX <= "011";
---						sel_distY <= "011";
---					end if;
 				end if;
 			
 			when sixteenCandidates_3_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadByPassOutOfAnyBound <= '0';
@@ -1139,6 +1215,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= sixteenCandidates_4;
 			
 			when sixteenCandidates_4 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -1151,6 +1228,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					op_typeY <= '0';
@@ -1161,32 +1239,33 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= sixteenCandidates_5;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= sixteenCandidates_5;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= sixteenCandidates_5;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= sixteenCandidates_5;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= sixteenCandidates_5;
 					end if;
---					if(doAgain = "100") then
---						sel_distX <= "010";
---						sel_distY <= "001";
---					else
---						sel_distX <= "011";
---						sel_distY <= "011";
---					end if;
 				end if;
 			
 			when sixteenCandidates_4_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadByPassOutOfAnyBound <= '0';
@@ -1199,6 +1278,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= sixteenCandidates_5;
 				
 			when sixteenCandidates_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -1211,6 +1291,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					op_typeY <= '0';
@@ -1221,32 +1302,33 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= sixteenCandidates_6;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= sixteenCandidates_6;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= sixteenCandidates_6;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= sixteenCandidates_6;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= sixteenCandidates_6;
 					end if;
---					if(doAgain = "100") then
---						sel_distX <= "010";
---						sel_distY <= "001";
---					else
---						sel_distX <= "011";
---						sel_distY <= "011";
---					end if;
 				end if;
 			
 			when sixteenCandidates_5_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadByPassOutOfAnyBound <= '0';
@@ -1260,6 +1342,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 			
 			when sixteenCandidates_6 =>
 				loadByPassVecFound <= '0';
+				loadVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
 				loadCurVec <= '0';
@@ -1271,6 +1354,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					op_typeY <= '0';
@@ -1281,32 +1365,33 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= sixteenCandidates_7;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= sixteenCandidates_7;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= sixteenCandidates_7;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= sixteenCandidates_7;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= sixteenCandidates_7;
 					end if;
---					if(doAgain = "100") then
---						sel_distX <= "010";
---						sel_distY <= "001";
---					else
---						sel_distX <= "011";
---						sel_distY <= "011";
---					end if;
 				end if;
 			
 			when sixteenCandidates_6_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadByPassOutOfAnyBound <= '0';
@@ -1319,6 +1404,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= sixteenCandidates_7;
 				
 			when sixteenCandidates_7 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -1331,6 +1417,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					op_typeY <= '0';
@@ -1341,32 +1428,33 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= sixteenCandidates_8;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= sixteenCandidates_8;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= sixteenCandidates_8;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= sixteenCandidates_8;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= sixteenCandidates_8;
 					end if;
---					if(doAgain = "100") then
---						sel_distX <= "010";
---						sel_distY <= "001";
---					else
---						sel_distX <= "011";
---						sel_distY <= "011";
---					end if;
 				end if;
 			
 			when sixteenCandidates_7_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadByPassOutOfAnyBound <= '0';
@@ -1379,6 +1467,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= sixteenCandidates_8;
 			
 			when sixteenCandidates_8 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -1391,6 +1480,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					op_typeX <= '1';
@@ -1402,32 +1492,33 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= sixteenCandidates_9;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= sixteenCandidates_9;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= sixteenCandidates_9;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= sixteenCandidates_9;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= sixteenCandidates_9;
 					end if;
---					if(doAgain = "100") then
---						sel_distX <= "010";
---						sel_distY <= "001";
---					else
---						sel_distX <= "011";
---						sel_distY <= "011";
---					end if;
 				end if;
 			
 			when sixteenCandidates_8_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadByPassOutOfAnyBound <= '0';
@@ -1440,6 +1531,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= sixteenCandidates_9;
 			
 			when sixteenCandidates_9 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -1452,6 +1544,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					op_typeY <= '0';
@@ -1462,32 +1555,33 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= sixteenCandidates_10;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= sixteenCandidates_10;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= sixteenCandidates_10;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= sixteenCandidates_10;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= sixteenCandidates_10;
 					end if;
---					if(doAgain = "100") then
---						sel_distX <= "010";
---						sel_distY <= "001";
---					else
---						sel_distX <= "011";
---						sel_distY <= "011";
---					end if;
 				end if;
 			
 			when sixteenCandidates_9_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadByPassOutOfAnyBound <= '0';
@@ -1500,6 +1594,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= sixteenCandidates_10;
 			
 			when sixteenCandidates_10 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -1512,6 +1607,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					op_typeY <= '0';
@@ -1522,32 +1618,33 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= sixteenCandidates_11;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= sixteenCandidates_11;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= sixteenCandidates_11;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= sixteenCandidates_11;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= sixteenCandidates_11;
 					end if;
---					if(doAgain = "100") then
---						sel_distX <= "010";
---						sel_distY <= "001";
---					else
---						sel_distX <= "011";
---						sel_distY <= "011";
---					end if;
 				end if;
 			
 			when sixteenCandidates_10_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadCurVec <= '0';
@@ -1560,6 +1657,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= sixteenCandidates_11;
 			
 			when sixteenCandidates_11 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -1572,6 +1670,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					op_typeY <= '0';
@@ -1583,33 +1682,34 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= sixteenCandidates_12;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= sixteenCandidates_12;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= sixteenCandidates_12;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= sixteenCandidates_12;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= sixteenCandidates_12;
 					end if;
---					if(doAgain = "100") then
---						sel_distX <= "010";
---						sel_distY <= "001";
---					else
---						sel_distX <= "011";
---						sel_distY <= "011";
---					end if;
 				end if;
 			
 			when sixteenCandidates_11_5 =>
 				loadByPassVecFound <= '0';
+				loadVecFound <= '0';
 				writeCache <= '0';
 				loadCurVec <= '0';
 				sendToMem <= '0';
@@ -1621,6 +1721,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= sixteenCandidates_12;
 
 			when sixteenCandidates_12 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -1633,6 +1734,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					op_typeX <= '0';
@@ -1644,32 +1746,33 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= sixteenCandidates_13;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= sixteenCandidates_13;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= sixteenCandidates_13;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= sixteenCandidates_13;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= sixteenCandidates_13;
 					end if;
---					if(doAgain = "100") then
---						sel_distX <= "010";
---						sel_distY <= "001";
---					else
---						sel_distX <= "011";
---						sel_distY <= "011";
---					end if;
 				end if;
 			
 			when sixteenCandidates_12_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadCurVec <= '0';
@@ -1682,6 +1785,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= sixteenCandidates_13;
 			
 			when sixteenCandidates_13 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -1694,6 +1798,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					op_typeY <= '1';
@@ -1704,32 +1809,33 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= sixteenCandidates_14;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= sixteenCandidates_14;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= sixteenCandidates_14;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= sixteenCandidates_14;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= sixteenCandidates_14;
 					end if;
---					if(doAgain = "100") then
---						sel_distX <= "010";
---						sel_distY <= "001";
---					else
---						sel_distX <= "011";
---						sel_distY <= "011";
---					end if;
 				end if;
 			
 			when sixteenCandidates_13_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadCurVec <= '0';
@@ -1742,6 +1848,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= sixteenCandidates_14;
 			
 			when sixteenCandidates_14 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -1754,6 +1861,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					op_typeY <= '1';
@@ -1764,32 +1872,33 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= sixteenCandidates_15;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= sixteenCandidates_15;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= sixteenCandidates_15;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= sixteenCandidates_15;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= sixteenCandidates_15;
 					end if;
---					if(doAgain = "100") then
---						sel_distX <= "010";
---						sel_distY <= "001";
---					else
---						sel_distX <= "011";
---						sel_distY <= "011";
---					end if;
 				end if;
 			
 			when sixteenCandidates_14_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadCurVec <= '0';
@@ -1802,6 +1911,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= sixteenCandidates_15;
 			
 			when sixteenCandidates_15 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -1814,6 +1924,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					op_typeY <= '1';
@@ -1824,32 +1935,33 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= sixteenCandidates_16;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= sixteenCandidates_16;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= sixteenCandidates_16;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= sixteenCandidates_16;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= sixteenCandidates_16;
 					end if;
---					if(doAgain = "100") then
---						sel_distX <= "010";
---						sel_distY <= "001";
---					else
---						sel_distX <= "011";
---						sel_distY <= "011";
---					end if;
 				end if;
 			
 			when sixteenCandidates_15_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadCurVec <= '0';
@@ -1862,6 +1974,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= sixteenCandidates_16;
 			
 			when sixteenCandidates_16 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -1874,6 +1987,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				loadByPassOutOfAnyBound <= '0';
 				if(finishSendPartitions = '1' or byPassIsOutOfAnyBound = '1' or byPassVecFound = '1') then
 					loadByPassVecFound <= '1';
+					loadVecFound <= '1';
 					loadCurVec <= '1';
 					validBit <= isValid;
 					loadByPassOutOfAnyBound <= '1';
@@ -1881,32 +1995,33 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 					if(is8x8or16x4 = '1') then
 						nextState <= sixteenCandidates_17;
 					end if;
-					if(isOutOfAnyBound = '0') then
+					if(concatVecOutBound = "00") then
 						writeCache <= '1';
-						if(vecFound = '1') then
-							incRegPUsFinished <= '1';
-							initIncrement <= '0';
-							sendToMem <= '0';
-							nextState <= sixteenCandidates_17;
-						else
-							initIncrement <= '1';
-							sendToMem <= '1';
-						end if;
-					else
+						initIncrement <= '1';
+						sendToMem <= '1';
+					elsif(concatVecOutBound = "01") then
+						writeCache <= '0';
 						incRegPUsFinished <= '1';
 						initIncrement <= '0';
+						sendToMem <= '0';
+						nextState <= sixteenCandidates_17;
+					elsif(concatVecOutBound = "10") then
+						writeCache <= '0';
+						initIncrement <= '0';
+						sendToMem <= '0';
+						incRegPUsFinished <= '1';
+						nextState <= sixteenCandidates_17;
+					else
+						writeCache <= '0';
+						incRegPUsFinished <= '1';
+						initIncrement <= '0';
+						sendToMem <= '0';
 						nextState <= sixteenCandidates_17;
 					end if;
---					if(doAgain = "100") then
---						sel_distX <= "010";
---						sel_distY <= "001";
---					else
---						sel_distX <= "011";
---						sel_distY <= "011";
---					end if;
 				end if;
 				
 			when sixteenCandidates_16_5 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				loadCurVec <= '0';
@@ -1919,6 +2034,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				nextState <= sixteenCandidates_17;
 				
 			when sixteenCandidates_17 =>
+				loadVecFound <= '0';
 				loadByPassVecFound <= '0';
 				writeCache <= '0';
 				incRegPUsFinished <= '0';
@@ -1992,6 +2108,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 				op_typeY <= '1';
 				sendToMem <= '0';
 				initIncrement <= '0';
+				loadVecFound <= '1';
 				if(hasPassedNumLevels = '1') then
 					nextState <= stateDone;
 				else

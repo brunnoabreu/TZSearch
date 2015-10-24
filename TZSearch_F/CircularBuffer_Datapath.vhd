@@ -34,12 +34,13 @@ use IEEE.numeric_std.all;
 
 entity CircularBuffer_Datapath is
 	Port(
-		CLK			: in STD_LOGIC;
-		START			: in STD_LOGIC;
-		writeCache	: in STD_LOGIC;
-		curVecX		: in STD_LOGIC_VECTOR(7 downto 0);
-		curVecY		: in STD_LOGIC_VECTOR(7 downto 0);
-		vecFound		: out STD_LOGIC
+		CLK				: in STD_LOGIC;
+		START				: in STD_LOGIC;
+		writeCache		: in STD_LOGIC;
+		loadVecFound	: in STD_LOGIC;
+		curVecX			: in STD_LOGIC_VECTOR(7 downto 0);
+		curVecY			: in STD_LOGIC_VECTOR(7 downto 0);
+		vecFound			: out STD_LOGIC
 	);
 end CircularBuffer_Datapath;
 
@@ -52,7 +53,7 @@ signal concatVecXY: STD_LOGIC_VECTOR(15 downto 0);
 signal regVecFound: STD_LOGIC;
 signal hasFoundVec: STD_LOGIC;
 
-signal regCurVecXByPass, regCurVecYByPass: STD_LOGIC_VECTOR(7 downto 0);
+--signal regCurVecXByPass, regCurVecYByPass: STD_LOGIC_VECTOR(7 downto 0);
 
 begin
 
@@ -63,21 +64,22 @@ vecFound <= regVecFound;
 		if(START = '0') then
 			index <= (OTHERS=>'0');
 			regVecFound <= '0';
-			regCurVecXByPass <= (OTHERS=>'0');
-			regCurVecYByPass <= (OTHERS=>'0');
+--			regCurVecXByPass <= (OTHERS=>'0');
+--			regCurVecYByPass <= (OTHERS=>'0');
 			for i in 0 to 14 loop
 				cache(i) <= (OTHERS=>'0');
 				cache(i+1) <= (OTHERS=>'0');
 			end loop;
-			cache(12) <= "00010100000101011";
 		elsif(CLK'event and CLK = '1') then
-			regVecFound <= hasFoundVec;
+			if(loadVecFound = '1') then
+				regVecFound <= hasFoundVec;			
+			end if;
 			if(writeCache = '1') then
-				cache(to_integer(unsigned(index))) <= regCurVecXByPass & regCurVecYByPass & '1';
+				cache(to_integer(unsigned(index))) <= curVecX & curVecY & '1';
 				index <= index + 1;
 			end if;
-			regCurVecXByPass <= curVecX;
-			regCurVecYByPass <= curVecY;
+--			regCurVecXByPass <= curVecX;
+--			regCurVecYByPass <= curVecY;
 		end if;
 	end process;
 	
