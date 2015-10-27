@@ -1,18 +1,18 @@
 V3 54
 FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/blck4x4.vhd 2015/03/25.13:39:51 P.20131013
-EN work/blck4x4 1445658208 \
+EN work/blck4x4 1445883066 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/blck4x4.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/std_logic_arith 1381692177 PB ieee/NUMERIC_STD 1381692181 \
-      PB work/STD_SAD 1445658201
-AR work/blck4x4/Behavioral 1445658209 \
+      PB work/STD_SAD 1445883061
+AR work/blck4x4/Behavioral 1445883067 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/blck4x4.vhd \
-      EN work/blck4x4 1445658208 CP genericSub CP genericAdder
+      EN work/blck4x4 1445883066 CP genericSub CP genericAdder
 FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/CircularBuffer_Datapath.vhd 2015/10/24.01:13:35 P.20131013
 EN work/CircularBuffer_Datapath 1445658206 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/CircularBuffer_Datapath.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PB work/STD_SAD 1445658201 PB ieee/NUMERIC_STD 1381692181
+      PB work/STD_SAD 1445883061 PB ieee/NUMERIC_STD 1381692181
 AR work/CircularBuffer_Datapath/Behavioral 1445658207 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/CircularBuffer_Datapath.vhd \
       EN work/CircularBuffer_Datapath 1445658206
@@ -20,7 +20,7 @@ FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Datapath_FirstSea
 EN work/Datapath_FirstSearch 1445658220 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Datapath_FirstSearch.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PB work/STD_SAD 1445658201
+      PB work/STD_SAD 1445883061
 AR work/Datapath_FirstSearch/Behavioral 1445658221 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Datapath_FirstSearch.vhd \
       EN work/Datapath_FirstSearch 1445658220 CP CircularBuffer_Datapath
@@ -28,7 +28,7 @@ FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Datapath_Raster.v
 EN work/Datapath_Raster 1445658222 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Datapath_Raster.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PB work/STD_SAD 1445658201
+      PB work/STD_SAD 1445883061
 AR work/Datapath_Raster/Behavioral 1445658223 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Datapath_Raster.vhd \
       EN work/Datapath_Raster 1445658222
@@ -36,43 +36,43 @@ FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vh
 EN work/Final_TZSearch 1445658226 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PB work/STD_SAD 1445658201
+      PB work/STD_SAD 1445883061
 AR work/Final_TZSearch/Behavioral 1445658227 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd \
       EN work/Final_TZSearch 1445658226 CP Datapath CP UC_SAD CP UC_MainFirst \
       CP UC_Raster CP UC_PredMov CP Datapath_FirstSearch CP Datapath_Raster \
       CP UC_TZSearch
 FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/genericAdder.vhd 2015/01/22.15:32:42 P.20131013
-EN work/genericAdder 1445658204 \
+EN work/genericAdder 1445883064 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/genericAdder.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/genericAdder/Behavioral 1445658205 \
+AR work/genericAdder/Behavioral 1445883065 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/genericAdder.vhd \
-      EN work/genericAdder 1445658204
+      EN work/genericAdder 1445883064
 FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/genericSub.vhd 2015/03/23.17:58:31 P.20131013
-EN work/genericSub 1445658202 \
+EN work/genericSub 1445883062 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/genericSub.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/std_logic_arith 1381692177 PB ieee/NUMERIC_STD 1381692181
-AR work/genericSub/Behavioral 1445658203 \
+AR work/genericSub/Behavioral 1445883063 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/genericSub.vhd \
-      EN work/genericSub 1445658202
+      EN work/genericSub 1445883062
 FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/SAD4x4_Datapath.vhd 2015/10/09.23:34:09 P.20131013
-EN work/Datapath 1445658210 \
+EN work/Datapath 1445883068 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/SAD4x4_Datapath.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/std_logic_arith 1381692177 PB ieee/NUMERIC_STD 1381692181 \
-      PB work/STD_SAD 1445658201
-AR work/Datapath/Behavioral 1445658211 \
+      PB work/STD_SAD 1445883061
+AR work/Datapath/Behavioral 1445883069 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/SAD4x4_Datapath.vhd \
-      EN work/Datapath 1445658210 CP blck4x4 CP genericAdder
+      EN work/Datapath 1445883068 CP blck4x4 CP genericAdder
 FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/STD_SAD.vhd 2015/10/09.00:56:07 P.20131013
-PH work/STD_SAD 1445658200 \
+PH work/STD_SAD 1445883060 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/STD_SAD.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-PB work/STD_SAD 1445658201 \
+PB work/STD_SAD 1445883061 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/STD_SAD.vhd \
-      PH work/STD_SAD 1445658200
+      PH work/STD_SAD 1445883060
 FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_MainFirst.vhd 2015/10/24.01:07:04 P.20131013
 EN work/UC_MainFirst 1445658214 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_MainFirst.vhd \
@@ -91,7 +91,7 @@ FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_Raster.vhd 201
 EN work/UC_Raster 1445658216 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_Raster.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PB work/STD_SAD 1445658201
+      PB work/STD_SAD 1445883061
 AR work/UC_Raster/Behavioral 1445658217 \
       FL C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_Raster.vhd \
       EN work/UC_Raster 1445658216

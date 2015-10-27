@@ -8,7 +8,49 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/CircularBuffer_Datapath.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/DatapathPredVec.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Datapath_FirstSearch.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Datapath_Raster.vhd&quot; into library work</arg>
+</msg>
+
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/SAD4x4_Datapath.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/STD_SAD.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_MainFirst.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_PredMov.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_Raster.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_SAD.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_TZSearch.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/blck4x4.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/genericAdder.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/genericSub.vhd&quot; into library work</arg>
 </msg>
 
 </messages>
