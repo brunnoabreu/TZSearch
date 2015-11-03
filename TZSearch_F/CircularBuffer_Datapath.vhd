@@ -90,7 +90,9 @@ COMP: for i in 0 to 15 generate
 						 '0';
 end generate COMP;
 
-hasFoundVec <= '0' when bitsFound = "0000000000000000" else
-				'1';
+--hasFoundVec <= '0' when bitsFound = "0000000000000000" else
+--				'1';
+
+hasFoundVec <= '0';
 
 end Behavioral;

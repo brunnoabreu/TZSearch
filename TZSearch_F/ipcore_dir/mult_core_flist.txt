@@ -1,0 +1,14 @@
+# Output products list for <mult_core>
+mult_core.asy
+mult_core.gise
+mult_core.ngc
+mult_core.sym
+mult_core.vhd
+mult_core.vho
+mult_core.xco
+mult_core.xise
+mult_core\doc\mult_gen_ds255.pdf
+mult_core\doc\mult_gen_v11_2_readme.txt
+mult_core\doc\mult_gen_v11_2_vinfo.html
+mult_core_flist.txt
+mult_core_xmdf.tcl

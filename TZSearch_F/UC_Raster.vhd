@@ -96,7 +96,7 @@ begin
 			initData <= '0';
 			initIncrement <= '0';
 			loadRegXMem2 <= '1';
-			auxvalidBit <= '1';
+			auxvalidBit <= '0';
 			incRegX <= '1';
 			nextState <= waitForStart4;
 			
@@ -104,6 +104,7 @@ begin
 			loadRegXMem2 <= '1';
 			incRegX <= '1';
 			sendToMem <= '1';
+			auxvalidBit <= '1';
 			initIncrement <= '1';
 			nextState <= waitForDone;
 			
@@ -161,35 +162,13 @@ begin
 			nextState <= stateDone;
 			
 		when stateDone =>
+			initIncrement <= '0';
 			done <= '1';
 
 	end case;
 	
 end process;
 
-process(CLK, START)
-begin
-	if(START='0') then
-		validBitByPass1 <= '0';
-		validBitByPass2 <= '0';
-		validBitByPass3 <= '0';
-		validBitByPass4 <= '0';
-		validBitByPass5 <= '0';
-		validBitByPass6 <= '0';
-		validBitByPass7 <= '0';
-		validBitByPass8 <= '0';
-	elsif(CLK'event and CLK='1') then
-		validBitByPass1 <= auxvalidBit;
-		validBitByPass2 <= validBitByPass1;
-		validBitByPass3 <= validBitByPass2;
-		validBitByPass4 <= validBitByPass3;
-		validBitByPass5 <= validBitByPass4;
-		validBitByPass6 <= validBitByPass5;
-		validBitByPass7 <= validBitByPass6;
-		validBitByPass8 <= validBitByPass7;
-	end if;
-end process;
-
-validBit <= validBitByPass8;
+validBit <= auxValidBit;
 
 end Behavioral;

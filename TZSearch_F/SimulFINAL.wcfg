@@ -5,16 +5,20 @@
    <db_ref_list>
       <db_ref path="C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/testbench_isim_beh.wdb" id="1" type="auto">
          <top_modules>
+            <top_module name="bip_utils_pkg_v2_0" />
+            <top_module name="mult_gen_pkg_v11_2" />
             <top_module name="numeric_std" />
             <top_module name="std_logic_1164" />
             <top_module name="std_logic_arith" />
+            <top_module name="std_logic_signed" />
             <top_module name="std_logic_unsigned" />
             <top_module name="std_sad" />
             <top_module name="testbench" />
+            <top_module name="textio" />
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="124" />
+   <WVObjectSize size="250" />
    <wvobject fp_name="/testbench/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -165,6 +169,16 @@
       <obj_property name="ObjectShortName">regwidthpu[6:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/multhw" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">multhw[13:0]</obj_property>
+      <obj_property name="ObjectShortName">multhw[13:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/cyclesperpu" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cyclesperpu[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cyclesperpu[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
    <wvobject fp_name="/testbench/searchrange" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">searchrange[7:0]</obj_property>
       <obj_property name="ObjectShortName">searchrange[7:0]</obj_property>
@@ -185,6 +199,24 @@
       <obj_property name="ObjectShortName">initcandidatey[7:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_TZSearch/state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_TZSearch/nextstate" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">nextstate</obj_property>
+      <obj_property name="ObjectShortName">nextstate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_PredMov/state" type="other" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+      <obj_property name="label">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_PredMov/nextstate" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">nextstate</obj_property>
+      <obj_property name="ObjectShortName">nextstate</obj_property>
+   </wvobject>
    <wvobject fp_name="/testbench/Inst_TZSearch/Inst_SAD_UC/state" type="other" db_ref_id="1">
       <obj_property name="ElementShortName">state</obj_property>
       <obj_property name="ObjectShortName">state</obj_property>
@@ -201,25 +233,59 @@
       <obj_property name="ElementShortName">nextstate</obj_property>
       <obj_property name="ObjectShortName">nextstate</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecx" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">regcurvecx[7:0]</obj_property>
-      <obj_property name="ObjectShortName">regcurvecx[7:0]</obj_property>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_Raster/state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_Raster/nextstate" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">nextstate</obj_property>
+      <obj_property name="ObjectShortName">nextstate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/not_p_subbestvecx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">not_p_subbestvecx[8:0]</obj_property>
+      <obj_property name="ObjectShortName">not_p_subbestvecx[8:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/not_p_subbestvecy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">not_p_subbestvecy[8:0]</obj_property>
+      <obj_property name="ObjectShortName">not_p_subbestvecy[8:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/p_subbestvecx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">p_subbestvecx[8:0]</obj_property>
+      <obj_property name="ObjectShortName">p_subbestvecx[8:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/p_subbestvecy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">p_subbestvecy[8:0]</obj_property>
+      <obj_property name="ObjectShortName">p_subbestvecy[8:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/regsubbestvecx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regsubbestvecx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regsubbestvecx[7:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecy" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">regcurvecy[7:0]</obj_property>
-      <obj_property name="ObjectShortName">regcurvecy[7:0]</obj_property>
+   <wvobject fp_name="/testbench/Inst_TZSearch/regsubbestvecy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regsubbestvecy[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regsubbestvecy[7:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regbypasscurvecx" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">regbypasscurvecx[7:0]</obj_property>
-      <obj_property name="ObjectShortName">regbypasscurvecx[7:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/testbench/done" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regbypasscurvecy" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">regbypasscurvecy[7:0]</obj_property>
-      <obj_property name="ObjectShortName">regbypasscurvecy[7:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/testbench/Inst_TZSearch/vecbig" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vecbig</obj_property>
+      <obj_property name="ObjectShortName">vecbig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_PredMov/donesad" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">donesad</obj_property>
+      <obj_property name="ObjectShortName">donesad</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath/isvalidsad" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">isvalidsad</obj_property>
+      <obj_property name="ObjectShortName">isvalidsad</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/curvecx" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">curvecx[7:0]</obj_property>
@@ -234,71 +300,6 @@
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="CustomSignalColor">#ff0000</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/Inst_Circ_Buffer/cache" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">cache[0:15]</obj_property>
-      <obj_property name="ObjectShortName">cache[0:15]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_MainFirst/initincrement" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">initincrement</obj_property>
-      <obj_property name="ObjectShortName">initincrement</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/sendtomem" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">sendtomem</obj_property>
-      <obj_property name="ObjectShortName">sendtomem</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/loadcurvec" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">loadcurvec</obj_property>
-      <obj_property name="ObjectShortName">loadcurvec</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/loadbypassoutofanybound" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">loadbypassoutofanybound</obj_property>
-      <obj_property name="ObjectShortName">loadbypassoutofanybound</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/incregpusfinished" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">incregpusfinished</obj_property>
-      <obj_property name="ObjectShortName">incregpusfinished</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/loadbypassvecfound" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">loadbypassvecfound</obj_property>
-      <obj_property name="ObjectShortName">loadbypassvecfound</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/writecache" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">writecache</obj_property>
-      <obj_property name="ObjectShortName">writecache</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/vecfound" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">vecfound</obj_property>
-      <obj_property name="ObjectShortName">vecfound</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/Inst_Circ_Buffer/regvecfound" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">regvecfound</obj_property>
-      <obj_property name="ObjectShortName">regvecfound</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/Inst_Circ_Buffer/hasfoundvec" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">hasfoundvec</obj_property>
-      <obj_property name="ObjectShortName">hasfoundvec</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_MainFirst/concatvecoutbound" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">concatvecoutbound[1:0]</obj_property>
-      <obj_property name="ObjectShortName">concatvecoutbound[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/bypassvecfound" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">bypassvecfound</obj_property>
-      <obj_property name="ObjectShortName">bypassvecfound</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/isoutofanybound" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">isoutofanybound</obj_property>
-      <obj_property name="ObjectShortName">isoutofanybound</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/bypassisoutofanybound" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">bypassisoutofanybound</obj_property>
-      <obj_property name="ObjectShortName">bypassisoutofanybound</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/finishsendpartitions" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">finishsendpartitions</obj_property>
-      <obj_property name="ObjectShortName">finishsendpartitions</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/bestvecx" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">bestvecx[7:0]</obj_property>
@@ -315,26 +316,6 @@
       <obj_property name="ObjectShortName">regbestsad[19:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecxbypass10" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">regcurvecxbypass10[7:0]</obj_property>
-      <obj_property name="ObjectShortName">regcurvecxbypass10[7:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecybypass10" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">regcurvecybypass10[7:0]</obj_property>
-      <obj_property name="ObjectShortName">regcurvecybypass10[7:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regbestx" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">regbestx[7:0]</obj_property>
-      <obj_property name="ObjectShortName">regbestx[7:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regbesty" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">regbesty[7:0]</obj_property>
-      <obj_property name="ObjectShortName">regbesty[7:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench/Inst_TZSearch/regcenterx" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">regcenterx[7:0]</obj_property>
       <obj_property name="ObjectShortName">regcenterx[7:0]</obj_property>
@@ -345,17 +326,15 @@
       <obj_property name="ObjectShortName">regcentery[7:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/done" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">done</obj_property>
-      <obj_property name="ObjectShortName">done</obj_property>
+   <wvobject fp_name="/testbench/Inst_TZSearch/auxbestvecx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">auxbestvecx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">auxbestvecx[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_TZSearch/state" type="other" db_ref_id="1">
-      <obj_property name="ElementShortName">state</obj_property>
-      <obj_property name="ObjectShortName">state</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_TZSearch/nextstate" type="other" db_ref_id="1">
-      <obj_property name="ElementShortName">nextstate</obj_property>
-      <obj_property name="ObjectShortName">nextstate</obj_property>
+   <wvobject fp_name="/testbench/Inst_TZSearch/auxbestvecy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">auxbestvecy[7:0]</obj_property>
+      <obj_property name="ObjectShortName">auxbestvecy[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/Inst_TZSearch/regborderleft" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">regborderleft[7:0]</obj_property>
@@ -377,13 +356,933 @@
       <obj_property name="ObjectShortName">regborderdown[7:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/initdata" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">initdata</obj_property>
+      <obj_property name="ObjectShortName">initdata</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/initincrement" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">initincrement</obj_property>
+      <obj_property name="ObjectShortName">initincrement</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/rearrangevecmems" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rearrangevecmems</obj_property>
+      <obj_property name="ObjectShortName">rearrangevecmems</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/incregx" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">incregx</obj_property>
+      <obj_property name="ObjectShortName">incregx</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/loadregxmem2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">loadregxmem2</obj_property>
+      <obj_property name="ObjectShortName">loadregxmem2</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/sendtomem" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sendtomem</obj_property>
+      <obj_property name="ObjectShortName">sendtomem</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/bestinitialx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bestinitialx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bestinitialx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/bestinitialy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bestinitialy[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bestinitialy[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/finishsendpartitions" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">finishsendpartitions</obj_property>
+      <obj_property name="ObjectShortName">finishsendpartitions</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/isoutofxbound" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">isoutofxbound</obj_property>
+      <obj_property name="ObjectShortName">isoutofxbound</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/isoutofybound" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">isoutofybound</obj_property>
+      <obj_property name="ObjectShortName">isoutofybound</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/xmem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xmem[7:0]</obj_property>
+      <obj_property name="ObjectShortName">xmem[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/ymem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ymem[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ymem[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/bestvecx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bestvecx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bestvecx[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/bestvecy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bestvecy[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bestvecy[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentxvecbypass1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentxvecbypass1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentxvecbypass1[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentxvecbypass2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentxvecbypass2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentxvecbypass2[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentxvecbypass3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentxvecbypass3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentxvecbypass3[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentxvecbypass4" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentxvecbypass4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentxvecbypass4[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentxvecbypass5" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentxvecbypass5[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentxvecbypass5[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentxvecbypass6" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentxvecbypass6[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentxvecbypass6[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentxvecbypass7" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentxvecbypass7[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentxvecbypass7[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentxvecbypass8" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentxvecbypass8[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentxvecbypass8[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentxvecbypass9" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentxvecbypass9[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentxvecbypass9[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentxvecbypass10" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentxvecbypass10[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentxvecbypass10[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentyvecbypass1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentyvecbypass1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentyvecbypass1[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentyvecbypass2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentyvecbypass2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentyvecbypass2[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentyvecbypass3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentyvecbypass3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentyvecbypass3[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentyvecbypass4" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentyvecbypass4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentyvecbypass4[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentyvecbypass5" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentyvecbypass5[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentyvecbypass5[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentyvecbypass6" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentyvecbypass6[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentyvecbypass6[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentyvecbypass7" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentyvecbypass7[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentyvecbypass7[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentyvecbypass8" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentyvecbypass8[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentyvecbypass8[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentyvecbypass9" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentyvecbypass9[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentyvecbypass9[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/currentyvecbypass10" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">currentyvecbypass10[7:0]</obj_property>
+      <obj_property name="ObjectShortName">currentyvecbypass10[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/reglatency" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">reglatency[7:0]</obj_property>
+      <obj_property name="ObjectShortName">reglatency[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/regsublatency" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regsublatency[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regsublatency[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/sublatency" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sublatency[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sublatency[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/regbestinitialx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regbestinitialx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regbestinitialx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/regbestinitialy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regbestinitialy[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regbestinitialy[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/regxmem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regxmem[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regxmem[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/regymem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regymem[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regymem[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/regymemafter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regymemafter[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regymemafter[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/regxmem2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regxmem2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regxmem2[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/regymem2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regymem2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regymem2[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/regxmem3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regxmem3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regxmem3[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/regymem3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regymem3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regymem3[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/subright" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">subright[7:0]</obj_property>
+      <obj_property name="ObjectShortName">subright[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/subdown" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">subdown[7:0]</obj_property>
+      <obj_property name="ObjectShortName">subdown[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/auxisoutofxbound" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">auxisoutofxbound</obj_property>
+      <obj_property name="ObjectShortName">auxisoutofxbound</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/auxisoutofybound" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">auxisoutofybound</obj_property>
+      <obj_property name="ObjectShortName">auxisoutofybound</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/regisoutofxbound" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">regisoutofxbound</obj_property>
+      <obj_property name="ObjectShortName">regisoutofxbound</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_Raster/regisoutofybound" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">regisoutofybound</obj_property>
+      <obj_property name="ObjectShortName">regisoutofybound</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/initcenterx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">initcenterx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">initcenterx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/initcentery" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">initcentery[7:0]</obj_property>
+      <obj_property name="ObjectShortName">initcentery[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/incdoagain" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">incdoagain</obj_property>
+      <obj_property name="ObjectShortName">incdoagain</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/donepu" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">donepu</obj_property>
+      <obj_property name="ObjectShortName">donepu</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/sel_distx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sel_distx[2:0]</obj_property>
+      <obj_property name="ObjectShortName">sel_distx[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/sel_disty" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sel_disty[2:0]</obj_property>
+      <obj_property name="ObjectShortName">sel_disty[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/sel_candidates" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sel_candidates[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sel_candidates[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/isrefinement" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">isrefinement</obj_property>
+      <obj_property name="ObjectShortName">isrefinement</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/loadregnumpuslevel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">loadregnumpuslevel</obj_property>
+      <obj_property name="ObjectShortName">loadregnumpuslevel</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/op_typex" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">op_typex</obj_property>
+      <obj_property name="ObjectShortName">op_typex</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/op_typey" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">op_typey</obj_property>
+      <obj_property name="ObjectShortName">op_typey</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/incregcurvecx" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">incregcurvecx</obj_property>
+      <obj_property name="ObjectShortName">incregcurvecx</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/incregcurvecy" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">incregcurvecy</obj_property>
+      <obj_property name="ObjectShortName">incregcurvecy</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/rstregcurvecx" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rstregcurvecx</obj_property>
+      <obj_property name="ObjectShortName">rstregcurvecx</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/rstregcurvecy" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rstregcurvecy</obj_property>
+      <obj_property name="ObjectShortName">rstregcurvecy</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/incregnumlevels" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">incregnumlevels</obj_property>
+      <obj_property name="ObjectShortName">incregnumlevels</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/rstregnumlevels" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rstregnumlevels</obj_property>
+      <obj_property name="ObjectShortName">rstregnumlevels</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/initdata" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">initdata</obj_property>
+      <obj_property name="ObjectShortName">initdata</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/initincrement" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">initincrement</obj_property>
+      <obj_property name="ObjectShortName">initincrement</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/rstregpusfinished" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rstregpusfinished</obj_property>
+      <obj_property name="ObjectShortName">rstregpusfinished</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/sendtomem" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sendtomem</obj_property>
+      <obj_property name="ObjectShortName">sendtomem</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/loadcurvec" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">loadcurvec</obj_property>
+      <obj_property name="ObjectShortName">loadcurvec</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/loadbypassoutofanybound" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">loadbypassoutofanybound</obj_property>
+      <obj_property name="ObjectShortName">loadbypassoutofanybound</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/incregpusfinished" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">incregpusfinished</obj_property>
+      <obj_property name="ObjectShortName">incregpusfinished</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/isoutofanybound" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">isoutofanybound</obj_property>
+      <obj_property name="ObjectShortName">isoutofanybound</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/bypassisoutofanybound" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bypassisoutofanybound</obj_property>
+      <obj_property name="ObjectShortName">bypassisoutofanybound</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/haspassednumlevels" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">haspassednumlevels</obj_property>
+      <obj_property name="ObjectShortName">haspassednumlevels</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/doagain" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">doagain[2:0]</obj_property>
+      <obj_property name="ObjectShortName">doagain[2:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/finishsendpartitions" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">finishsendpartitions</obj_property>
+      <obj_property name="ObjectShortName">finishsendpartitions</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/vecmemx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">vecmemx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">vecmemx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/vecmemy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">vecmemy[7:0]</obj_property>
+      <obj_property name="ObjectShortName">vecmemy[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/bestvecx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bestvecx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bestvecx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/bestvecy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bestvecy[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bestvecy[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/numlevels" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">numlevels[1:0]</obj_property>
+      <obj_property name="ObjectShortName">numlevels[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regnumlevels" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regnumlevels[1:0]</obj_property>
+      <obj_property name="ObjectShortName">regnumlevels[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regtolerancelevels" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regtolerancelevels[1:0]</obj_property>
+      <obj_property name="ObjectShortName">regtolerancelevels[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecy[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecy[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/borderleft" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">borderleft[7:0]</obj_property>
+      <obj_property name="ObjectShortName">borderleft[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/borderright" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">borderright[7:0]</obj_property>
+      <obj_property name="ObjectShortName">borderright[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/borderup" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">borderup[7:0]</obj_property>
+      <obj_property name="ObjectShortName">borderup[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/borderdown" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">borderdown[7:0]</obj_property>
+      <obj_property name="ObjectShortName">borderdown[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regbestx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regbestx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regbestx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regbesty" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regbesty[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regbesty[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/subright" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">subright[7:0]</obj_property>
+      <obj_property name="ObjectShortName">subright[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/subdown" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">subdown[7:0]</obj_property>
+      <obj_property name="ObjectShortName">subdown[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/sumvaluex" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sumvaluex[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sumvaluex[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/sumvaluey" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sumvaluey[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sumvaluey[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/auxcurvecx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">auxcurvecx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">auxcurvecx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/auxcurvecy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">auxcurvecy[7:0]</obj_property>
+      <obj_property name="ObjectShortName">auxcurvecy[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regdoagain" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regdoagain[2:0]</obj_property>
+      <obj_property name="ObjectShortName">regdoagain[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurcenterx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurcenterx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurcenterx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurcentery" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurcentery[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurcentery[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regpusfinished" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regpusfinished[4:0]</obj_property>
+      <obj_property name="ObjectShortName">regpusfinished[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regloadedbetter" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">regloadedbetter</obj_property>
+      <obj_property name="ObjectShortName">regloadedbetter</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regbypasscurvecx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regbypasscurvecx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regbypasscurvecx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regbypasscurvecy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regbypasscurvecy[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regbypasscurvecy[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regvecmemx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regvecmemx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regvecmemx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regvecmemy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regvecmemy[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regvecmemy[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regisoutofanybound" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">regisoutofanybound</obj_property>
+      <obj_property name="ObjectShortName">regisoutofanybound</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/auxisoutofanybound" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">auxisoutofanybound</obj_property>
+      <obj_property name="ObjectShortName">auxisoutofanybound</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regisoutofanyboundbypass" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">regisoutofanyboundbypass</obj_property>
+      <obj_property name="ObjectShortName">regisoutofanyboundbypass</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecxbypass1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecxbypass1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecxbypass1[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecxbypass2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecxbypass2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecxbypass2[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecxbypass3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecxbypass3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecxbypass3[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecxbypass4" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecxbypass4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecxbypass4[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecxbypass5" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecxbypass5[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecxbypass5[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecxbypass6" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecxbypass6[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecxbypass6[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecxbypass7" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecxbypass7[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecxbypass7[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecxbypass8" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecxbypass8[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecxbypass8[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecxbypass9" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecxbypass9[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecxbypass9[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecxbypass10" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecxbypass10[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecxbypass10[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecybypass1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecybypass1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecybypass1[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecybypass2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecybypass2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecybypass2[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecybypass3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecybypass3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecybypass3[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecybypass4" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecybypass4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecybypass4[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecybypass5" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecybypass5[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecybypass5[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecybypass6" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecybypass6[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecybypass6[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecybypass7" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecybypass7[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecybypass7[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecybypass8" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecybypass8[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecybypass8[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecybypass9" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecybypass9[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecybypass9[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regcurvecybypass10" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regcurvecybypass10[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regcurvecybypass10[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/regnumpuslevel" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">regnumpuslevel[4:0]</obj_property>
+      <obj_property name="ObjectShortName">regnumpuslevel[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/numcandidateslevel" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">numcandidateslevel[4:0]</obj_property>
+      <obj_property name="ObjectShortName">numcandidateslevel[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_Datapath_FirstSearch/haspassedpuslevel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">haspassedpuslevel</obj_property>
+      <obj_property name="ObjectShortName">haspassedpuslevel</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
    <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_PredMov/start" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">start</obj_property>
       <obj_property name="ObjectShortName">start</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_PredMov/donesad" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">donesad</obj_property>
-      <obj_property name="ObjectShortName">donesad</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_PredMov/start2" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">start2</obj_property>
@@ -392,14 +1291,6 @@
    <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_PredMov/done" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">done</obj_property>
       <obj_property name="ObjectShortName">done</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_PredMov/state" type="other" db_ref_id="1">
-      <obj_property name="ElementShortName">state</obj_property>
-      <obj_property name="ObjectShortName">state</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_PredMov/nextstate" type="other" db_ref_id="1">
-      <obj_property name="ElementShortName">nextstate</obj_property>
-      <obj_property name="ObjectShortName">nextstate</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/Inst_TZSearch/Inst_TZSearch/donepredmov" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">donepredmov</obj_property>
@@ -489,14 +1380,6 @@
    <wvobject fp_name="/testbench/Inst_TZSearch/Inst_SAD_UC/donerest" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">donerest</obj_property>
       <obj_property name="ObjectShortName">donerest</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_PredMov/state" type="other" db_ref_id="1">
-      <obj_property name="ElementShortName">state</obj_property>
-      <obj_property name="ObjectShortName">state</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/Inst_TZSearch/Inst_UC_PredMov/nextstate" type="other" db_ref_id="1">
-      <obj_property name="ElementShortName">nextstate</obj_property>
-      <obj_property name="ObjectShortName">nextstate</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/Inst_TZSearch/foundbettersad" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">foundbettersad</obj_property>

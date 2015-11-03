@@ -20,6 +20,10 @@ char *IEEE_P_3620187407;
 char *IEEE_P_3499444699;
 char *WORK_P_0398875704;
 char *IEEE_P_1242562249;
+char *IEEE_P_0774719531;
+char *STD_TEXTIO;
+char *XILINXCORELIB_P_1837083571;
+char *XILINXCORELIB_P_1705937335;
 
 
 int main(int argc, char **argv)
@@ -33,6 +37,12 @@ int main(int argc, char **argv)
     ieee_p_3499444699_init();
     ieee_p_3620187407_init();
     work_p_0398875704_init();
+    ieee_p_0774719531_init();
+    std_textio_init();
+    xilinxcorelib_p_1837083571_init();
+    xilinxcorelib_p_1705937335_init();
+    xilinxcorelib_a_1958656812_3212880686_init();
+    work_a_0083724723_4067396290_init();
     work_a_3892918792_3212880686_init();
     work_a_0665108037_3212880686_init();
     work_a_0644273266_3212880686_init();
@@ -63,6 +73,10 @@ int main(int argc, char **argv)
     IEEE_P_3499444699 = xsi_get_engine_memory("ieee_p_3499444699");
     WORK_P_0398875704 = xsi_get_engine_memory("work_p_0398875704");
     IEEE_P_1242562249 = xsi_get_engine_memory("ieee_p_1242562249");
+    IEEE_P_0774719531 = xsi_get_engine_memory("ieee_p_0774719531");
+    STD_TEXTIO = xsi_get_engine_memory("std_textio");
+    XILINXCORELIB_P_1837083571 = xsi_get_engine_memory("xilinxcorelib_p_1837083571");
+    XILINXCORELIB_P_1705937335 = xsi_get_engine_memory("xilinxcorelib_p_1705937335");
 
     return xsi_run_simulation(argc, argv);
 

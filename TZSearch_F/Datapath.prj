@@ -1,5 +1,0 @@
-vhdl work "STD_SAD.vhd"
-vhdl work "genericSub.vhd"
-vhdl work "genericAdder.vhd"
-vhdl work "blck4x4.vhd"
-vhdl work "SAD4x4_Datapath.vhd"

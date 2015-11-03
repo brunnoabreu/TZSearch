@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/testbench.xst" -ofn "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/testbench.syr" 

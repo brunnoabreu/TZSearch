@@ -37,6 +37,7 @@ entity UC_TZSearch is
 		donePredMov			: in STD_LOGIC;
 		doneFirstSearch	: in STD_LOGIC;
 		doneRaster			: in STD_LOGIC;
+		vecBig				: in STD_LOGIC;
 		STARTPredMov		: out STD_LOGIC;
 		STARTFirstSearch	: out STD_LOGIC;
 		STARTRaster			: out STD_LOGIC;
@@ -48,7 +49,7 @@ end UC_TZSearch;
 
 architecture Behavioral of UC_TZSearch is
 
-type t_state is (idle, s_PredMov, s_FirstSearch, s_Raster, s_RefinementSearch, stateDone);
+type t_state is (idle, s_PredMov, s_FirstSearch, testVecBig, s_Raster, s_RefinementSearch, stateDone);
 signal state, nextState: t_state;
 
 begin
@@ -62,7 +63,7 @@ begin
 	end if;
 end process;
 
-process(state, donePredMov, doneFirstSearch, doneRaster)
+process(state, donePredMov, doneFirstSearch, doneRaster, vecBig)
 begin
 
 	case state is
@@ -89,6 +90,17 @@ begin
 				sel_TZ_stage <= "00";
 			end if;
 	
+--		when s_FirstSearch =>
+--			STARTFirstSearch <= '1';
+--			STARTRaster <= '0';
+--			sel_TZ_stage <= "01";
+--			if(doneFirstSearch = '1') then
+--				STARTFirstSearch <= '1';
+--				STARTRaster <= '0';
+--				sel_TZ_stage <= "01";
+--				nextState <= s_Raster;
+--			end if;
+
 		when s_FirstSearch =>
 			STARTFirstSearch <= '1';
 			STARTRaster <= '0';
@@ -97,9 +109,17 @@ begin
 				STARTFirstSearch <= '1';
 				STARTRaster <= '0';
 				sel_TZ_stage <= "01";
-				nextState <= s_Raster;
+				nextState <= testVecBig;
 			end if;
 		
+		when testVecBig =>
+			STARTFirstSearch <= '0';
+			if(vecBig = '1') then
+				nextState <= s_Raster;
+			else
+				nextState <= s_RefinementSearch;
+			end if;
+				
 		when s_Raster =>
 			STARTFirstSearch <= '0';
 			STARTRaster <= '1';
@@ -114,7 +134,7 @@ begin
 			STARTFirstSearch <= '1';
 			sel_TZ_stage <= "11";
 			if(doneFirstSearch = '1') then
-				STARTFirstSearch <= '0';
+				STARTFirstSearch <= '1';
 				nextState <= stateDone;
 			end if;
 			

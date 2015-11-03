@@ -1,0 +1,171 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.28 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.28 secs
+ 
+--> Reading design: testbench.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "testbench.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "testbench"
+Output Format                      : NGC
+Target Device                      : xc5vlx20t-2-ff323
+
+---- Source Options
+Top Module Name                    : testbench
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/STD_SAD.vhd" in Library work.
+Architecture std_sad of Entity std_sad is up to date.
+Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/genericSub.vhd" in Library work.
+Architecture behavioral of Entity genericsub is up to date.
+Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/genericAdder.vhd" in Library work.
+Architecture behavioral of Entity genericadder is up to date.
+Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/CircularBuffer_Datapath.vhd" in Library work.
+Architecture behavioral of Entity circularbuffer_datapath is up to date.
+Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/blck4x4.vhd" in Library work.
+Architecture behavioral of Entity blck4x4 is up to date.
+Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/ipcore_dir/mult_core.vhd" in Library work.
+Architecture mult_core_a of Entity mult_core is up to date.
+Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/SAD4x4_Datapath.vhd" in Library work.
+Architecture behavioral of Entity datapath is up to date.
+Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_SAD.vhd" in Library work.
+Architecture behavioral of Entity uc_sad is up to date.
+Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_MainFirst.vhd" in Library work.
+Architecture behavioral of Entity uc_mainfirst is up to date.
+Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_Raster.vhd" in Library work.
+Architecture behavioral of Entity uc_raster is up to date.
+Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_PredMov.vhd" in Library work.
+Architecture behavioral of Entity uc_predmov is up to date.
+Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Datapath_FirstSearch.vhd" in Library work.
+Entity <datapath_firstsearch> compiled.
+Entity <datapath_firstsearch> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Datapath_Raster.vhd" in Library work.
+Architecture behavioral of Entity datapath_raster is up to date.
+Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_TZSearch.vhd" in Library work.
+Architecture behavioral of Entity uc_tzsearch is up to date.
+Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" in Library work.
+Architecture behavioral of Entity final_tzsearch is up to date.
+Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" in Library work.
+Entity <testbench> compiled.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 93. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 95. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 105. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 107. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 123. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 136. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 151. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 164. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 179. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 192. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 207. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 220. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 234. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 247. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 262. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 275. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 290. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 303. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 305. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/TB_TZSearch.vhd" Line 306. Wait for statement unsupported.
+--> 
+
+Total memory usage is 277804 kilobytes
+
+Number of errors   :   20 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

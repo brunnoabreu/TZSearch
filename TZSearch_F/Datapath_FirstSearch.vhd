@@ -44,6 +44,7 @@ entity Datapath_FirstSearch is
 		initCenterX					: in STD_LOGIC_VECTOR(7 downto 0);
 		initCenterY					: in STD_LOGIC_VECTOR(7 downto 0);
 		incDoAgain					: in STD_LOGIC;
+		donePU						: in STD_LOGIC;   --vem da UC do FS, que recebe da UC do SAD
 		sel_distX					: in STD_LOGIC_VECTOR(2 downto 0);
 		sel_distY					: in STD_LOGIC_VECTOR(2 downto 0);
 		sel_candidates				: in STD_LOGIC_VECTOR(1 downto 0);
@@ -89,6 +90,7 @@ signal numLevels, regNumLevels, regToleranceLevels: STD_LOGIC_VECTOR(1 downto 0)
 signal regCurVecX, regCurVecY: STD_LOGIC_VECTOR(7 downto 0);
 signal regBestX, regBestY: STD_LOGIC_VECTOR(7 downto 0);
 signal subRight, subDown: STD_LOGIC_VECTOR(7 downto 0);
+signal subLeft, subUp: STD_LOGIC_VECTOR(7 downto 0);
 signal sumValueX, sumValueY: STD_LOGIC_VECTOR(7 downto 0);
 signal auxCurVecX, auxCurVecY: STD_LOGIC_VECTOR(7 downto 0);
 signal regLatency, regSubLatency, subLatency: STD_LOGIC_VECTOR(7 downto 0);
@@ -110,12 +112,11 @@ signal regCurVecXByPass1, regCurVecXByPass2, regCurVecXByPass3, regCurVecXByPass
 signal regCurVecYByPass1, regCurVecYByPass2, regCurVecYByPass3, regCurVecYByPass4, regCurVecYByPass5, regCurVecYByPass6,
  regCurVecYByPass7, regCurVecYByPass8, regCurVecYByPass9, regCurVecYByPass10: STD_LOGIC_VECTOR(7 downto 0);
 
-signal doneRest: STD_LOGIC;
+--signal doneRest: STD_LOGIC;
 signal regNumPUsLevel: STD_LOGIC_VECTOR(4 downto 0);
 
 signal numCandidatesLevel: STD_LOGIC_VECTOR(4 downto 0);
 
-signal auxDiffRegPUsLevel: STD_LOGIC_VECTOR(4 downto 0);
 signal hasPassedPUsLevel: STD_LOGIC;
 signal auxVecFound, regByPassVecFound: STD_LOGIC;
 
@@ -179,8 +180,10 @@ numCandidatesLevel <= "00100" when sel_candidates = "00" else
 
 vecMemX 			<= regVecMemX;
 vecMemY 			<= regVecMemY;
-bestVecX 		<= regBestX;
-bestVecY 		<= regBestY;
+--bestVecX 		<= regBestX;
+--bestVecY 		<= regBestY;
+bestVecX			<= regCurVecXByPass9;
+bestVecY			<= regCurVecYByPass9;
 doAgain 			<= regDoAgain;
 byPassVecFound <= regByPassVecFound;
 vecFound			<= auxVecFound;
@@ -195,14 +198,16 @@ numLevels <= regNumLevels + 1 when incRegNumLevels = '1' and regLoadedBetter = '
 				 "00" when regLoadedBetter = '1' else
 				 regNumLevels;
 
-auxIsOutOfAnyBound <= '1' when subRight(7) = '0' or subDown(7) = '0' else
+auxIsOutOfAnyBound <= '1' when subRight(7) = '1' or subDown(7) = '1' or subLeft(7) = '1' or subUp(7) = '1' else
 						 '0';
 
 isOutOfAnyBound <= regIsOutOfAnyBound;
 byPassIsOutOfAnyBound <= regIsOutOfAnyBoundByPass;
 				 
-subRight <= regCurVecX - borderRight;
-subDown <= regCurVecY - borderDown;
+subRight <= borderRight - regCurVecX;
+subDown <= borderDown - regCurVecY;
+subLeft <= regCurVecX - borderLeft;
+subUp <= regCurVecY - borderUp;
 
 	process(CLK, START)
 	begin
@@ -232,7 +237,7 @@ subDown <= regCurVecY - borderDown;
 			regVecMemX <= (OTHERS=>'0');
 			regVecMemY <= (OTHERS=>'0');
 
-			regNumPUsLevel <= (OTHERS=>'0');
+			regNumPUsLevel <= (OTHERS=>'1');
 			
 			regDoAgain <= (OTHERS=>'0');
 			
@@ -308,12 +313,14 @@ subDown <= regCurVecY - borderDown;
 			end if;
 			
 			if(foundBetterSAD = '1') then
-				regBestX <= regCurVecXByPass10;
-				regBestY <= regCurVecYByPass10;
+--				regBestX <= regCurVecXByPass10;
+--				regBestY <= regCurVecYByPass10;
 				regLoadedBetter <= '1';
 			end if;
 			
-			if(incRegPUsFinished = '1' or doneRest = '1') then
+			if(incRegPUsFinished = '1' and donePU = '1') then
+				regPUsFinished <= regPUsFinished + 2;
+			elsif(incRegPUsFinished  = '1' or donePU = '1') then
 				regPUsFinished <= regPUsFinished + 1;
 			end if;
 			
@@ -378,7 +385,7 @@ subDown <= regCurVecY - borderDown;
 			regCurVecYByPass9 <= (OTHERS=>'0');
 			regCurVecYByPass10 <= (OTHERS=>'0');
 		elsif(CLK'event and CLK='1') then
-			regCurVecXByPass1 	<= regCurVecX;
+			regCurVecXByPass1 	<= regVecMemX;
 			regCurVecXByPass2 	<= regCurVecXByPass1;
 			regCurVecXByPass3 	<= regCurVecXByPass2;
 			regCurVecXByPass4 	<= regCurVecXByPass3;
@@ -389,7 +396,7 @@ subDown <= regCurVecY - borderDown;
 			regCurVecXByPass9 	<= regCurVecXByPass8;
 			regCurVecXByPass10 	<= regCurVecXByPass9;
 			
-			regCurVecYByPass1 	<= regCurVecY;
+			regCurVecYByPass1 	<= regVecMemY;
 			regCurVecYByPass2 	<= regCurVecYByPass1;
 			regCurVecYByPass3 	<= regCurVecYByPass2;
 			regCurVecYByPass4 	<= regCurVecYByPass3;

@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> Reading design: Final_TZSearch.prj
 
@@ -118,6 +118,8 @@ Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F
 Architecture behavioral of Entity circularbuffer_datapath is up to date.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/blck4x4.vhd" in Library work.
 Architecture behavioral of Entity blck4x4 is up to date.
+Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/ipcore_dir/mult_core.vhd" in Library work.
+Architecture mult_core_a of Entity mult_core is up to date.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/SAD4x4_Datapath.vhd" in Library work.
 Architecture behavioral of Entity datapath is up to date.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_SAD.vhd" in Library work.
@@ -129,7 +131,8 @@ Architecture behavioral of Entity uc_raster is up to date.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_PredMov.vhd" in Library work.
 Architecture behavioral of Entity uc_predmov is up to date.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Datapath_FirstSearch.vhd" in Library work.
-Architecture behavioral of Entity datapath_firstsearch is up to date.
+Entity <datapath_firstsearch> compiled.
+Entity <datapath_firstsearch> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Datapath_Raster.vhd" in Library work.
 Architecture behavioral of Entity datapath_raster is up to date.
 Compiling vhdl file "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_TZSearch.vhd" in Library work.
@@ -187,12 +190,13 @@ Analyzing hierarchy for entity <genericAdder> in library <work> (architecture <b
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <Final_TZSearch> in library <work> (Architecture <behavioral>).
-WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 408: Unconnected output port 'SAD441' of component 'Datapath'.
-WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 408: Unconnected output port 'SAD442' of component 'Datapath'.
-WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 408: Unconnected output port 'SAD443' of component 'Datapath'.
-WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 408: Unconnected output port 'SAD444' of component 'Datapath'.
-WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 408: Unconnected output port 'SAD481' of component 'Datapath'.
-WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 408: Unconnected output port 'SAD482' of component 'Datapath'.
+WARNING:Xst:2211 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 447: Instantiating black box module <mult_core>.
+WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 457: Unconnected output port 'SAD441' of component 'Datapath'.
+WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 457: Unconnected output port 'SAD442' of component 'Datapath'.
+WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 457: Unconnected output port 'SAD443' of component 'Datapath'.
+WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 457: Unconnected output port 'SAD444' of component 'Datapath'.
+WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 457: Unconnected output port 'SAD481' of component 'Datapath'.
+WARNING:Xst:753 - "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd" line 457: Unconnected output port 'SAD482' of component 'Datapath'.
 Entity <Final_TZSearch> analyzed. Unit <Final_TZSearch> generated.
 
 Analyzing Entity <Datapath> in library <work> (Architecture <behavioral>).
@@ -249,8 +253,6 @@ Analyzing Entity <CircularBuffer_Datapath> in library <work> (Architecture <beha
 Entity <CircularBuffer_Datapath> analyzed. Unit <CircularBuffer_Datapath> generated.
 
 Analyzing Entity <Datapath_Raster> in library <work> (Architecture <behavioral>).
-INFO:Xst:2679 - Register <regInitCenterX> in unit <Datapath_Raster> has a constant value of 00000000 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <regInitCenterY> in unit <Datapath_Raster> has a constant value of 00000000 during circuit operation. The register is replaced by logic.
 Entity <Datapath_Raster> analyzed. Unit <Datapath_Raster> generated.
 
 Analyzing Entity <UC_TZSearch> in library <work> (Architecture <behavioral>).
@@ -262,6 +264,7 @@ Entity <UC_TZSearch> analyzed. Unit <UC_TZSearch> generated.
 =========================================================================
 
 Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <regVecFound> in unit <CircularBuffer_Datapath> has a constant value of 0 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <UC_SAD>.
     Related source file is "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_SAD.vhd".
@@ -349,6 +352,14 @@ Unit <UC_MainFirst> synthesized.
 
 Synthesizing Unit <UC_Raster>.
     Related source file is "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/UC_Raster.vhd".
+WARNING:Xst:1780 - Signal <validBitByPass8> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <validBitByPass7> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <validBitByPass6> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <validBitByPass5> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <validBitByPass4> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <validBitByPass3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <validBitByPass2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <validBitByPass1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Using one-hot encoding for signal <state>.
 WARNING:Xst:737 - Found 1-bit latch for signal <START2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
@@ -369,16 +380,6 @@ INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and 
 WARNING:Xst:737 - Found 1-bit latch for signal <incRegX>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
     Found 16-bit register for signal <state>.
-    Found 1-bit register for signal <validBitByPass1>.
-    Found 1-bit register for signal <validBitByPass2>.
-    Found 1-bit register for signal <validBitByPass3>.
-    Found 1-bit register for signal <validBitByPass4>.
-    Found 1-bit register for signal <validBitByPass5>.
-    Found 1-bit register for signal <validBitByPass6>.
-    Found 1-bit register for signal <validBitByPass7>.
-    Found 1-bit register for signal <validBitByPass8>.
-    Summary:
-	inferred   8 D-type flip-flop(s).
 Unit <UC_Raster> synthesized.
 
 
@@ -409,16 +410,12 @@ Unit <UC_PredMov> synthesized.
 
 Synthesizing Unit <Datapath_Raster>.
     Related source file is "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Datapath_Raster.vhd".
-WARNING:Xst:647 - Input <foundBetterSAD> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <initCenterX> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <initCenterY> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <searchRange> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:646 - Signal <subRight<6:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <subDown<6:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <regInitCenterY> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <regInitCenterX> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <curRegBestVecY> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <curRegBestVecX> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <regBestInitialY> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <regBestInitialX> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <currentYVecByPass10> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <currentXVecByPass10> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 8-bit register for signal <currentXVecByPass1>.
     Found 8-bit register for signal <currentXVecByPass2>.
     Found 8-bit register for signal <currentXVecByPass3>.
@@ -427,6 +424,7 @@ WARNING:Xst:646 - Signal <curRegBestVecX> is assigned but never used. This uncon
     Found 8-bit register for signal <currentXVecByPass6>.
     Found 8-bit register for signal <currentXVecByPass7>.
     Found 8-bit register for signal <currentXVecByPass8>.
+    Found 8-bit register for signal <currentXVecByPass9>.
     Found 8-bit register for signal <currentYVecByPass1>.
     Found 8-bit register for signal <currentYVecByPass2>.
     Found 8-bit register for signal <currentYVecByPass3>.
@@ -435,6 +433,7 @@ WARNING:Xst:646 - Signal <curRegBestVecX> is assigned but never used. This uncon
     Found 8-bit register for signal <currentYVecByPass6>.
     Found 8-bit register for signal <currentYVecByPass7>.
     Found 8-bit register for signal <currentYVecByPass8>.
+    Found 8-bit register for signal <currentYVecByPass9>.
     Found 1-bit register for signal <regIsOutOfXBound>.
     Found 1-bit register for signal <regIsOutOfYBound>.
     Found 8-bit register for signal <regLatency>.
@@ -454,7 +453,7 @@ WARNING:Xst:646 - Signal <curRegBestVecX> is assigned but never used. This uncon
     Found 8-bit subtractor for signal <subDown>.
     Found 8-bit subtractor for signal <subRight>.
     Summary:
-	inferred 202 D-type flip-flop(s).
+	inferred 218 D-type flip-flop(s).
 	inferred   7 Adder/Subtractor(s).
 Unit <Datapath_Raster> synthesized.
 
@@ -468,7 +467,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <loadSearchCenter>. Latches may b
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 WARNING:Xst:737 - Found 1-bit latch for signal <STARTRaster>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 6-bit latch for signal <nextState>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 7-bit latch for signal <nextState>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 WARNING:Xst:737 - Found 1-bit latch for signal <done>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
@@ -476,7 +475,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <STARTPredMov>. Latches may be ge
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 WARNING:Xst:737 - Found 2-bit latch for signal <sel_TZ_stage>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 6-bit register for signal <state>.
+    Found 7-bit register for signal <state>.
 Unit <UC_TZSearch> synthesized.
 
 
@@ -540,50 +539,30 @@ Unit <genericAdder_6> synthesized.
 
 Synthesizing Unit <CircularBuffer_Datapath>.
     Related source file is "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/CircularBuffer_Datapath.vhd".
-    Found 17-bit comparator equal for signal <bitsFound_0$cmp_eq0000> created at line 89.
-    Found 17-bit comparator equal for signal <bitsFound_1$cmp_eq0000> created at line 89.
-    Found 17-bit comparator equal for signal <bitsFound_10$cmp_eq0000> created at line 89.
-    Found 17-bit comparator equal for signal <bitsFound_11$cmp_eq0000> created at line 89.
-    Found 17-bit comparator equal for signal <bitsFound_12$cmp_eq0000> created at line 89.
-    Found 17-bit comparator equal for signal <bitsFound_13$cmp_eq0000> created at line 89.
-    Found 17-bit comparator equal for signal <bitsFound_14$cmp_eq0000> created at line 89.
-    Found 17-bit comparator equal for signal <bitsFound_15$cmp_eq0000> created at line 89.
-    Found 17-bit comparator equal for signal <bitsFound_2$cmp_eq0000> created at line 89.
-    Found 17-bit comparator equal for signal <bitsFound_3$cmp_eq0000> created at line 89.
-    Found 17-bit comparator equal for signal <bitsFound_4$cmp_eq0000> created at line 89.
-    Found 17-bit comparator equal for signal <bitsFound_5$cmp_eq0000> created at line 89.
-    Found 17-bit comparator equal for signal <bitsFound_6$cmp_eq0000> created at line 89.
-    Found 17-bit comparator equal for signal <bitsFound_7$cmp_eq0000> created at line 89.
-    Found 17-bit comparator equal for signal <bitsFound_8$cmp_eq0000> created at line 89.
-    Found 17-bit comparator equal for signal <bitsFound_9$cmp_eq0000> created at line 89.
-    Found 272-bit register for signal <cache>.
+WARNING:Xst:646 - Signal <bitsFound> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 4-bit up counter for signal <index>.
-    Found 1-bit register for signal <regVecFound>.
-INFO:Xst:738 - HDL ADVISOR - 272 flip-flops were inferred for signal <cache>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
     Summary:
 	inferred   1 Counter(s).
-	inferred 273 D-type flip-flop(s).
-	inferred  16 Comparator(s).
 Unit <CircularBuffer_Datapath> synthesized.
 
 
 Synthesizing Unit <Datapath_FirstSearch>.
     Related source file is "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Datapath_FirstSearch.vhd".
-WARNING:Xst:647 - Input <borderLeft> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rstRegNumLevels> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <searchRange> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <borderUp> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <subUp<6:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <subRight<6:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <subLeft<6:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <subDown<6:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <doneRest> is used but never assigned. This sourceless signal will be automatically connected to value 0.
-WARNING:Xst:1780 - Signal <auxDiffRegPUsLevel> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <regCurVecYByPass10> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <regCurVecXByPass10> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 4x5-bit ROM for signal <numCandidatesLevel>.
     Found 8x8-bit ROM for signal <sumValueX>.
     Found 8x8-bit ROM for signal <sumValueY>.
     Found 8-bit addsub for signal <auxCurVecX>.
     Found 8-bit addsub for signal <auxCurVecY>.
-    Found 2-bit comparator equal for signal <hasPassedNumLevels$cmp_eq0000> created at line 188.
-    Found 5-bit comparator equal for signal <hasPassedPUsLevel$cmp_eq0000> created at line 191.
+    Found 2-bit comparator equal for signal <hasPassedNumLevels$cmp_eq0000> created at line 191.
+    Found 5-bit comparator equal for signal <hasPassedPUsLevel$cmp_eq0000> created at line 194.
     Found 8-bit register for signal <regBestX>.
     Found 8-bit register for signal <regBestY>.
     Found 8-bit register for signal <regByPassCurVecX>.
@@ -593,7 +572,6 @@ WARNING:Xst:1780 - Signal <auxDiffRegPUsLevel> is never used or assigned. This u
     Found 8-bit register for signal <regCurCenterY>.
     Found 8-bit register for signal <regCurVecX>.
     Found 8-bit register for signal <regCurVecXByPass1>.
-    Found 8-bit register for signal <regCurVecXByPass10>.
     Found 8-bit register for signal <regCurVecXByPass2>.
     Found 8-bit register for signal <regCurVecXByPass3>.
     Found 8-bit register for signal <regCurVecXByPass4>.
@@ -604,7 +582,6 @@ WARNING:Xst:1780 - Signal <auxDiffRegPUsLevel> is never used or assigned. This u
     Found 8-bit register for signal <regCurVecXByPass9>.
     Found 8-bit register for signal <regCurVecY>.
     Found 8-bit register for signal <regCurVecYByPass1>.
-    Found 8-bit register for signal <regCurVecYByPass10>.
     Found 8-bit register for signal <regCurVecYByPass2>.
     Found 8-bit register for signal <regCurVecYByPass3>.
     Found 8-bit register for signal <regCurVecYByPass4>.
@@ -620,19 +597,22 @@ WARNING:Xst:1780 - Signal <auxDiffRegPUsLevel> is never used or assigned. This u
     Found 1-bit register for signal <regLoadedBetter>.
     Found 2-bit up counter for signal <regNumLevels>.
     Found 5-bit register for signal <regNumPUsLevel>.
-    Found 5-bit up counter for signal <regPUsFinished>.
+    Found 5-bit register for signal <regPUsFinished>.
+    Found 5-bit adder for signal <regPUsFinished$addsub0000>.
     Found 8-bit register for signal <regSubLatency>.
-    Found 8-bit subtractor for signal <regSubLatency$addsub0000> created at line 289.
+    Found 8-bit subtractor for signal <regSubLatency$addsub0000> created at line 294.
     Found 2-bit register for signal <regToleranceLevels>.
     Found 8-bit register for signal <regVecMemX>.
     Found 8-bit register for signal <regVecMemY>.
     Found 8-bit subtractor for signal <subDown>.
+    Found 8-bit subtractor for signal <subLeft>.
     Found 8-bit subtractor for signal <subRight>.
+    Found 8-bit subtractor for signal <subUp>.
     Summary:
 	inferred   3 ROM(s).
-	inferred   3 Counter(s).
-	inferred 267 D-type flip-flop(s).
-	inferred   5 Adder/Subtractor(s).
+	inferred   2 Counter(s).
+	inferred 256 D-type flip-flop(s).
+	inferred   8 Adder/Subtractor(s).
 	inferred   2 Comparator(s).
 Unit <Datapath_FirstSearch> synthesized.
 
@@ -703,26 +683,16 @@ Unit <Datapath> synthesized.
 
 Synthesizing Unit <Final_TZSearch>.
     Related source file is "C:/Users/Brunno/Desktop/TZSearch_Github/TZSearch/TZSearch_F/Final_TZSearch.vhd".
-WARNING:Xst:1780 - Signal <waitCycles_PredMov> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <not_p_subBestVecY<8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <not_p_subBestVecX<8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <multHW<13>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <multHW<5:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <middleLoadBetterCenter> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <middleIsValidSAD> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <middleInitCenterY> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <middleInitCenterX> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <middleFinishFSM> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <middleDoneRest> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <middleAuxIs8x8or16x4> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <loadBetterCenter> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <inVecYByPass9> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <inVecXByPass9> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <START2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 8-bit register for signal <auxRegBorderDown>.
-    Found 8-bit adder for signal <auxRegBorderDown$add0000> created at line 398.
+    Found 8-bit subtractor for signal <auxRegBorderDown$sub0000> created at line 438.
     Found 8-bit register for signal <auxRegBorderRight>.
-    Found 8-bit adder for signal <auxRegBorderRight$add0000> created at line 397.
+    Found 8-bit subtractor for signal <auxRegBorderRight$sub0000> created at line 437.
     Found 8-bit subtractor for signal <cyclesPerPU>.
-    Found 20-bit comparator less for signal <flagBetter$cmp_lt0000> created at line 335.
+    Found 20-bit comparator less for signal <flagBetter$cmp_lt0000> created at line 354.
     Found 8-bit register for signal <inVecXByPass1>.
     Found 8-bit register for signal <inVecXByPass2>.
     Found 8-bit register for signal <inVecXByPass3>.
@@ -739,24 +709,29 @@ WARNING:Xst:1780 - Signal <START2> is never used or assigned. This unconnected s
     Found 8-bit register for signal <inVecYByPass6>.
     Found 8-bit register for signal <inVecYByPass7>.
     Found 8-bit register for signal <inVecYByPass8>.
-    Found 7x7-bit multiplier for signal <multHW>.
+    Found 9-bit subtractor for signal <not_p_subBestVecX>.
+    Found 9-bit subtractor for signal <not_p_subBestVecY>.
+    Found 9-bit subtractor for signal <p_subBestVecX>.
+    Found 9-bit subtractor for signal <p_subBestVecY>.
     Found 20-bit register for signal <regBestSAD>.
     Found 8-bit register for signal <regBestVecX>.
     Found 8-bit register for signal <regBestVecY>.
     Found 8-bit register for signal <regBorderDown>.
-    Found 8-bit subtractor for signal <regBorderDown$sub0000> created at line 401.
+    Found 8-bit adder for signal <regBorderDown$add0000> created at line 441.
     Found 8-bit register for signal <regBorderLeft>.
-    Found 8-bit subtractor for signal <regBorderLeft$sub0000> created at line 394.
+    Found 8-bit subtractor for signal <regBorderLeft$sub0000> created at line 434.
     Found 8-bit register for signal <regBorderRight>.
-    Found 8-bit subtractor for signal <regBorderRight$sub0000> created at line 400.
+    Found 8-bit adder for signal <regBorderRight$add0000> created at line 440.
     Found 8-bit register for signal <regBorderUp>.
-    Found 8-bit subtractor for signal <regBorderUp$sub0000> created at line 395.
+    Found 8-bit subtractor for signal <regBorderUp$sub0000> created at line 435.
     Found 8-bit register for signal <regCenterx>.
     Found 8-bit register for signal <regCenterY>.
     Found 8-bit register for signal <regCyclesPerPU>.
     Found 7-bit register for signal <regHeightPU>.
     Found 1-bit register for signal <regis8x8or16x4>.
     Found 8-bit register for signal <regSearchRange>.
+    Found 8-bit register for signal <regSubBestVecX>.
+    Found 8-bit register for signal <regSubBestVecY>.
     Found 7-bit register for signal <regWidthPU>.
     Found 1-bit register for signal <validBitByPass1>.
     Found 1-bit register for signal <validBitByPass10>.
@@ -768,11 +743,14 @@ WARNING:Xst:1780 - Signal <START2> is never used or assigned. This unconnected s
     Found 1-bit register for signal <validBitByPass7>.
     Found 1-bit register for signal <validBitByPass8>.
     Found 1-bit register for signal <validBitByPass9>.
+    Found 9-bit comparator less for signal <vecBig$cmp_lt0000> created at line 386.
+    Found 9-bit comparator less for signal <vecBig$cmp_lt0001> created at line 386.
+    Found 9-bit comparator less for signal <vecBig$cmp_lt0002> created at line 386.
+    Found 9-bit comparator less for signal <vecBig$cmp_lt0003> created at line 386.
     Summary:
-	inferred 269 D-type flip-flop(s).
-	inferred   7 Adder/Subtractor(s).
-	inferred   1 Multiplier(s).
-	inferred   1 Comparator(s).
+	inferred 285 D-type flip-flop(s).
+	inferred  11 Adder/Subtractor(s).
+	inferred   5 Comparator(s).
 Unit <Final_TZSearch> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -784,42 +762,37 @@ Macro Statistics
 # ROMs                                                 : 3
  4x5-bit ROM                                           : 1
  8x8-bit ROM                                           : 2
-# Multipliers                                          : 1
- 7x7-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 211
+# Adders/Subtractors                                   : 218
  10-bit adder                                          : 16
  11-bit adder                                          : 8
  12-bit adder                                          : 4
  13-bit adder                                          : 2
  14-bit adder                                          : 1
+ 5-bit adder                                           : 1
  8-bit adder                                           : 6
  8-bit addsub                                          : 2
- 8-bit subtractor                                      : 12
+ 8-bit subtractor                                      : 14
  9-bit adder                                           : 32
- 9-bit subtractor                                      : 128
-# Counters                                             : 4
+ 9-bit subtractor                                      : 132
+# Counters                                             : 2
  2-bit up counter                                      : 1
  3-bit up counter                                      : 1
- 4-bit up counter                                      : 1
- 5-bit up counter                                      : 1
 # Accumulators                                         : 1
  20-bit up loadable accumulator                        : 1
-# Registers                                            : 409
- 1-bit register                                        : 26
+# Registers                                            : 387
+ 1-bit register                                        : 17
  10-bit register                                       : 16
  11-bit register                                       : 8
  12-bit register                                       : 17
  13-bit register                                       : 6
  14-bit register                                       : 1
  16-bit register                                       : 1
- 17-bit register                                       : 16
  2-bit register                                        : 1
  20-bit register                                       : 1
- 5-bit register                                        : 1
- 6-bit register                                        : 1
- 7-bit register                                        : 2
+ 5-bit register                                        : 2
+ 7-bit register                                        : 3
  78-bit register                                       : 1
- 8-bit register                                        : 279
+ 8-bit register                                        : 281
  9-bit register                                        : 32
 # Latches                                              : 53
  1-bit latch                                           : 44
@@ -827,13 +800,13 @@ Macro Statistics
  16-bit latch                                          : 1
  2-bit latch                                           : 2
  3-bit latch                                           : 2
- 6-bit latch                                           : 1
+ 7-bit latch                                           : 1
  78-bit latch                                          : 2
-# Comparators                                          : 19
- 17-bit comparator equal                               : 16
+# Comparators                                          : 7
  2-bit comparator equal                                : 1
  20-bit comparator less                                : 1
  5-bit comparator equal                                : 1
+ 9-bit comparator less                                 : 4
 
 =========================================================================
 
@@ -861,6 +834,7 @@ WARNING:Xst:1426 - The value init of the FF/Latch 0 hinder the constant cleaning
    You should achieve better results by setting this init to 0.
 WARNING:Xst:1426 - The value init of the FF/Latch 0 hinder the constant cleaning in the block 0.
    You should achieve better results by setting this init to 0.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <58>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <57>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <56>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <55>. This FF/Latch will be trimmed during the optimization process.
@@ -882,7 +856,7 @@ WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 i
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <39>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <38>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <37>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <36>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <regByPassVecFound> (without init value) has a constant value of 0 in block <Inst_Datapath_FirstSearch>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <5>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <5> has a constant value of 0 in block <state>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <77>. This FF/Latch will be trimmed during the optimization process.
@@ -904,7 +878,6 @@ WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 i
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <61>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <60>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <59>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <58>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <13>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <11>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <10>. This FF/Latch will be trimmed during the optimization process.
@@ -927,6 +900,7 @@ WARNING:Xst:1293 - FF/Latch <45> has a constant value of 0 in block <state>. Thi
 WARNING:Xst:1293 - FF/Latch <44> has a constant value of 0 in block <state>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <24> has a constant value of 0 in block <state>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <22> has a constant value of 0 in block <state>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <36>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <35>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <34>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <33>. This FF/Latch will be trimmed during the optimization process.
@@ -949,6 +923,8 @@ WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 i
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <16>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <15>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1290 - Hierarchical block <Inst_Circ_Buffer> is unconnected in block <Inst_Datapath_FirstSearch>.
+   It will be removed from the design.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -957,41 +933,38 @@ Macro Statistics
 # ROMs                                                 : 3
  4x5-bit ROM                                           : 1
  8x8-bit ROM                                           : 2
-# Multipliers                                          : 1
- 7x7-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 211
+# Adders/Subtractors                                   : 218
  10-bit adder                                          : 16
  11-bit adder                                          : 8
  12-bit adder                                          : 4
  13-bit adder                                          : 2
  14-bit adder                                          : 1
+ 5-bit adder                                           : 1
  8-bit adder                                           : 6
  8-bit addsub                                          : 2
- 8-bit subtractor                                      : 76
+ 8-bit subtractor                                      : 80
  9-bit adder                                           : 32
- 9-bit subtractor                                      : 64
-# Counters                                             : 4
+ 9-bit subtractor                                      : 66
+# Counters                                             : 2
  2-bit up counter                                      : 1
  3-bit up counter                                      : 1
- 4-bit up counter                                      : 1
- 5-bit up counter                                      : 1
 # Accumulators                                         : 1
  20-bit up loadable accumulator                        : 1
-# Registers                                            : 3506
- Flip-Flops                                            : 3506
+# Registers                                            : 3247
+ Flip-Flops                                            : 3247
 # Latches                                              : 53
  1-bit latch                                           : 44
  12-bit latch                                          : 1
  16-bit latch                                          : 1
  2-bit latch                                           : 2
  3-bit latch                                           : 2
- 6-bit latch                                           : 1
+ 7-bit latch                                           : 1
  78-bit latch                                          : 2
-# Comparators                                          : 19
- 17-bit comparator equal                               : 16
+# Comparators                                          : 7
  2-bit comparator equal                                : 1
  20-bit comparator less                                : 1
  5-bit comparator equal                                : 1
+ 9-bit comparator less                                 : 4
 
 =========================================================================
 
@@ -1009,6 +982,7 @@ WARNING:Xst:1710 - FF/Latch <op_typeY_mux0000> (without init value) has a consta
 INFO:Xst:2261 - The FF/Latch <sel_distY_2> in Unit <UC_MainFirst> is equivalent to the following FF/Latch, which will be removed : <sel_distX_2> 
 WARNING:Xst:1426 - The value init of the FF/Latch nextState_0 hinder the constant cleaning in the block UC_TZSearch.
    You should achieve better results by setting this init to 0.
+WARNING:Xst:1710 - FF/Latch <Inst_Datapath_FirstSearch/regByPassVecFound> (without init value) has a constant value of 0 in block <Final_TZSearch>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1426 - The value init of the FF/Latch nextState_0 hinder the constant cleaning in the block UC_MainFirst.
    You should achieve better results by setting this init to 0.
 WARNING:Xst:1293 - FF/Latch <nextState_22> has a constant value of 0 in block <UC_MainFirst>. This FF/Latch will be trimmed during the optimization process.
@@ -1029,11 +1003,11 @@ Optimizing unit <Final_TZSearch> ...
 
 Optimizing unit <genericSub> ...
 
-Optimizing unit <CircularBuffer_Datapath> ...
-
 Optimizing unit <UC_SAD> ...
 
 Optimizing unit <UC_MainFirst> ...
+INFO:Xst:2261 - The FF/Latch <validBit> in Unit <UC_MainFirst> is equivalent to the following FF/Latch, which will be removed : <initIncrement> 
+INFO:Xst:2261 - The FF/Latch <validBit> in Unit <UC_MainFirst> is equivalent to the following FF/Latch, which will be removed : <initIncrement> 
 
 Optimizing unit <UC_Raster> ...
 
@@ -1042,6 +1016,8 @@ Optimizing unit <UC_TZSearch> ...
 Optimizing unit <blck4x4> ...
 
 Optimizing unit <Datapath> ...
+WARNING:Xst:2677 - Node <Inst_UC_MainFirst/loadVecFound> of sequential type is unconnected in block <Final_TZSearch>.
+WARNING:Xst:2677 - Node <Inst_UC_MainFirst/writeCache> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_Datapath/regByPass48_1_12> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_Datapath/regByPass48_1_11> of sequential type is unconnected in block <Final_TZSearch>.
 WARNING:Xst:2677 - Node <Inst_Datapath/regByPass48_1_10> of sequential type is unconnected in block <Final_TZSearch>.
@@ -1241,7 +1217,7 @@ WARNING:Xst:2677 - Node <Inst_Datapath/regByPass441_0_0> of sequential type is u
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Final_TZSearch, actual ratio is 48.
+Found area constraint ratio of 100 (+ 5) on block Final_TZSearch, actual ratio is 45.
 
 Final Macro Processing ...
 
@@ -1279,35 +1255,33 @@ Processing Unit <Final_TZSearch> :
 	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentXVecByPass8_5>.
 	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentXVecByPass8_6>.
 	Found 8-bit shift register for signal <Inst_Datapath_Raster/currentXVecByPass8_7>.
-	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_0>.
-	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_1>.
-	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_2>.
-	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_3>.
-	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_4>.
-	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_5>.
-	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_6>.
-	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass10_7>.
-	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_0>.
-	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_1>.
-	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_2>.
-	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_3>.
-	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_4>.
-	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_5>.
-	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_6>.
-	Found 10-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass10_7>.
-	Found 8-bit shift register for signal <Inst_UC_Raster/validBitByPass8>.
+	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass9_0>.
+	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass9_1>.
+	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass9_2>.
+	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass9_3>.
+	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass9_4>.
+	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass9_5>.
+	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass9_6>.
+	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecXByPass9_7>.
+	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass9_0>.
+	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass9_1>.
+	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass9_2>.
+	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass9_3>.
+	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass9_4>.
+	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass9_5>.
+	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass9_6>.
+	Found 9-bit shift register for signal <Inst_Datapath_FirstSearch/regCurVecYByPass9_7>.
 Unit <Final_TZSearch> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 2905
- Flip-Flops                                            : 2905
-# Shift Registers                                      : 50
- 10-bit shift register                                 : 16
- 8-bit shift register                                  : 33
- 9-bit shift register                                  : 1
+# Registers                                            : 2660
+ Flip-Flops                                            : 2660
+# Shift Registers                                      : 49
+ 8-bit shift register                                  : 32
+ 9-bit shift register                                  : 17
 
 =========================================================================
 
@@ -1336,36 +1310,36 @@ Design Statistics
 # IOs                              : 1097
 
 Cell Usage :
-# BELS                             : 6372
+# BELS                             : 6336
 #      GND                         : 1
-#      INV                         : 13
-#      LUT2                        : 1760
-#      LUT3                        : 590
-#      LUT4                        : 127
-#      LUT5                        : 161
-#      LUT6                        : 223
-#      MUXCY                       : 1753
-#      MUXF7                       : 6
+#      INV                         : 12
+#      LUT2                        : 1801
+#      LUT3                        : 594
+#      LUT4                        : 129
+#      LUT5                        : 138
+#      LUT6                        : 177
+#      MUXCY                       : 1701
+#      MUXF7                       : 9
 #      VCC                         : 1
-#      XORCY                       : 1737
-# FlipFlops/Latches                : 3184
-#      FDC                         : 2426
-#      FDCE                        : 529
-#      FDE                         : 50
-#      FDP                         : 4
-#      FDPE                        : 20
+#      XORCY                       : 1773
+# FlipFlops/Latches                : 2934
+#      FDC                         : 2491
+#      FDCE                        : 197
+#      FDE                         : 65
+#      FDP                         : 24
+#      FDPE                        : 4
 #      LD                          : 118
-#      LD_1                        : 37
-# Shift Registers                  : 50
-#      SRLC16E                     : 50
+#      LD_1                        : 35
+# Shift Registers                  : 49
+#      SRLC16E                     : 49
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 1096
 #      IBUF                        : 1063
 #      OBUF                        : 33
-# DSPs                             : 1
-#      DSP48E                      : 1
+# Others                           : 1
+#      mult_core                   : 1
 =========================================================================
 
 Device utilization summary:
@@ -1375,18 +1349,18 @@ Selected Device : 5vlx20tff323-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            3183  out of  12480    25%  
- Number of Slice LUTs:                 2924  out of  12480    23%  
-    Number used as Logic:              2874  out of  12480    23%  
-    Number used as Memory:               50  out of   3360     1%  
-       Number used as SRL:               50
+ Number of Slice Registers:            2933  out of  12480    23%  
+ Number of Slice LUTs:                 2900  out of  12480    23%  
+    Number used as Logic:              2851  out of  12480    22%  
+    Number used as Memory:               49  out of   3360     1%  
+       Number used as SRL:               49
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   4504
-   Number with an unused Flip Flop:    1321  out of   4504    29%  
-   Number with an unused LUT:          1580  out of   4504    35%  
-   Number of fully used LUT-FF pairs:  1603  out of   4504    35%  
-   Number of unique control sets:        88
+ Number of LUT Flip Flop pairs used:   4216
+   Number with an unused Flip Flop:    1283  out of   4216    30%  
+   Number with an unused LUT:          1316  out of   4216    31%  
+   Number of fully used LUT-FF pairs:  1617  out of   4216    38%  
+   Number of unique control sets:        65
 
 IO Utilization: 
  Number of IOs:                        1097
@@ -1395,7 +1369,6 @@ IO Utilization:
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
- Number of DSP48Es:                       1  out of     24     4%  
 
 WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
 
@@ -1420,78 +1393,75 @@ Clock Information:
 -----------------------------------------------------------------------------------------------------+---------------------------------------------------+-------+
 Clock Signal                                                                                         | Clock buffer(FF name)                             | Load  |
 -----------------------------------------------------------------------------------------------------+---------------------------------------------------+-------+
-CLK                                                                                                  | BUFGP                                             | 3079  |
+CLK                                                                                                  | BUFGP                                             | 2830  |
 Inst_UC_PredMov/done_or0000(Inst_UC_PredMov/done_or00001:O)                                          | NONE(*)(Inst_UC_PredMov/done)                     | 1     |
 Inst_UC_PredMov/START2_or0000(Inst_UC_PredMov/START2_or00001:O)                                      | NONE(*)(Inst_UC_PredMov/START2)                   | 1     |
 Inst_SAD_UC/nextState_not0001(Inst_SAD_UC/nextState_not00011:O)                                      | NONE(*)(Inst_SAD_UC/nextState_11)                 | 12    |
 Inst_SAD_UC/doneRest_or0000(Inst_SAD_UC/doneRest_or0000:O)                                           | NONE(*)(Inst_SAD_UC/doneRest)                     | 1     |
 Inst_SAD_UC/nrAccumSubSrc_not0001(Inst_SAD_UC/nrAccumSubSrc_not0001:O)                               | NONE(*)(Inst_SAD_UC/nrAccumSubSrc)                | 1     |
 Inst_UC_MainFirst/nextState_not00011(Inst_UC_MainFirst/nextState_not00011:O)                         | BUFG(*)(Inst_UC_MainFirst/nextState_77)           | 74    |
-Inst_UC_MainFirst/sel_candidates_or0000(Inst_UC_MainFirst/sel_candidates_or0000:O)                   | NONE(*)(Inst_UC_MainFirst/sel_candidates_1)       | 2     |
+Inst_UC_MainFirst/sel_candidates_or0000(Inst_UC_MainFirst/sel_candidates_or00001:O)                  | NONE(*)(Inst_UC_MainFirst/sel_candidates_1)       | 2     |
 Inst_UC_MainFirst/sel_distX_not0001(Inst_UC_MainFirst/sel_distX_not0001171:O)                        | NONE(*)(Inst_UC_MainFirst/sel_distY_2)            | 3     |
-Inst_UC_MainFirst/loadVecFound_or0000(Inst_UC_MainFirst/loadVecFound_or00001:O)                      | NONE(*)(Inst_UC_MainFirst/loadVecFound)           | 1     |
-Inst_UC_MainFirst/START2_or0000(Inst_UC_MainFirst/START2_or00001:O)                                  | NONE(*)(Inst_UC_MainFirst/START2)                 | 1     |
+Inst_UC_MainFirst/START2_or0000(Inst_UC_MainFirst/START2_or00003:O)                                  | NONE(*)(Inst_UC_MainFirst/START2)                 | 1     |
 Inst_UC_MainFirst/loadregNumPUsLevel_or0000(Inst_UC_MainFirst/loadregNumPUsLevel_or00001:O)          | NONE(*)(Inst_UC_MainFirst/loadregNumPUsLevel)     | 1     |
 Inst_UC_MainFirst/incRegPUsFinished_or0000(Inst_UC_MainFirst/incRegPUsFinished_or00001:O)            | NONE(*)(Inst_UC_MainFirst/incRegPUsFinished)      | 1     |
 Inst_UC_MainFirst/op_typeY_or0000(Inst_UC_MainFirst/op_typeY_or00001:O)                              | NONE(*)(Inst_UC_MainFirst/op_typeY)               | 1     |
-Inst_UC_MainFirst/incRegCurVecX_or0000(Inst_UC_MainFirst/incRegCurVecX_or0000:O)                     | NONE(*)(Inst_UC_MainFirst/incRegCurVecX)          | 1     |
+Inst_UC_MainFirst/incRegCurVecX_or0000(Inst_UC_MainFirst/incRegCurVecX_or00001:O)                    | NONE(*)(Inst_UC_MainFirst/incRegCurVecX)          | 1     |
 Inst_UC_MainFirst/loadByPassOutOfAnyBound_or0000(Inst_UC_MainFirst/loadByPassOutOfAnyBound_or00001:O)| NONE(*)(Inst_UC_MainFirst/loadByPassOutOfAnyBound)| 1     |
-Inst_UC_MainFirst/waitCycles_or0000(Inst_UC_MainFirst/waitCycles_or0000:O)                           | NONE(*)(Inst_UC_MainFirst/waitCycles)             | 1     |
-Inst_UC_MainFirst/initIncrement_or0000(Inst_UC_MainFirst/initIncrement_or00001:O)                    | NONE(*)(Inst_UC_MainFirst/initIncrement)          | 1     |
-Inst_UC_MainFirst/rstRegPUsFinished_or0000(Inst_UC_MainFirst/rstRegPUsFinished_or0000:O)             | NONE(*)(Inst_UC_MainFirst/rstRegPUsFinished)      | 1     |
+Inst_UC_MainFirst/waitCycles_or0000(Inst_UC_MainFirst/waitCycles_or000067:O)                         | NONE(*)(Inst_UC_MainFirst/waitCycles)             | 1     |
+Inst_UC_MainFirst/rstRegPUsFinished_or0000(Inst_UC_MainFirst/rstRegPUsFinished_or00001:O)            | NONE(*)(Inst_UC_MainFirst/rstRegPUsFinished)      | 1     |
 Inst_UC_MainFirst/done_or0000(Inst_UC_MainFirst/done_or0000_wg_cy<11>:O)                             | NONE(*)(Inst_UC_MainFirst/done)                   | 1     |
 Inst_UC_MainFirst/rstRegCurVecY_or0000(Inst_UC_MainFirst/rstRegCurVecY_or00001:O)                    | NONE(*)(Inst_UC_MainFirst/rstRegCurVecY)          | 1     |
-Inst_UC_MainFirst/initData_or0000(Inst_UC_MainFirst/initData_or0000:O)                               | NONE(*)(Inst_UC_MainFirst/initData)               | 1     |
+Inst_UC_MainFirst/initData_or0000(Inst_UC_MainFirst/initData_or00001:O)                              | NONE(*)(Inst_UC_MainFirst/initData)               | 1     |
 Inst_UC_MainFirst/sendToMem_or0000(Inst_UC_MainFirst/sendToMem_or00001:O)                            | NONE(*)(Inst_UC_MainFirst/sendToMem)              | 1     |
-Inst_UC_MainFirst/validBit_or0000(Inst_UC_MainFirst/validBit_or00001:O)                              | NONE(*)(Inst_UC_MainFirst/validBit)               | 1     |
+Inst_UC_MainFirst/initIncrement_or0000(Inst_UC_MainFirst/initIncrement_or0000_f7:O)                  | NONE(*)(Inst_UC_MainFirst/validBit)               | 1     |
 Inst_UC_MainFirst/incRegNumLevels_or0000(Inst_UC_MainFirst/incRegNumLevels_or0000:O)                 | NONE(*)(Inst_UC_MainFirst/incRegNumLevels)        | 1     |
 Inst_UC_MainFirst/incDoAgain_or0000(Inst_UC_MainFirst/incDoAgain_or0000_wg_cy<10>:O)                 | NONE(*)(Inst_UC_MainFirst/incDoAgain)             | 1     |
-Inst_UC_MainFirst/loadCurVec_or0000(Inst_UC_MainFirst/loadCurVec_or0000:O)                           | NONE(*)(Inst_UC_MainFirst/loadCurVec)             | 1     |
+Inst_UC_MainFirst/loadCurVec_or0000(Inst_UC_MainFirst/loadCurVec_or00001:O)                          | NONE(*)(Inst_UC_MainFirst/loadCurVec)             | 1     |
 Inst_UC_MainFirst/op_typeX_not0001(Inst_UC_MainFirst/op_typeX_not00011:O)                            | NONE(*)(Inst_UC_MainFirst/op_typeX)               | 1     |
 Inst_UC_MainFirst/incRegCurVecY_not0001(Inst_UC_MainFirst/rstRegCurVecX_not000111:O)                 | NONE(*)(Inst_UC_MainFirst/incRegCurVecY)          | 1     |
 Inst_UC_MainFirst/rstRegCurVecX_not0001(Inst_UC_MainFirst/rstRegCurVecX_not00012:O)                  | NONE(*)(Inst_UC_MainFirst/rstRegCurVecX)          | 1     |
-Inst_UC_MainFirst/writeCache_not0001(Inst_UC_MainFirst/writeCache_not0001:O)                         | NONE(*)(Inst_UC_MainFirst/writeCache)             | 1     |
 Inst_UC_MainFirst/nextState_or0000(Inst_UC_MainFirst/nextState_or00001:O)                            | NONE(*)(Inst_UC_MainFirst/op_typeX_mux0000)       | 2     |
 Inst_UC_Raster/nextState_not0001(Inst_UC_Raster/nextState_not00011:O)                                | NONE(*)(Inst_UC_Raster/nextState_15)              | 15    |
 Inst_UC_Raster/START2_or0000(Inst_UC_Raster/START2_or000067:O)                                       | NONE(*)(Inst_UC_Raster/START2)                    | 2     |
-Inst_UC_Raster/initIncrement_or0000(Inst_UC_Raster/initIncrement_or000055:O)                         | NONE(*)(Inst_UC_Raster/initIncrement)             | 1     |
+Inst_UC_Raster/initIncrement_or0000(Inst_UC_Raster/initIncrement_or0000:O)                           | NONE(*)(Inst_UC_Raster/initIncrement)             | 1     |
 Inst_UC_Raster/done_or0000(Inst_UC_Raster/done_or000067:O)                                           | NONE(*)(Inst_UC_Raster/done)                      | 1     |
 Inst_UC_Raster/initData_or0000(Inst_UC_Raster/initData_or000055_f7:O)                                | NONE(*)(Inst_UC_Raster/initData)                  | 1     |
 Inst_UC_Raster/sendToMem_or0000(Inst_UC_Raster/sendToMem_or000055:O)                                 | NONE(*)(Inst_UC_Raster/sendToMem)                 | 1     |
 Inst_UC_Raster/incRegX_or0000(Inst_UC_Raster/incRegX_or0000:O)                                       | NONE(*)(Inst_UC_Raster/incRegX)                   | 1     |
-Inst_UC_Raster/auxvalidBit_not0001(Inst_UC_Raster/auxvalidBit_not0001198:O)                          | NONE(*)(Inst_UC_Raster/auxvalidBit)               | 1     |
-Inst_TZSearch/state_5                                                                                | NONE(Inst_TZSearch/sel_TZ_stage_1)                | 2     |
-Inst_TZSearch/nextState_not0001(Inst_TZSearch/nextState_not0001:O)                                   | NONE(*)(Inst_TZSearch/nextState_5)                | 6     |
+Inst_UC_Raster/auxvalidBit_not0001(Inst_UC_Raster/auxvalidBit_not0001173:O)                          | NONE(*)(Inst_UC_Raster/auxvalidBit)               | 1     |
+Inst_TZSearch/sel_TZ_stage_or0000(Inst_TZSearch/sel_TZ_stage_or00001:O)                              | NONE(*)(Inst_TZSearch/sel_TZ_stage_1)             | 2     |
+Inst_TZSearch/nextState_not0001(Inst_TZSearch/nextState_not0001:O)                                   | NONE(*)(Inst_TZSearch/nextState_6)                | 7     |
 Inst_TZSearch/STARTFirstSearch_or0000(Inst_TZSearch/STARTFirstSearch_or00001:O)                      | NONE(*)(Inst_TZSearch/STARTFirstSearch)           | 1     |
 Inst_TZSearch/loadSearchCenter_or0000(Inst_TZSearch/loadSearchCenter_or00001:O)                      | NONE(*)(Inst_TZSearch/loadSearchCenter)           | 2     |
 Inst_TZSearch/STARTRaster_or0000(Inst_TZSearch/STARTRaster_or00001:O)                                | NONE(*)(Inst_TZSearch/STARTRaster)                | 1     |
 Inst_TZSearch/done_or0000(Inst_TZSearch/done_or00001:O)                                              | NONE(*)(Inst_TZSearch/done)                       | 1     |
 -----------------------------------------------------------------------------------------------------+---------------------------------------------------+-------+
-(*) These 44 clock signal(s) are generated by combinatorial logic,
+(*) These 42 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
--------------------------------------------------------------------------------------+------------------------------------------------------------------+-------+
-Control Signal                                                                       | Buffer(FF name)                                                  | Load  |
--------------------------------------------------------------------------------------+------------------------------------------------------------------+-------+
-GLOBAL_START_inv(Inst_TZSearch/state_Acst_inv1_INV_0:O)                              | NONE(GLOBAL_START_inv_shift1)                                    | 2359  |
-Inst_Datapath_FirstSearch/Inst_Circ_Buffer/START_inv(STARTFirstSearch_inv411_INV_0:O)| NONE(Inst_Datapath_FirstSearch/Inst_Circ_Buffer/START_inv_shift1)| 492   |
-Inst_UC_Raster/START_inv(STARTRaster_inv271_INV_0:O)                                 | NONE(Inst_Datapath_Raster/currentXVecByPass8_0)                  | 113   |
-Inst_SAD_UC/state_Acst_inv(Inst_SAD_UC/state_Acst_inv1:O)                            | NONE(Inst_SAD_UC/state_0)                                        | 12    |
-Inst_UC_PredMov/state_Rst_inv(Inst_UC_PredMov/state_Rst_inv1_INV_0:O)                | NONE(Inst_UC_PredMov/state_FSM_FFd1)                             | 3     |
--------------------------------------------------------------------------------------+------------------------------------------------------------------+-------+
+---------------------------------------------------------------------+------------------------------------------------+-------+
+Control Signal                                                       | Buffer(FF name)                                | Load  |
+---------------------------------------------------------------------+------------------------------------------------+-------+
+GLOBAL_START_inv(Inst_TZSearch/state_Acst_inv1_INV_0:O)              | NONE(GLOBAL_START_inv_shift1)                  | 2376  |
+Inst_UC_MainFirst/state_Acst_inv(STARTFirstSearch_inv391_INV_0:O)    | NONE(Inst_Datapath_FirstSearch/regBestX_0)     | 213   |
+Inst_UC_Raster/state_Acst_inv(STARTRaster_inv271_INV_0:O)            | NONE(Inst_Datapath_Raster/currentXVecByPass8_0)| 112   |
+Inst_SAD_UC/state_Acst_inv(Inst_SAD_UC/state_Acst_inv1:O)            | NONE(Inst_SAD_UC/state_0)                      | 12    |
+Inst_UC_PredMov/state_Rst_inv(Inst_UC_PredMov/state_Rst_inv1_INV_0:O)| NONE(Inst_UC_PredMov/state_FSM_FFd1)           | 3     |
+---------------------------------------------------------------------+------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 5.252ns (Maximum Frequency: 190.416MHz)
-   Minimum input arrival time before clock: 1.446ns
-   Maximum output required time after clock: 3.896ns
-   Maximum combinational path delay: No path found
+   Minimum period: 2.475ns (Maximum Frequency: 404.031MHz)
+   Minimum input arrival time before clock: 1.573ns
+   Maximum output required time after clock: 3.897ns
+   Maximum combinational path delay: 0.468ns
 
 Timing Detail:
 --------------
@@ -1499,47 +1469,57 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 5.252ns (frequency: 190.416MHz)
-  Total number of paths / destination ports: 46979 / 2241
+  Clock period: 2.475ns (frequency: 404.031MHz)
+  Total number of paths / destination ports: 42771 / 1643
 -------------------------------------------------------------------------
-Delay:               5.252ns (Levels of Logic = 3)
-  Source:            regHeightPU_4 (FF)
-  Destination:       regCyclesPerPU_6 (FF)
+Delay:               2.475ns (Levels of Logic = 12)
+  Source:            Inst_Datapath/S_SAD_0 (FF)
+  Destination:       Inst_Datapath_FirstSearch/regLoadedBetter (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: regHeightPU_4 to regCyclesPerPU_6
+  Data Path: Inst_Datapath/S_SAD_0 to Inst_Datapath_FirstSearch/regLoadedBetter
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              2   0.396   0.290  regHeightPU_4 (regHeightPU_4)
-     DSP48E:A4->P10        3   3.068   0.910  Mmult_multHW (multHW<10>)
-     LUT6:I0->O            2   0.086   0.416  cyclesPerPU<6>11 (cyclesPerPU<6>_bdd0)
-     LUT2:I1->O            1   0.086   0.000  cyclesPerPU<6>2 (cyclesPerPU<6>)
-     FDC:D                    -0.022          regCyclesPerPU_6
+     FDC:C->Q              4   0.396   0.675  Inst_Datapath/S_SAD_0 (Inst_Datapath/S_SAD_0)
+     LUT4:I0->O            1   0.086   0.000  Mcompar_flagBetter_cmp_lt0000_lut<0> (Mcompar_flagBetter_cmp_lt0000_lut<0>)
+     MUXCY:S->O            1   0.305   0.000  Mcompar_flagBetter_cmp_lt0000_cy<0> (Mcompar_flagBetter_cmp_lt0000_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_flagBetter_cmp_lt0000_cy<1> (Mcompar_flagBetter_cmp_lt0000_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_flagBetter_cmp_lt0000_cy<2> (Mcompar_flagBetter_cmp_lt0000_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_flagBetter_cmp_lt0000_cy<3> (Mcompar_flagBetter_cmp_lt0000_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_flagBetter_cmp_lt0000_cy<4> (Mcompar_flagBetter_cmp_lt0000_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_flagBetter_cmp_lt0000_cy<5> (Mcompar_flagBetter_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_flagBetter_cmp_lt0000_cy<6> (Mcompar_flagBetter_cmp_lt0000_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_flagBetter_cmp_lt0000_cy<7> (Mcompar_flagBetter_cmp_lt0000_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_flagBetter_cmp_lt0000_cy<8> (Mcompar_flagBetter_cmp_lt0000_cy<8>)
+     MUXCY:CI->O          53   0.222   0.523  Mcompar_flagBetter_cmp_lt0000_cy<9> (Mcompar_flagBetter_cmp_lt0000_cy<9>)
+     LUT4:I3->O            1   0.086   0.000  Inst_Datapath_FirstSearch/regLoadedBetter_rstpot (Inst_Datapath_FirstSearch/regLoadedBetter_rstpot)
+     FDC:D                    -0.022          Inst_Datapath_FirstSearch/regLoadedBetter
     ----------------------------------------
-    Total                      5.252ns (3.636ns logic, 1.616ns route)
-                                       (69.2% logic, 30.8% route)
+    Total                      2.475ns (1.277ns logic, 1.198ns route)
+                                       (51.6% logic, 48.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 1066 / 1063
+  Total number of paths / destination ports: 1101 / 1071
 -------------------------------------------------------------------------
-Offset:              1.446ns (Levels of Logic = 2)
-  Source:            heightPU<2> (PAD)
-  Destination:       regis8x8or16x4 (FF)
+Offset:              1.573ns (Levels of Logic = 2)
+  Source:            MULT_CORE_GEN:p<10> (PAD)
+  Destination:       regCyclesPerPU_7 (FF)
   Destination Clock: CLK rising
 
-  Data Path: heightPU<2> to regis8x8or16x4
+  Data Path: MULT_CORE_GEN:p<10> to regCyclesPerPU_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.694   0.666  heightPU_2_IBUF (heightPU_2_IBUF)
-     LUT4:I0->O            1   0.086   0.000  auxIs8x8or16x4_or00001 (auxIs8x8or16x4)
-     FDC:D                    -0.022          regis8x8or16x4
+    mult_core:p<10>        3   0.000   0.910  MULT_CORE_GEN (multHW<10>)
+     LUT6:I0->O            2   0.086   0.491  cyclesPerPU<6>11 (cyclesPerPU<6>_bdd0)
+     LUT2:I0->O            1   0.086   0.000  cyclesPerPU<7>1 (cyclesPerPU<7>)
+     FDC:D                    -0.022          regCyclesPerPU_7
     ----------------------------------------
-    Total                      1.446ns (0.780ns logic, 0.666ns route)
-                                       (53.9% logic, 46.1% route)
+    Total                      1.573ns (0.172ns logic, 1.401ns route)
+                                       (10.9% logic, 89.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_TZSearch/done_or0000'
@@ -1562,7 +1542,7 @@ Offset:              3.040ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 48 / 32
+  Total number of paths / destination ports: 62 / 46
 -------------------------------------------------------------------------
 Offset:              3.581ns (Levels of Logic = 2)
   Source:            Inst_Datapath_Raster/regYMem3_1 (FF)
@@ -1581,36 +1561,54 @@ Offset:              3.581ns (Levels of Logic = 2)
                                        (73.3% logic, 26.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_TZSearch/state_5'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_TZSearch/sel_TZ_stage_or0000'
   Total number of paths / destination ports: 32 / 16
 -------------------------------------------------------------------------
-Offset:              3.896ns (Levels of Logic = 2)
+Offset:              3.897ns (Levels of Logic = 2)
   Source:            Inst_TZSearch/sel_TZ_stage_0 (LATCH)
   Destination:       curVecX<7> (PAD)
-  Source Clock:      Inst_TZSearch/state_5 rising
+  Source Clock:      Inst_TZSearch/sel_TZ_stage_or0000 rising
 
   Data Path: Inst_TZSearch/sel_TZ_stage_0 to curVecX<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD_1:G->Q            38   0.610   0.771  Inst_TZSearch/sel_TZ_stage_0 (Inst_TZSearch/sel_TZ_stage_0)
+     LD_1:G->Q            39   0.610   0.771  Inst_TZSearch/sel_TZ_stage_0 (Inst_TZSearch/sel_TZ_stage_0)
      LUT4:I0->O            1   0.086   0.286  curVecY<7>1 (curVecY_7_OBUF)
      OBUF:I->O                 2.144          curVecY_7_OBUF (curVecY<7>)
     ----------------------------------------
-    Total                      3.896ns (2.840ns logic, 1.056ns route)
+    Total                      3.897ns (2.840ns logic, 1.057ns route)
                                        (72.9% logic, 27.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               0.468ns (Levels of Logic = 1)
+  Source:            CLK (PAD)
+  Destination:       MULT_CORE_GEN:clk (PAD)
+
+  Data Path: CLK to MULT_CORE_GEN:clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     BUFGP:I->O         2830   0.000   0.468  CLK_BUFGP (CLK_BUFGP)
+    mult_core:clk              0.000          MULT_CORE_GEN
+    ----------------------------------------
+    Total                      0.468ns (0.000ns logic, 0.468ns route)
+                                       (0.0% logic, 100.0% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 39.00 secs
-Total CPU time to Xst completion: 39.20 secs
+Total REAL time to Xst completion: 63.00 secs
+Total CPU time to Xst completion: 62.41 secs
  
 --> 
 
-Total memory usage is 469200 kilobytes
+Total memory usage is 419216 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  397 (   0 filtered)
+Number of warnings :  398 (   0 filtered)
 Number of infos    :   66 (   0 filtered)
 

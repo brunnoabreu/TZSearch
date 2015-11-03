@@ -35,7 +35,7 @@ entity Datapath_Raster is
    Port(	
 		CLK						: in STD_LOGIC;
 		START						: in STD_LOGIC;
-		foundBetterSAD			: in STD_LOGIC;
+	--	foundBetterSAD			: in STD_LOGIC;
 		cyclesPerPU				: in STD_LOGIC_VECTOR(7 downto 0);
 		borderLeft				: in STD_LOGIC_VECTOR(7 downto 0);
 		borderRight				: in STD_LOGIC_VECTOR(7 downto 0);
@@ -47,9 +47,9 @@ entity Datapath_Raster is
 		incRegX					: in STD_LOGIC;
 		loadRegXMem2			: in STD_LOGIC;
 		sendToMem				: in STD_LOGIC;
-		searchRange				: in STD_LOGIC_VECTOR(7 downto 0);
-		initCenterX				: in STD_LOGIC_VECTOR(7 downto 0);
-		initCenterY				: in STD_LOGIC_VECTOR(7 downto 0);
+	--	searchRange				: in STD_LOGIC_VECTOR(7 downto 0);
+	--	initCenterX				: in STD_LOGIC_VECTOR(7 downto 0);
+	--	initCenterY				: in STD_LOGIC_VECTOR(7 downto 0);
 		bestInitialX			: in STD_LOGIC_VECTOR(7 downto 0);
 		bestInitialY			: in STD_LOGIC_VECTOR(7 downto 0);
 		finishSendPartitions	: out STD_LOGIC;
@@ -64,8 +64,8 @@ end Datapath_Raster;
 
 architecture Behavioral of Datapath_Raster is
 
-signal currentXVecByPass1, currentXVecByPass2, currentXVecByPass3, currentXVecByPass4, currentXVecByPass5, currentXVecByPass6, currentXVecByPass7, currentXVecByPass8: STD_LOGIC_VECTOR(7 downto 0);
-signal currentYVecByPass1, currentYVecByPass2, currentYVecByPass3, currentYVecByPass4, currentYVecByPass5, currentYVecByPass6, currentYVecByPass7, currentYVecByPass8: STD_LOGIC_VECTOR(7 downto 0);
+signal currentXVecByPass1, currentXVecByPass2, currentXVecByPass3, currentXVecByPass4, currentXVecByPass5, currentXVecByPass6, currentXVecByPass7, currentXVecByPass8, currentXVecByPass9, currentXVecByPass10: STD_LOGIC_VECTOR(7 downto 0);
+signal currentYVecByPass1, currentYVecByPass2, currentYVecByPass3, currentYVecByPass4, currentYVecByPass5, currentYVecByPass6, currentYVecByPass7, currentYVecByPass8, currentYVecByPass9, currentYVecByPass10: STD_LOGIC_VECTOR(7 downto 0);
 signal regLatency, regSubLatency, subLatency: STD_LOGIC_VECTOR(7 downto 0);
 signal regBestInitialX, regBestInitialY: STD_LOGIC_VECTOR(7 downto 0);
 signal regXMem, regYMem, regYMemAfter: STD_LOGIC_VECTOR(7 downto 0);
@@ -73,8 +73,8 @@ signal regXMem2, regYMem2: STD_LOGIC_VECTOR(7 downto 0);
 signal regXMem3, regYMem3: STD_LOGIC_VECTOR(7 downto 0);
 signal subRight, subDown: STD_LOGIC_VECTOR(7 downto 0);
 signal auxIsOutOfXBound, auxIsOutOfYBound, regIsOutOfXBound, regIsOutOfYBound: STD_LOGIC;
-signal curRegBestVecX, curRegBestVecY: STD_LOGIC_VECTOR(7 downto 0);
-signal regInitCenterX, regInitCenterY: STD_LOGIC_VECTOR(7 downto 0);
+--signal curRegBestVecX, curRegBestVecY: STD_LOGIC_VECTOR(7 downto 0);
+--signal regInitCenterX, regInitCenterY: STD_LOGIC_VECTOR(7 downto 0);
 
 begin
 
@@ -90,8 +90,8 @@ subDown <= regYMemAfter - borderDown;
 
 --bestVecX <= curRegBestVecX;
 --bestVecY <= curRegBestVecY;
-bestVecX <= currentXVecByPass8;
-bestVecY <= currentYVecByPass8;
+bestVecX <= currentXVecByPass9;
+bestVecY <= currentYVecByPass9;
 xMem <= regXMem3;
 yMem <= regYMem3;
 isOutOfXBound <= regIsOutOfXBound;
@@ -100,14 +100,14 @@ isOutOfYBound <= regIsOutOfYBound;
 	process(CLK, START)
 	begin
 		if(START='0') then
-			regInitCenterX <= (OTHERS=>'0');
-			regInitCenterY <= (OTHERS=>'0');
+--			regInitCenterX <= (OTHERS=>'0');
+--			regInitCenterY <= (OTHERS=>'0');
 			regBestInitialX <= (OTHERS=>'0');
 			regBestInitialY <= (OTHERS=>'0');
 			regLatency <= (OTHERS=>'0');
 			regSubLatency <= (OTHERS=>'0');
-			curRegBestVecX <= (OTHERS=>'0');
-			curRegBestVecY <= (OTHERS=>'0');
+--			curRegBestVecX <= (OTHERS=>'0');
+--			curRegBestVecY <= (OTHERS=>'0');
 			regXMem <= (OTHERS=>'0');
 			regYMem <= (OTHERS=>'0');
 			regXMem2 <= (OTHERS=>'0');
@@ -128,8 +128,8 @@ isOutOfYBound <= regIsOutOfYBound;
 			regYMemAfter <= regYMem + IRASTER;
 			
 			if(initData = '1') then
-				curRegBestVecX <= regBestInitialX;
-				curRegBestVecY <= regBestInitialY;
+--				curRegBestVecX <= regBestInitialX;
+--				curRegBestVecY <= regBestInitialY;
 				regXMem <= borderLeft; --PODE-SE USAR OUTRO SOMADOR PARA FAZER TUDO UM CICLO ANTES
 				regYMem <= borderUp;
 			end if;
@@ -208,6 +208,8 @@ isOutOfYBound <= regIsOutOfYBound;
 			currentXVecByPass6 <= currentXVecByPass5;
 			currentXVecByPass7 <= currentXVecByPass6;
 			currentXVecByPass8 <= currentXVecByPass7;
+			currentXVecByPass9 <= currentXVecByPass8;
+			currentXVecByPass10 <= currentXVecByPass9;
 			currentYVecByPass1 <= regYMem3;
 			currentYVecByPass2 <= currentYVecByPass1;
 			currentYVecByPass3 <= currentYVecByPass2;
@@ -216,6 +218,8 @@ isOutOfYBound <= regIsOutOfYBound;
 			currentYVecByPass6 <= currentYVecByPass5;
 			currentYVecByPass7 <= currentYVecByPass6;
 			currentYVecByPass8 <= currentYVecByPass7;
+			currentYVecByPass9 <= currentYVecByPass8;
+			currentYVecByPass10 <= currentYVecByPass9;
 		end if;
 	end process;
 

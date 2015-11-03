@@ -38,6 +38,7 @@ entity UC_MainFirst is
 			doAgain						: in STD_LOGIC_VECTOR(2 downto 0);
 			is8x8or16x4					: in STD_LOGIC;
 			isOutOfAnyBound			: in STD_LOGIC;
+			inpDonePU					: in std_logic;
 			byPassIsOutOfAnyBound	: in STD_LOGIC;
 			hasPassedNumLevels		: in STD_LOGIC;
 			vecFound						: in STD_LOGIC;
@@ -65,6 +66,7 @@ entity UC_MainFirst is
 			rstRegNumLevels			: out STD_LOGIC;
 			initData						: out STD_LOGIC;
 			initIncrement				: out STD_LOGIC;
+			outDonePU					: out STD_LOGIC;
 			START2						: out STD_LOGIC;
 			waitCycles					: out STD_LOGIC;
 			validBit						: out STD_LOGIC;
@@ -90,6 +92,7 @@ signal concatVecOutBound: STD_LOGIC_VECTOR(1 downto 0);
 
 begin
 
+outDonePU <= inpDonePU;
 concatVecOutBound <= vecFound & isOutOfAnyBound;
 isNotOutOfAnyBound <= not (isOutOfAnyBound);
 isNotVecFound		 <= not (vecFound);
@@ -2099,6 +2102,7 @@ isValid <= isNotOutOfAnyBound and isNotvecFound;
 --				nextState <= waitAndDecide12;
 
 			when waitAndDecide12 =>
+				validBit <= '0';
 				incRegNumLevels <= '0';
 				rstRegPUsFinished <= '0';
 				incDoAgain <= '1';

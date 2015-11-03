@@ -92,24 +92,43 @@ begin
 				nextState <= waitPipe8;
 
 			when waitPipe8 =>
-				if(is8x8or16x4 = '1') then
-					nextState <= s2Nx2N_1;
-				else
+--				if(is8x8or16x4 = '1') then
+--					nextState <= s2Nx2N_1;
+--				else
 					nextState <= s2Nx2N_0;
-				end if;
+--				end if;
 
 			when s2Nx2N_0 =>
 				doneRest <= '0';
 				nrAccumSubSrc <= '1';
-				nextState <= s2Nx2N_1;
+				nextState <= s2Nx2N_0;
 				if(validBit = '0') then
 					nrAccumSubSrc <= '0';
 					nextState <= s2Nx2N_0;
 				end if;
+				if(subResult = '1') then
+					doneRest <= '1';
+					nrAccumSubSrc <= '0';
+					nextState <= s2Nx2N_0;
+				end if;
 				if(waitCycles = '1') then
+					--doneRest <= '0';
 					nextState <= waitFlushCycles;
 				end if;
-				
+
+
+--			when s2Nx2N_0 =>
+--				doneRest <= '0';
+--				nrAccumSubSrc <= '1';
+--				nextState <= s2Nx2N_1;
+--				if(validBit = '0') then
+--					nrAccumSubSrc <= '0';
+--					nextState <= s2Nx2N_0;
+--				end if;
+--				if(waitCycles = '1') then
+--					nextState <= waitFlushCycles;
+--				end if;
+--				
 			when s2Nx2N_1 =>
 				if(subResult = '1') then
 					doneRest <= '1';
